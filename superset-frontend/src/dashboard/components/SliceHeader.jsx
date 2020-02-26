@@ -69,6 +69,7 @@ const defaultProps = {
   supersetCanExplore: false,
   supersetCanCSV: false,
   sliceCanEdit: false,
+  resizeEvent: false,
 };
 
 const annoationsLoading = t('Annotation layers are still loading.');
