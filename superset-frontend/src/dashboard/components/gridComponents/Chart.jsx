@@ -40,6 +40,8 @@ const propTypes = {
   height: PropTypes.number.isRequired,
   updateSliceName: PropTypes.func.isRequired,
   isComponentVisible: PropTypes.bool,
+  handleFullSize: PropTypes.func.isRequired,
+  resizeEvent: PropTypes.bool,
 
   // from redux
   chart: chartPropShape.isRequired,
@@ -74,7 +76,7 @@ const defaultProps = {
 // resizing across all slices on a dashboard on every update
 const RESIZE_TIMEOUT = 350;
 const SHOULD_UPDATE_ON_PROP_CHANGES = Object.keys(propTypes).filter(
-  prop => prop !== 'width' && prop !== 'height',
+  prop => prop !== 'width' && prop !== 'height' && prop !== 'resizeEvent',
 );
 const OVERFLOWABLE_VIZ_TYPES = new Set(['filter_box']);
 const DEFAULT_HEADER_HEIGHT = 22;
@@ -114,6 +116,12 @@ class Chart extends React.Component {
     if (nextProps.isComponentVisible) {
       if (nextProps.chart.triggerQuery) {
         return true;
+      }
+
+      if( nextProps.resizeEvent ){
+        clearTimeout(this.resizeTimeout);
+        this.resizeTimeout = setTimeout(this.resize, RESIZE_TIMEOUT);
+        return false;
       }
 
       for (let i = 0; i < SHOULD_UPDATE_ON_PROP_CHANGES.length; i += 1) {
@@ -227,6 +235,8 @@ class Chart extends React.Component {
       supersetCanCSV,
       sliceCanEdit,
       addDangerToast,
+      handleFullSize,
+      isFullSize,
     } = this.props;
 
     const { width } = this.state;
@@ -271,6 +281,8 @@ class Chart extends React.Component {
           componentId={componentId}
           filters={filters}
           addDangerToast={addDangerToast}
+          handleFullSize={handleFullSize}
+          isFullSize={isFullSize}
         />
 
         {/*

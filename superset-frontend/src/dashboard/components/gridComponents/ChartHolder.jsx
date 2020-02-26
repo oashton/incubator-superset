@@ -107,11 +107,14 @@ class ChartHolder extends React.Component {
       outlinedComponentId: null,
       outlinedColumnName: null,
       directPathLastUpdated: 0,
+      isFullSize: false,
+      resizeEvent: false,
     };
 
     this.handleChangeFocus = this.handleChangeFocus.bind(this);
     this.handleDeleteComponent = this.handleDeleteComponent.bind(this);
     this.handleUpdateSliceName = this.handleUpdateSliceName.bind(this);
+    this.handleFullSize = this.handleFullSize.bind(this);
   }
 
   componentDidMount() {
@@ -119,6 +122,9 @@ class ChartHolder extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    if(this.state.resizeEvent){
+      this.setState(() => ({ resizeEvent: false }));
+    }
     this.hideOutline(prevState, this.state);
   }
 
@@ -158,10 +164,15 @@ class ChartHolder extends React.Component {
       },
     });
   }
+  
+  handleFullSize() {
+    var flag = !this.state.isFullSize;
+    this.setState(() => ({ isFullSize: flag, resizeEvent: true }));
+  }
 
   render() {
     const { isFocused } = this.state;
-
+    const PADDING = 32;
     const {
       component,
       parentComponent,
@@ -182,6 +193,29 @@ class ChartHolder extends React.Component {
       parentComponent.type === COLUMN_TYPE
         ? parentComponent.meta.width || GRID_MIN_COLUMN_COUNT
         : component.meta.width || GRID_MIN_COLUMN_COUNT;
+
+    var fullStyle = {};
+    var w = 0;
+    var h = 0;
+
+    if( this.state.isFullSize ){
+      fullStyle = {position: 'fixed', zIndex : '1000', left: '0px', top: '0px'};
+      //w = '100%';
+      //h = '100%';
+      w = document.body.clientWidth - PADDING;
+      h = document.body.clientHeight - PADDING;
+    }
+    else {
+      fullStyle = {};
+      w = Math.floor(
+        widthMultiple * columnWidth +
+          (widthMultiple - 1) * GRID_GUTTER_SIZE -
+          CHART_MARGIN,
+      )
+      h = Math.floor(
+        component.meta.height * GRID_BASE_UNIT - CHART_MARGIN,
+      );
+    }
 
     return (
       <DragDroppable
@@ -216,6 +250,7 @@ class ChartHolder extends React.Component {
               className={`dashboard-component dashboard-component-chart-holder ${
                 this.state.outlinedComponentId ? 'fade-in' : 'fade-out'
               }`}
+              style={fullStyle}
             >
               {!editMode && (
                 <AnchorLink
@@ -228,17 +263,14 @@ class ChartHolder extends React.Component {
               <Chart
                 componentId={component.id}
                 id={component.meta.chartId}
-                width={Math.floor(
-                  widthMultiple * columnWidth +
-                    (widthMultiple - 1) * GRID_GUTTER_SIZE -
-                    CHART_MARGIN,
-                )}
-                height={Math.floor(
-                  component.meta.height * GRID_BASE_UNIT - CHART_MARGIN,
-                )}
+                width={w}
+                height={h}
                 sliceName={component.meta.sliceName || ''}
                 updateSliceName={this.handleUpdateSliceName}
                 isComponentVisible={isComponentVisible}
+                handleFullSize={this.handleFullSize}
+                resizeEvent={this.state.resizeEvent}
+                isFullSize={this.state.isFullSize}
               />
               {!editMode && (
                 <FilterIndicators chartId={component.meta.chartId} />
