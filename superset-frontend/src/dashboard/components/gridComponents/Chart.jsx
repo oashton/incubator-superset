@@ -40,7 +40,7 @@ const propTypes = {
   height: PropTypes.number.isRequired,
   updateSliceName: PropTypes.func.isRequired,
   isComponentVisible: PropTypes.bool,
-  handleFullSize: PropTypes.func.isRequired,
+  handleToggleFullSize: PropTypes.func.isRequired,
 
   // from redux
   chart: chartPropShape.isRequired,
@@ -234,7 +234,7 @@ class Chart extends React.Component {
       supersetCanCSV,
       sliceCanEdit,
       addDangerToast,
-      handleFullSize,
+      handleToggleFullSize,
       isFullSize,
     } = this.props;
 
@@ -280,7 +280,7 @@ class Chart extends React.Component {
           componentId={componentId}
           filters={filters}
           addDangerToast={addDangerToast}
-          handleFullSize={handleFullSize}
+          handleToggleFullSize={handleToggleFullSize}
           isFullSize={isFullSize}
         />
 

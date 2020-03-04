@@ -46,7 +46,7 @@ const propTypes = {
   componentId: PropTypes.string.isRequired,
   filters: PropTypes.object.isRequired,
   addDangerToast: PropTypes.func.isRequired,
-  handleFullSize: PropTypes.func.isRequired,
+  handleToggleFullSize: PropTypes.func.isRequired,
   resizeEvent: PropTypes.bool,
 };
 
@@ -98,7 +98,7 @@ class SliceHeader extends React.PureComponent {
       annotationError,
       componentId,
       addDangerToast,
-      handleFullSize,
+      handleToggleFullSize,
       isFullSize,
     } = this.props;
 
@@ -151,7 +151,7 @@ class SliceHeader extends React.PureComponent {
               sliceCanEdit={sliceCanEdit}
               componentId={componentId}
               addDangerToast={addDangerToast}
-              handleFullSize={handleFullSize}
+              handleToggleFullSize={handleToggleFullSize}
               isFullSize={isFullSize}
             />
           )}
