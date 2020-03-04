@@ -113,7 +113,7 @@ class ChartHolder extends React.Component {
     this.handleChangeFocus = this.handleChangeFocus.bind(this);
     this.handleDeleteComponent = this.handleDeleteComponent.bind(this);
     this.handleUpdateSliceName = this.handleUpdateSliceName.bind(this);
-    this.handleFullSize = this.handleFullSize.bind(this);
+    this.handleToggleFullSize = this.handleToggleFullSize.bind(this);
   }
 
   componentDidMount() {
@@ -161,14 +161,13 @@ class ChartHolder extends React.Component {
     });
   }
 
-  handleFullSize() {
-    const flag = !this.state.isFullSize;
-    this.setState(() => ({ isFullSize: flag }));
+  handleToggleFullSize() {
+    this.setState(() => ({ isFullSize: !this.state.isFullSize }));
   }
 
   render() {
     const { isFocused } = this.state;
-    const PADDING = 32;
+    
     const {
       component,
       parentComponent,
@@ -191,8 +190,8 @@ class ChartHolder extends React.Component {
         : component.meta.width || GRID_MIN_COLUMN_COUNT;
 
     let fullStyle = {};
-    let w = 0;
-    let h = 0;
+    let chartWidth = 0;
+    let chartHeight = 0;
 
     if (this.state.isFullSize) {
       fullStyle = {
@@ -201,16 +200,16 @@ class ChartHolder extends React.Component {
         left: '0px',
         top: '0px',
       };
-      w = document.body.clientWidth - PADDING;
-      h = document.body.clientHeight - PADDING;
+      chartWidth = document.body.clientWidth - CHART_MARGIN;
+      chartHeight = document.body.clientHeight - CHART_MARGIN;
     } else {
       fullStyle = {};
-      w = Math.floor(
+      chartWidth = Math.floor(
         widthMultiple * columnWidth +
           (widthMultiple - 1) * GRID_GUTTER_SIZE -
           CHART_MARGIN,
       );
-      h = Math.floor(component.meta.height * GRID_BASE_UNIT - CHART_MARGIN);
+      chartHeight = Math.floor(component.meta.height * GRID_BASE_UNIT - CHART_MARGIN);
     }
 
     return (
@@ -259,12 +258,12 @@ class ChartHolder extends React.Component {
               <Chart
                 componentId={component.id}
                 id={component.meta.chartId}
-                width={w}
-                height={h}
+                width={chartWidth}
+                height={chartHeight}
                 sliceName={component.meta.sliceName || ''}
                 updateSliceName={this.handleUpdateSliceName}
                 isComponentVisible={isComponentVisible}
-                handleFullSize={this.handleFullSize}
+                handleToggleFullSize={this.handleToggleFullSize}
                 isFullSize={this.state.isFullSize}
               />
               {!editMode && (
