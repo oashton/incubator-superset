@@ -154,16 +154,22 @@ class ChartRestApi(SliceMixin, BaseOwnedModelRestApi):
         "changed_by_url",
         "changed_on",
         "datasource_name_text",
-        "datasource_link",
+        "datasource_url",
         "viz_type",
         "params",
         "cache_timeout",
     ]
+    order_columns = [
+        "slice_name",
+        "viz_type",
+        "datasource_name",
+        "changed_by_fk",
+        "changed_on",
+    ]
+
     # Will just affect _info endpoint
     edit_columns = ["slice_name"]
     add_columns = edit_columns
-
-    # exclude_route_methods = ("info",)
 
     add_model_schema = ChartPostSchema()
     edit_model_schema = ChartPutSchema()
