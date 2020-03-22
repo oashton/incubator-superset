@@ -50,7 +50,7 @@ def decode_dashboards(o):
         return o
 
 
-def import_dashboards(session, data_stream, import_time=None):
+def import_dashboards(session, data_stream, import_time=None, new=False):
     """Imports dashboards from a stream to databases"""
     current_tt = int(time.time())
     import_time = current_tt if import_time is None else import_time
@@ -60,7 +60,7 @@ def import_dashboards(session, data_stream, import_time=None):
         type(table).import_obj(table, import_time=import_time)
     session.commit()
     for dashboard in data["dashboards"]:
-        Dashboard.import_obj(dashboard, import_time=import_time)
+        Dashboard.import_obj(dashboard, import_time=import_time, new=new)
     session.commit()
 
 

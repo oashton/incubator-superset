@@ -209,10 +209,16 @@ def refresh_druid(datasource, merge):
     default=None,
     help="Specify the user name to assign dashboards to",
 )
-def import_dashboards(path, recursive, username):
+@click.option(
+    "--new",
+    "-n",
+    is_flag=True,
+    default=False,
+    help="force to create new dashboards and slices, not to check for overwrite",
+)
+def import_dashboards(path, recursive, username, new):
     """Import dashboards from JSON"""
     from superset.utils import dashboard_import_export
-
     path_object = Path(path)
     files = []
     if path_object.is_file():
@@ -227,7 +233,7 @@ def import_dashboards(path, recursive, username):
         logger.info("Importing dashboard from file %s", file_)
         try:
             with file_.open() as data_stream:
-                dashboard_import_export.import_dashboards(db.session, data_stream)
+                dashboard_import_export.import_dashboards(db.session, data_stream, new=new)
         except Exception as e:  # pylint: disable=broad-except
             logger.error("Error when importing dashboard from file %s", file_)
             logger.error(e)

@@ -228,7 +228,7 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
 
     @classmethod
     def import_obj(  # pylint: disable=too-many-locals,too-many-branches,too-many-statements
-        cls, dashboard_to_import: "Dashboard", import_time: Optional[int] = None
+        cls, dashboard_to_import: "Dashboard", import_time: Optional[int] = None, new = False
     ) -> int:
         """Imports the dashboard from the object to the database.
 
@@ -296,18 +296,40 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
         new_expanded_slices = {}
         new_filter_scopes: Dict[str, Dict] = {}
         i_params_dict = dashboard_to_import.params_dict
-        remote_id_slice_map = {
-            slc.params_dict["remote_id"]: slc
-            for slc in session.query(Slice).all()
-            if "remote_id" in slc.params_dict
-        }
+        if( not new ):
+            remote_id_slice_map = {
+                slc.params_dict["remote_id"]: slc
+                for slc in session.query(Slice).all()
+                if "remote_id" in slc.params_dict
+            }
         for slc in slices:
             logger.info(
                 "Importing slice %s from the dashboard: %s",
                 slc.to_json(),
                 dashboard_to_import.dashboard_title,
             )
-            remote_slc = remote_id_slice_map.get(slc.id)
+            if( not new ):
+                remote_slc = remote_id_slice_map.get(slc.id)
+            else:
+                remote_slc = None
+            #Check for annotations layer references
+            if "annotation_layers" in slc.params_dict:
+                new_annotation_layers = []
+                for annotation_layer in slc.params_dict['annotation_layers']:
+                    annotation_layer['value'] = old_to_new_slc_id_dict[annotation_layer['value']]
+                    new_annotation_layers.append( annotation_layer )
+                slc.alter_params( annotation_layers = new_annotation_layers )
+
+            #Check for line charts in line_multi chart type
+            if "line_charts" in slc.params_dict:
+                line_chart_1 = []
+                line_chart_1.append( old_to_new_slc_id_dict[slc.params_dict['line_charts'][0]] )
+                slc.alter_params( line_charts = line_chart_1 )
+            if "line_charts_2" in slc.params_dict:
+                line_chart_2 = []
+                line_chart_2.append( old_to_new_slc_id_dict[slc.params_dict['line_charts_2'][0]] )
+                slc.alter_params( line_charts_2 = line_chart_2 )
+
             new_slc_id = Slice.import_obj(slc, remote_slc, import_time=import_time)
             old_to_new_slc_id_dict[slc.id] = new_slc_id
             # update json metadata that deals with slice ids
@@ -349,12 +371,13 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
 
         # override the dashboard
         existing_dashboard = None
-        for dash in session.query(Dashboard).all():
-            if (
-                "remote_id" in dash.params_dict
-                and dash.params_dict["remote_id"] == dashboard_to_import.id
-            ):
-                existing_dashboard = dash
+        if( not new ):
+            for dash in session.query(Dashboard).all():
+                if (
+                    "remote_id" in dash.params_dict
+                    and dash.params_dict["remote_id"] == dashboard_to_import.id
+                ):
+                    existing_dashboard = dash
 
         dashboard_to_import = dashboard_to_import.copy()
         dashboard_to_import.id = None
@@ -375,17 +398,36 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
                 timed_refresh_immune_slices=new_timed_refresh_immune_slices
             )
 
+        #Get all the slices to be included visually in the dashboard
+        slices_to_include_in_dashboard = []
+        pos_data = json.loads(dashboard_to_import.position_json)
+        pos_json = pos_data.values()
+        for key in old_to_new_slc_id_dict:
+            exist = False
+            for value in pos_json:
+                if (
+                    isinstance(value, dict)
+                    and value.get("meta")
+                    and value.get("meta").get("chartId")
+                ):
+                    pos_slice_id = value.get("meta").get("chartId")
+                    if pos_slice_id == old_to_new_slc_id_dict[key]:
+                        exist = True
+            if exist:
+                slices_to_include_in_dashboard.append( old_to_new_slc_id_dict[key] )
+
         new_slices = (
             session.query(Slice)
-            .filter(Slice.id.in_(old_to_new_slc_id_dict.values()))
+            .filter(Slice.id.in_(slices_to_include_in_dashboard))
             .all()
         )
 
-        if existing_dashboard:
-            existing_dashboard.override(dashboard_to_import)
-            existing_dashboard.slices = new_slices
-            session.flush()
-            return existing_dashboard.id
+        if( not new ):
+            if existing_dashboard:
+                existing_dashboard.override(dashboard_to_import)
+                existing_dashboard.slices = new_slices
+                session.flush()
+                return existing_dashboard.id
 
         dashboard_to_import.slices = new_slices
         session.add(dashboard_to_import)
@@ -407,8 +449,48 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
                 .filter_by(id=dashboard_id)
                 .first()
             )
+
+            # Get all dependent slices (annotation_layers, multi-line)
+            copy_slices = copy(dashboard.slices)
+            dependent_slices_id = []
+            for slc in copy_slices:
+                if "annotation_layers" in slc.params_dict:
+                    for annotation_layer in slc.params_dict['annotation_layers']:
+                        dependent_slices_id.append( annotation_layer['value'])
+            for slc in copy_slices:
+                if "line_charts" in slc.params_dict:
+                    dependent_slices_id.append( slc.params_dict['line_charts'][0] )
+            for slc in copy_slices:
+                if "line_charts_2" in slc.params_dict:
+                    dependent_slices_id.append( slc.params_dict['line_charts_2'][0] )
+
+            dependent_slices = (
+                db.session.query(Slice)
+                .filter(Slice.id.in_(dependent_slices_id))
+                .all()
+            )
+
             # remove ids and relations (like owners, created by, slices, ...)
             copied_dashboard = dashboard.copy()
+            
+            # Add dependent slices to the dashboard json, but not visually
+            for slc in dependent_slices:
+                datasource_ids.add((slc.datasource_id, slc.datasource_type))
+                copied_slc = slc.copy()
+                # save original id into json
+                # we need it to update dashboard's json metadata on import
+                copied_slc.id = slc.id
+                # add extra params for the import
+                copied_slc.alter_params(
+                    remote_id=slc.id,
+                    datasource_name=slc.datasource.datasource_name,
+                    schema=slc.datasource.schema,
+                    database_name=slc.datasource.database.name,
+                )
+                # set slices without creating ORM relations
+                slices = copied_dashboard.__dict__.setdefault("slices", [])
+                slices.append(copied_slc)
+
             for slc in dashboard.slices:
                 datasource_ids.add((slc.datasource_id, slc.datasource_type))
                 copied_slc = slc.copy()
