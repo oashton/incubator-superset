@@ -433,7 +433,7 @@ class TableModelView(DatasourceModelView, DeleteMixin, YamlExportMixin):
         return redirect("/superset/explore/table/{}/".format(pk))
 
     @action(
-        "refresh", __("Refresh Metadata"), __("Refresh column metadata"), "fa-refresh"
+        "refresh", _("Refresh Metadata"), _("Refresh column metadata"), "fa-refresh"
     )
     def refresh(self, tables):
         if not isinstance(tables, list):

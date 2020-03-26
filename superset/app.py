@@ -191,44 +191,44 @@ class SupersetAppInitializer:
         appbuilder.add_view(
             AnnotationLayerModelView,
             "Annotation Layers",
-            label=__("Annotation Layers"),
+            label=_("Annotation Layers"),
             icon="fa-comment",
             category="Manage",
-            category_label=__("Manage"),
+            category_label=_("Manage"),
             category_icon="",
         )
         appbuilder.add_view(
             AnnotationModelView,
             "Annotations",
-            label=__("Annotations"),
+            label=_("Annotations"),
             icon="fa-comments",
             category="Manage",
-            category_label=__("Manage"),
+            category_label=_("Manage"),
             category_icon="",
         )
         appbuilder.add_view(
             DatabaseView,
             "Databases",
-            label=__("Databases"),
+            label=_("Databases"),
             icon="fa-database",
             category="Sources",
-            category_label=__("Sources"),
+            category_label=_("Sources"),
             category_icon="fa-database",
         )
         appbuilder.add_link(
             "Tables",
-            label=__("Tables"),
+            label=_("Tables"),
             href="/tablemodelview/list/?_flt_1_is_sqllab_view=y",
             icon="fa-table",
             category="Sources",
-            category_label=__("Sources"),
+            category_label=_("Sources"),
             category_icon="fa-table",
         )
         appbuilder.add_separator("Sources")
         appbuilder.add_view(
             SliceModelView,
             "Charts",
-            label=__("Charts"),
+            label=_("Charts"),
             icon="fa-bar-chart",
             category="",
             category_icon="",
@@ -236,7 +236,7 @@ class SupersetAppInitializer:
         appbuilder.add_view(
             DashboardModelView,
             "Dashboards",
-            label=__("Dashboards"),
+            label=_("Dashboards"),
             icon="fa-dashboard",
             category="",
             category_icon="",
@@ -244,27 +244,27 @@ class SupersetAppInitializer:
         appbuilder.add_view(
             CssTemplateModelView,
             "CSS Templates",
-            label=__("CSS Templates"),
+            label=_("CSS Templates"),
             icon="fa-css3",
             category="Manage",
-            category_label=__("Manage"),
+            category_label=_("Manage"),
             category_icon="",
         )
         appbuilder.add_view(
             QueryView,
             "Queries",
-            label=__("Queries"),
+            label=_("Queries"),
             category="Manage",
-            category_label=__("Manage"),
+            category_label=_("Manage"),
             icon="fa-search",
         )
         if self.config["ENABLE_ROW_LEVEL_SECURITY"]:
             appbuilder.add_view(
                 RowLevelSecurityFiltersModelView,
                 "Row Level Security Filters",
-                label=__("Row level security filters"),
+                label=_("Row level security filters"),
                 category="Security",
-                category_label=__("Security"),
+                category_label=_("Security"),
                 icon="fa-lock",
             )
 
@@ -301,11 +301,11 @@ class SupersetAppInitializer:
         #
         appbuilder.add_link(
             "Import Dashboards",
-            label=__("Import Dashboards"),
+            label=_("Import Dashboards"),
             href="/superset/import_dashboards",
             icon="fa-cloud-upload",
             category="Manage",
-            category_label=__("Manage"),
+            category_label=_("Manage"),
             category_icon="fa-wrench",
         )
         appbuilder.add_link(
@@ -315,7 +315,7 @@ class SupersetAppInitializer:
             category_icon="fa-flask",
             icon="fa-flask",
             category="SQL Lab",
-            category_label=__("SQL Lab"),
+            category_label=_("SQL Lab"),
         )
         appbuilder.add_link(
             __("Saved Queries"),
@@ -330,15 +330,15 @@ class SupersetAppInitializer:
             icon="fa-search",
             category_icon="fa-flask",
             category="SQL Lab",
-            category_label=__("SQL Lab"),
+            category_label=_("SQL Lab"),
         )
         appbuilder.add_link(
             "Upload a CSV",
-            label=__("Upload a CSV"),
+            label=_("Upload a CSV"),
             href="/csvtodatabaseview/form",
             icon="fa-upload",
             category="Sources",
-            category_label=__("Sources"),
+            category_label=_("Sources"),
             category_icon="fa-wrench",
         )
 
@@ -350,9 +350,9 @@ class SupersetAppInitializer:
             appbuilder.add_view(
                 LogModelView,
                 "Action Log",
-                label=__("Action Log"),
+                label=_("Action Log"),
                 category="Security",
-                category_label=__("Security"),
+                category_label=_("Security"),
                 icon="fa-list-ol",
             )
 
@@ -364,17 +364,17 @@ class SupersetAppInitializer:
             appbuilder.add_view(
                 DashboardEmailScheduleView,
                 "Dashboard Email Schedules",
-                label=__("Dashboard Emails"),
+                label=_("Dashboard Emails"),
                 category="Manage",
-                category_label=__("Manage"),
+                category_label=_("Manage"),
                 icon="fa-search",
             )
             appbuilder.add_view(
                 SliceEmailScheduleView,
                 "Chart Emails",
-                label=__("Chart Email Schedules"),
+                label=_("Chart Email Schedules"),
                 category="Manage",
-                category_label=__("Manage"),
+                category_label=_("Manage"),
                 icon="fa-search",
             )
 
@@ -385,9 +385,9 @@ class SupersetAppInitializer:
             appbuilder.add_view(
                 AccessRequestsModelView,
                 "Access requests",
-                label=__("Access requests"),
+                label=_("Access requests"),
                 category="Security",
-                category_label=__("Security"),
+                category_label=_("Security"),
                 icon="fa-table",
             )
 
@@ -399,18 +399,18 @@ class SupersetAppInitializer:
             appbuilder.add_view(
                 DruidDatasourceModelView,
                 "Druid Datasources",
-                label=__("Druid Datasources"),
+                label=_("Druid Datasources"),
                 category="Sources",
-                category_label=__("Sources"),
+                category_label=_("Sources"),
                 icon="fa-cube",
             )
             appbuilder.add_view(
                 DruidClusterModelView,
                 name="Druid Clusters",
-                label=__("Druid Clusters"),
+                label=_("Druid Clusters"),
                 icon="fa-cubes",
                 category="Sources",
-                category_label=__("Sources"),
+                category_label=_("Sources"),
                 category_icon="fa-database",
             )
             appbuilder.add_view_no_menu(DruidMetricInlineView)
@@ -420,19 +420,19 @@ class SupersetAppInitializer:
             if self.config["DRUID_METADATA_LINKS_ENABLED"]:
                 appbuilder.add_link(
                     "Scan New Datasources",
-                    label=__("Scan New Datasources"),
+                    label=_("Scan New Datasources"),
                     href="/druid/scan_new_datasources/",
                     category="Sources",
-                    category_label=__("Sources"),
+                    category_label=_("Sources"),
                     category_icon="fa-database",
                     icon="fa-refresh",
                 )
                 appbuilder.add_link(
                     "Refresh Druid Metadata",
-                    label=__("Refresh Druid Metadata"),
+                    label=_("Refresh Druid Metadata"),
                     href="/druid/refresh_datasources/",
                     category="Sources",
-                    category_label=__("Sources"),
+                    category_label=_("Sources"),
                     category_icon="fa-database",
                     icon="fa-cog",
                 )
