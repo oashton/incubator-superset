@@ -72,7 +72,7 @@ export default function Welcome({ user }) {
                   type="text"
                   bsSize="sm"
                   style={{ marginTop: '25px' }}
-                  placeholder="Search"
+                  placeholder={t("Search")}
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.currentTarget.value)}
                 />

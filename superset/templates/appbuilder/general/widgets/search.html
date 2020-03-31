@@ -52,9 +52,16 @@
                 $('.filters a.remove-filter').off('click', checkSearchButton);
                 $('.filters a.remove-filter').on('click', checkSearchButton);
                 $('.filter-action').toggle(true);
+                $('.filter-action > button').html( function() {
+                    var search = '{{_("Search")}}';
+                    return search + '&nbsp;&nbsp;<i class="fa fa-search"></i>';
+                })
             } else {
                 $('.filter-action').toggle(true);
-                $('.filter-action > button').html('Refresh&nbsp;&nbsp;<i class="fa fa-refresh"></i>');
+                $('.filter-action > button').html( function() {
+                    var refresh = '{{_("Refresh")}}';
+                    return refresh + '&nbsp;&nbsp;<i class="fa fa-refresh"></i>';
+                })
             }
         }
 

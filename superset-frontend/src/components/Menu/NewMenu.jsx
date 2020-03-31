@@ -35,7 +35,7 @@ export default function NewMenu() {
         data-toggle="dropdown"
         className="dropdown-toggle btn btn-sm btn-primary"
       >
-        <i className="fa fa-plus" /> New
+        <i className="fa fa-plus" /> {t('New')}
       </button>
       <ul className="dropdown-menu">
         <li>

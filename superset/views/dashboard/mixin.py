@@ -27,7 +27,7 @@ class DashboardMixin:  # pylint: disable=too-few-public-methods
     add_title = _("Add Dashboard")
     edit_title = _("Edit Dashboard")
 
-    list_columns = ["dashboard_link", "creator", "published", "modified"]
+    list_columns = ["dashboard_link", "creator", "published_translation", "modified"]
     order_columns = ["dashboard_link", "modified", "published"]
     edit_columns = [
         "dashboard_title",
@@ -80,6 +80,8 @@ class DashboardMixin:  # pylint: disable=too-few-public-methods
         "css": _("CSS"),
         "json_metadata": _("JSON Metadata"),
         "table_names": _("Underlying Tables"),
+        "published": _("Published"),
+        "published_translation": _("Published"),
     }
 
     def pre_delete(self, item):  # pylint: disable=no-self-use

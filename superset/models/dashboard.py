@@ -19,6 +19,7 @@ import logging
 from copy import copy
 from typing import Any, Dict, List, Optional, Set, TYPE_CHECKING
 from urllib import parse
+from flask_babel import lazy_gettext as _
 
 import sqlalchemy as sqla
 from flask_appbuilder import Model
@@ -195,6 +196,12 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
         if not self.changed_by:
             return ""
         return f"/superset/profile/{self.changed_by.username}"
+
+    @property
+    def published_translation(self):
+        if self.published:
+            return _("True")
+        return _("False")
 
     @property
     def data(self) -> Dict[str, Any]:
