@@ -2178,9 +2178,12 @@ class Superset(BaseSupersetView):
         except Exception as e:
             logger.exception(e)
             msg = _(
-                f"{validator.name} was unable to check your query.\n"
-                "Please recheck your query.\n"
-                f"Exception: {e}"
+                "%(validator_name)s was unable to check your query.\n" + 
+                "Please recheck your query.\n" +
+                "Exception: {exception}",
+                validator_name=validator.name,
+                exception=e
+
             )
             # Return as a 400 if the database error message says we got a 4xx error
             if re.search(r"([\W]|^)4\d{2}([\W]|$)", str(e)):
