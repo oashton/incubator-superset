@@ -20,10 +20,10 @@ import logging
 import re
 from datetime import datetime
 from typing import List, Optional
+import timeago
 
 # isort and pylint disagree, isort should win
 # pylint: disable=ungrouped-imports
-import humanize
 import pandas as pd
 import sqlalchemy as sa
 import yaml
@@ -33,6 +33,7 @@ from flask_appbuilder.models.mixins import AuditMixin
 from sqlalchemy import and_, or_, UniqueConstraint
 from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.orm.exc import MultipleResultsFound
+from flask_babel import get_locale
 
 from superset.utils.core import QueryStatus
 
@@ -362,7 +363,7 @@ class AuditMixinNullable(AuditMixin):
 
     @property
     def changed_on_humanized(self):
-        return humanize.naturaltime(datetime.now() - self.changed_on)
+        return timeago.format(self.changed_on,datetime.now(),str(get_locale()))
 
     @renders("changed_on")
     def modified(self):
