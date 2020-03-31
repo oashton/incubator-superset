@@ -124,7 +124,7 @@ export default class TemplateParamsEditor extends React.Component {
         modalTitle={t('Template Parameters')}
         triggerNode={
           <Button tooltip={t('Edit template parameters')}>
-            {`${t('parameters')} `}
+            {t('parameters')}
             {paramCount > 0 && <Badge>{paramCount}</Badge>}
             {!this.state.isValid && (
               <InfoTooltipWithTrigger

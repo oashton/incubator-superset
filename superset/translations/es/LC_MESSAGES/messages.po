@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-31 08:02-0400\n"
+"POT-Creation-Date: 2020-03-31 18:26-0400\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -1096,11 +1096,11 @@ msgstr ""
 msgid "Unable to retrieve metadata for the following table(s): %(tables)s"
 msgstr ""
 
-#: superset/models/helpers.py:376
+#: superset/models/dashboard.py:203
 msgid "True"
 msgstr "Verdadero"
 
-#: superset/models/helpers.py:378
+#: superset/models/dashboard.py:204
 msgid "False"
 msgstr "Falso"
 
@@ -1255,7 +1255,7 @@ msgstr ""
 
 #: superset/views/annotations.py:51
 msgid "List Annotation"
-msgstr ""
+msgstr "Lista de Anotaciones"
 
 #: superset/views/annotations.py:52
 msgid "Show Annotation"
@@ -1603,7 +1603,7 @@ msgstr ""
 
 #: superset/views/sql_lab.py:58
 msgid "List Query"
-msgstr ""
+msgstr "Lista de Consultas"
 
 #: superset/views/sql_lab.py:59
 msgid "Show Query"
@@ -1803,7 +1803,7 @@ msgid "Underlying Tables"
 msgstr "Tablas Subyacentes"
 
 #: superset-frontend/src/views/dashboardList/DashboardList.tsx:161
-#: superset/views/dashboard/mixin.py:83
+#: superset/views/dashboard/mixin.py:83 superset/views/dashboard/mixin.py:84
 msgid "Published"
 msgstr "Publicado"
 
@@ -1842,11 +1842,11 @@ msgstr "Específica un esquema (si la base de datos lo soporta)"
 
 #: superset/views/database/forms.py:117
 msgid "Delimiter"
-msgstr ""
+msgstr "Delimitador"
 
 #: superset/views/database/forms.py:118
 msgid "Delimiter used by CSV file (for whitespace use \\s+)."
-msgstr ""
+msgstr "Delimitador usado por el archivo CSV (para espacios en blanco usar \\s+)."
 
 #: superset/views/database/forms.py:123
 msgid "Table Exists"
@@ -1862,15 +1862,15 @@ msgstr ""
 
 #: superset/views/database/forms.py:130
 msgid "Fail"
-msgstr ""
+msgstr "Falla"
 
 #: superset/views/database/forms.py:131
 msgid "Replace"
-msgstr ""
+msgstr "Reemplaza"
 
 #: superset/views/database/forms.py:132
 msgid "Append"
-msgstr ""
+msgstr "Adiciona"
 
 #: superset/views/database/forms.py:137
 msgid "Header Row"
@@ -1956,7 +1956,7 @@ msgstr "Usa Pandas para interpretar los formatos de fecha-hora automáticamente.
 
 #: superset/views/database/forms.py:192
 msgid "Decimal Character"
-msgstr ""
+msgstr "Carácter Decimal"
 
 #: superset/views/database/forms.py:194
 msgid "Character to interpret as decimal point."
@@ -2115,7 +2115,7 @@ msgstr ""
 
 #: superset/views/database/views.py:82
 msgid "CSV to Database configuration"
-msgstr ""
+msgstr "Configuración Cargue CSV"
 
 #: superset/views/database/views.py:100
 #, python-format
@@ -2466,6 +2466,10 @@ msgstr "Límite filas"
 msgid "Max: ${this.props.maxRow}"
 msgstr ""
 
+#: superset-frontend/src/SqlLab/components/LimitControl.jsx:135
+msgid "LIMIT"
+msgstr "LIMITE"
+
 #: superset-frontend/src/SqlLab/components/QueryHistory.jsx:52
 msgid "No query history yet..."
 msgstr "No hay histórico de consultas, aun..."
@@ -2482,15 +2486,15 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:219
 msgid "Filter by user"
-msgstr ""
+msgstr "Filtrar por usuario"
 
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:228
 msgid "Filter by database"
-msgstr ""
+msgstr "Filtrar por base de datos"
 
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:237
 msgid "Query search string"
-msgstr ""
+msgstr "Cadena de búsqueda"
 
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:243
 msgid "[From]-"
@@ -2657,7 +2661,7 @@ msgstr "Copiar al portapapeles"
 
 #: superset-frontend/src/SqlLab/components/ShareSqlLabQuery.jsx:115
 msgid "Share Query"
-msgstr ""
+msgstr "Compartir Consulta"
 
 #: superset-frontend/src/SqlLab/components/ShowSQL.jsx:41
 msgid "Show SQL"
@@ -2740,6 +2744,14 @@ msgstr "Restablecer estado"
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:195
 msgid "Enter a new title for the tab"
 msgstr "Ingresa un nuevo título para la pestaña"
+
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:215
+msgid ""
+"-- Note: Unless you save your query, these tabs will NOT persist if you "
+"clear your cookies or change browsers."
+msgstr ""
+"-- Nota: A menos que guardes tu consulta, estos tabs NO persistirán si "
+"limpias tus cookies o cambias de navegador"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:219
 #, python-format
@@ -2834,6 +2846,10 @@ msgstr ""
 #: superset-frontend/src/SqlLab/components/TemplateParamsEditor.jsx:126
 msgid "Edit template parameters"
 msgstr ""
+
+#: superset-frontend/src/SqlLab/components/TemplateParamsEditor.jsx:127
+msgid "parameters"
+msgstr "parámetros"
 
 #: superset-frontend/src/SqlLab/components/TemplateParamsEditor.jsx:133
 msgid "Invalid JSON"
@@ -3005,7 +3021,7 @@ msgstr "Esquema:"
 
 #: superset-frontend/src/components/TableSelector.jsx:316
 msgid "Force refresh schema list"
-msgstr ""
+msgstr "Forzar refrescar lista de esquemas"
 
 #: superset-frontend/src/components/TableSelector.jsx:327
 msgid "Type to search ..."
@@ -3013,7 +3029,7 @@ msgstr "Escribe para buscar ..."
 
 #: superset-frontend/src/components/TableSelector.jsx:329
 msgid "Select table "
-msgstr ""
+msgstr "Selecciona una tabla"
 
 #: superset-frontend/src/components/TableSelector.jsx:339
 msgid "Select table or type table name"
@@ -3025,7 +3041,7 @@ msgstr ""
 
 #: superset-frontend/src/components/TableSelector.jsx:372
 msgid "See table schema"
-msgstr ""
+msgstr "Ver las tablas del esquema"
 
 #: superset-frontend/src/components/URLShortLinkButton.jsx:58
 #: superset-frontend/src/components/URLShortLinkModal.jsx:64
@@ -3408,11 +3424,19 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:124
 #, python-format
 msgid "Fetched %s"
-msgstr ""
+msgstr "Consultado %s"
+
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:125
+msgid "Minimize"
+msgstr "Minimizar"
+
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:125
+msgid "Maximize"
+msgstr "Maximizar"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:141
 msgid "Force refresh"
-msgstr ""
+msgstr "Forzar refresco"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:149
 msgid "Toggle chart description"
@@ -3420,7 +3444,7 @@ msgstr "Alternar la descripción del cuadro de mando"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:155
 msgid "Edit chart metadata"
-msgstr ""
+msgstr "Editar metadatos del gráfico"
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:160
 msgid "Export CSV"
@@ -3433,7 +3457,7 @@ msgstr "Explorar gráfico"
 #: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:179
 #: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:180
 msgid "Share chart"
-msgstr ""
+msgstr "Compartir gráfico"
 
 #: superset-frontend/src/dashboard/components/filterscope/FilterScopeSelector.jsx:446
 msgid "Search..."

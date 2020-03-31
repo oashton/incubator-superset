@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-31 08:02-0400\n"
+"POT-Creation-Date: 2020-03-31 18:26-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1051,11 +1051,11 @@ msgstr ""
 msgid "Unable to retrieve metadata for the following table(s): %(tables)s"
 msgstr ""
 
-#: superset/models/helpers.py:376
+#: superset/models/dashboard.py:203
 msgid "True"
 msgstr ""
 
-#: superset/models/helpers.py:378
+#: superset/models/dashboard.py:204
 msgid "False"
 msgstr ""
 
@@ -1736,7 +1736,7 @@ msgid "Underlying Tables"
 msgstr ""
 
 #: superset-frontend/src/views/dashboardList/DashboardList.tsx:161
-#: superset/views/dashboard/mixin.py:83
+#: superset/views/dashboard/mixin.py:83 superset/views/dashboard/mixin.py:84
 msgid "Published"
 msgstr ""
 
@@ -2385,6 +2385,10 @@ msgstr ""
 msgid "Max: ${this.props.maxRow}"
 msgstr ""
 
+#: superset-frontend/src/SqlLab/components/LimitControl.jsx:135
+msgid "LIMIT"
+msgstr ""
+
 #: superset-frontend/src/SqlLab/components/QueryHistory.jsx:52
 msgid "No query history yet..."
 msgstr ""
@@ -2660,6 +2664,12 @@ msgstr ""
 msgid "Enter a new title for the tab"
 msgstr ""
 
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:215
+msgid ""
+"-- Note: Unless you save your query, these tabs will NOT persist if you "
+"clear your cookies or change browsers."
+msgstr ""
+
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:219
 #, python-format
 msgid "Untitled Query %s"
@@ -2752,6 +2762,10 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/components/TemplateParamsEditor.jsx:126
 msgid "Edit template parameters"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/TemplateParamsEditor.jsx:127
+msgid "parameters"
 msgstr ""
 
 #: superset-frontend/src/SqlLab/components/TemplateParamsEditor.jsx:133
@@ -3327,6 +3341,14 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:124
 #, python-format
 msgid "Fetched %s"
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:125
+msgid "Minimize"
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:125
+msgid "Maximize"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:141
