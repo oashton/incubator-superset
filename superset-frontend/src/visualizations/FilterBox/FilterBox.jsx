@@ -98,6 +98,7 @@ class FilterBox extends React.Component {
       selectedValues: props.origSelectedValues,
       // this flag is used by non-instant filter, to make the apply button enabled/disabled
       hasChanged: false,
+      isFilteredByFilterBox: false
     };
     this.changeFilter = this.changeFilter.bind(this);
     this.onFilterMenuOpen = this.onFilterMenuOpen.bind(this, props.chartId);
@@ -149,12 +150,15 @@ class FilterBox extends React.Component {
         vals = options;
       }
     }
-    const selectedValues = {
-      ...this.state.selectedValues,
-      [fltr]: vals,
-    };
+    let selectedValues = {};
+      if( vals.length != 0 ){
+        selectedValues = {
+        ...this.state.selectedValues,
+        [fltr]: vals,
+      };
+    }
 
-    this.setState({ selectedValues, hasChanged: true }, () => {
+    this.setState({ selectedValues, hasChanged: true, isFilteredByFilterBox: true }, () => {
       if (this.props.instantFiltering) {
         this.props.onChange({ [fltr]: vals }, false);
       }
@@ -225,9 +229,23 @@ class FilterBox extends React.Component {
     }
     return datasourceFilters;
   }
+
+  componentDidUpdate() {
+    if( this.state.isFilteredByFilterBox ){
+      this.state.isFilteredByFilterBox = false;
+    }
+  }
+
   renderSelect(filterConfig) {
     const { filtersChoices } = this.props;
-    const { selectedValues } = this.state;
+    let selectedValues = null;
+
+    if( this.state.isFilteredByFilterBox ){
+      selectedValues = this.state.selectedValues;
+    }
+    else {
+      selectedValues = this.props.origSelectedValues;
+    }
 
     // Add created options to filtersChoices, even though it doesn't exist,
     // or these options will exist in query sql but invisible to end user.

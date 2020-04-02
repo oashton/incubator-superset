@@ -147,6 +147,8 @@ class Dashboard extends React.PureComponent {
       });
 
       const idSet = new Set(affectedChartIds);
+      //We add the filter box object in the list of objects to refresh
+      idSet.add( ([...allKeys][0]).substr(0, ([...allKeys][0]).indexOf('_')) );
       this.refreshCharts([...idSet]);
       this.appliedFilters = activeFilters;
     }

@@ -163,8 +163,9 @@ export default function dashboardFiltersReducer(dashboardFilters = {}, action) {
   } else if (action.type in actionHandlers) {
     const updatedFilters = {
       ...dashboardFilters,
-      [action.chartId]: actionHandlers[action.type](
-        dashboardFilters[action.chartId],
+      //Force to always pass the filter object, even if the trigger object is not the filterbox object
+      [Object.keys( dashboardFilters )[0]]: actionHandlers[action.type](
+        dashboardFilters[Object.keys( dashboardFilters )[0]],
       ),
     };
 
