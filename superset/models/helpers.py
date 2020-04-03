@@ -20,7 +20,6 @@ import logging
 import re
 from datetime import datetime
 from typing import List, Optional
-import timeago
 
 # isort and pylint disagree, isort should win
 # pylint: disable=ungrouped-imports
@@ -35,6 +34,7 @@ from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.orm.exc import MultipleResultsFound
 from flask_babel import get_locale
 
+import timeago
 from superset.utils.core import QueryStatus
 
 logger = logging.getLogger(__name__)
@@ -363,7 +363,7 @@ class AuditMixinNullable(AuditMixin):
 
     @property
     def changed_on_humanized(self):
-        return timeago.format(self.changed_on,datetime.now(),str(get_locale()))
+        return timeago.format(self.changed_on, datetime.now(), str(get_locale()))
 
     @renders("changed_on")
     def modified(self):
