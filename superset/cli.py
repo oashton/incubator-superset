@@ -233,7 +233,8 @@ def import_dashboards(path, recursive, username, new):
         logger.info("Importing dashboard from file %s", file_)
         try:
             with file_.open() as data_stream:
-                dashboard_import_export.import_dashboards(db.session, data_stream, new=new)
+                dashboard_import_export.import_dashboards(
+                    db.session, data_stream, new=new)
         except Exception as e:  # pylint: disable=broad-except
             logger.error("Error when importing dashboard from file %s", file_)
             logger.error(e)

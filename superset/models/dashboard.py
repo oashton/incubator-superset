@@ -235,7 +235,8 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
 
     @classmethod
     def import_obj(  # pylint: disable=too-many-locals,too-many-branches,too-many-statements
-        cls, dashboard_to_import: "Dashboard", import_time: Optional[int] = None, new = False
+        cls, dashboard_to_import: "Dashboard", import_time: Optional[int] = None,
+        new=False
     ) -> int:
         """Imports the dashboard from the object to the database.
 
@@ -303,7 +304,7 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
         new_expanded_slices = {}
         new_filter_scopes: Dict[str, Dict] = {}
         i_params_dict = dashboard_to_import.params_dict
-        if( not new ):
+        if not new:
             remote_id_slice_map = {
                 slc.params_dict["remote_id"]: slc
                 for slc in session.query(Slice).all()
@@ -315,7 +316,7 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
                 slc.to_json(),
                 dashboard_to_import.dashboard_title,
             )
-            if( not new ):
+            if not new:
                 remote_slc = remote_id_slice_map.get(slc.id)
             else:
                 remote_slc = None
@@ -323,19 +324,22 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
             if "annotation_layers" in slc.params_dict:
                 new_annotation_layers = []
                 for annotation_layer in slc.params_dict['annotation_layers']:
-                    annotation_layer['value'] = old_to_new_slc_id_dict[annotation_layer['value']]
-                    new_annotation_layers.append( annotation_layer )
-                slc.alter_params( annotation_layers = new_annotation_layers )
+                    annotation_layer['value'] = old_to_new_slc_id_dict[
+                        annotation_layer['value']]
+                    new_annotation_layers.append(annotation_layer)
+                slc.alter_params(annotation_layers=new_annotation_layers)
 
             #Check for line charts in line_multi chart type
             if "line_charts" in slc.params_dict:
                 line_chart_1 = []
-                line_chart_1.append( old_to_new_slc_id_dict[slc.params_dict['line_charts'][0]] )
-                slc.alter_params( line_charts = line_chart_1 )
+                line_chart_1.append(
+                    old_to_new_slc_id_dict[slc.params_dict['line_charts'][0]])
+                slc.alter_params(line_charts=line_chart_1)
             if "line_charts_2" in slc.params_dict:
                 line_chart_2 = []
-                line_chart_2.append( old_to_new_slc_id_dict[slc.params_dict['line_charts_2'][0]] )
-                slc.alter_params( line_charts_2 = line_chart_2 )
+                line_chart_2.append(
+                    old_to_new_slc_id_dict[slc.params_dict['line_charts_2'][0]])
+                slc.alter_params(line_charts_2=line_chart_2)
 
             new_slc_id = Slice.import_obj(slc, remote_slc, import_time=import_time)
             old_to_new_slc_id_dict[slc.id] = new_slc_id
@@ -378,7 +382,7 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
 
         # override the dashboard
         existing_dashboard = None
-        if( not new ):
+        if not new:
             for dash in session.query(Dashboard).all():
                 if (
                     "remote_id" in dash.params_dict
@@ -421,7 +425,7 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
                     if pos_slice_id == old_to_new_slc_id_dict[key]:
                         exist = True
             if exist:
-                slices_to_include_in_dashboard.append( old_to_new_slc_id_dict[key] )
+                slices_to_include_in_dashboard.append(old_to_new_slc_id_dict[key])
 
         new_slices = (
             session.query(Slice)
@@ -429,7 +433,7 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
             .all()
         )
 
-        if( not new ):
+        if not new:
             if existing_dashboard:
                 existing_dashboard.override(dashboard_to_import)
                 existing_dashboard.slices = new_slices
@@ -463,13 +467,13 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
             for slc in copy_slices:
                 if "annotation_layers" in slc.params_dict:
                     for annotation_layer in slc.params_dict['annotation_layers']:
-                        dependent_slices_id.append( annotation_layer['value'])
+                        dependent_slices_id.append(annotation_layer['value'])
             for slc in copy_slices:
                 if "line_charts" in slc.params_dict:
-                    dependent_slices_id.append( slc.params_dict['line_charts'][0] )
+                    dependent_slices_id.append(slc.params_dict['line_charts'][0])
             for slc in copy_slices:
                 if "line_charts_2" in slc.params_dict:
-                    dependent_slices_id.append( slc.params_dict['line_charts_2'][0] )
+                    dependent_slices_id.append(slc.params_dict['line_charts_2'][0])
 
             dependent_slices = (
                 db.session.query(Slice)
@@ -479,7 +483,6 @@ class Dashboard(  # pylint: disable=too-many-instance-attributes
 
             # remove ids and relations (like owners, created by, slices, ...)
             copied_dashboard = dashboard.copy()
-            
             # Add dependent slices to the dashboard json, but not visually
             for slc in dependent_slices:
                 datasource_ids.add((slc.datasource_id, slc.datasource_type))
