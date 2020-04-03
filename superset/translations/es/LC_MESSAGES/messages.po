@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-03-31 18:26-0400\n"
+"POT-Creation-Date: 2020-04-03 19:02-0400\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -26,7 +26,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.3\n"
+"Generated-By: Babel 2.8.0\n"
 
 #: superset/app.py:194
 msgid "Annotation Layers"
@@ -2990,6 +2990,18 @@ msgstr "Haz clic para favorito/no favorito"
 msgid "An error occurred while fethching Dashboards"
 msgstr ""
 
+#: superset-frontend/src/components/TableLoader.jsx:84
+msgid "Name"
+msgstr "Nombre"
+
+#: superset-frontend/src/components/TableLoader.jsx:85
+msgid "Type"
+msgstr "Tipo"
+
+#: superset-frontend/src/components/TableLoader.jsx:86
+msgid "Time"
+msgstr "Tiempo"
+
 #: superset-frontend/src/components/TableSelector.jsx:163
 msgid "Error while fetching table list"
 msgstr "Error recuperando la lista de tablas"
@@ -3059,7 +3071,7 @@ msgstr ""
 
 #: superset-frontend/src/components/ListView/ListView.tsx:272
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:731
-#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:348
+#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:368
 msgid "Apply"
 msgstr ""
 
@@ -5855,7 +5867,7 @@ msgid "Error while fetching data"
 msgstr "Error recuperando datos"
 
 #: superset-frontend/src/explore/components/controls/SelectControl.jsx:75
-#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:299
+#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:319
 msgid "No results found"
 msgstr ""
 
@@ -6594,11 +6606,11 @@ msgstr ""
 msgid "Are you sure you want to delete the selected dashboards?"
 msgstr ""
 
-#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:175
+#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:188
 msgid "Select start and end date"
 msgstr ""
 
-#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:271
+#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:291
 #, python-format
 msgid "Select [%s]"
 msgstr "Selecciona [%s]"
