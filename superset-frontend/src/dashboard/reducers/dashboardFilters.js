@@ -161,12 +161,19 @@ export default function dashboardFiltersReducer(dashboardFilters = {}, action) {
 
     return updatedFilters;
   } else if (action.type in actionHandlers) {
+    // Force to index to always be the filter object, even if the trigger object is not the filterbox object
+    let index;
+    if (
+      Object.keys(dashboardFilters)[0] !== undefined &&
+      Object.keys(dashboardFilters)[0] !== action.chartId
+    ) {
+      index = Object.keys(dashboardFilters)[0];
+    } else {
+      index = action.chartId;
+    }
     const updatedFilters = {
       ...dashboardFilters,
-      //Force to always pass the filter object, even if the trigger object is not the filterbox object
-      [Object.keys( dashboardFilters )[0]]: actionHandlers[action.type](
-        dashboardFilters[Object.keys( dashboardFilters )[0]],
-      ),
+      [index]: actionHandlers[action.type](dashboardFilters[index]),
     };
 
     if (CHANGE_FILTER_VALUE_ACTIONS.includes(action.type)) {
