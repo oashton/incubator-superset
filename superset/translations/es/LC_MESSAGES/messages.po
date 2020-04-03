@@ -6529,7 +6529,7 @@ msgstr "Sin cuadros de mando"
 
 #: superset-frontend/src/profile/components/Favorites.jsx:54
 msgid "No favorite charts yet, go click on stars!"
-msgstr ""
+msgstr "No hay gràficos favoritos todavìa, haga clic en las estrellas!"
 
 #: superset-frontend/src/profile/components/Favorites.jsx:71
 msgid "No favorite dashboards yet, go click on stars!"
