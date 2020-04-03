@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-03 19:02-0400\n"
+"POT-Creation-Date: 2020-04-03 19:24-0400\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -530,6 +530,7 @@ msgstr "Editar Columna Druid"
 msgid "Column"
 msgstr "Columna"
 
+#: superset-frontend/src/components/TableLoader.jsx:85
 #: superset/connectors/druid/views.py:77 superset/connectors/druid/views.py:173
 #: superset/connectors/sqla/views.py:135 superset/connectors/sqla/views.py:209
 msgid "Type"
@@ -1313,6 +1314,7 @@ msgstr ""
 msgid "Edit Annotation Layer"
 msgstr ""
 
+#: superset-frontend/src/components/TableLoader.jsx:84
 #: superset-frontend/src/explore/components/PropertiesModal.jsx:143
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:683
 #: superset/views/annotations.py:109 superset/views/chart/mixin.py:86
@@ -1802,6 +1804,7 @@ msgstr "CSS"
 msgid "Underlying Tables"
 msgstr "Tablas Subyacentes"
 
+#: superset-frontend/src/dashboard/components/PublishedStatus.jsx:110
 #: superset-frontend/src/views/dashboardList/DashboardList.tsx:161
 #: superset/views/dashboard/mixin.py:83 superset/views/dashboard/mixin.py:84
 msgid "Published"
@@ -2990,15 +2993,9 @@ msgstr "Haz clic para favorito/no favorito"
 msgid "An error occurred while fethching Dashboards"
 msgstr ""
 
-#: superset-frontend/src/components/TableLoader.jsx:84
-msgid "Name"
-msgstr "Nombre"
-
-#: superset-frontend/src/components/TableLoader.jsx:85
-msgid "Type"
-msgstr "Tipo"
-
 #: superset-frontend/src/components/TableLoader.jsx:86
+#: superset-frontend/src/explore/controlPanels/sections.jsx:23
+#: superset-frontend/src/explore/controlPanels/sections.jsx:45
 msgid "Time"
 msgstr "Tiempo"
 
@@ -3210,7 +3207,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/Header.jsx:435
 msgid "Edit dashboard"
-msgstr ""
+msgstr "Editar tablero"
 
 #: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:94
 msgid "An error occurred while fetching available CSS templates"
@@ -3235,7 +3232,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:177
 msgid "Force refresh dashboard"
-msgstr ""
+msgstr "Forzar refresco del tablero"
 
 #: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:187
 msgid "Set auto-refresh interval"
@@ -3243,7 +3240,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:188
 msgid "Auto-refresh dashboard"
-msgstr ""
+msgstr "Auto-refrescar tablero"
 
 #: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:195
 msgid "Edit dashboard properties"
@@ -3251,7 +3248,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:209
 msgid "Share dashboard"
-msgstr ""
+msgstr "Compartir tablero"
 
 #: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:214
 msgid "Edit CSS"
@@ -3330,6 +3327,8 @@ msgid ""
 "This dashboard is not published, it will not show up in the list of "
 "dashboards. Click here to publish this dashboard."
 msgstr ""
+"Este tablero no está publicado, no se mostrará en el listado de "
+"tableros. Haz click aquì para publicar este tablero."
 
 #: superset-frontend/src/dashboard/components/PublishedStatus.jsx:37
 msgid ""
@@ -3337,10 +3336,17 @@ msgid ""
 "list of dashboards. Favorite it to see it there or access it by using the"
 " URL directly."
 msgstr ""
+"Este tablero no está publicado, lo cual significa que no se mostrarà en el "
+"listado de tableros. Seleccionalo como favorito para verlo en el listado o "
+"accede al tablero usando la URL directamente"
 
 #: superset-frontend/src/dashboard/components/PublishedStatus.jsx:42
 msgid "This dashboard is published. Click to make it a draft."
-msgstr ""
+msgstr "Este tablero está publicado. Haz click para convertirlo en un borrador"
+
+#: superset-frontend/src/dashboard/components/PublishedStatus.jsx:80
+msgid "Draft"
+msgstr "Borrador"
 
 #: superset-frontend/src/dashboard/components/RefreshIntervalModal.jsx:34
 msgid "Don't refresh"
@@ -6462,11 +6468,6 @@ msgstr "Tamaño de burbuja"
 #: superset-frontend/src/explore/controlPanels/WorldMap.js:84
 msgid "Metric that defines the size of the bubble"
 msgstr "Métrica que define el tamaño de la burbuja."
-
-#: superset-frontend/src/explore/controlPanels/sections.jsx:23
-#: superset-frontend/src/explore/controlPanels/sections.jsx:45
-msgid "Time"
-msgstr "Tiempo"
 
 #: superset-frontend/src/explore/controlPanels/sections.jsx:25
 #: superset-frontend/src/explore/controlPanels/sections.jsx:46

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-03 19:02-0400\n"
+"POT-Creation-Date: 2020-04-03 19:24-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -515,6 +515,7 @@ msgstr ""
 msgid "Column"
 msgstr ""
 
+#: superset-frontend/src/components/TableLoader.jsx:85
 #: superset/connectors/druid/views.py:77 superset/connectors/druid/views.py:173
 #: superset/connectors/sqla/views.py:135 superset/connectors/sqla/views.py:209
 msgid "Type"
@@ -1268,6 +1269,7 @@ msgstr ""
 msgid "Edit Annotation Layer"
 msgstr ""
 
+#: superset-frontend/src/components/TableLoader.jsx:84
 #: superset-frontend/src/explore/components/PropertiesModal.jsx:143
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:683
 #: superset/views/annotations.py:109 superset/views/chart/mixin.py:86
@@ -1735,6 +1737,7 @@ msgstr ""
 msgid "Underlying Tables"
 msgstr ""
 
+#: superset-frontend/src/dashboard/components/PublishedStatus.jsx:110
 #: superset-frontend/src/views/dashboardList/DashboardList.tsx:161
 #: superset/views/dashboard/mixin.py:83 superset/views/dashboard/mixin.py:84
 msgid "Published"
@@ -2907,16 +2910,10 @@ msgstr ""
 msgid "An error occurred while fethching Dashboards"
 msgstr ""
 
-#: superset-frontend/src/components/TableLoader.jsx:84
-msgid "Name2"
-msgstr ""
-
-#: superset-frontend/src/components/TableLoader.jsx:85
-msgid "Type2"
-msgstr ""
-
 #: superset-frontend/src/components/TableLoader.jsx:86
-msgid "Time2"
+#: superset-frontend/src/explore/controlPanels/sections.jsx:23
+#: superset-frontend/src/explore/controlPanels/sections.jsx:45
+msgid "Time"
 msgstr ""
 
 #: superset-frontend/src/components/TableSelector.jsx:163
@@ -3257,6 +3254,10 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/PublishedStatus.jsx:42
 msgid "This dashboard is published. Click to make it a draft."
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/PublishedStatus.jsx:80
+msgid "Draft"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/RefreshIntervalModal.jsx:34
@@ -6308,11 +6309,6 @@ msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/WorldMap.js:84
 msgid "Metric that defines the size of the bubble"
-msgstr ""
-
-#: superset-frontend/src/explore/controlPanels/sections.jsx:23
-#: superset-frontend/src/explore/controlPanels/sections.jsx:45
-msgid "Time"
 msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/sections.jsx:25
