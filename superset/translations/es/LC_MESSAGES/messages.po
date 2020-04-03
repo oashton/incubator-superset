@@ -3070,7 +3070,7 @@ msgstr ""
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:731
 #: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:368
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 #: superset-frontend/src/components/ListView/ListView.tsx:304
 #: superset-frontend/src/views/dashboardList/DashboardList.tsx:239
