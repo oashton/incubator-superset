@@ -80,11 +80,11 @@ class TableLoader extends React.PureComponent {
     delete tableProps.mutator;
     delete tableProps.columns;
 
-    const column_names = {
+    const columnNames = {
       name: t('Name'),
       type: t('Type'),
       time: t('Time'),
-    }
+    };
 
     return (
       <Table
@@ -98,13 +98,17 @@ class TableLoader extends React.PureComponent {
             {columns.map(col => {
               if (row.hasOwnProperty('_' + col)) {
                 return (
-                  <Td key={column_names[col]} column={column_names[col]} value={row['_' + col]}>
+                  <Td
+                    key={columnNames[col]}
+                    column={columnNames[col]}
+                    value={row['_' + col]}
+                  >
                     {row[col]}
                   </Td>
                 );
               }
               return (
-                <Td key={column_names[col]} column={column_names[col]}>
+                <Td key={columnNames[col]} column={columnNames[col]}>
                   {row[col]}
                 </Td>
               );
