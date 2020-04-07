@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-03 19:24-0400\n"
+"POT-Creation-Date: 2020-04-06 18:57-0400\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -2169,6 +2169,54 @@ msgstr "dttm"
 msgid "Add Item"
 msgstr ""
 
+#: superset-frontend/src/SqlLab/constants.js:32
+msgid "success"
+msgstr "exitoso"
+
+#: superset-frontend/src/SqlLab/constants.js:33
+msgid "failed"
+msgstr "fallido"
+
+#: superset-frontend/src/SqlLab/constants.js:34
+msgid "running"
+msgstr "corriendo"
+
+#: superset-frontend/src/SqlLab/constants.js:35
+msgid "offline"
+msgstr "fuera de lìnea"
+
+#: superset-frontend/src/SqlLab/constants.js:36
+msgid "pending"
+msgstr "pendiente"
+
+#: superset-frontend/src/SqlLab/constants.js:40
+msgid "now"
+msgstr "Ahora"
+
+#: superset-frontend/src/SqlLab/constants.js:41
+msgid "1 hour ago"
+msgstr "Hace 1 hora"
+
+#: superset-frontend/src/SqlLab/constants.js:42
+msgid "1 day ago"
+msgstr "Hace 1 día"
+
+#: superset-frontend/src/SqlLab/constants.js:43
+msgid "7 days ago"
+msgstr "Hace 7 días"
+
+#: superset-frontend/src/SqlLab/constants.js:44
+msgid "28 days ago"
+msgstr "Hace 28 días"
+
+#: superset-frontend/src/SqlLab/constants.js:45
+msgid "90 days ago"
+msgstr "Hace 90 días"
+
+#: superset-frontend/src/SqlLab/constants.js:46
+msgid "1 year ago"
+msgstr "Hace 1 año"
+
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:150
 msgid "Your query was saved"
 msgstr "Tu consulta fue guardada"
@@ -2510,6 +2558,39 @@ msgstr "[A]-"
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:264
 msgid "Filter by status"
 msgstr ""
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:296
+msgid "state"
+msgstr "Estado"
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:300
+msgid "db"
+msgstr "Base de Datos"
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:304
+msgid "user"
+msgstr "Usuario"
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:308
+msgid "time"
+msgstr "Tiempo"
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:312
+msgid "progress"
+msgstr "Progreso"
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:316
+#: superset-frontend/src/explore/components/RowCountLabel.jsx:35
+msgid "rows"
+msgstr "Filas"
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:320
+msgid "sql"
+msgstr "sql"
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:324
+msgid "querylink"
+msgstr "Link de Consulta"
 
 #: superset-frontend/src/SqlLab/components/QueryTable.jsx:66
 #: superset-frontend/src/SqlLab/components/SqlEditor.jsx:210
@@ -3327,8 +3408,8 @@ msgid ""
 "This dashboard is not published, it will not show up in the list of "
 "dashboards. Click here to publish this dashboard."
 msgstr ""
-"Este tablero no está publicado, no se mostrará en el listado de "
-"tableros. Haz click aquì para publicar este tablero."
+"Este tablero no está publicado, no se mostrará en el listado de tableros."
+" Haz click aquì para publicar este tablero."
 
 #: superset-frontend/src/dashboard/components/PublishedStatus.jsx:37
 msgid ""
@@ -3336,9 +3417,9 @@ msgid ""
 "list of dashboards. Favorite it to see it there or access it by using the"
 " URL directly."
 msgstr ""
-"Este tablero no está publicado, lo cual significa que no se mostrarà en el "
-"listado de tableros. Seleccionalo como favorito para verlo en el listado o "
-"accede al tablero usando la URL directamente"
+"Este tablero no está publicado, lo cual significa que no se mostrarà en "
+"el listado de tableros. Seleccionalo como favorito para verlo en el "
+"listado o accede al tablero usando la URL directamente"
 
 #: superset-frontend/src/dashboard/components/PublishedStatus.jsx:42
 msgid "This dashboard is published. Click to make it a draft."
@@ -5677,10 +5758,6 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/PropertiesModal.jsx:209
 msgid "A list of users who can alter the chart"
-msgstr ""
-
-#: superset-frontend/src/explore/components/RowCountLabel.jsx:35
-msgid "rows"
 msgstr ""
 
 #: superset-frontend/src/explore/components/RowCountLabel.jsx:44

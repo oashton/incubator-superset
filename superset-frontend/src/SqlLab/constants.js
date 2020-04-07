@@ -16,6 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+import { t } from '@superset-ui/translation';
+
 export const STATE_BSSTYLE_MAP = {
   offline: 'danger',
   failed: 'danger',
@@ -27,21 +29,21 @@ export const STATE_BSSTYLE_MAP = {
 };
 
 export const STATUS_OPTIONS = {
-  success: 'success',
-  failed: 'failed',
-  running: 'running',
-  offline: 'offline',
-  pending: 'pending',
+  success: t('success'),
+  failed: t('failed'),
+  running: t('running'),
+  offline: t('offline'),
+  pending: t('pending'),
 };
 
 export const TIME_OPTIONS = [
-  'now',
-  '1 hour ago',
-  '1 day ago',
-  '7 days ago',
-  '28 days ago',
-  '90 days ago',
-  '1 year ago',
+  { key: 'now', label: t('now') },
+  { key: '1 hour ago', label: t('1 hour ago') },
+  { key: '1 day ago', label: t('1 day ago') },
+  { key: '7 days ago', label: t('7 days ago') },
+  { key: '28 days ago', label: t('28 days ago') },
+  { key: '90 days ago', label: t('90 days ago') },
+  { key: '1 year ago', label: t('1 year ago') },
 ];
 
 // SqlEditor layout constants

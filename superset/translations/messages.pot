@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-03 19:24-0400\n"
+"POT-Creation-Date: 2020-04-06 18:57-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2088,6 +2088,54 @@ msgstr ""
 msgid "Add Item"
 msgstr ""
 
+#: superset-frontend/src/SqlLab/constants.js:32
+msgid "success"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:33
+msgid "failed"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:34
+msgid "running"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:35
+msgid "offline"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:36
+msgid "pending"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:40
+msgid "now"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:41
+msgid "1 hour ago"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:42
+msgid "1 day ago"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:43
+msgid "7 days ago"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:44
+msgid "28 days ago"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:45
+msgid "90 days ago"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/constants.js:46
+msgid "1 year ago"
+msgstr ""
+
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:150
 msgid "Your query was saved"
 msgstr ""
@@ -2428,6 +2476,39 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:264
 msgid "Filter by status"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:296
+msgid "state"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:300
+msgid "db"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:304
+msgid "user"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:308
+msgid "time"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:312
+msgid "progress"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:316
+#: superset-frontend/src/explore/components/RowCountLabel.jsx:35
+msgid "rows"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:320
+msgid "sql"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:324
+msgid "querylink"
 msgstr ""
 
 #: superset-frontend/src/SqlLab/components/QueryTable.jsx:66
@@ -5531,10 +5612,6 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/PropertiesModal.jsx:209
 msgid "A list of users who can alter the chart"
-msgstr ""
-
-#: superset-frontend/src/explore/components/RowCountLabel.jsx:35
-msgid "rows"
 msgstr ""
 
 #: superset-frontend/src/explore/components/RowCountLabel.jsx:44
