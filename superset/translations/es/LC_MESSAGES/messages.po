@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-08 09:02-0400\n"
+"POT-Creation-Date: 2020-04-08 09:28-0400\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -601,7 +601,7 @@ msgstr "Descripción"
 
 #: superset/connectors/druid/views.py:172
 #: superset/connectors/druid/views.py:219 superset/connectors/sqla/views.py:127
-#: superset/connectors/sqla/views.py:208
+#: superset/connectors/sqla/views.py:208 superset/views/database/mixins.py:193
 msgid "Verbose Name"
 msgstr "Nombre detallado"
 
@@ -1338,12 +1338,13 @@ msgid "Created By"
 msgstr "Creado Por"
 
 #: superset/views/base.py:253 superset/views/core.py:264
-#: superset/views/schedules.py:201 superset/views/schedules.py:261
+#: superset/views/database/mixins.py:191 superset/views/schedules.py:201
+#: superset/views/schedules.py:261
 msgid "Created On"
 msgstr "Creado El"
 
-#: superset/views/base.py:254 superset/views/schedules.py:202
-#: superset/views/schedules.py:262
+#: superset/views/base.py:254 superset/views/database/mixins.py:192
+#: superset/views/schedules.py:202 superset/views/schedules.py:262
 msgid "Changed On"
 msgstr "Cambiado El"
 
@@ -2159,7 +2160,7 @@ msgstr "URI SQLAlchemy"
 
 #: superset/views/database/mixins.py:182
 msgid "Chart Cache Timeout"
-msgstr ""
+msgstr "Expiraciòn Tiempo De Cache Del Gráfico"
 
 #: superset/views/database/mixins.py:183
 msgid "Extra"
@@ -2175,7 +2176,7 @@ msgstr "Ejecución de Consultas Asincronas"
 
 #: superset/views/database/mixins.py:186
 msgid "Impersonate the logged on user"
-msgstr ""
+msgstr "Personificar el usuario autenticado"
 
 #: superset/views/database/mixins.py:187
 msgid "Allow Csv Upload"
@@ -2183,11 +2184,15 @@ msgstr "Permitir Descarga CSV"
 
 #: superset/views/database/mixins.py:189
 msgid "Allow Multi Schema Metadata Fetch"
-msgstr ""
+msgstr "Permitir Obtener Metadatos De Multi Esquemas"
 
 #: superset/views/database/mixins.py:190
 msgid "Backend"
 msgstr "Motor"
+
+#: superset/views/database/mixins.py:194
+msgid "Permission"
+msgstr "Permiso"
 
 #: superset/views/database/validators.py:38
 msgid ""

@@ -188,6 +188,10 @@ class DatabaseMixin:
         "modified": _("Modified"),
         "allow_multi_schema_metadata_fetch": _("Allow Multi Schema Metadata Fetch"),
         "backend": _("Backend"),
+        "created_on": _("Created On"),
+        "changed_on": _("Changed On"),
+        "verbose_name": _("Verbose Name"),
+        "perm": _("Permission"),
     }
 
     def _pre_add_update(self, database):
