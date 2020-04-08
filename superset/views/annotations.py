@@ -106,4 +106,6 @@ class AnnotationLayerModelView(
     edit_columns = ["name", "descr"]
     add_columns = edit_columns
 
-    label_columns = {"name": _("Name"), "descr": _("Description")}
+    label_columns = {"name": _("Name"), "descr": _("Description"),
+                    "annotation": _("Annotation"),
+                    **SupersetModelView.get_common_labels()}

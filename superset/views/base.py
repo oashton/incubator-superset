@@ -246,6 +246,13 @@ class SupersetModelView(ModelView):
             ),
         )
 
+    @classmethod
+    def get_common_labels(cls):
+        return {"created_by": _("Created By"),
+                "changed_by": _("Changed By"),
+                "created_on": _("Created On"),
+                "changed_on": _("Changed On")}
+
 
 class ListWidgetWithCheckboxes(ListWidget):  # pylint: disable=too-few-public-methods
     """An alternative to list view that renders Boolean fields as checkboxes

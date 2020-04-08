@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-06 18:57-0400\n"
+"POT-Creation-Date: 2020-04-07 19:53-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -577,7 +577,7 @@ msgstr ""
 #: superset/connectors/druid/views.py:171
 #: superset/connectors/druid/views.py:324 superset/connectors/sqla/views.py:128
 #: superset/connectors/sqla/views.py:207 superset/connectors/sqla/views.py:364
-#: superset/views/annotations.py:109 superset/views/chart/mixin.py:81
+#: superset/views/annotations.py:116 superset/views/chart/mixin.py:81
 #: superset/views/sql_lab.py:114
 msgid "Description"
 msgstr ""
@@ -763,6 +763,7 @@ msgid "Fetch Values From"
 msgstr ""
 
 #: superset/connectors/druid/views.py:333 superset/connectors/sqla/views.py:351
+#: superset/views/base.py:252
 msgid "Changed By"
 msgstr ""
 
@@ -1139,7 +1140,7 @@ msgstr ""
 msgid "Filter List"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:280
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:283
 #: superset-frontend/src/explore/components/DisplayQueryButton.jsx:186
 #: superset-frontend/src/explore/components/controls/VizTypeControl.jsx:228
 #: superset-frontend/src/welcome/Welcome.jsx:75
@@ -1272,8 +1273,12 @@ msgstr ""
 #: superset-frontend/src/components/TableLoader.jsx:84
 #: superset-frontend/src/explore/components/PropertiesModal.jsx:143
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:683
-#: superset/views/annotations.py:109 superset/views/chart/mixin.py:86
+#: superset/views/annotations.py:116 superset/views/chart/mixin.py:86
 msgid "Name"
+msgstr ""
+
+#: superset/views/annotations.py:116
+msgid "Annotation"
 msgstr ""
 
 #: superset/views/base.py:145
@@ -1281,24 +1286,38 @@ msgstr ""
 msgid "Datasource %(name)s already exists"
 msgstr ""
 
-#: superset/views/base.py:263
+#: superset/views/base.py:251
+msgid "Created By"
+msgstr ""
+
+#: superset/views/base.py:253 superset/views/core.py:264
+#: superset/views/schedules.py:201 superset/views/schedules.py:261
+msgid "Created On"
+msgstr ""
+
+#: superset/views/base.py:254 superset/views/schedules.py:202
+#: superset/views/schedules.py:262
+msgid "Changed On"
+msgstr ""
+
+#: superset/views/base.py:271
 msgid "json isn't valid"
 msgstr ""
 
-#: superset/views/base.py:274
+#: superset/views/base.py:282
 msgid "Export to YAML"
 msgstr ""
 
-#: superset/views/base.py:274
+#: superset/views/base.py:282
 msgid "Export to YAML?"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/DeleteComponentModal.jsx:70
-#: superset/views/base.py:330
+#: superset/views/base.py:338
 msgid "Delete"
 msgstr ""
 
-#: superset/views/base.py:330
+#: superset/views/base.py:338
 msgid "Delete all Really?"
 msgstr ""
 
@@ -1342,11 +1361,6 @@ msgstr ""
 
 #: superset/views/core.py:263
 msgid "Roles to grant"
-msgstr ""
-
-#: superset/views/core.py:264 superset/views/schedules.py:201
-#: superset/views/schedules.py:261
-msgid "Created On"
 msgstr ""
 
 #: superset/views/core.py:450
@@ -1512,10 +1526,6 @@ msgstr ""
 
 #: superset/views/schedules.py:164
 msgid "Manage Email Reports for Dashboards"
-msgstr ""
-
-#: superset/views/schedules.py:202 superset/views/schedules.py:262
-msgid "Changed On"
 msgstr ""
 
 #: superset/views/schedules.py:204 superset/views/schedules.py:264
@@ -2474,40 +2484,40 @@ msgstr ""
 msgid "[To]-"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:264
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:267
 msgid "Filter by status"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:296
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:299
 msgid "state"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:300
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:303
 msgid "db"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:304
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:307
 msgid "user"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:308
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:311
 msgid "time"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:312
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:315
 msgid "progress"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:316
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:319
 #: superset-frontend/src/explore/components/RowCountLabel.jsx:35
 msgid "rows"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:320
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:323
 msgid "sql"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:324
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:327
 msgid "querylink"
 msgstr ""
 
