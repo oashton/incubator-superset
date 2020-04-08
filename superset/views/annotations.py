@@ -72,6 +72,7 @@ class AnnotationModelView(
         "end_dttm": _("End Dttm"),
         "long_descr": _("Long Descr"),
         "json_metadata": _("JSON Metadata"),
+        **SupersetModelView.get_common_labels(),
     }
 
     description_columns = {

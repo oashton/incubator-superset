@@ -1273,23 +1273,23 @@ msgstr ""
 
 #: superset/views/annotations.py:69
 msgid "Layer"
-msgstr ""
+msgstr "Capa"
 
 #: superset/views/annotations.py:70
 msgid "Short Descr"
-msgstr ""
+msgstr "Descr Corta"
 
 #: superset/views/annotations.py:71
 msgid "Start Dttm"
-msgstr ""
+msgstr "Inicio Dttm"
 
 #: superset/views/annotations.py:72
 msgid "End Dttm"
-msgstr ""
+msgstr "Fin Dttm"
 
 #: superset/views/annotations.py:73
 msgid "Long Descr"
-msgstr ""
+msgstr "Descr Larga"
 
 #: superset-frontend/src/dashboard/components/PropertiesModal.jsx:251
 #: superset/views/annotations.py:74 superset/views/dashboard/mixin.py:81
