@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-07 19:53-0400\n"
+"POT-Creation-Date: 2020-04-08 09:02-0400\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -594,8 +594,8 @@ msgstr "Métrica"
 #: superset/connectors/druid/views.py:171
 #: superset/connectors/druid/views.py:324 superset/connectors/sqla/views.py:128
 #: superset/connectors/sqla/views.py:207 superset/connectors/sqla/views.py:364
-#: superset/views/annotations.py:116 superset/views/chart/mixin.py:81
-#: superset/views/sql_lab.py:114
+#: superset/views/annotations.py:110 superset/views/chart/mixin.py:81
+#: superset/views/sql_lab.py:134
 msgid "Description"
 msgstr "Descripción"
 
@@ -800,7 +800,7 @@ msgstr "Cambiado Por"
 #: superset/connectors/druid/views.py:334 superset/connectors/sqla/views.py:256
 #: superset/connectors/sqla/views.py:367 superset/views/dashboard/mixin.py:78
 #: superset/views/dashboard/views.py:136 superset/views/database/mixins.py:188
-#: superset/views/sql_lab.py:115
+#: superset/views/sql_lab.py:135
 msgid "Modified"
 msgstr "Modificado"
 
@@ -1031,7 +1031,8 @@ msgstr ""
 
 #: superset/connectors/sqla/views.py:352 superset/connectors/sqla/views.py:353
 #: superset/views/database/forms.py:105 superset/views/database/mixins.py:178
-#: superset/views/sql_lab.py:69 superset/views/sql_lab.py:113
+#: superset/views/sql_lab.py:69 superset/views/sql_lab.py:73
+#: superset/views/sql_lab.py:133
 msgid "Database"
 msgstr "Base de datos"
 
@@ -1040,6 +1041,7 @@ msgid "Last Changed"
 msgstr "Último cambio"
 
 #: superset/connectors/sqla/views.py:356 superset/views/database/forms.py:111
+#: superset/views/sql_lab.py:79
 msgid "Schema"
 msgstr "Esquema"
 
@@ -1296,33 +1298,33 @@ msgstr "Descr Larga"
 msgid "JSON Metadata"
 msgstr "Metadatos JSON"
 
-#: superset/views/annotations.py:100
+#: superset/views/annotations.py:101
 msgid "List Annotation Layer"
 msgstr "Lista Capa de Anotaciones"
 
-#: superset/views/annotations.py:101
+#: superset/views/annotations.py:102
 msgid "Show Annotation Layer"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl.jsx:107
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl.jsx:178
-#: superset/views/annotations.py:102
+#: superset/views/annotations.py:103
 msgid "Add Annotation Layer"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl.jsx:107
-#: superset/views/annotations.py:103
+#: superset/views/annotations.py:104
 msgid "Edit Annotation Layer"
 msgstr ""
 
 #: superset-frontend/src/components/TableLoader.jsx:84
 #: superset-frontend/src/explore/components/PropertiesModal.jsx:143
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:683
-#: superset/views/annotations.py:116 superset/views/chart/mixin.py:86
+#: superset/views/annotations.py:110 superset/views/chart/mixin.py:86
 msgid "Name"
 msgstr "Nombre"
 
-#: superset/views/annotations.py:116
+#: superset/views/annotations.py:111
 msgid "Annotation"
 msgstr "Anotación"
 
@@ -1345,24 +1347,24 @@ msgstr "Creado El"
 msgid "Changed On"
 msgstr "Cambiado El"
 
-#: superset/views/base.py:271
+#: superset/views/base.py:270
 msgid "json isn't valid"
 msgstr "no es json válido"
 
-#: superset/views/base.py:282
+#: superset/views/base.py:281
 msgid "Export to YAML"
 msgstr ""
 
-#: superset/views/base.py:282
+#: superset/views/base.py:281
 msgid "Export to YAML?"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/DeleteComponentModal.jsx:70
-#: superset/views/base.py:338
+#: superset/views/base.py:337
 msgid "Delete"
 msgstr "Eliminar"
 
-#: superset/views/base.py:338
+#: superset/views/base.py:337
 msgid "Delete all Really?"
 msgstr "¿Realmente quieres borrar todo?"
 
@@ -1394,7 +1396,7 @@ msgstr ""
 #: superset/views/core.py:259 superset/views/log/__init__.py:30
 #: superset/views/schedules.py:203 superset/views/schedules.py:263
 #: superset/views/sql_lab.py:67 superset/views/sql_lab.py:68
-#: superset/views/sql_lab.py:112
+#: superset/views/sql_lab.py:132
 msgid "User"
 msgstr "Usuario"
 
@@ -1637,23 +1639,92 @@ msgstr "Estado"
 msgid "Start Time"
 msgstr "Hora Inicio"
 
-#: superset/views/sql_lab.py:72 superset/views/sql_lab.py:116
+#: superset/views/sql_lab.py:72 superset/views/sql_lab.py:136
 msgid "End Time"
 msgstr "Hora Fin"
 
+#: superset/views/sql_lab.py:74
+msgid "Extra Json"
+msgstr "Json Extra"
+
+#: superset/views/sql_lab.py:75
+msgid "Client Id"
+msgstr "Id Cliente"
+
+#: superset/views/sql_lab.py:76
+msgid "Tmp Table Name"
+msgstr "Nombre de Tabla Temporal"
+
+#: superset/views/sql_lab.py:77
+msgid "Tab Name"
+msgstr "Nombre del Tab"
+
+#: superset/views/sql_lab.py:78
+msgid "SQL Editor Id"
+msgstr "Id del Editor SQL"
+
+#: superset/views/sql_lab.py:80
+msgid "Select SQL"
+msgstr "SQL Select"
+
+#: superset/views/sql_lab.py:81
+msgid "Executed SQL"
+msgstr "SQL Ejecutado"
+
 #: superset/views/sql_lab.py:82
+msgid "Limit"
+msgstr "Límite"
+
+#: superset/views/sql_lab.py:83
+msgid "Select As Cta"
+msgstr "Select Como Cta"
+
+#: superset/views/sql_lab.py:84
+msgid "Select As Cta Used"
+msgstr "Select Como Cta Usado"
+
+#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:315
+#: superset/views/sql_lab.py:85
+msgid "progress"
+msgstr "Progreso"
+
+#: superset/views/sql_lab.py:86
+msgid "Rows"
+msgstr "Filas"
+
+#: superset/views/sql_lab.py:87
+msgid "Error Message"
+msgstr "Mensaje De Error"
+
+#: superset/views/sql_lab.py:88
+msgid "Results Key"
+msgstr "Llaves De Los Resultados"
+
+#: superset/views/sql_lab.py:89
+msgid "Start Running Time"
+msgstr "Inicio Tiempo De Corrida"
+
+#: superset/views/sql_lab.py:90
+msgid "End Result Backend Time"
+msgstr "Resultado Final Tiempo En Backend"
+
+#: superset/views/sql_lab.py:91
+msgid "Tracking Url"
+msgstr "Url De Rastreo"
+
+#: superset/views/sql_lab.py:102
 msgid "List Saved Query"
 msgstr "Mostrar Consultas Guardadas"
 
-#: superset/views/sql_lab.py:83
+#: superset/views/sql_lab.py:103
 msgid "Show Saved Query"
 msgstr "Mostrar Consulta Guardada"
 
-#: superset/views/sql_lab.py:84
+#: superset/views/sql_lab.py:104
 msgid "Add Saved Query"
 msgstr "Añadir Consulta Guardada"
 
-#: superset/views/sql_lab.py:85
+#: superset/views/sql_lab.py:105
 msgid "Edit Saved Query"
 msgstr "Editar Consulta Guardada"
 
@@ -1663,15 +1734,15 @@ msgstr "Editar Consulta Guardada"
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:571
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:579
 #: superset-frontend/src/explore/components/controls/FilterBoxItemControl.jsx:93
-#: superset/views/sql_lab.py:111
+#: superset/views/sql_lab.py:131
 msgid "Label"
 msgstr "Etiqueta"
 
-#: superset/views/sql_lab.py:117
+#: superset/views/sql_lab.py:137
 msgid "Pop Tab Link"
 msgstr "Pop Tab Link"
 
-#: superset/views/sql_lab.py:118
+#: superset/views/sql_lab.py:138
 msgid "Changed on"
 msgstr "Cambiado el"
 
@@ -2584,10 +2655,6 @@ msgstr "Usuario"
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:311
 msgid "time"
 msgstr "Tiempo"
-
-#: superset-frontend/src/SqlLab/components/QuerySearch.jsx:315
-msgid "progress"
-msgstr "Progreso"
 
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:319
 #: superset-frontend/src/explore/components/RowCountLabel.jsx:35
