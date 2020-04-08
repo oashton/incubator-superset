@@ -86,6 +86,7 @@ class SliceMixin:  # pylint: disable=too-few-public-methods
         "slice_name": _("Name"),
         "table": _("Table"),
         "viz_type": _("Visualization Type"),
+        "datasource_name": _("Datasource Name"),
     }
 
     add_form_query_rel_fields = {"dashboards": [["name", DashboardFilter, None]]}
