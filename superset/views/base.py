@@ -251,7 +251,10 @@ class SupersetModelView(ModelView):
         return {"created_by": _("Created By"),
                 "changed_by": _("Changed By"),
                 "created_on": _("Created On"),
-                "changed_on": _("Changed On")}
+                "changed_on": _("Changed On"),
+                "created": _("Created2"),
+                "changed": _("Changed2"),
+                }
 
 
 class ListWidgetWithCheckboxes(ListWidget):  # pylint: disable=too-few-public-methods

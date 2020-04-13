@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-08 09:28-0400\n"
+"POT-Creation-Date: 2020-04-13 16:09-0400\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -781,7 +781,7 @@ msgstr "Endpoint predeterminado"
 msgid "Time Offset"
 msgstr "Desplazamiento de tiempo"
 
-#: superset/connectors/druid/views.py:331
+#: superset/connectors/druid/views.py:331 superset/views/chart/mixin.py:89
 msgid "Datasource Name"
 msgstr "Nombre de la Fuente de Datos"
 
@@ -1041,7 +1041,7 @@ msgid "Last Changed"
 msgstr "Último cambio"
 
 #: superset/connectors/sqla/views.py:356 superset/views/database/forms.py:111
-#: superset/views/sql_lab.py:79
+#: superset/views/sql_lab.py:79 superset/views/sql_lab.py:139
 msgid "Schema"
 msgstr "Esquema"
 
@@ -1107,6 +1107,21 @@ msgstr "Verdadero"
 #: superset/models/dashboard.py:204
 msgid "False"
 msgstr "Falso"
+
+#: superset/security/manager.py:91 superset/views/core.py:259
+#: superset/views/log/__init__.py:30 superset/views/schedules.py:203
+#: superset/views/schedules.py:263 superset/views/sql_lab.py:67
+#: superset/views/sql_lab.py:68 superset/views/sql_lab.py:132
+msgid "User"
+msgstr "Usuario"
+
+#: superset/security/manager.py:92
+msgid "Created"
+msgstr "Creado"
+
+#: superset/security/manager.py:92
+msgid "Changed"
+msgstr "Modificado"
 
 #: superset/tasks/schedules.py:92 superset/tasks/schedules.py:286
 #, python-format
@@ -1348,24 +1363,32 @@ msgstr "Creado El"
 msgid "Changed On"
 msgstr "Cambiado El"
 
-#: superset/views/base.py:270
+#: superset/views/base.py:255
+msgid "Created2"
+msgstr ""
+
+#: superset/views/base.py:256
+msgid "Changed2"
+msgstr ""
+
+#: superset/views/base.py:273
 msgid "json isn't valid"
 msgstr "no es json válido"
 
-#: superset/views/base.py:281
+#: superset/views/base.py:284
 msgid "Export to YAML"
 msgstr ""
 
-#: superset/views/base.py:281
+#: superset/views/base.py:284
 msgid "Export to YAML?"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/DeleteComponentModal.jsx:70
-#: superset/views/base.py:337
+#: superset/views/base.py:340
 msgid "Delete"
 msgstr "Eliminar"
 
-#: superset/views/base.py:337
+#: superset/views/base.py:340
 msgid "Delete all Really?"
 msgstr "¿Realmente quieres borrar todo?"
 
@@ -1393,13 +1416,6 @@ msgid ""
 msgstr ""
 "Esta vista requiere la base de datos %(name)s o el permiso "
 "`all_datasource_access`"
-
-#: superset/views/core.py:259 superset/views/log/__init__.py:30
-#: superset/views/schedules.py:203 superset/views/schedules.py:263
-#: superset/views/sql_lab.py:67 superset/views/sql_lab.py:68
-#: superset/views/sql_lab.py:132
-msgid "User"
-msgstr "Usuario"
 
 #: superset/views/core.py:260
 msgid "User Roles"
@@ -2250,6 +2266,22 @@ msgstr "Acción"
 #: superset/views/log/__init__.py:32
 msgid "dttm"
 msgstr "dttm"
+
+#: superset/views/log/views.py:31
+msgid "Dashboard Id"
+msgstr "Id Tablero"
+
+#: superset/views/log/views.py:32
+msgid "Slice Id"
+msgstr "Id Gráfico"
+
+#: superset/views/log/views.py:33
+msgid "Duration Ms"
+msgstr "Duración en Milisegundos"
+
+#: superset/views/log/views.py:34
+msgid "Referrer"
+msgstr "Referente"
 
 #: superset-frontend/src/CRUD/CollectionTable.jsx:254
 msgid "Add Item"

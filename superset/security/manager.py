@@ -38,6 +38,7 @@ from flask_appbuilder.widgets import ListWidget
 from sqlalchemy import or_
 from sqlalchemy.engine.base import Connection
 from sqlalchemy.orm.mapper import Mapper
+from flask_babel import lazy_gettext as _
 
 from superset import sql_parse
 from superset.connectors.connector_registry import ConnectorRegistry
@@ -87,6 +88,8 @@ PermissionViewModelView.include_route_methods = {RouteMethod.LIST}
 PermissionModelView.include_route_methods = {RouteMethod.LIST}
 ViewMenuModelView.include_route_methods = {RouteMethod.LIST}
 
+RoleModelView.label_columns = {**RoleModelView.label_columns, "user": _("User"),}
+UserModelView.label_columns = {**UserModelView.label_columns, "created": _("Created"), "changed": _("Changed"),}
 
 class SupersetSecurityManager(SecurityManager):
     userstatschartview = None

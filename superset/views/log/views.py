@@ -15,6 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 from flask_appbuilder.models.sqla.interface import SQLAInterface
+from flask_babel import lazy_gettext as _
 
 import superset.models.core as models
 from superset.constants import RouteMethod
@@ -26,3 +27,8 @@ from . import LogMixin
 class LogModelView(LogMixin, SupersetModelView):  # pylint: disable=too-many-ancestors
     datamodel = SQLAInterface(models.Log)
     include_route_methods = {RouteMethod.LIST, RouteMethod.SHOW}
+
+    label_columns = {"dashboard_id": _("Dashboard Id"),
+                    "slice_id": _("Slice Id"),
+                    "duration_ms": _("Duration Ms"),
+                    "referrer": _("Referrer"),}
