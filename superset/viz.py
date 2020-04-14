@@ -45,7 +45,7 @@ from geopy.point import Point
 from markdown import markdown
 from pandas.tseries.frequencies import to_offset
 
-from superset import app, cache, get_css_manifest_files, security_manager
+from superset import app, cache, get_manifest_files, security_manager
 from superset.constants import NULL_STRING
 from superset.exceptions import NullValueException, SpatialException
 from superset.models.helpers import QueryResult
@@ -177,6 +177,26 @@ class BaseViz:
         the underlying query(ies).
         """
         pass
+
+    def apply_rolling(self, df):
+        fd = self.form_data
+        rolling_type = fd.get("rolling_type")
+        rolling_periods = int(fd.get("rolling_periods") or 0)
+        min_periods = int(fd.get("min_periods") or 0)
+
+        if rolling_type in ("mean", "std", "sum") and rolling_periods:
+            kwargs = dict(window=rolling_periods, min_periods=min_periods)
+            if rolling_type == "mean":
+                df = df.rolling(**kwargs).mean()
+            elif rolling_type == "std":
+                df = df.rolling(**kwargs).std()
+            elif rolling_type == "sum":
+                df = df.rolling(**kwargs).sum()
+        elif rolling_type == "cumsum":
+            df = df.cumsum()
+        if min_periods:
+            df = df[min_periods:]
+        return df
 
     def get_samples(self):
         query_obj = self.query_obj()
@@ -310,7 +330,7 @@ class BaseViz:
             "druid_time_origin": form_data.get("druid_time_origin", ""),
             "having": form_data.get("having", ""),
             "having_druid": form_data.get("having_filters", []),
-            "time_grain_sqla": form_data.get("time_grain_sqla", ""),
+            "time_grain_sqla": form_data.get("time_grain_sqla"),
             "time_range_endpoints": form_data.get("time_range_endpoints"),
             "where": form_data.get("where", ""),
         }
@@ -423,6 +443,8 @@ class BaseViz:
                 df = self.get_df(query_obj)
                 if self.status != utils.QueryStatus.FAILED:
                     stats_logger.incr("loaded_from_source")
+                    if not self.force:
+                        stats_logger.incr("loaded_from_source_without_force")
                     is_loaded = True
             except Exception as e:
                 logger.exception(e)
@@ -766,7 +788,7 @@ class MarkupViz(BaseViz):
         code = self.form_data.get("code", "")
         if markup_type == "markdown":
             code = markdown(code)
-        return dict(html=code, theme_css=get_css_manifest_files("theme"))
+        return dict(html=code, theme_css=get_manifest_files("theme", "css"))
 
 
 class SeparatorViz(MarkupViz):
@@ -1101,6 +1123,18 @@ class BigNumberViz(BaseViz):
         self.form_data["metric"] = metric
         return d
 
+    def get_data(self, df: pd.DataFrame) -> VizData:
+        df = df.pivot_table(
+            index=DTTM_ALIAS,
+            columns=[],
+            values=self.metric_labels,
+            dropna=False,
+            aggfunc=np.min,  # looking for any (only) value, preserving `None`
+        )
+        df = self.apply_rolling(df)
+        df[DTTM_ALIAS] = df.index
+        return super().get_data(df)
+
 
 class BigNumberTotalViz(BaseViz):
 
@@ -1225,23 +1259,7 @@ class NVD3TimeSeriesViz(NVD3Viz):
             dfs.sort_values(ascending=False, inplace=True)
             df = df[dfs.index]
 
-        rolling_type = fd.get("rolling_type")
-        rolling_periods = int(fd.get("rolling_periods") or 0)
-        min_periods = int(fd.get("min_periods") or 0)
-
-        if rolling_type in ("mean", "std", "sum") and rolling_periods:
-            kwargs = dict(window=rolling_periods, min_periods=min_periods)
-            if rolling_type == "mean":
-                df = df.rolling(**kwargs).mean()
-            elif rolling_type == "std":
-                df = df.rolling(**kwargs).std()
-            elif rolling_type == "sum":
-                df = df.rolling(**kwargs).sum()
-        elif rolling_type == "cumsum":
-            df = df.cumsum()
-        if min_periods:
-            df = df[min_periods:]
-
+        df = self.apply_rolling(df)
         if fd.get("contribution"):
             dft = df.T
             df = (dft / dft.sum()).T
@@ -1657,12 +1675,15 @@ class SunburstViz(BaseViz):
     def get_data(self, df: pd.DataFrame) -> VizData:
         fd = self.form_data
         cols = fd.get("groupby") or []
+        cols.extend(["m1", "m2"])
         metric = utils.get_metric_name(fd.get("metric"))
         secondary_metric = utils.get_metric_name(fd.get("secondary_metric"))
         if metric == secondary_metric or secondary_metric is None:
             df.rename(columns={df.columns[-1]: "m1"}, inplace=True)
             df["m2"] = df["m1"]
-            cols.extend(["m1", "m2"])
+        else:
+            df.rename(columns={df.columns[-2]: "m1"}, inplace=True)
+            df.rename(columns={df.columns[-1]: "m2"}, inplace=True)
 
         # Re-order the columns as the query result set column ordering may differ from
         # that listed in the hierarchy.
