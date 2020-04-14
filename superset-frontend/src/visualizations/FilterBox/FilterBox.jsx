@@ -139,7 +139,7 @@ class FilterBox extends React.Component {
 
   clickApply() {
     const { selectedValues } = this.state;
-    this.setState({ hasChanged: false }, () => {
+    this.setState({ hasChanged: false, isFilteredByFilterBox: true }, () => {
       this.props.onChange(selectedValues, false);
     });
   }
@@ -156,13 +156,10 @@ class FilterBox extends React.Component {
         vals = options;
       }
     }
-    let selectedValues = {};
-    if (vals.length !== 0) {
-      selectedValues = {
-        ...this.state.selectedValues,
-        [fltr]: vals,
-      };
-    }
+    const selectedValues = {
+      ...this.state.selectedValues,
+      [fltr]: vals,
+    };
 
     this.setState(
       { selectedValues, hasChanged: true, isFilteredByFilterBox: true },
