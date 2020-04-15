@@ -36,12 +36,12 @@ import getFilterValuesByFilterId from '../../util/getFilterValuesByFilterId';
 const propTypes = {
   id: PropTypes.number.isRequired,
   componentId: PropTypes.string.isRequired,
+  dashboardId: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   updateSliceName: PropTypes.func.isRequired,
   isComponentVisible: PropTypes.bool,
-  handleFullSize: PropTypes.func.isRequired,
-  resizeEvent: PropTypes.bool,
+  handleToggleFullSize: PropTypes.func.isRequired,
 
   // from redux
   chart: chartPropShape.isRequired,
@@ -70,14 +70,13 @@ const propTypes = {
 const defaultProps = {
   isCached: false,
   isComponentVisible: true,
-  resizeEvent: false,
 };
 
 // we use state + shouldComponentUpdate() logic to prevent perf-wrecking
 // resizing across all slices on a dashboard on every update
 const RESIZE_TIMEOUT = 350;
 const SHOULD_UPDATE_ON_PROP_CHANGES = Object.keys(propTypes).filter(
-  prop => prop !== 'width' && prop !== 'height' && prop !== 'resizeEvent',
+  prop => prop !== 'width' && prop !== 'height',
 );
 const OVERFLOWABLE_VIZ_TYPES = new Set(['filter_box']);
 const DEFAULT_HEADER_HEIGHT = 22;
@@ -119,7 +118,7 @@ class Chart extends React.Component {
         return true;
       }
 
-      if (nextProps.resizeEvent) {
+      if (nextProps.isFullSize !== this.props.isFullSize) {
         clearTimeout(this.resizeTimeout);
         this.resizeTimeout = setTimeout(this.resize, RESIZE_TIMEOUT);
         return false;
@@ -141,7 +140,8 @@ class Chart extends React.Component {
       }
     }
 
-    return false;
+    // `cacheBusterProp` is nnjected by react-hot-loader
+    return this.props.cacheBusterProp !== nextProps.cacheBusterProp;
   }
 
   componentWillUnmount() {
@@ -214,13 +214,18 @@ class Chart extends React.Component {
       slice_id: this.props.slice.slice_id,
       is_cached: this.props.isCached,
     });
-    return this.props.refreshChart(this.props.chart.id, true);
+    return this.props.refreshChart(
+      this.props.chart.id,
+      true,
+      this.props.dashboardId,
+    );
   }
 
   render() {
     const {
       id,
       componentId,
+      dashboardId,
       chart,
       slice,
       datasource,
@@ -236,7 +241,7 @@ class Chart extends React.Component {
       supersetCanCSV,
       sliceCanEdit,
       addDangerToast,
-      handleFullSize,
+      handleToggleFullSize,
       isFullSize,
     } = this.props;
 
@@ -280,9 +285,10 @@ class Chart extends React.Component {
           supersetCanCSV={supersetCanCSV}
           sliceCanEdit={sliceCanEdit}
           componentId={componentId}
+          dashboardId={dashboardId}
           filters={filters}
           addDangerToast={addDangerToast}
-          handleFullSize={handleFullSize}
+          handleToggleFullSize={handleToggleFullSize}
           isFullSize={isFullSize}
         />
 
@@ -319,6 +325,7 @@ class Chart extends React.Component {
             chartId={id}
             chartStatus={chart.chartStatus}
             datasource={datasource}
+            dashboardId={dashboardId}
             initialValues={initialValues}
             formData={formData}
             queryResponse={chart.queryResponse}

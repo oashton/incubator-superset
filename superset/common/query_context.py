@@ -123,7 +123,7 @@ class QueryContext:
 
     @staticmethod
     def get_data(  # pylint: disable=invalid-name,no-self-use
-        df: pd.DataFrame
+        df: pd.DataFrame,
     ) -> List[Dict]:
         return df.to_dict(orient="records")
 
@@ -213,6 +213,8 @@ class QueryContext:
                 df = query_result["df"]
                 if status != utils.QueryStatus.FAILED:
                     stats_logger.incr("loaded_from_source")
+                    if not self.force:
+                        stats_logger.incr("loaded_from_source_without_force")
                     is_loaded = True
             except Exception as e:  # pylint: disable=broad-except
                 logger.exception(e)

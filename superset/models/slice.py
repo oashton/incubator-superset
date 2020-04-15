@@ -113,6 +113,12 @@ class Slice(
         datasource = self.datasource
         return datasource.link if datasource else None
 
+    @renders("datasource_url")
+    def datasource_url(self) -> Optional[str]:
+        # pylint: disable=no-member
+        datasource = self.datasource
+        return datasource.explore_url if datasource else None
+
     def datasource_name_text(self) -> Optional[str]:
         # pylint: disable=no-member
         datasource = self.datasource
@@ -225,23 +231,6 @@ class Slice(
     @property
     def changed_by_url(self) -> str:
         return f"/superset/profile/{self.created_by.username}"
-
-    def get_viz(self, force: bool = False) -> BaseViz:
-        """Creates :py:class:viz.BaseViz object from the url_params_multidict.
-
-        :return: object of the 'viz_type' type that is taken from the
-            url_params_multidict or self.params.
-        :rtype: :py:class:viz.BaseViz
-        """
-        slice_params = json.loads(self.params)
-        slice_params["slice_id"] = self.id
-        slice_params["json"] = "false"
-        slice_params["slice_name"] = self.slice_name
-        slice_params["viz_type"] = self.viz_type if self.viz_type else "table"
-
-        return viz_types[slice_params.get("viz_type")](
-            self.datasource, form_data=slice_params, force=force
-        )
 
     @property
     def icons(self) -> str:

@@ -44,10 +44,10 @@ const propTypes = {
   supersetCanCSV: PropTypes.bool,
   sliceCanEdit: PropTypes.bool,
   componentId: PropTypes.string.isRequired,
+  dashboardId: PropTypes.number.isRequired,
   filters: PropTypes.object.isRequired,
   addDangerToast: PropTypes.func.isRequired,
-  handleFullSize: PropTypes.func.isRequired,
-  resizeEvent: PropTypes.bool,
+  handleToggleFullSize: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
@@ -69,7 +69,6 @@ const defaultProps = {
   supersetCanExplore: false,
   supersetCanCSV: false,
   sliceCanEdit: false,
-  resizeEvent: false,
 };
 
 const annoationsLoading = t('Annotation layers are still loading.');
@@ -97,8 +96,9 @@ class SliceHeader extends React.PureComponent {
       annotationQuery,
       annotationError,
       componentId,
+      dashboardId,
       addDangerToast,
-      handleFullSize,
+      handleToggleFullSize,
       isFullSize,
     } = this.props;
 
@@ -150,8 +150,9 @@ class SliceHeader extends React.PureComponent {
               supersetCanCSV={supersetCanCSV}
               sliceCanEdit={sliceCanEdit}
               componentId={componentId}
+              dashboardId={dashboardId}
               addDangerToast={addDangerToast}
-              handleFullSize={handleFullSize}
+              handleToggleFullSize={handleToggleFullSize}
               isFullSize={isFullSize}
             />
           )}
