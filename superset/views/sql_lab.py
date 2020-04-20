@@ -74,6 +74,7 @@ class QueryView(SupersetModelView):
         "extra_json": _("Extra Json"),
         "client_id": _("Client Id"),
         "tmp_table_name": _("Tmp Table Name"),
+        "tmp_schema_name": _("Tmp Schema Name"),
         "tab_name": _("Tab Name"),
         "sql_editor_id": _("SQL Editor Id"),
         "schema": _("Schema"),

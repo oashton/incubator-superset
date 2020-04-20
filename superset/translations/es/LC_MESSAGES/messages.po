@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-13 16:09-0400\n"
+"POT-Creation-Date: 2020-04-20 17:28-0400\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -28,38 +28,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: superset/app.py:194
+#: superset/app.py:196
 msgid "Annotation Layers"
 msgstr "Capas de Anotación"
 
-#: superset/app.py:197 superset/app.py:206 superset/app.py:250
-#: superset/app.py:258 superset/app.py:308 superset/app.py:369
-#: superset/app.py:377
+#: superset/app.py:199 superset/app.py:208 superset/app.py:252
+#: superset/app.py:260 superset/app.py:310 superset/app.py:371
+#: superset/app.py:379
 msgid "Manage"
 msgstr "Administrar"
 
-#: superset/app.py:203
+#: superset/app.py:205
 msgid "Annotations"
 msgstr "Anotaciones"
 
-#: superset-frontend/src/profile/components/Security.jsx:43 superset/app.py:212
-#: superset/views/database/mixins.py:30
+#: superset-frontend/src/profile/components/Security.jsx:43 superset/app.py:214
+#: superset/views/database/mixins.py:31
 msgid "Databases"
 msgstr "Bases de datos"
 
-#: superset/app.py:215 superset/app.py:224 superset/app.py:341
-#: superset/app.py:404 superset/app.py:413 superset/app.py:426
-#: superset/app.py:435
+#: superset/app.py:217 superset/app.py:226 superset/app.py:343
+#: superset/app.py:406 superset/app.py:415 superset/app.py:428
+#: superset/app.py:437
 msgid "Sources"
 msgstr "Fuentes"
 
-#: superset/app.py:220 superset/connectors/sqla/views.py:264
+#: superset/app.py:222 superset/connectors/sqla/views.py:264
 msgid "Tables"
 msgstr "Tablas"
 
 #: superset-frontend/src/profile/components/CreatedContent.jsx:82
 #: superset-frontend/src/profile/components/Favorites.jsx:83
-#: superset/app.py:231 superset/views/chart/mixin.py:26
+#: superset/app.py:233 superset/views/chart/mixin.py:26
 #: superset/views/dashboard/mixin.py:75
 msgid "Charts"
 msgstr "Gráficas"
@@ -67,88 +67,92 @@ msgstr "Gráficas"
 #: superset-frontend/src/profile/components/CreatedContent.jsx:79
 #: superset-frontend/src/profile/components/Favorites.jsx:80
 #: superset-frontend/src/welcome/Welcome.jsx:64
-#: superset-frontend/src/welcome/Welcome.jsx:68 superset/app.py:239
+#: superset-frontend/src/welcome/Welcome.jsx:69 superset/app.py:241
 #: superset/views/chart/mixin.py:79 superset/views/dashboard/mixin.py:25
 msgid "Dashboards"
 msgstr "Cuadros de Mando"
 
-#: superset/app.py:247 superset/views/core.py:2762
+#: superset/app.py:249 superset/views/core.py:2814
 msgid "CSS Templates"
 msgstr "Plantillas CSS"
 
-#: superset/app.py:256
+#: superset/app.py:258
 msgid "Queries"
 msgstr "Consultas"
 
-#: superset/app.py:265
+#: superset/app.py:267
 msgid "Row level security filters"
 msgstr ""
 
-#: superset/app.py:267 superset/app.py:355 superset/app.py:390
+#: superset/app.py:269 superset/app.py:357 superset/app.py:392
 msgid "Security"
 msgstr "Seguridad"
 
-#: superset/app.py:304
+#: superset/app.py:306
 msgid "Import Dashboards"
 msgstr "Importar Cuadros de Mando"
 
-#: superset/app.py:313
+#: superset/app.py:315
 msgid "SQL Editor"
 msgstr "Editor SQL"
 
-#: superset/app.py:318 superset/app.py:333
+#: superset/app.py:320 superset/app.py:335
 msgid "SQL Lab"
 msgstr "Laboratorio SQL"
 
-#: superset/app.py:321
+#: superset/app.py:323
 msgid "Saved Queries"
 msgstr " Consultas Guardadas"
 
-#: superset/app.py:328
+#: superset/app.py:330
 msgid "Query Search"
 msgstr "Consulta de Búsqueda"
 
-#: superset/app.py:337
+#: superset/app.py:339
 msgid "Upload a CSV"
 msgstr "Cargar un CSV"
 
-#: superset/app.py:353
+#: superset/app.py:355
 msgid "Action Log"
 msgstr "Registro Acciones"
 
-#: superset/app.py:367
+#: superset/app.py:369
 msgid "Dashboard Emails"
 msgstr ""
 
-#: superset/app.py:375
+#: superset/app.py:377
 msgid "Chart Email Schedules"
 msgstr ""
 
-#: superset/app.py:388
+#: superset/app.py:390
 msgid "Access requests"
 msgstr "Solicitudes de Acceso"
 
-#: superset/app.py:402 superset/connectors/druid/views.py:256
+#: superset/app.py:404 superset/connectors/druid/views.py:256
 msgid "Druid Datasources"
 msgstr "Fuentes de Datos Druid"
 
-#: superset/app.py:410 superset/connectors/druid/views.py:194
+#: superset/app.py:412 superset/connectors/druid/views.py:194
 msgid "Druid Clusters"
 msgstr "Clusters Druid"
 
-#: superset/app.py:423
+#: superset/app.py:425
 msgid "Scan New Datasources"
 msgstr "Buscar Nuevas Fuentes de Datos"
 
-#: superset/app.py:432
+#: superset/app.py:434
 msgid "Refresh Druid Metadata"
 msgstr "Actualizar Metadatos Druid"
 
-#: superset/sql_lab.py:195
+#: superset/exceptions.py:66
+msgid "Invalid certificate"
+msgstr ""
+
+#: superset/sql_lab.py:196
 msgid "Only `SELECT` statements are allowed against this database"
 msgstr ""
 
-#: superset/sql_lab.py:200
+#: superset/sql_lab.py:201
 msgid "Only `SELECT` statements can be used with the CREATE TABLE feature."
 msgstr ""
 
@@ -156,195 +160,196 @@ msgstr ""
 msgid "Viz is missing a datasource"
 msgstr "Falta una fuente de datos"
 
-#: superset/utils/core.py:1070 superset/viz.py:302
+#: superset/utils/core.py:1082 superset/viz.py:322
 msgid "From date cannot be larger than to date"
 msgstr "La fecha de inicio no puede ser superior a la de fin"
 
-#: superset/viz.py:514
+#: superset/viz.py:533
 msgid "Table View"
 msgstr "Vista de Tabla"
 
-#: superset/viz.py:527
+#: superset/viz.py:546
 msgid "Pick a granularity in the Time section or uncheck 'Include Time'"
 msgstr "Elige una granularidad en la sección de tiempo o desmarca 'Incluir tiempo'"
 
-#: superset/viz.py:539
+#: superset/viz.py:558
 msgid ""
 "Choose either fields to [Group By] and [Metrics] and/or [Percentage "
 "Metrics], or [Columns], not both"
 msgstr ""
 
-#: superset/viz.py:636
+#: superset/viz.py:655
 msgid "Time Table View"
 msgstr ""
 
-#: superset/viz.py:645 superset/viz.py:1575
+#: superset/viz.py:664 superset/viz.py:1616
 msgid "Pick at least one metric"
 msgstr "Elige al menos una métrica"
 
-#: superset/viz.py:649
+#: superset/viz.py:668
 msgid "When using 'Group By' you are limited to use a single metric"
 msgstr ""
 
-#: superset/viz.py:675
+#: superset/viz.py:697
 msgid "Pivot Table"
 msgstr "Tabla Dinámica"
 
-#: superset/viz.py:690
+#: superset/viz.py:712
 msgid "Please choose at least one 'Group by' field "
 msgstr ""
 
-#: superset/viz.py:701
+#: superset/viz.py:723
 msgid "Please choose at least one metric"
 msgstr "Por favor elige al menos una métrica"
 
-#: superset/viz.py:703
+#: superset/viz.py:725
 msgid "Group By' and 'Columns' can't overlap"
 msgstr ""
 
-#: superset/viz.py:752
+#: superset/viz.py:777
 msgid "Markup"
 msgstr "Texto con Formato"
 
-#: superset/viz.py:774
+#: superset/viz.py:799
 msgid "Separator"
 msgstr "Separador"
 
-#: superset/viz.py:786
+#: superset/viz.py:811
 msgid "Word Cloud"
 msgstr "Nube de Etiquetas"
 
-#: superset/viz.py:800
+#: superset/viz.py:825
 msgid "Treemap"
 msgstr "Mapa de Arbol"
 
-#: superset/viz.py:829
+#: superset/viz.py:857
 msgid "Calendar Heatmap"
 msgstr "Mapa de Calor del Calendario"
 
-#: superset/viz.py:901
+#: superset/viz.py:929
 msgid "Box Plot"
 msgstr "Diagrama de Caja"
 
-#: superset-frontend/src/explore/controlPanels/Bubble.js:22 superset/viz.py:985
+#: superset-frontend/src/explore/controlPanels/Bubble.js:22
+#: superset/viz.py:1016
 msgid "Bubble Chart"
 msgstr "Gráfico de Burbujas"
 
-#: superset/viz.py:1007
+#: superset/viz.py:1038
 msgid "Please use 3 different metric labels"
 msgstr ""
 
-#: superset/viz.py:1009
+#: superset/viz.py:1040
 msgid "Pick a metric for x, y and size"
 msgstr "Elige una métrica y tamaño para x, y "
 
-#: superset/viz.py:1033
+#: superset/viz.py:1067
 msgid "Bullet Chart"
 msgstr "Grafico de Puntos"
 
-#: superset/viz.py:1057
+#: superset/viz.py:1091
 msgid "Pick a metric to display"
 msgstr "Elige una métrica para mostrar"
 
-#: superset/viz.py:1079
+#: superset/viz.py:1113
 msgid "Big Number with Trendline"
 msgstr "Número Grande con Línea de Tendencia"
 
-#: superset/viz.py:1087 superset/viz.py:1106
+#: superset/viz.py:1121 superset/viz.py:1152
 msgid "Pick a metric!"
 msgstr "Elige una métrica!"
 
-#: superset/viz.py:1098
+#: superset/viz.py:1144
 msgid "Big Number"
 msgstr "Número Grande"
 
-#: superset/viz.py:1120
+#: superset/viz.py:1166
 msgid "Time Series - Line Chart"
 msgstr "Serie Temporal - Gráfico de Líneas"
 
-#: superset/viz.py:1184 superset/viz.py:1409
+#: superset/viz.py:1230 superset/viz.py:1442
 msgid "Pick a time granularity for your time series"
 msgstr "Elige una granularidad de tiempo para tus series de tiempo."
 
-#: superset/viz.py:1255
+#: superset/viz.py:1285
 msgid ""
 "`Since` and `Until` time bounds should be specified when using the `Time "
 "Shift` feature."
 msgstr ""
 
-#: superset/viz.py:1325
+#: superset/viz.py:1355
 msgid "Time Series - Multiple Line Charts"
 msgstr ""
 
-#: superset/viz.py:1355
+#: superset/viz.py:1385
 msgid "Time Series - Dual Axis Line Chart"
 msgstr "Series temporales - Gráfico de líneas de doble eje"
 
-#: superset/viz.py:1365
+#: superset/viz.py:1395
 msgid "Pick a metric for left axis!"
 msgstr "Elige una métrica para el eje izquierdo!"
 
-#: superset/viz.py:1367
+#: superset/viz.py:1397
 msgid "Pick a metric for right axis!"
 msgstr "Elige una métrica para el eje derecho!"
 
-#: superset/viz.py:1370
+#: superset/viz.py:1400
 msgid "Please choose different metrics on left and right axis"
 msgstr "Por favor, elige diferentes métricas en el eje izquierdo y derecho"
 
-#: superset/viz.py:1425
+#: superset/viz.py:1458
 msgid "Time Series - Bar Chart"
 msgstr "Series de Tiempo - Gráfico de Barras"
 
-#: superset/viz.py:1434
+#: superset/viz.py:1467
 msgid "Time Series - Period Pivot"
 msgstr ""
 
-#: superset/viz.py:1478
+#: superset/viz.py:1514
 msgid "Time Series - Percent Change"
 msgstr "Series de tiempo - Cambio Porcentual"
 
-#: superset/viz.py:1486
+#: superset/viz.py:1522
 msgid "Time Series - Stacked"
 msgstr "Series de Tiempo - Apiladas"
 
-#: superset/viz.py:1496
+#: superset/viz.py:1532
 msgid "Distribution - NVD3 - Pie Chart"
 msgstr "Distribución - NVD3 - Gráfico Circular"
 
-#: superset/viz.py:1513
+#: superset/viz.py:1551
 msgid "Histogram"
 msgstr "Histograma"
 
-#: superset/viz.py:1522
+#: superset/viz.py:1560
 msgid "Must have at least one numeric column specified"
 msgstr ""
 
-#: superset/viz.py:1564
+#: superset/viz.py:1605
 msgid "Distribution - Bar Chart"
 msgstr "Distribución - Gráfico de Barra"
 
-#: superset/viz.py:1573
+#: superset/viz.py:1614
 msgid "Can't have overlap between Series and Breakdowns"
 msgstr "No se puede superponer Series y Distribuciones"
 
-#: superset/viz.py:1577
+#: superset/viz.py:1618
 msgid "Pick at least one field for [Series]"
 msgstr "Elige al menos un campo para [Series]"
 
-#: superset/viz.py:1624
+#: superset/viz.py:1668
 msgid "Sunburst"
 msgstr "Sunburst"
 
-#: superset/viz.py:1661
+#: superset/viz.py:1708
 msgid "Sankey"
 msgstr "Sankey"
 
-#: superset/viz.py:1668
+#: superset/viz.py:1715
 msgid "Pick exactly 2 columns as [Source / Target]"
 msgstr "Elige exactamente 2 columnas como [Origen / Destino]"
 
-#: superset/viz.py:1701
+#: superset/viz.py:1748
 msgid ""
 "There's a loop in your Sankey, please provide a tree. Here's a faulty "
 "link: {}"
@@ -352,139 +357,192 @@ msgstr ""
 "Hay un bucle en tu Sankey, por favor proporciona un árbol. Aquí hay un "
 "enlace defectuoso: {}"
 
-#: superset/viz.py:1714 superset/viz.py:1735
+#: superset/viz.py:1761 superset/viz.py:1782
 msgid "Directed Force Layout"
 msgstr "Disposición Dirigida Forzado"
 
-#: superset/viz.py:1721
+#: superset/viz.py:1768
 msgid "Pick exactly 2 columns to 'Group By'"
 msgstr "Elija exactamente 2 columnas para 'Agrupar por'"
 
-#: superset/viz.py:1765
+#: superset/viz.py:1815
 msgid "Country Map"
 msgstr "Mapa de País"
 
-#: superset/viz.py:1792
+#: superset/viz.py:1842
 msgid "World Map"
 msgstr "Mapa Mundial"
 
-#: superset-frontend/src/dashboard/components/Header.jsx:394
-#: superset-frontend/src/explore/controls.jsx:2128 superset/viz.py:1843
+#: superset-frontend/src/dashboard/components/Header.jsx:405
+#: superset-frontend/src/explore/controls.jsx:1694 superset/viz.py:1893
 msgid "Filters"
 msgstr "Filtros"
 
-#: superset/viz.py:1861
+#: superset/viz.py:1911
 msgid "Invalid filter configuration, please select a column"
 msgstr ""
 
-#: superset/viz.py:1899
+#: superset/viz.py:1949
 msgid "iFrame"
 msgstr "iFrame"
 
-#: superset/viz.py:1922
+#: superset/viz.py:1972
 msgid "Parallel Coordinates"
 msgstr "Coordenadas Paralelas"
 
-#: superset/viz.py:1944
+#: superset/viz.py:1994
 msgid "Heatmap"
 msgstr "Mapa de Calor"
 
-#: superset/viz.py:1997
+#: superset/viz.py:2050
 msgid "Horizon Charts"
 msgstr "Gráficos de Horizontes"
 
-#: superset/viz.py:2009
+#: superset/viz.py:2062
 msgid "Mapbox"
 msgstr "Caja de Mapa"
 
-#: superset/viz.py:2020
+#: superset/viz.py:2073
 msgid "[Longitude] and [Latitude] must be set"
 msgstr ""
 
-#: superset/viz.py:2026
+#: superset/viz.py:2079
 msgid "Must have a [Group By] column to have 'count' as the [Label]"
 msgstr ""
 "Debe tener una columna [Agrupar por] para tener 'contar' como la "
 "[Etiqueta]"
 
-#: superset/viz.py:2045
+#: superset/viz.py:2098
 msgid "Choice of [Label] must be present in [Group By]"
 msgstr "La opción de [Etiqueta] debe estar presente en [Agrupar por]"
 
-#: superset/viz.py:2051
+#: superset/viz.py:2104
 msgid "Choice of [Point Radius] must be present in [Group By]"
 msgstr "La opción de [Radio de puntos] debe estar presente en [Agrupar por]"
 
-#: superset/viz.py:2058
+#: superset/viz.py:2111
 msgid "[Longitude] and [Latitude] columns must be present in [Group By]"
 msgstr "Las columnas [Longitud] y [Latitud] deben estar presentes en [Agrupar por]"
 
-#: superset/viz.py:2137
+#: superset/viz.py:2191
 msgid "Deck.gl - Multiple Layers"
 msgstr ""
 
-#: superset/viz.py:2177 superset/viz.py:2208
+#: superset/viz.py:2231 superset/viz.py:2262
 msgid "Bad spatial key"
 msgstr ""
 
-#: superset/viz.py:2194
+#: superset/viz.py:2248
 #, python-format
 msgid "Invalid spatial point encountered: %s"
 msgstr ""
 
-#: superset/viz.py:2230
+#: superset/viz.py:2284
 msgid ""
 "Encountered invalid NULL spatial entry,"
 "                                        please consider filtering those "
 "out"
 msgstr ""
 
-#: superset/viz.py:2318
+#: superset/viz.py:2372
 msgid "Deck.gl - Scatter plot"
 msgstr ""
 
-#: superset/viz.py:2365
+#: superset/viz.py:2419
 msgid "Deck.gl - Screen Grid"
 msgstr ""
 
-#: superset/viz.py:2391
+#: superset/viz.py:2445
 msgid "Deck.gl - 3D Grid"
 msgstr ""
 
-#: superset/viz.py:2418
+#: superset/viz.py:2472
 msgid "Deck.gl - Paths"
 msgstr ""
 
-#: superset/viz.py:2466
+#: superset/viz.py:2520
 msgid "Deck.gl - Polygon"
 msgstr ""
 
-#: superset/viz.py:2495
+#: superset/viz.py:2549
 msgid "Deck.gl - 3D HEX"
 msgstr ""
 
-#: superset/viz.py:2511
+#: superset/viz.py:2565
 msgid "Deck.gl - GeoJSON"
 msgstr ""
 
-#: superset/viz.py:2530
+#: superset/viz.py:2584
 msgid "Deck.gl - Arc"
 msgstr ""
 
-#: superset/viz.py:2562
+#: superset/viz.py:2619
 msgid "Event flow"
 msgstr "Flujo de Evento"
 
-#: superset/viz.py:2594
+#: superset/viz.py:2651
 msgid "Time Series - Paired t-test"
 msgstr "Serie Temportal - Prueba-T Pareada"
 
-#: superset/viz.py:2645
+#: superset/viz.py:2706
 msgid "Time Series - Nightingale Rose Chart"
 msgstr ""
 
-#: superset/viz.py:2677
+#: superset/viz.py:2741
 msgid "Partition Diagram"
+msgstr ""
+
+#: superset/charts/api.py:337
+#, python-format
+msgid "Deleted %(num)d chart"
+msgid_plural "Deleted %(num)d charts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: superset/charts/commands/exceptions.py:36
+#: superset/datasets/commands/exceptions.py:37
+msgid "Database does not exist"
+msgstr ""
+
+#: superset/charts/commands/exceptions.py:45
+msgid "Dashboards do not exist"
+msgstr ""
+
+#: superset/charts/commands/exceptions.py:55
+msgid "Datasource type is required when datasource_id is given"
+msgstr ""
+
+#: superset/charts/commands/exceptions.py:65
+msgid "Chart parameters are invalid."
+msgstr ""
+
+#: superset/charts/commands/exceptions.py:69
+msgid "Chart could not be created."
+msgstr ""
+
+#: superset/charts/commands/exceptions.py:73
+msgid "Chart could not be updated."
+msgstr ""
+
+#: superset/charts/commands/exceptions.py:77
+msgid "Chart could not be deleted."
+msgstr ""
+
+#: superset/charts/commands/exceptions.py:81
+msgid "Changing this chart is forbidden"
+msgstr ""
+
+#: superset/charts/commands/exceptions.py:85
+msgid "Charts could not be deleted."
+msgstr ""
+
+#: superset/commands/exceptions.py:80
+#: superset/datasets/commands/exceptions.py:142
+msgid "Owners are invalid"
+msgstr ""
+
+#: superset/commands/exceptions.py:87
+msgid "Datasource does not exist"
 msgstr ""
 
 #: superset/connectors/druid/models.py:236
@@ -504,8 +562,8 @@ msgid "Unsupported extraction function: "
 msgstr ""
 
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:670
-#: superset-frontend/src/explore/controls.jsx:674
-#: superset-frontend/src/explore/controls.jsx:681
+#: superset-frontend/src/explore/controls.jsx:530
+#: superset-frontend/src/explore/controls.jsx:537
 #: superset/connectors/druid/views.py:55 superset/connectors/sqla/views.py:55
 msgid "Columns"
 msgstr "Columnas"
@@ -536,10 +594,10 @@ msgstr "Columna"
 msgid "Type"
 msgstr "Tipo"
 
-#: superset-frontend/src/explore/controls.jsx:249
-#: superset-frontend/src/views/chartList/ChartList.tsx:149
+#: superset-frontend/src/explore/controls.jsx:243
+#: superset-frontend/src/views/chartList/ChartList.tsx:143
 #: superset/connectors/druid/views.py:78 superset/views/chart/mixin.py:80
-#: superset/views/core.py:262
+#: superset/views/core.py:280
 msgid "Datasource"
 msgstr "Fuente de datos"
 
@@ -560,7 +618,7 @@ msgstr ""
 "exploración."
 
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:659
-#: superset-frontend/src/explore/controls.jsx:162
+#: superset-frontend/src/explore/controls.jsx:156
 #: superset/connectors/druid/views.py:142 superset/connectors/sqla/views.py:172
 msgid "Metrics"
 msgstr "Métricas"
@@ -579,8 +637,8 @@ msgstr "Editar Métricas Druid"
 
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:570
 #: superset-frontend/src/explore/controlPanels/CountryMap.js:45
-#: superset-frontend/src/explore/controls.jsx:181
-#: superset-frontend/src/explore/controls.jsx:182
+#: superset-frontend/src/explore/controls.jsx:175
+#: superset-frontend/src/explore/controls.jsx:176
 #: superset/connectors/druid/views.py:170 superset/connectors/sqla/views.py:206
 msgid "Metric"
 msgstr "Métrica"
@@ -590,18 +648,18 @@ msgstr "Métrica"
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:96
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:403
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:584
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:155
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:186
 #: superset/connectors/druid/views.py:171
 #: superset/connectors/druid/views.py:324 superset/connectors/sqla/views.py:128
 #: superset/connectors/sqla/views.py:207 superset/connectors/sqla/views.py:364
 #: superset/views/annotations.py:110 superset/views/chart/mixin.py:81
-#: superset/views/sql_lab.py:134
+#: superset/views/sql_lab.py:135
 msgid "Description"
 msgstr "Descripción"
 
 #: superset/connectors/druid/views.py:172
 #: superset/connectors/druid/views.py:219 superset/connectors/sqla/views.py:127
-#: superset/connectors/sqla/views.py:208 superset/views/database/mixins.py:193
+#: superset/connectors/sqla/views.py:208 superset/views/database/mixins.py:202
 msgid "Verbose Name"
 msgstr "Nombre detallado"
 
@@ -656,7 +714,7 @@ msgid "Broker Endpoint"
 msgstr "Endpoint Broker"
 
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:494
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:177
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:210
 #: superset/connectors/druid/views.py:220
 #: superset/connectors/druid/views.py:330 superset/connectors/sqla/views.py:359
 #: superset/views/chart/mixin.py:77
@@ -757,9 +815,9 @@ msgstr "Fuente de Datos"
 msgid "Cluster"
 msgstr "Cluster"
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:215
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:243
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:438
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:197
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:230
 #: superset/connectors/druid/views.py:325 superset/connectors/sqla/views.py:362
 #: superset/views/chart/mixin.py:83 superset/views/dashboard/mixin.py:76
 msgid "Owners"
@@ -789,18 +847,20 @@ msgstr "Nombre de la Fuente de Datos"
 msgid "Fetch Values From"
 msgstr ""
 
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:162
 #: superset/connectors/druid/views.py:333 superset/connectors/sqla/views.py:351
-#: superset/views/base.py:252
+#: superset/views/base.py:253
 msgid "Changed By"
 msgstr "Cambiado Por"
 
 #: superset-frontend/src/dashboard/components/AddSliceCard.jsx:56
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:171
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:174
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:171
 #: superset-frontend/src/welcome/DashboardTable.jsx:76
 #: superset/connectors/druid/views.py:334 superset/connectors/sqla/views.py:256
 #: superset/connectors/sqla/views.py:367 superset/views/dashboard/mixin.py:78
-#: superset/views/dashboard/views.py:136 superset/views/database/mixins.py:188
-#: superset/views/sql_lab.py:135
+#: superset/views/dashboard/views.py:136 superset/views/database/mixins.py:197
+#: superset/views/sql_lab.py:136
 msgid "Modified"
 msgstr "Modificado"
 
@@ -808,7 +868,7 @@ msgstr "Modificado"
 msgid "Refreshed metadata from cluster [{}]"
 msgstr ""
 
-#: superset/connectors/sqla/models.py:712
+#: superset/connectors/sqla/models.py:747
 msgid ""
 "Datetime column not provided as part table configuration and is required "
 "by this type of chart"
@@ -816,17 +876,17 @@ msgstr ""
 "No se ha proporcionado una columna de fecha y hora y es requerida por "
 "este tipo de gráfico"
 
-#: superset/connectors/sqla/models.py:718
+#: superset/connectors/sqla/models.py:753
 msgid "Empty query?"
 msgstr "¿Consulta vacía?"
 
-#: superset/connectors/sqla/models.py:726
-#: superset/connectors/sqla/models.py:977
+#: superset/connectors/sqla/models.py:761
+#: superset/connectors/sqla/models.py:1012
 #, python-format
 msgid "Metric '%(metric)s' does not exist"
 msgstr ""
 
-#: superset/connectors/sqla/models.py:1048
+#: superset/connectors/sqla/models.py:1083
 msgid ""
 "Table [{}] doesn't seem to exist in the specified database, couldn't "
 "fetch column information"
@@ -834,7 +894,7 @@ msgstr ""
 "La tabla [{}] no parece existir en la base de datos especificada, no se "
 "pudo recuperar la información de las columnas"
 
-#: superset/connectors/sqla/models.py:1134
+#: superset/connectors/sqla/models.py:1169
 #, python-format
 msgid "Database '%(name)s' is not found"
 msgstr ""
@@ -870,7 +930,8 @@ msgstr ""
 "expresión. En la mayoría de los casos, los usuarios no deberían necesitar"
 " alterar esto."
 
-#: superset-frontend/src/SqlLab/components/ResultSet.jsx:217
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:222
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:146
 #: superset/connectors/sqla/views.py:131 superset/connectors/sqla/views.py:211
 #: superset/connectors/sqla/views.py:252 superset/connectors/sqla/views.py:350
 #: superset/views/chart/mixin.py:87
@@ -890,7 +951,7 @@ msgstr "Es temporal"
 msgid "Datetime Format"
 msgstr "Formato FechaHora"
 
-#: superset/connectors/sqla/views.py:151
+#: superset/connectors/sqla/views.py:151 superset/datasets/schemas.py:38
 msgid "Invalid date/timestamp format"
 msgstr ""
 
@@ -957,12 +1018,12 @@ msgstr "Roles"
 msgid "Clause"
 msgstr ""
 
-#: superset-frontend/src/views/chartList/ChartList.tsx:162
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:147
+#: superset-frontend/src/views/chartList/ChartList.tsx:156
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:150
 #: superset-frontend/src/welcome/DashboardTable.jsx:66
 #: superset/connectors/sqla/views.py:255 superset/views/chart/mixin.py:78
 #: superset/views/dashboard/mixin.py:77 superset/views/dashboard/views.py:135
-#: superset/views/database/mixins.py:179
+#: superset/views/database/mixins.py:187
 msgid "Creator"
 msgstr "Creador"
 
@@ -1029,19 +1090,20 @@ msgid ""
 "database timeout if undefined."
 msgstr ""
 
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:150
 #: superset/connectors/sqla/views.py:352 superset/connectors/sqla/views.py:353
-#: superset/views/database/forms.py:105 superset/views/database/mixins.py:178
+#: superset/views/database/forms.py:105 superset/views/database/mixins.py:186
 #: superset/views/sql_lab.py:69 superset/views/sql_lab.py:73
-#: superset/views/sql_lab.py:133
+#: superset/views/sql_lab.py:134
 msgid "Database"
 msgstr "Base de datos"
 
-#: superset/connectors/sqla/views.py:354 superset/views/database/mixins.py:180
+#: superset/connectors/sqla/views.py:354 superset/views/database/mixins.py:188
 msgid "Last Changed"
 msgstr "Último cambio"
 
 #: superset/connectors/sqla/views.py:356 superset/views/database/forms.py:111
-#: superset/views/sql_lab.py:79 superset/views/sql_lab.py:139
+#: superset/views/sql_lab.py:80 superset/views/sql_lab.py:140
 msgid "Schema"
 msgstr "Esquema"
 
@@ -1100,6 +1162,100 @@ msgstr ""
 msgid "Unable to retrieve metadata for the following table(s): %(tables)s"
 msgstr ""
 
+#: superset/dashboards/api.py:332
+#, python-format
+msgid "Deleted %(num)d dashboard"
+msgid_plural "Deleted %(num)d dashboards"
+msgstr[0] ""
+msgstr[1] ""
+
+#: superset/dashboards/commands/exceptions.py:36
+msgid "Must be unique"
+msgstr ""
+
+#: superset/dashboards/commands/exceptions.py:40
+msgid "Dashboard parameters are invalid."
+msgstr ""
+
+#: superset/dashboards/commands/exceptions.py:44
+msgid "Dashboard not found."
+msgstr ""
+
+#: superset/dashboards/commands/exceptions.py:48
+msgid "Dashboard could not be created."
+msgstr ""
+
+#: superset/dashboards/commands/exceptions.py:52
+msgid "Dashboards could not be deleted."
+msgstr ""
+
+#: superset/dashboards/commands/exceptions.py:56
+msgid "Dashboard could not be updated."
+msgstr ""
+
+#: superset/dashboards/commands/exceptions.py:60
+msgid "Dashboard could not be deleted."
+msgstr ""
+
+#: superset/dashboards/commands/exceptions.py:64
+msgid "Changing this Dashboard is forbidden"
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:46
+msgid "Database not allowed to change"
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:66
+msgid "One or more columns do not exist"
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:76
+msgid "One or more columns are duplicated"
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:87
+msgid "One or more columns already exist"
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:97
+msgid "One or more metrics do not exist"
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:107
+msgid "One or more metrics are duplicated"
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:118
+msgid "One or more metrics already exist"
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:129
+msgid ""
+"Table [{table_name}] could not be found, please double check your "
+"database connection, schema, and table name"
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:150
+msgid "Dataset parameters are invalid."
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:154
+msgid "Dataset could not be created."
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:158
+#: superset/datasets/commands/exceptions.py:166
+msgid "Dataset could not be updated."
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:162
+msgid "Dataset could not be deleted."
+msgstr ""
+
+#: superset/datasets/commands/exceptions.py:170
+msgid "Changing this dataset is forbidden"
+msgstr ""
+
 #: superset/models/dashboard.py:203
 msgid "True"
 msgstr "Verdadero"
@@ -1108,18 +1264,19 @@ msgstr "Verdadero"
 msgid "False"
 msgstr "Falso"
 
-#: superset/security/manager.py:91 superset/views/core.py:259
-#: superset/views/log/__init__.py:30 superset/views/schedules.py:203
-#: superset/views/schedules.py:263 superset/views/sql_lab.py:67
-#: superset/views/sql_lab.py:68 superset/views/sql_lab.py:132
+#: superset/security/manager.py:96 superset/views/core.py:277
+#: superset/views/log/__init__.py:30 superset/views/log/views.py:35
+#: superset/views/schedules.py:203 superset/views/schedules.py:263
+#: superset/views/sql_lab.py:67 superset/views/sql_lab.py:68
+#: superset/views/sql_lab.py:133
 msgid "User"
 msgstr "Usuario"
 
-#: superset/security/manager.py:92
+#: superset/security/manager.py:97
 msgid "Created"
 msgstr "Creado"
 
-#: superset/security/manager.py:92
+#: superset/security/manager.py:97
 msgid "Changed"
 msgstr "Modificado"
 
@@ -1159,7 +1316,7 @@ msgstr "Consulta SQL"
 
 #: superset-frontend/src/components/Menu/NewMenu.jsx:50
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:358
-#: superset-frontend/src/views/chartList/ChartList.tsx:126
+#: superset-frontend/src/views/chartList/ChartList.tsx:123
 #: superset/templates/appbuilder/navbar_right.html:39
 #: superset/views/chart/mixin.py:85 superset/views/chart/views.py:101
 #: superset/views/schedules.py:260
@@ -1195,17 +1352,17 @@ msgstr "Número de Registros"
 
 #: superset/templates/appbuilder/general/widgets/base_list.html:64
 msgid "No records found"
-msgstr "No se encontrarón registros"
+msgstr "No se encontraron registros"
 
-#: superset-frontend/src/components/ListView/ListView.tsx:152
+#: superset-frontend/src/components/ListView/ListView.tsx:165
 #: superset/templates/appbuilder/general/widgets/search.html:24
 msgid "Filter List"
 msgstr "Lista de Filtros"
 
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:283
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:186
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:189
 #: superset-frontend/src/explore/components/controls/VizTypeControl.jsx:228
-#: superset-frontend/src/welcome/Welcome.jsx:75
+#: superset-frontend/src/welcome/Welcome.jsx:76
 #: superset/templates/appbuilder/general/widgets/search.html:56
 msgid "Search"
 msgstr "Buscar"
@@ -1243,9 +1400,9 @@ msgstr "Solicitar Permisos"
 #: superset-frontend/src/SqlLab/components/SaveQuery.jsx:152
 #: superset-frontend/src/components/ConfirmStatusChange.tsx:69
 #: superset-frontend/src/dashboard/components/DeleteComponentModal.jsx:68
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:286
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:314
 #: superset-frontend/src/datasource/DatasourceModal.jsx:168
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:226
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:259
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:723
 #: superset/templates/superset/request_access.html:34
 msgid "Cancel"
@@ -1259,7 +1416,7 @@ msgstr ""
 msgid "Test Connection"
 msgstr "Probar Conexión"
 
-#: superset/utils/core.py:643
+#: superset/utils/core.py:652
 #, python-format
 msgid "[Superset] Access to the datasource %(name)s was granted"
 msgstr "Se ha otorgado Acceso [Superset] a la fuente de datos %(name)"
@@ -1308,7 +1465,7 @@ msgstr "Fin Dttm"
 msgid "Long Descr"
 msgstr "Descr Larga"
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:251
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:279
 #: superset/views/annotations.py:74 superset/views/dashboard/mixin.py:81
 msgid "JSON Metadata"
 msgstr "Metadatos JSON"
@@ -1333,7 +1490,7 @@ msgid "Edit Annotation Layer"
 msgstr ""
 
 #: superset-frontend/src/components/TableLoader.jsx:84
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:143
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:172
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:683
 #: superset/views/annotations.py:110 superset/views/chart/mixin.py:86
 msgid "Name"
@@ -1343,72 +1500,72 @@ msgstr "Nombre"
 msgid "Annotation"
 msgstr "Anotación"
 
-#: superset/views/base.py:145
+#: superset/views/base.py:146
 #, python-format
 msgid "Datasource %(name)s already exists"
 msgstr "La fuente de datos %(name)s ya existe"
 
-#: superset/views/base.py:251
+#: superset/views/base.py:252
 msgid "Created By"
 msgstr "Creado Por"
 
-#: superset/views/base.py:253 superset/views/core.py:264
-#: superset/views/database/mixins.py:191 superset/views/schedules.py:201
+#: superset/views/base.py:254 superset/views/core.py:282
+#: superset/views/database/mixins.py:200 superset/views/schedules.py:201
 #: superset/views/schedules.py:261
 msgid "Created On"
 msgstr "Creado El"
 
-#: superset/views/base.py:254 superset/views/database/mixins.py:192
+#: superset/views/base.py:255 superset/views/database/mixins.py:201
 #: superset/views/schedules.py:202 superset/views/schedules.py:262
 msgid "Changed On"
 msgstr "Cambiado El"
 
-#: superset/views/base.py:255
+#: superset/views/base.py:256
 msgid "Created2"
 msgstr ""
 
-#: superset/views/base.py:256
+#: superset/views/base.py:257
 msgid "Changed2"
 msgstr ""
 
-#: superset/views/base.py:273
+#: superset/views/base.py:274
 msgid "json isn't valid"
 msgstr "no es json válido"
 
-#: superset/views/base.py:284
+#: superset/views/base.py:285
 msgid "Export to YAML"
 msgstr ""
 
-#: superset/views/base.py:284
+#: superset/views/base.py:285
 msgid "Export to YAML?"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/DeleteComponentModal.jsx:70
-#: superset/views/base.py:340
+#: superset/views/base.py:341
 msgid "Delete"
 msgstr "Eliminar"
 
-#: superset/views/base.py:340
+#: superset/views/base.py:341
 msgid "Delete all Really?"
 msgstr "¿Realmente quieres borrar todo?"
 
-#: superset/views/core.py:136
+#: superset/views/core.py:143
 msgid "This endpoint requires the `all_datasource_access` permission"
 msgstr "Este API requiere el permiso `all_datasource_access`"
 
-#: superset/views/core.py:139
+#: superset/views/core.py:146
 msgid "The data source seems to have been deleted"
 msgstr ""
 
-#: superset/views/core.py:140
+#: superset/views/core.py:147
 msgid "The access requests seem to have been deleted"
 msgstr "Las solicitudes de acceso parecen haber sido eliminadas"
 
-#: superset/views/core.py:141
+#: superset/views/core.py:148
 msgid "The user seems to have been deleted"
 msgstr "El usuario parece haber sido eliminado"
 
-#: superset/views/core.py:149
+#: superset/views/core.py:156
 #, python-format
 msgid ""
 "This view requires the database %(name)s or `all_datasource_access` "
@@ -1417,113 +1574,113 @@ msgstr ""
 "Esta vista requiere la base de datos %(name)s o el permiso "
 "`all_datasource_access`"
 
-#: superset/views/core.py:260
+#: superset/views/core.py:278
 msgid "User Roles"
 msgstr "Roles de Usuario"
 
-#: superset/views/core.py:261
+#: superset/views/core.py:279
 msgid "Database URL"
 msgstr "URL de la Base de datos"
 
-#: superset/views/core.py:263
+#: superset/views/core.py:281
 msgid "Roles to grant"
 msgstr "Roles a conceder"
 
-#: superset/views/core.py:450
+#: superset/views/core.py:468
 msgid "Access was requested"
 msgstr "Se ha solicitado Acceso"
 
-#: superset/views/core.py:515
+#: superset/views/core.py:533
 #, python-format
 msgid ""
 "%(user)s was granted the role %(role)s that gives access to the "
 "%(datasource)s"
 msgstr "%(user)s recibió el rol %(role)s que le da acceso a %(datasource)s"
 
-#: superset/views/core.py:538
+#: superset/views/core.py:556
 #, python-format
 msgid "Role %(r)s was extended to provide the access to the datasource %(ds)s"
 msgstr ""
 "El rol %(r)s se extendió para proporcionar el acceso al origen de datos "
 "%(ds)s"
 
-#: superset/views/core.py:555
+#: superset/views/core.py:573
 msgid "You have no permission to approve this request"
 msgstr "No tienes permiso para aprobar esta solicitud."
 
-#: superset/views/core.py:734
+#: superset/views/core.py:732
 #, python-format
 msgid ""
 "Cannot import dashboard: %(db_error)s.\n"
 "Make sure to create the database before importing the dashboard."
 msgstr ""
 
-#: superset/views/core.py:745
+#: superset/views/core.py:743
 msgid "An unknown error occurred. Please contact your Superset administrator"
 msgstr ""
 
-#: superset/views/core.py:847 superset/views/core.py:853
-#: superset/views/core.py:976 superset/views/core.py:993
+#: superset/views/core.py:845 superset/views/core.py:851
+#: superset/views/core.py:984 superset/views/core.py:1001
 msgid "You don't have the rights to "
 msgstr ""
 
-#: superset/views/core.py:847 superset/views/core.py:977
+#: superset/views/core.py:845 superset/views/core.py:985
 msgid "alter this "
 msgstr ""
 
-#: superset/views/core.py:847 superset/views/core.py:853
+#: superset/views/core.py:845 superset/views/core.py:851
 msgid "chart"
 msgstr ""
 
-#: superset/views/core.py:853 superset/views/core.py:994
+#: superset/views/core.py:851 superset/views/core.py:1002
 msgid "create a "
 msgstr ""
 
-#: superset/views/core.py:894
+#: superset/views/core.py:892
 #, python-format
 msgid "Explore - %(table)s"
 msgstr ""
 
-#: superset/views/core.py:978 superset/views/core.py:995
+#: superset/views/core.py:986 superset/views/core.py:1003
 msgid "dashboard"
 msgstr ""
 
-#: superset/views/core.py:983
+#: superset/views/core.py:991
 msgid "Chart [{}] was added to dashboard [{}]"
 msgstr ""
 
-#: superset/views/core.py:1004
+#: superset/views/core.py:1012
 msgid "Dashboard [{}] just got created and chart [{}] was added to it"
 msgstr ""
 
-#: superset/views/core.py:1030
+#: superset/views/core.py:1038
 msgid "Chart [{}] has been saved"
 msgstr ""
 
-#: superset/views/core.py:1039
+#: superset/views/core.py:1047
 msgid "Chart [{}] has been overwritten"
 msgstr ""
 
-#: superset/views/core.py:1349
+#: superset/views/core.py:1378
 #, python-format
 msgid "Could not load database driver: %(driver_name)s"
 msgstr ""
 
-#: superset/views/core.py:1358
+#: superset/views/core.py:1387
 msgid ""
 "Invalid connection string, a valid string usually follows:\n"
 "'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
 msgstr ""
 
-#: superset/views/core.py:1366
+#: superset/views/core.py:1395
 msgid "Connection failed, please check your connection settings."
 msgstr ""
 
-#: superset/views/core.py:1370
-msgid "Unexpected error occurred."
+#: superset/views/core.py:1403
+msgid "Unexpected error occurred, please check your logs for details"
 msgstr ""
 
-#: superset/views/core.py:1620
+#: superset/views/core.py:1655
 msgid ""
 "Malformed request. slice_id or table_name and db_name arguments are "
 "expected"
@@ -1531,29 +1688,29 @@ msgstr ""
 "Solicitud mal formada. Se esperan argumentos de slice_id o table_name y "
 "db_name"
 
-#: superset/views/core.py:1630
+#: superset/views/core.py:1665
 #, python-format
 msgid "Chart %(id)s not found"
 msgstr ""
 
-#: superset/views/core.py:1644
+#: superset/views/core.py:1679
 #, python-format
 msgid "Table %(t)s wasn't found in the database %(d)s"
 msgstr "La tabla %(t)s no se encontró en la base de datos %(d)s"
 
-#: superset/views/core.py:1882
+#: superset/views/core.py:1930
 #, python-format
 msgid "Can't find User '%(name)s', please ask your admin to create one."
 msgstr ""
 "No se puede encontrar el usuario '%(name)s', pídale a tu administrador "
 "que cree uno."
 
-#: superset/views/core.py:1894
+#: superset/views/core.py:1942
 #, python-format
 msgid "Can't find DruidCluster with cluster_name = '%(name)s'"
 msgstr "No puedo encontrar DruidCluster con nombre = '%(name)s'"
 
-#: superset/views/core.py:2180
+#: superset/views/core.py:2228
 #, python-format
 msgid ""
 "%(validator_name)s was unable to check your query.\n"
@@ -1561,34 +1718,34 @@ msgid ""
 "Exception: {exception}"
 msgstr ""
 
-#: superset/views/core.py:2225
+#: superset/views/core.py:2273
 msgid ""
 "Failed to start remote query on a worker. Tell your administrator to "
 "verify the availability of the message queue."
 msgstr ""
 
-#: superset/views/core.py:2366 superset/views/core.py:2368
+#: superset/views/core.py:2420 superset/views/core.py:2422
 msgid "Query record was not created as expected."
 msgstr "El registro de consulta no se creó como se esperaba."
 
-#: superset/views/core.py:2639
+#: superset/views/core.py:2695
 #, python-format
 msgid "%(user)s's profile"
 msgstr ""
 
-#: superset/views/core.py:2763
+#: superset/views/core.py:2815
 msgid "Show CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2764
+#: superset/views/core.py:2816
 msgid "Add CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2765
+#: superset/views/core.py:2817
 msgid "Edit CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2770
+#: superset/views/core.py:2822
 msgid "Template Name"
 msgstr "Nombre Plantilla"
 
@@ -1656,7 +1813,7 @@ msgstr "Estado"
 msgid "Start Time"
 msgstr "Hora Inicio"
 
-#: superset/views/sql_lab.py:72 superset/views/sql_lab.py:136
+#: superset/views/sql_lab.py:72 superset/views/sql_lab.py:137
 msgid "End Time"
 msgstr "Hora Fin"
 
@@ -1673,75 +1830,79 @@ msgid "Tmp Table Name"
 msgstr "Nombre de Tabla Temporal"
 
 #: superset/views/sql_lab.py:77
+msgid "Tmp Schema Name"
+msgstr "Nombre de Esquema Temporal"
+
+#: superset/views/sql_lab.py:78
 msgid "Tab Name"
 msgstr "Nombre del Tab"
 
-#: superset/views/sql_lab.py:78
+#: superset/views/sql_lab.py:79
 msgid "SQL Editor Id"
 msgstr "Id del Editor SQL"
 
-#: superset/views/sql_lab.py:80
+#: superset/views/sql_lab.py:81
 msgid "Select SQL"
 msgstr "SQL Select"
 
-#: superset/views/sql_lab.py:81
+#: superset/views/sql_lab.py:82
 msgid "Executed SQL"
 msgstr "SQL Ejecutado"
 
-#: superset/views/sql_lab.py:82
+#: superset/views/sql_lab.py:83
 msgid "Limit"
 msgstr "Límite"
 
-#: superset/views/sql_lab.py:83
+#: superset/views/sql_lab.py:84
 msgid "Select As Cta"
 msgstr "Select Como Cta"
 
-#: superset/views/sql_lab.py:84
+#: superset/views/sql_lab.py:85
 msgid "Select As Cta Used"
 msgstr "Select Como Cta Usado"
 
 #: superset-frontend/src/SqlLab/components/QuerySearch.jsx:315
-#: superset/views/sql_lab.py:85
+#: superset/views/sql_lab.py:86
 msgid "progress"
 msgstr "Progreso"
 
-#: superset/views/sql_lab.py:86
+#: superset/views/sql_lab.py:87
 msgid "Rows"
 msgstr "Filas"
 
-#: superset/views/sql_lab.py:87
+#: superset/views/sql_lab.py:88
 msgid "Error Message"
 msgstr "Mensaje De Error"
 
-#: superset/views/sql_lab.py:88
+#: superset/views/sql_lab.py:89
 msgid "Results Key"
 msgstr "Llaves De Los Resultados"
 
-#: superset/views/sql_lab.py:89
+#: superset/views/sql_lab.py:90
 msgid "Start Running Time"
 msgstr "Inicio Tiempo De Corrida"
 
-#: superset/views/sql_lab.py:90
+#: superset/views/sql_lab.py:91
 msgid "End Result Backend Time"
 msgstr "Resultado Final Tiempo En Backend"
 
-#: superset/views/sql_lab.py:91
+#: superset/views/sql_lab.py:92
 msgid "Tracking Url"
 msgstr "Url De Rastreo"
 
-#: superset/views/sql_lab.py:102
+#: superset/views/sql_lab.py:103
 msgid "List Saved Query"
 msgstr "Mostrar Consultas Guardadas"
 
-#: superset/views/sql_lab.py:103
+#: superset/views/sql_lab.py:104
 msgid "Show Saved Query"
 msgstr "Mostrar Consulta Guardada"
 
-#: superset/views/sql_lab.py:104
+#: superset/views/sql_lab.py:105
 msgid "Add Saved Query"
 msgstr "Añadir Consulta Guardada"
 
-#: superset/views/sql_lab.py:105
+#: superset/views/sql_lab.py:106
 msgid "Edit Saved Query"
 msgstr "Editar Consulta Guardada"
 
@@ -1751,15 +1912,15 @@ msgstr "Editar Consulta Guardada"
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:571
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:579
 #: superset-frontend/src/explore/components/controls/FilterBoxItemControl.jsx:93
-#: superset/views/sql_lab.py:131
+#: superset/views/sql_lab.py:132
 msgid "Label"
 msgstr "Etiqueta"
 
-#: superset/views/sql_lab.py:137
+#: superset/views/sql_lab.py:138
 msgid "Pop Tab Link"
 msgstr "Pop Tab Link"
 
-#: superset/views/sql_lab.py:138
+#: superset/views/sql_lab.py:139
 msgid "Changed on"
 msgstr "Cambiado el"
 
@@ -1787,14 +1948,14 @@ msgstr ""
 "expone aquí como referencia y para usuarios avanzados que quieran "
 "modificar parámetros específicos."
 
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:189
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:222
 #: superset/views/chart/mixin.py:70
 msgid ""
 "Duration (in seconds) of the caching timeout for this chart. Note this "
 "defaults to the datasource/table timeout if undefined."
 msgstr ""
 
-#: superset-frontend/src/views/chartList/ChartList.tsx:172
+#: superset-frontend/src/views/chartList/ChartList.tsx:166
 #: superset/views/chart/mixin.py:82
 msgid "Last Modified"
 msgstr "Última modificación"
@@ -1803,22 +1964,11 @@ msgstr "Última modificación"
 msgid "Parameters"
 msgstr "Parámetros"
 
-#: superset-frontend/src/explore/controls.jsx:260
-#: superset-frontend/src/views/chartList/ChartList.tsx:136
+#: superset-frontend/src/explore/controls.jsx:254
+#: superset-frontend/src/views/chartList/ChartList.tsx:133
 #: superset/views/chart/mixin.py:88
 msgid "Visualization Type"
 msgstr "Tipo de Visualización"
-
-#: superset/views/dashboard/api.py:232
-msgid "No dashboards deleted"
-msgstr ""
-
-#: superset/views/dashboard/api.py:261
-#, python-format
-msgid "Deleted %(num)d dashboard"
-msgid_plural "Deleted %(num)d dashboards"
-msgstr[0] ""
-msgstr[1] ""
 
 #: superset/views/dashboard/mixin.py:26
 msgid "Show Dashboard"
@@ -1853,7 +2003,7 @@ msgstr ""
 msgid "To get a readable URL for your dashboard"
 msgstr "Para obtener una URL legible para tu panel de control"
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:265
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:293
 #: superset/views/dashboard/mixin.py:58
 msgid ""
 "This JSON object is generated dynamically when clicking the save or "
@@ -1865,7 +2015,7 @@ msgstr ""
 "como referencia y para usuarios avanzados que quieran modificar "
 "parámetros específicos."
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:227
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:255
 #: superset/views/dashboard/mixin.py:64
 msgid "Owners is a list of users who can alter the dashboard."
 msgstr ""
@@ -1879,8 +2029,8 @@ msgid ""
 msgstr ""
 
 #: superset-frontend/src/components/EditableTitle.jsx:40
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:185
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:134
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:211
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:137
 #: superset/views/dashboard/mixin.py:73 superset/views/dashboard/views.py:134
 msgid "Title"
 msgstr "Título"
@@ -1903,7 +2053,7 @@ msgid "Underlying Tables"
 msgstr "Tablas Subyacentes"
 
 #: superset-frontend/src/dashboard/components/PublishedStatus.jsx:110
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:161
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:164
 #: superset/views/dashboard/mixin.py:83 superset/views/dashboard/mixin.py:84
 msgid "Published"
 msgstr "Publicado"
@@ -2083,23 +2233,23 @@ msgstr ""
 "Etiqueta para columnas de índice. Si no es suministrado y el Indice del "
 "Dataframe es Verdadero, Nombres de Indice son usados."
 
-#: superset/views/database/mixins.py:31
+#: superset/views/database/mixins.py:32
 msgid "Show Database"
 msgstr "Mostrar Base de Datos"
 
-#: superset/views/database/mixins.py:32
+#: superset/views/database/mixins.py:33
 msgid "Add Database"
 msgstr "Añadir Base de Datos"
 
-#: superset/views/database/mixins.py:33
+#: superset/views/database/mixins.py:34
 msgid "Edit Database"
 msgstr "Editar Base de Datos"
 
-#: superset/views/database/mixins.py:100
+#: superset/views/database/mixins.py:103
 msgid "Expose this DB in SQL Lab"
 msgstr "Mostrar esta base de datos en el laboratorio SQL"
 
-#: superset/views/database/mixins.py:101
+#: superset/views/database/mixins.py:104
 msgid ""
 "Operate the database in asynchronous mode, meaning  that the queries are "
 "executed on remote workers as opposed to on the web server itself. This "
@@ -2107,11 +2257,11 @@ msgid ""
 " Refer to the installation docs for more information."
 msgstr ""
 
-#: superset/views/database/mixins.py:109
+#: superset/views/database/mixins.py:112
 msgid "Allow CREATE TABLE AS option in SQL Lab"
 msgstr "Permitir la opción CREAR TABLA COMO en el laboratorio SQL"
 
-#: superset/views/database/mixins.py:110
+#: superset/views/database/mixins.py:113
 msgid ""
 "Allow users to run non-SELECT statements (UPDATE, DELETE, CREATE, ...) in"
 " SQL Lab"
@@ -2119,7 +2269,7 @@ msgstr ""
 "Permitir que los usuarios ejecuten instrucciones que no sean SELECT "
 "(UPDATE, DELETE, CREATE, ...) en el laboratorio SQL"
 
-#: superset/views/database/mixins.py:115
+#: superset/views/database/mixins.py:118
 msgid ""
 "When allowing CREATE TABLE AS option in SQL Lab, this option forces the "
 "table to be created in this schema"
@@ -2127,7 +2277,7 @@ msgstr ""
 "Cuando se permite la opción CREATE TABLE AS en el laboratorio SQL, esta "
 "opción hace que la tabla se cree en este esquema"
 
-#: superset/views/database/mixins.py:151
+#: superset/views/database/mixins.py:159
 msgid ""
 "If Presto, all the queries in SQL Lab are going to be executed as the "
 "currently logged on user who must have permission to run them.<br/>If "
@@ -2136,79 +2286,93 @@ msgid ""
 "hive.server2.proxy.user property."
 msgstr ""
 
-#: superset/views/database/mixins.py:158
+#: superset/views/database/mixins.py:166
 msgid ""
 "Allow SQL Lab to fetch a list of all tables and all views across all "
 "database schemas. For large data warehouse with thousands of tables, this"
 " can be expensive and put strain on the system."
 msgstr ""
 
-#: superset/views/database/mixins.py:163
+#: superset/views/database/mixins.py:171
 msgid ""
 "Duration (in seconds) of the caching timeout for charts of this database."
 " A timeout of 0 indicates that the cache never expires. Note this "
 "defaults to the global timeout if undefined."
 msgstr ""
 
-#: superset/views/database/mixins.py:168
+#: superset/views/database/mixins.py:176
 msgid "If selected, please set the schemas allowed for csv upload in Extra."
 msgstr ""
 
-#: superset/views/database/mixins.py:174
+#: superset/views/database/mixins.py:182
 msgid "Expose in SQL Lab"
 msgstr "Mostrar en el laboratorio SQL"
 
-#: superset/views/database/mixins.py:175
+#: superset/views/database/mixins.py:183
 msgid "Allow CREATE TABLE AS"
 msgstr "Permitir CREATE TABLE AS"
 
-#: superset/views/database/mixins.py:176
+#: superset/views/database/mixins.py:184
 msgid "Allow DML"
 msgstr "Permitir DML"
 
-#: superset/views/database/mixins.py:177
+#: superset/views/database/mixins.py:185
 msgid "CTAS Schema"
 msgstr "Esquema CTAS"
 
-#: superset/views/database/mixins.py:181
+#: superset/views/database/mixins.py:189
 msgid "SQLAlchemy URI"
 msgstr "URI SQLAlchemy"
 
-#: superset/views/database/mixins.py:182
+#: superset/views/database/mixins.py:190
 msgid "Chart Cache Timeout"
 msgstr "Expiraciòn Tiempo De Cache Del Gráfico"
 
-#: superset/views/database/mixins.py:183
+#: superset/views/database/mixins.py:191
 msgid "Extra"
 msgstr "Extra"
 
-#: superset/views/database/mixins.py:184
+#: superset/views/database/mixins.py:192
 msgid "Secure Extra"
 msgstr ""
 
-#: superset/views/database/mixins.py:185
+#: superset/views/database/mixins.py:193
+msgid "Root certificate"
+msgstr ""
+
+#: superset/views/database/mixins.py:194
 msgid "Asynchronous Query Execution"
 msgstr "Ejecución de Consultas Asincronas"
 
-#: superset/views/database/mixins.py:186
+#: superset/views/database/mixins.py:195
 msgid "Impersonate the logged on user"
 msgstr "Personificar el usuario autenticado"
 
-#: superset/views/database/mixins.py:187
+#: superset/views/database/mixins.py:196
 msgid "Allow Csv Upload"
 msgstr "Permitir Descarga CSV"
 
-#: superset/views/database/mixins.py:189
+#: superset/views/database/mixins.py:198
 msgid "Allow Multi Schema Metadata Fetch"
 msgstr "Permitir Obtener Metadatos De Multi Esquemas"
 
-#: superset/views/database/mixins.py:190
+#: superset/views/database/mixins.py:199
 msgid "Backend"
 msgstr "Motor"
 
-#: superset/views/database/mixins.py:194
+#: superset/views/database/mixins.py:203
 msgid "Permission"
 msgstr "Permiso"
+
+#: superset/views/database/mixins.py:243 superset/views/database/mixins.py:265
+msgid "Extra field cannot be decoded by JSON. %{msg}s"
+msgstr ""
+
+#: superset/views/database/mixins.py:251
+msgid ""
+"The metadata_params in Extra field is not configured correctly. The key "
+"%{key}s is invalid."
+msgstr ""
 
 #: superset/views/database/validators.py:38
 msgid ""
@@ -2218,25 +2382,25 @@ msgid ""
 "db/database'</p>"
 msgstr ""
 
-#: superset/views/database/views.py:82
+#: superset/views/database/views.py:97
 msgid "CSV to Database configuration"
 msgstr "Configuración Cargue CSV"
 
-#: superset/views/database/views.py:100
+#: superset/views/database/views.py:115
 #, python-format
 msgid ""
 "Database \"%(database_name)s\" schema \"%(schema_name)s\" is not allowed "
 "for csv uploads. Please contact your Superset Admin."
 msgstr ""
 
-#: superset/views/database/views.py:159
+#: superset/views/database/views.py:174
 #, python-format
 msgid ""
 "Unable to upload CSV file \"%(filename)s\" to table \"%(table_name)s\" in"
 " database \"%(db_name)s\". Error message: %(error_msg)s"
 msgstr ""
 
-#: superset/views/database/views.py:168
+#: superset/views/database/views.py:183
 #, python-format
 msgid ""
 "CSV file \"%(csv_filename)s\" uploaded to table \"%(table_name)s\" in "
@@ -2259,7 +2423,7 @@ msgstr ""
 msgid "Edit Log"
 msgstr ""
 
-#: superset/views/log/__init__.py:31
+#: superset/views/log/__init__.py:31 superset/views/log/views.py:36
 msgid "Action"
 msgstr "Acción"
 
@@ -2627,7 +2791,7 @@ msgid " and not greater than %s"
 msgstr ""
 
 #: superset-frontend/src/SqlLab/components/LimitControl.jsx:93
-#: superset-frontend/src/explore/controls.jsx:1088
+#: superset-frontend/src/explore/controls.jsx:881
 msgid "Row limit"
 msgstr "Límite filas"
 
@@ -2707,8 +2871,8 @@ msgid "querylink"
 msgstr "Link de Consulta"
 
 #: superset-frontend/src/SqlLab/components/QueryTable.jsx:66
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:210
-#: superset-frontend/src/SqlLab/reducers/getInitialState.js:35
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:212
+#: superset-frontend/src/SqlLab/reducers/getInitialState.js:43
 msgid "Untitled Query"
 msgstr "Consulta sin Nombre"
 
@@ -2736,60 +2900,64 @@ msgstr "Ejecutar consulta en otra pestaña"
 msgid "Remove query from log"
 msgstr "Eliminar consulta del historial"
 
-#: superset-frontend/src/SqlLab/components/ResultSet.jsx:155
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:160
 msgid ".CSV"
 msgstr ".CSV"
 
-#: superset-frontend/src/SqlLab/components/ResultSet.jsx:164
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:169
 msgid "Clipboard"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/ResultSet.jsx:177
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:182
 msgid "Filter Results"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/ResultSet.jsx:208
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:213
 msgid "(Request Access)"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/ResultSet.jsx:217
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:222
 msgid "was created"
 msgstr "fue creada"
 
-#: superset-frontend/src/SqlLab/components/ResultSet.jsx:224
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:229
 msgid "Query in a new tab"
 msgstr "Consultar en otra pestaña"
 
-#: superset-frontend/src/SqlLab/components/ResultSet.jsx:256
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:261
 msgid "The query returned no data"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/ResultSet.jsx:271
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:279
 msgid "Fetch data preview"
 msgstr "Obtener vista previa de datos"
 
-#: superset-frontend/src/SqlLab/components/ResultSet.jsx:294
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:290
+msgid "Refetch Results"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/ResultSet.jsx:314
 msgid "Track Job"
 msgstr "Rastrear trabajo"
 
-#: superset-frontend/src/SqlLab/components/RunQueryActionButton.jsx:41
+#: superset-frontend/src/SqlLab/components/RunQueryActionButton.tsx:45
 msgid "Run Selected Query"
 msgstr "Ejecutar consulta seleccionada"
 
-#: superset-frontend/src/SqlLab/components/RunQueryActionButton.jsx:42
+#: superset-frontend/src/SqlLab/components/RunQueryActionButton.tsx:45
 #: superset-frontend/src/components/RefreshChartOverlay.jsx:43
 msgid "Run Query"
 msgstr "Ejecutar consulta"
 
-#: superset-frontend/src/SqlLab/components/RunQueryActionButton.jsx:56
+#: superset-frontend/src/SqlLab/components/RunQueryActionButton.tsx:59
 msgid "Stop"
 msgstr "Detener"
 
-#: superset-frontend/src/SqlLab/components/RunQueryActionButton.jsx:65
+#: superset-frontend/src/SqlLab/components/RunQueryActionButton.tsx:68
 msgid "Run query asynchronously (Ctrl + ↵)"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/RunQueryActionButton.jsx:77
+#: superset-frontend/src/SqlLab/components/RunQueryActionButton.tsx:80
 msgid "Run query synchronously (Ctrl + ↵)"
 msgstr ""
 
@@ -2817,11 +2985,11 @@ msgid "Save New"
 msgstr ""
 
 #: superset-frontend/src/SqlLab/components/SaveQuery.jsx:149
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:283
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:311
 #: superset-frontend/src/dashboard/components/SaveModal.jsx:187
 #: superset-frontend/src/dashboard/components/filterscope/FilterScopeSelector.jsx:519
 #: superset-frontend/src/datasource/DatasourceModal.jsx:165
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:223
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:256
 #: superset-frontend/src/explore/components/SaveModal.jsx:269
 msgid "Save"
 msgstr "Guardar"
@@ -2890,28 +3058,28 @@ msgstr "Resultados"
 msgid "Query History"
 msgstr "Historial de la Consulta"
 
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:194
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:200
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:196
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:202
 msgid "Run query"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:206
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:208
 msgid "New tab"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:218
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:220
 msgid "Stop query"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:369
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:375
 msgid "Create table as with query results"
 msgstr "Crear tabla con resultados de consulta"
 
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:377
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:383
 msgid "new table name"
 msgstr "nuevo nombre de tabla"
 
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:403
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:409
 #, python-format
 msgid ""
 "It appears that the number of rows in the query results displayed\n"
@@ -2919,31 +3087,36 @@ msgid ""
 "           the %s limit."
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:420
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:426
 msgid "Schedule the query periodically"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:421
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:427
 msgid "You must run the query successfully first"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:454
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:460
 msgid "Estimate the cost before running a query"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:500
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:506
 msgid "Keyboard shortcuts"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:515
+#: superset-frontend/src/SqlLab/components/SqlEditor.jsx:518
+msgid "Autocomplete"
 msgstr ""
 
 #: superset-frontend/src/SqlLab/components/SqlEditorLeftBar.jsx:144
 msgid "Reset State"
 msgstr "Restablecer estado"
 
-#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:195
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:202
 msgid "Enter a new title for the tab"
 msgstr "Ingresa un nuevo título para la pestaña"
 
-#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:215
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:222
 msgid ""
 "-- Note: Unless you save your query, these tabs will NOT persist if you "
 "clear your cookies or change browsers."
@@ -2951,32 +3124,32 @@ msgstr ""
 "-- Nota: A menos que guardes tu consulta, estos tabs NO persistirán si "
 "limpias tus cookies o cambias de navegador"
 
-#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:219
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:226
 #, python-format
 msgid "Untitled Query %s"
 msgstr "Consulta sin título %s"
 
-#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:294
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:301
 msgid "Close tab"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:300
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:307
 msgid "Rename tab"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:306
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:313
 msgid "Expand tool bar"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:306
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:313
 msgid "Hide tool bar"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:315
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:322
 msgid "Close all other tabs"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:321
+#: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:328
 msgid "Duplicate tab"
 msgstr ""
 
@@ -3053,51 +3226,51 @@ msgstr "parámetros"
 msgid "Invalid JSON"
 msgstr ""
 
-#: superset-frontend/src/addSlice/AddSliceContainer.jsx:83
+#: superset-frontend/src/addSlice/AddSliceContainer.jsx:85
 msgid "Create a new chart"
 msgstr ""
 
-#: superset-frontend/src/addSlice/AddSliceContainer.jsx:85
-#: superset-frontend/src/addSlice/AddSliceContainer.jsx:93
+#: superset-frontend/src/addSlice/AddSliceContainer.jsx:89
+#: superset-frontend/src/addSlice/AddSliceContainer.jsx:97
 msgid "Choose a datasource"
 msgstr ""
 
-#: superset-frontend/src/addSlice/AddSliceContainer.jsx:100
+#: superset-frontend/src/addSlice/AddSliceContainer.jsx:104
 msgid ""
 "If the datasource you are looking for is not available in the list, "
 "follow the instructions on the how to add it on the "
 msgstr ""
 
-#: superset-frontend/src/addSlice/AddSliceContainer.jsx:106
+#: superset-frontend/src/addSlice/AddSliceContainer.jsx:110
 msgid "Superset tutorial"
 msgstr ""
 
-#: superset-frontend/src/addSlice/AddSliceContainer.jsx:112
+#: superset-frontend/src/addSlice/AddSliceContainer.jsx:116
 msgid "Choose a visualization type"
 msgstr ""
 
-#: superset-frontend/src/addSlice/AddSliceContainer.jsx:126
+#: superset-frontend/src/addSlice/AddSliceContainer.jsx:130
 msgid "Create new chart"
 msgstr ""
 
-#: superset-frontend/src/chart/chartAction.js:357
+#: superset-frontend/src/chart/chartAction.js:370
 msgid "An error occurred while loading the SQL"
 msgstr ""
 
-#: superset-frontend/src/chart/chartReducer.js:69
+#: superset-frontend/src/chart/chartReducer.js:70
 msgid "Updating chart was stopped"
 msgstr "La actualización del gráfico ha sido detenida"
 
-#: superset-frontend/src/chart/chartReducer.js:81
+#: superset-frontend/src/chart/chartReducer.js:82
 #, python-format
 msgid "An error occurred while rendering the visualization: %s"
 msgstr "Ocurrió un error al crear la visualización: %s"
 
-#: superset-frontend/src/chart/chartReducer.js:93
+#: superset-frontend/src/chart/chartReducer.js:94
 msgid "visualization queries are set to timeout at ${action.timeout} seconds. "
 msgstr ""
 
-#: superset-frontend/src/chart/chartReducer.js:96
+#: superset-frontend/src/chart/chartReducer.js:97
 msgid ""
 "Perhaps your data has grown, your database is under unusual load, or you "
 "are simply querying a data source that is too large to be processed "
@@ -3105,8 +3278,8 @@ msgid ""
 "summarize your data further."
 msgstr ""
 
-#: superset-frontend/src/chart/chartReducer.js:111
-#: superset-frontend/src/chart/chartReducer.js:171
+#: superset-frontend/src/chart/chartReducer.js:112
+#: superset-frontend/src/chart/chartReducer.js:172
 msgid "Network error."
 msgstr "Error de red."
 
@@ -3261,22 +3434,23 @@ msgstr ""
 msgid "Cell Content"
 msgstr ""
 
-#: superset-frontend/src/components/ListView/ListView.tsx:272
+#: superset-frontend/src/components/ListView/ListView.tsx:285
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:731
-#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:368
+#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:365
 msgid "Apply"
 msgstr "Aplicar"
 
-#: superset-frontend/src/components/ListView/ListView.tsx:304
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:239
+#: superset-frontend/src/components/ListView/ListView.tsx:317
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:244
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:238
 msgid "Actions"
 msgstr "Acciones"
 
-#: superset-frontend/src/components/ListView/ListView.tsx:343
+#: superset-frontend/src/components/ListView/ListView.tsx:350
 msgid "showing"
 msgstr "Mostrando"
 
-#: superset-frontend/src/components/ListView/ListView.tsx:348
+#: superset-frontend/src/components/ListView/ListView.tsx:355
 msgid "of"
 msgstr "de"
 
@@ -3347,7 +3521,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/ColorComponentPane.jsx:89
 #: superset-frontend/src/explore/controlPanels/sections.jsx:40
-#: superset-frontend/src/explore/controls.jsx:2193
+#: superset-frontend/src/explore/controls.jsx:1737
 msgid "Color Scheme"
 msgstr "Esquema de Color"
 
@@ -3380,27 +3554,27 @@ msgstr ""
 msgid "Not filtered"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/Header.jsx:267
+#: superset-frontend/src/dashboard/components/Header.jsx:278
 msgid "Your dashboard is too large. Please reduce the size before save it."
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/Header.jsx:378
+#: superset-frontend/src/dashboard/components/Header.jsx:389
 msgid "Components"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/Header.jsx:388
+#: superset-frontend/src/dashboard/components/Header.jsx:399
 msgid "Colors"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/Header.jsx:404
+#: superset-frontend/src/dashboard/components/Header.jsx:415
 msgid "Save changes"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/Header.jsx:415
+#: superset-frontend/src/dashboard/components/Header.jsx:426
 msgid "Switch to view mode"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/Header.jsx:435
+#: superset-frontend/src/dashboard/components/Header.jsx:446
 msgid "Edit dashboard"
 msgstr "Editar tablero"
 
@@ -3471,40 +3645,40 @@ msgstr ""
 msgid "Delete this container and save to remove this message."
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:142
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:162
 msgid "The dashboard has been saved"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:158
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:179
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:308
 #: superset-frontend/src/datasource/DatasourceModal.jsx:88
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:66
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:89
 msgid "An error has occurred"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:172
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:198
 msgid "Dashboard Properties"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:179
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:140
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:205
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:169
 msgid "Basic Information"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:197
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:224
 msgid "URL Slug"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:207
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:235
 msgid "A readable URL for your dashboard"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:213
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:194
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:241
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:227
 msgid "Access"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:245
+#: superset-frontend/src/dashboard/components/PropertiesModal.jsx:273
 #: superset-frontend/src/datasource/DatasourceEditor.jsx:462
 #: superset-frontend/src/explore/controlPanels/DeckArc.js:51
 #: superset-frontend/src/explore/controlPanels/DeckGeojson.js:50
@@ -3621,54 +3795,54 @@ msgstr ""
 msgid "Filter your charts"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/SliceHeader.jsx:75
+#: superset-frontend/src/dashboard/components/SliceHeader.jsx:74
 msgid "Annotation layers are still loading."
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/SliceHeader.jsx:76
+#: superset-frontend/src/dashboard/components/SliceHeader.jsx:75
 msgid "One ore more annotation layers failed loading."
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:123
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:127
 #, python-format
 msgid "Cached %s"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:124
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:128
 #, python-format
 msgid "Fetched %s"
 msgstr "Consultado %s"
 
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:125
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:129
 msgid "Minimize"
 msgstr "Minimizar"
 
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:125
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:129
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:141
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:148
 msgid "Force refresh"
 msgstr "Forzar refresco"
 
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:149
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:156
 msgid "Toggle chart description"
 msgstr "Alternar la descripción del cuadro de mando"
 
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:155
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:162
 msgid "Edit chart metadata"
 msgstr "Editar metadatos del gráfico"
 
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:160
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:167
 msgid "Export CSV"
 msgstr "Exportar CSV"
 
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:165
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:172
 msgid "Explore chart"
 msgstr "Explorar gráfico"
 
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:179
-#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:180
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:186
+#: superset-frontend/src/dashboard/components/SliceHeaderControls.jsx:187
 msgid "Share chart"
 msgstr "Compartir gráfico"
 
@@ -3707,6 +3881,14 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/filterscope/treeIcons.jsx:39
 msgid "Collapse all"
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/gridComponents/Markdown.jsx:80
+msgid "This markdown component has an error."
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/gridComponents/Markdown.jsx:173
+msgid "This markdown component has an error. Please revert your recent changes."
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/gridComponents/new/NewDivider.jsx:31
@@ -3751,8 +3933,8 @@ msgid "All charts"
 msgstr ""
 
 #: superset-frontend/src/dashboard/util/headerStyleOptions.js:25
-#: superset-frontend/src/explore/controls.jsx:1506
-#: superset-frontend/src/explore/controls.jsx:1537
+#: superset-frontend/src/explore/controls.jsx:1208
+#: superset-frontend/src/explore/controls.jsx:1239
 msgid "Small"
 msgstr ""
 
@@ -3761,8 +3943,8 @@ msgid "Medium"
 msgstr ""
 
 #: superset-frontend/src/dashboard/util/headerStyleOptions.js:35
-#: superset-frontend/src/explore/controls.jsx:1514
-#: superset-frontend/src/explore/controls.jsx:1545
+#: superset-frontend/src/explore/controls.jsx:1216
+#: superset-frontend/src/explore/controls.jsx:1247
 msgid "Large"
 msgstr ""
 
@@ -3935,11 +4117,11 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: superset-frontend/src/datasource/DatasourceEditor.jsx:733
+#: superset-frontend/src/datasource/DatasourceEditor.jsx:734
 msgid "Be careful."
 msgstr ""
 
-#: superset-frontend/src/datasource/DatasourceEditor.jsx:734
+#: superset-frontend/src/datasource/DatasourceEditor.jsx:735
 msgid ""
 "Changing these settings will affect all charts using this datasource, "
 "including charts owned by other people."
@@ -4000,136 +4182,116 @@ msgstr ""
 "Una referencia a la configuración [Tiempo], teniendo en cuenta la "
 "granularidad."
 
-#: superset-frontend/src/explore/controls.jsx:132
+#: superset-frontend/src/explore/controls.jsx:126
 msgid "Group by"
 msgstr "Agrupar por"
 
-#: superset-frontend/src/explore/controls.jsx:135
+#: superset-frontend/src/explore/controls.jsx:129
 msgid "One or many controls to group by"
 msgstr "Uno o varios controles para agrupar por"
 
-#: superset-frontend/src/explore/controls.jsx:176
-#: superset-frontend/src/explore/controls.jsx:292
+#: superset-frontend/src/explore/controlPanels/Table.js:87
+#: superset-frontend/src/explore/controls.jsx:170
 msgid "One or many metrics to display"
 msgstr "Una o varias métricas para mostrar"
 
-#: superset-frontend/src/explore/controls.jsx:191
+#: superset-frontend/src/explore/controls.jsx:185
 msgid ""
 "For more information about objects are in context in the scope of this "
 "function, refer to the"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:194
+#: superset-frontend/src/explore/controls.jsx:188
 msgid " source code of Superset's sandboxed parser"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:233
+#: superset-frontend/src/explore/controls.jsx:227
 msgid "This functionality is disabled in your environment for security reasons."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:262
+#: superset-frontend/src/explore/controls.jsx:256
 msgid "The type of visualization to display"
 msgstr "El tipo de visualización a mostrar."
 
-#: superset-frontend/src/explore/controls.jsx:269
-msgid "Percentage Metrics"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:271
-msgid "Metrics for which percentage of total are to be displayed"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:276
+#: superset-frontend/src/explore/controls.jsx:261
 msgid "Y Axis Bounds"
 msgstr "Límites del Eje Y"
 
-#: superset-frontend/src/explore/controls.jsx:279
+#: superset-frontend/src/explore/controls.jsx:264
 msgid ""
 "Bounds for the Y-axis. When left empty, the bounds are dynamically "
 "defined based on the min/max of the data. Note that this feature will "
 "only expand the axis range. It won't narrow the data's extent."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:290
-msgid "Ordering"
-msgstr "Ordenación"
-
-#: superset-frontend/src/explore/controls.jsx:298
+#: superset-frontend/src/explore/controls.jsx:273
 msgid "Fixed Color"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:299
+#: superset-frontend/src/explore/controls.jsx:274
 msgid "Use this to define a static color for all circles"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:306
+#: superset-frontend/src/explore/controls.jsx:281
 msgid "Target Color"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:307
+#: superset-frontend/src/explore/controls.jsx:282
 msgid "Color of the target location"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:314
+#: superset-frontend/src/explore/controls.jsx:289
 msgid "Legend Position"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:315
+#: superset-frontend/src/explore/controls.jsx:290
 msgid "Choose the position of the legend"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:330
+#: superset-frontend/src/explore/controls.jsx:305
 msgid "Legend Format"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:331
+#: superset-frontend/src/explore/controls.jsx:306
 msgid "Choose the format for legend values"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:340
+#: superset-frontend/src/explore/controls.jsx:315
 msgid "Fill Color"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:341
-#: superset-frontend/src/explore/controls.jsx:351
+#: superset-frontend/src/explore/controls.jsx:316
+#: superset-frontend/src/explore/controls.jsx:326
 msgid ""
 " Set the opacity to 0 if you do not want to override the color specified "
 "in the GeoJSON"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:350
+#: superset-frontend/src/explore/controls.jsx:325
 msgid "Stroke Color"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:361
+#: superset-frontend/src/explore/controls.jsx:336
 msgid "Right Axis Metric"
 msgstr "Métrica Eje Derecho"
 
-#: superset-frontend/src/explore/controls.jsx:363
+#: superset-frontend/src/explore/controls.jsx:338
 msgid "Choose a metric for right axis"
 msgstr "Elige una métrica para el eje derecho"
 
-#: superset-frontend/src/explore/controls.jsx:368
+#: superset-frontend/src/explore/controls.jsx:343
 msgid "Stacked Style"
 msgstr "Estilo apilado"
 
-#: superset-frontend/src/explore/controls.jsx:381
-msgid "Sort X Axis"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:389
-msgid "Sort Y Axis"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:397
+#: superset-frontend/src/explore/controls.jsx:356
 msgid "Linear Color Scheme"
 msgstr "Esquema de Color Lineal"
 
-#: superset-frontend/src/explore/controls.jsx:410
+#: superset-frontend/src/explore/controls.jsx:369
 msgid "Normalize Across"
 msgstr "Normalizar"
 
-#: superset-frontend/src/explore/controls.jsx:417
+#: superset-frontend/src/explore/controls.jsx:376
 msgid ""
 "Color will be rendered based on a ratio of the cell against the sum of "
 "across this criteria"
@@ -4137,132 +4299,47 @@ msgstr ""
 "El color se representará en función de la proporción de la celda respecto"
 " de la suma de este criterio."
 
-#: superset-frontend/src/explore/controls.jsx:427
-msgid "Value Domain"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:434
-msgid ""
-"series: Treat each series independently; overall: All series use the same"
-" scale; change: Show changes compared to the first data point in each "
-"series"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:441
-msgid "Rendering"
-msgstr "Generando"
-
-#: superset-frontend/src/explore/controls.jsx:448
-msgid ""
-"image-rendering CSS attribute of the canvas object that defines how the "
-"browser scales up the image"
-msgstr ""
-"Atributo CSS de representación de imagen que define cómo el navegador "
-"amplía la imagen"
-
-#: superset-frontend/src/explore/controls.jsx:456
-msgid "XScale Interval"
-msgstr "Intervalo Escala X"
-
-#: superset-frontend/src/explore/controls.jsx:461
-msgid "Number of steps to take between ticks when displaying the X scale"
-msgstr "Número de pasos a seguir entre las marcas al mostrar la escala X"
-
-#: superset-frontend/src/explore/controls.jsx:468
-msgid "YScale Interval"
-msgstr "Intervalo Escala Y"
-
-#: superset-frontend/src/explore/controls.jsx:473
-msgid "Number of steps to take between ticks when displaying the Y scale"
-msgstr "Número de pasos a seguir entre las marcas al mostrar la escala Y"
-
-#: superset-frontend/src/explore/controls.jsx:480
-msgid "Include Time"
-msgstr "Incluir Tiempo"
-
-#: superset-frontend/src/explore/controls.jsx:481
-msgid "Whether to include the time granularity as defined in the time section"
-msgstr ""
-"Si se incluye la granularidad de tiempo como se define en la sección de "
-"tiempo"
-
-#: superset-frontend/src/explore/controls.jsx:489
+#: superset-frontend/src/explore/controls.jsx:385
 msgid "Auto Zoom"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:492
+#: superset-frontend/src/explore/controls.jsx:388
 msgid "When checked, the map will zoom to your data after each query"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:499
-msgid "Show percentage"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:501
-msgid "Whether to include the percentage in the tooltip"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:507
+#: superset-frontend/src/explore/controls.jsx:395
 msgid "Stacked Bars"
 msgstr "Barras apiladas"
 
-#: superset-frontend/src/explore/controls.jsx:515
-msgid "Show totals"
-msgstr "Mostrar Totales"
-
-#: superset-frontend/src/explore/controls.jsx:518
-msgid "Display total row/column"
-msgstr "Mostrar total fila/columna"
-
-#: superset-frontend/src/explore/controls.jsx:523
-msgid "Transpose Pivot"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:525
-msgid "Swap Groups and Columns"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:530
+#: superset-frontend/src/explore/controls.jsx:403
 msgid "Show Markers"
 msgstr "Mostrar Marcadores"
 
-#: superset-frontend/src/explore/controls.jsx:533
+#: superset-frontend/src/explore/controls.jsx:406
 msgid "Show data points as circle markers on the lines"
 msgstr "Mostrar puntos de datos como marcadores circulares en las líneas."
 
-#: superset-frontend/src/explore/controls.jsx:538
+#: superset-frontend/src/explore/controls.jsx:411
 msgid "Bar Values"
 msgstr "Valores de Barra"
 
-#: superset-frontend/src/explore/controls.jsx:541
+#: superset-frontend/src/explore/controls.jsx:414
 msgid "Show the value on top of the bar"
 msgstr "Mostrar el valor en la parte superior de la barra."
 
-#: superset-frontend/src/explore/controls.jsx:546
+#: superset-frontend/src/explore/controls.jsx:419
 msgid "Sort Bars"
 msgstr "Ordenar Barras"
 
-#: superset-frontend/src/explore/controls.jsx:549
+#: superset-frontend/src/explore/controls.jsx:422
 msgid "Sort bars by x labels."
 msgstr "Ordenar barras por etiquetas del eje X."
 
-#: superset-frontend/src/explore/controls.jsx:554
-msgid "Combine Metrics"
-msgstr "Combinar Métricas"
-
-#: superset-frontend/src/explore/controls.jsx:556
-msgid ""
-"Display metrics side by side within each column, as opposed to each "
-"column being displayed side by side for each metric."
-msgstr ""
-"Muestre las métricas lado a lado dentro de cada columna, a diferencia de "
-"cada columna que se muestra lado a lado para cada métrica."
-
-#: superset-frontend/src/explore/controls.jsx:564
+#: superset-frontend/src/explore/controls.jsx:427
 msgid "Extra Controls"
 msgstr "Controles Extra"
 
-#: superset-frontend/src/explore/controls.jsx:567
+#: superset-frontend/src/explore/controls.jsx:430
 msgid ""
 "Whether to show extra controls or not. Extra controls include things like"
 " making mulitBar charts stacked or side by side."
@@ -4271,11 +4348,11 @@ msgstr ""
 "incluyen cosas como hacer gráficos mulitBar apilados o uno al lado del "
 "otro."
 
-#: superset-frontend/src/explore/controls.jsx:576
+#: superset-frontend/src/explore/controls.jsx:439
 msgid "Reduce X ticks"
 msgstr "Reducir las marcas X"
 
-#: superset-frontend/src/explore/controls.jsx:579
+#: superset-frontend/src/explore/controls.jsx:442
 msgid ""
 "Reduces the number of X-axis ticks to be rendered. If true, the x-axis "
 "will not overflow and labels may be missing. If false, a minimum width "
@@ -4283,35 +4360,27 @@ msgid ""
 "scroll."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:590
-msgid "Include Series"
-msgstr "Incluir series"
-
-#: superset-frontend/src/explore/controls.jsx:593
-msgid "Include series name as an axis"
-msgstr "Incluir el nombre de la serie como un eje."
-
-#: superset-frontend/src/explore/controls.jsx:598
+#: superset-frontend/src/explore/controls.jsx:453
 msgid "Color Metric"
 msgstr "Métrica de Color"
 
-#: superset-frontend/src/explore/controls.jsx:601
+#: superset-frontend/src/explore/controls.jsx:456
 msgid "A metric to use for color"
 msgstr "Una métrica para usar para el color."
 
-#: superset-frontend/src/explore/controls.jsx:605
+#: superset-frontend/src/explore/controls.jsx:460
 msgid "Country Name"
 msgstr "Nombre País"
 
-#: superset-frontend/src/explore/controls.jsx:635
+#: superset-frontend/src/explore/controls.jsx:491
 msgid "The name of the country that Superset should display"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:640
+#: superset-frontend/src/explore/controls.jsx:496
 msgid "Frequency"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:652
+#: superset-frontend/src/explore/controls.jsx:508
 msgid ""
 "The periodicity over which to pivot time. Users can provide\n"
 "      \"Pandas\" offset alias.\n"
@@ -4319,96 +4388,96 @@ msgid ""
 "expressions."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:667
+#: superset-frontend/src/explore/controls.jsx:523
 msgid "Dimension"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:668
+#: superset-frontend/src/explore/controls.jsx:524
 msgid "Select a dimension"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:675
+#: superset-frontend/src/explore/controls.jsx:531
 msgid "One or many controls to pivot as columns"
 msgstr "Uno o varios controles para pivotar como columnas"
 
-#: superset-frontend/src/explore/controls.jsx:683
-#: superset-frontend/src/explore/controls.jsx:799
-#: superset-frontend/src/explore/controls.jsx:809
+#: superset-frontend/src/explore/controls.jsx:539
+#: superset-frontend/src/explore/controls.jsx:655
+#: superset-frontend/src/explore/controls.jsx:665
 msgid "Columns to display"
 msgstr "Columnas a mostrar"
 
-#: superset-frontend/src/explore/controls.jsx:697
+#: superset-frontend/src/explore/controls.jsx:553
 msgid "Longitude & Latitude"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:699
-#: superset-frontend/src/explore/controls.jsx:709
-#: superset-frontend/src/explore/controls.jsx:719
+#: superset-frontend/src/explore/controls.jsx:555
+#: superset-frontend/src/explore/controls.jsx:565
+#: superset-frontend/src/explore/controls.jsx:575
 msgid "Point to your spatial columns"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:707
+#: superset-frontend/src/explore/controls.jsx:563
 msgid "Start Longitude & Latitude"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:717
+#: superset-frontend/src/explore/controls.jsx:573
 msgid "End Longitude & Latitude"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:62
-#: superset-frontend/src/explore/controls.jsx:727
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:201
+#: superset-frontend/src/explore/controls.jsx:583
 msgid "Longitude"
 msgstr "Longitud"
 
-#: superset-frontend/src/explore/controls.jsx:730
+#: superset-frontend/src/explore/controls.jsx:586
 msgid "Select the longitude column"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:66
-#: superset-frontend/src/explore/controls.jsx:738
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:205
+#: superset-frontend/src/explore/controls.jsx:594
 msgid "Latitude"
 msgstr "Latitud"
 
-#: superset-frontend/src/explore/controls.jsx:741
+#: superset-frontend/src/explore/controls.jsx:597
 msgid "Select the latitude column"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:749
+#: superset-frontend/src/explore/controls.jsx:605
 msgid "Ignore null locations"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:751
+#: superset-frontend/src/explore/controls.jsx:607
 msgid "Whether to ignore locations that are null"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:756
+#: superset-frontend/src/explore/controls.jsx:612
 msgid "GeoJson Column"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:758
+#: superset-frontend/src/explore/controls.jsx:614
 msgid "Select the geojson column"
 msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/DeckPolygon.js:73
-#: superset-frontend/src/explore/controls.jsx:766
+#: superset-frontend/src/explore/controls.jsx:622
 msgid "Polygon Column"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:768
+#: superset-frontend/src/explore/controls.jsx:624
 msgid ""
 "Select the polygon column. Each row should contain JSON.array(N) of "
 "[longitude, latitude] points"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:779
+#: superset-frontend/src/explore/controls.jsx:635
 msgid "Point Radius Scale"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:788
+#: superset-frontend/src/explore/controls.jsx:644
 msgid "Stroke Width"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:824
+#: superset-frontend/src/explore/controls.jsx:680
 msgid ""
 "Defines the origin where time buckets start, accepts natural dates as in "
 "`now`, `sunday` or `1970-01-01`"
@@ -4416,35 +4485,35 @@ msgstr ""
 "Define el origen donde comienzan los intervalos de tiempo, acepta fechas "
 "naturales como en `now`,` sunday` o `1970-01-01`"
 
-#: superset-frontend/src/explore/controls.jsx:834
+#: superset-frontend/src/explore/controls.jsx:690
 msgid "Bottom Margin"
 msgstr "Margen Inferior"
 
-#: superset-frontend/src/explore/controls.jsx:838
+#: superset-frontend/src/explore/controls.jsx:694
 msgid "Bottom margin, in pixels, allowing for more room for axis labels"
 msgstr ""
 "Margen inferior, en píxeles, lo que permite más espacio para las "
 "etiquetas de eje"
 
-#: superset-frontend/src/explore/controls.jsx:845
+#: superset-frontend/src/explore/controls.jsx:701
 msgid "X Tick Layout"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:850
+#: superset-frontend/src/explore/controls.jsx:706
 msgid "The way the ticks are laid out on the X-axis"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:857
+#: superset-frontend/src/explore/controls.jsx:713
 msgid "Left Margin"
 msgstr "Margen Izquierdo"
 
-#: superset-frontend/src/explore/controls.jsx:861
+#: superset-frontend/src/explore/controls.jsx:717
 msgid "Left margin, in pixels, allowing for more room for axis labels"
 msgstr ""
 "Margen izquierdo, en píxeles, lo que permite más espacio para las "
 "etiquetas de los ejes."
 
-#: superset-frontend/src/explore/controls.jsx:889
+#: superset-frontend/src/explore/controls.jsx:745
 msgid ""
 "The time granularity for the visualization. Note that you can type and "
 "use simple natural language as in `10 seconds`, `1 day` or `56 weeks`"
@@ -4453,50 +4522,22 @@ msgstr ""
 "puedes escribir y usar un lenguaje natural simple como en `10 seconds`, "
 "`1 day` o `56 weeks`"
 
-#: superset-frontend/src/explore/controls.jsx:898
-msgid "Domain"
-msgstr "Dominio"
-
-#: superset-frontend/src/explore/controls.jsx:901
-msgid "The time unit used for the grouping of blocks"
-msgstr "La unidad de tiempo utilizada para la agrupación de bloques."
-
-#: superset-frontend/src/explore/controls.jsx:906
-msgid "Subdomain"
-msgstr "Subdominio"
-
-#: superset-frontend/src/explore/controls.jsx:909
-msgid ""
-"The time unit for each block. Should be a smaller unit than "
-"domain_granularity. Should be larger or equal to Time Grain"
-msgstr ""
-"La unidad de tiempo para cada bloque. Debe ser una unidad más pequeña que"
-" domain_granularity. Debe ser mayor o igual a Time Grain"
-
-#: superset-frontend/src/explore/controls.jsx:919
+#: superset-frontend/src/explore/controls.jsx:756
 msgid "Link Length"
 msgstr "Longitud del Enlace"
 
-#: superset-frontend/src/explore/controls.jsx:931
+#: superset-frontend/src/explore/controls.jsx:768
 msgid "Link length in the force layout"
 msgstr "Longitud enlace en disposición forzada"
 
-#: superset-frontend/src/explore/controls.jsx:938
-msgid "Charge"
-msgstr "Cargo"
-
-#: superset-frontend/src/explore/controls.jsx:952
-msgid "Charge in the force layout"
-msgstr "Cargo en Disposición Forzada"
-
-#: superset-frontend/src/explore/controls.jsx:958
+#: superset-frontend/src/explore/controls.jsx:774
 msgid ""
 "The time column for the visualization. Note that you can define arbitrary"
 " expression that return a DATETIME column in the table. Also note that "
 "the filter below is applied against this column or expression"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:989
+#: superset-frontend/src/explore/controls.jsx:805
 msgid ""
 "The time granularity for the visualization. This applies a date "
 "transformation to alter your time column and defines a new time "
@@ -4508,27 +4549,27 @@ msgstr ""
 "nueva granularidad de tiempo. Las opciones aquí se definen en función del"
 " motor de base de datos en el código fuente de Superset."
 
-#: superset-frontend/src/explore/controls.jsx:1004
+#: superset-frontend/src/explore/controls.jsx:820
 msgid "Rule"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1007
+#: superset-frontend/src/explore/controls.jsx:823
 msgid "Pandas resample rule"
 msgstr "Regla de Remuestra Pandas"
 
-#: superset-frontend/src/explore/controls.jsx:1013
+#: superset-frontend/src/explore/controls.jsx:829
 msgid "Method"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1023
+#: superset-frontend/src/explore/controls.jsx:839
 msgid "Pandas resample method"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1030
+#: superset-frontend/src/explore/controls.jsx:846
 msgid "Last week"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1031
+#: superset-frontend/src/explore/controls.jsx:847
 msgid ""
 "The time range for the visualization. All relative times, e.g. \"Last "
 "month\", \"Last 7 days\", \"now\", etc. are evaluated on the server using"
@@ -4539,38 +4580,22 @@ msgid ""
 " the start and/or end time."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1047
+#: superset-frontend/src/explore/controls.jsx:863
 msgid "Max Bubble Size"
 msgstr "Tamaño Máximo Burbuja"
 
-#: superset-frontend/src/explore/controls.jsx:1055
-msgid "Whisker/outlier options"
-msgstr "Opciones de patillas/valores atípicos"
-
-#: superset-frontend/src/explore/controls.jsx:1057
-msgid "Determines how whiskers and outliers are calculated."
-msgstr "Determina cómo se calculan las patillas y los valores atípicos."
-
-#: superset-frontend/src/explore/controls.jsx:1068
-msgid "Ratio"
-msgstr "Proporción"
-
-#: superset-frontend/src/explore/controls.jsx:1072
-msgid "Target aspect ratio for treemap tiles."
-msgstr "Relación de aspecto de destino para los mosaicos de treemap."
-
-#: superset-frontend/src/explore/controlPanels/BigNumber.js:49
+#: superset-frontend/src/explore/controlPanels/BigNumber.js:58
 #: superset-frontend/src/explore/controlPanels/BigNumberTotal.js:41
 #: superset-frontend/src/explore/controlPanels/Chord.js:46
-#: superset-frontend/src/explore/controls.jsx:1078
+#: superset-frontend/src/explore/controls.jsx:871
 msgid "Number format"
 msgstr "Formato numérico"
 
-#: superset-frontend/src/explore/controls.jsx:1097
+#: superset-frontend/src/explore/controls.jsx:890
 msgid "Series limit"
 msgstr "Límite de Serie"
 
-#: superset-frontend/src/explore/controls.jsx:1100
+#: superset-frontend/src/explore/controls.jsx:893
 msgid ""
 "Limits the number of time series that get displayed. A sub query (or an "
 "extra phase where sub queries are not supported) is applied to limit the "
@@ -4578,27 +4603,27 @@ msgid ""
 "useful when grouping by high cardinality dimension(s)."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1110
+#: superset-frontend/src/explore/controls.jsx:903
 msgid "Sort By"
 msgstr "Ordenar por"
 
-#: superset-frontend/src/explore/controls.jsx:1112
+#: superset-frontend/src/explore/controls.jsx:905
 msgid "Metric used to define the top series"
 msgstr "Métrica utilizada para definir la serie superior."
 
-#: superset-frontend/src/explore/controls.jsx:1122
+#: superset-frontend/src/explore/controls.jsx:915
 msgid "Sort Descending"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1124
+#: superset-frontend/src/explore/controls.jsx:917
 msgid "Whether to sort descending or ascending"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1129
-msgid "Rolling"
-msgstr "Ventana Desplazamiento"
+#: superset-frontend/src/explore/controls.jsx:922
+msgid "Rolling Function"
+msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1132
+#: superset-frontend/src/explore/controls.jsx:925
 msgid ""
 "Defines a rolling window function to apply, works along with the "
 "[Periods] text box"
@@ -4606,19 +4631,19 @@ msgstr ""
 "Define un una ventana de desplazamiento móvil para aplicar, funciona "
 "junto con el cuadro de texto [Periods]"
 
-#: superset-frontend/src/explore/controls.jsx:1140
+#: superset-frontend/src/explore/controls.jsx:933
 msgid "Multiplier"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1144
+#: superset-frontend/src/explore/controls.jsx:937
 msgid "Factor to multiply the metric by"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1149
+#: superset-frontend/src/explore/controls.jsx:942
 msgid "Periods"
 msgstr "Periodos"
 
-#: superset-frontend/src/explore/controls.jsx:1151
+#: superset-frontend/src/explore/controls.jsx:944
 msgid ""
 "Defines the size of the rolling window function, relative to the time "
 "granularity selected"
@@ -4626,51 +4651,19 @@ msgstr ""
 "Define el tamaño de la función de ventana móvil, en relación con la "
 "granularidad de tiempo seleccionada"
 
-#: superset-frontend/src/explore/controls.jsx:1163
-msgid "Cell Size"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1164
-msgid "The size of the square cell, in pixels"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1173
-msgid "Cell Padding"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1174
-msgid "The distance between cells, in pixels"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1183
-msgid "Cell Radius"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1184
-msgid "The pixel radius"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1193
-msgid "Color Steps"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1194
-msgid "The number color \"steps\""
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1199
+#: superset-frontend/src/explore/controls.jsx:952
 msgid "Grid Size"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1203
+#: superset-frontend/src/explore/controls.jsx:956
 msgid "Defines the grid size in pixels"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1208
+#: superset-frontend/src/explore/controls.jsx:961
 msgid "Min Periods"
 msgstr "Periodos Mínimos"
 
-#: superset-frontend/src/explore/controls.jsx:1210
+#: superset-frontend/src/explore/controls.jsx:963
 msgid ""
 "The minimum number of rolling periods required to show a value. For "
 "instance if you do a cumulative sum on 7 days you may want your \"Min "
@@ -4685,11 +4678,11 @@ msgstr ""
 "\"incremento\" que tendrá lugar durante los primeros 7 períodos."
 
 #: superset-frontend/src/explore/controlPanels/DistBar.js:58
-#: superset-frontend/src/explore/controls.jsx:1221
+#: superset-frontend/src/explore/controls.jsx:974
 msgid "Series"
 msgstr "Series"
 
-#: superset-frontend/src/explore/controls.jsx:1224
+#: superset-frontend/src/explore/controls.jsx:977
 msgid ""
 "Defines the grouping of entities. Each series is shown as a specific "
 "color on the chart and has a legend toggle"
@@ -4697,11 +4690,11 @@ msgstr ""
 "Define la agrupación de entidades. Cada serie se muestra como un color "
 "específico en el gráfico y tiene una leyenda"
 
-#: superset-frontend/src/explore/controls.jsx:1233
+#: superset-frontend/src/explore/controls.jsx:986
 msgid "Entity"
 msgstr "Entidad"
 
-#: superset-frontend/src/explore/controls.jsx:1237
+#: superset-frontend/src/explore/controls.jsx:990
 msgid "This defines the element to be plotted on the chart"
 msgstr "Esto define el elemento a trazar en el gráfico."
 
@@ -4713,11 +4706,11 @@ msgstr "Esto define el elemento a trazar en el gráfico."
 #: superset-frontend/src/explore/controlPanels/Line.js:38
 #: superset-frontend/src/explore/controlPanels/LineMulti.js:37
 #: superset-frontend/src/explore/controlPanels/TimePivot.js:39
-#: superset-frontend/src/explore/controls.jsx:1242
+#: superset-frontend/src/explore/controls.jsx:995
 msgid "X Axis"
 msgstr "Eje X"
 
-#: superset-frontend/src/explore/controls.jsx:1243
+#: superset-frontend/src/explore/controls.jsx:996
 msgid "Metric assigned to the [X] axis"
 msgstr "Métrica asignada al eje [X]"
 
@@ -4727,23 +4720,23 @@ msgstr "Métrica asignada al eje [X]"
 #: superset-frontend/src/explore/controlPanels/Compare.js:42
 #: superset-frontend/src/explore/controlPanels/Line.js:47
 #: superset-frontend/src/explore/controlPanels/TimePivot.js:47
-#: superset-frontend/src/explore/controls.jsx:1249
+#: superset-frontend/src/explore/controls.jsx:1002
 msgid "Y Axis"
 msgstr "Eje Y"
 
-#: superset-frontend/src/explore/controls.jsx:1251
+#: superset-frontend/src/explore/controls.jsx:1004
 msgid "Metric assigned to the [Y] axis"
 msgstr "Métrica asignada al eje [Y]"
 
-#: superset-frontend/src/explore/controls.jsx:1256
+#: superset-frontend/src/explore/controls.jsx:1009
 msgid "Bubble Size"
 msgstr "Tamaño burbuja"
 
-#: superset-frontend/src/explore/controls.jsx:1262
+#: superset-frontend/src/explore/controls.jsx:1015
 msgid "URL"
 msgstr "URL"
 
-#: superset-frontend/src/explore/controls.jsx:1263
+#: superset-frontend/src/explore/controls.jsx:1016
 msgid ""
 "The URL, this control is templated, so you can integrate {{ width }} "
 "and/or {{ height }} in your URL string."
@@ -4751,116 +4744,91 @@ msgstr ""
 "La URL, este control es una plantilla, por lo que puedes integrar {{ "
 "width }} y/o {{ height }} en tu cadena de URL."
 
-#: superset-frontend/src/explore/controls.jsx:1272
+#: superset-frontend/src/explore/controls.jsx:1025
 msgid "X Axis Label"
 msgstr "Etiqueta Eje X"
 
-#: superset-frontend/src/explore/controls.jsx:1279
+#: superset-frontend/src/explore/controls.jsx:1032
 msgid "Y Axis Label"
 msgstr "Etiqueta Eje Y"
 
-#: superset-frontend/src/explore/controls.jsx:1286
+#: superset-frontend/src/explore/controls.jsx:1039
 msgid "Comparison Period Lag"
 msgstr "Retraso del Período de Comparación"
 
-#: superset-frontend/src/explore/controls.jsx:1288
+#: superset-frontend/src/explore/controls.jsx:1041
 msgid "Based on granularity, number of time periods to compare against"
 msgstr "Basado en la granularidad, número de períodos de tiempo para comparar con"
 
-#: superset-frontend/src/explore/controls.jsx:1295
+#: superset-frontend/src/explore/controls.jsx:1048
 msgid "Comparison suffix"
 msgstr "Sufijo Comparación"
 
-#: superset-frontend/src/explore/controls.jsx:1296
+#: superset-frontend/src/explore/controls.jsx:1049
 msgid "Suffix to apply after the percentage display"
 msgstr "Sufijo a mostrar después de la visualización del porcentaje"
 
-#: superset-frontend/src/explore/controls.jsx:1302
-msgid "Table Timestamp Format"
-msgstr "Formato de hora en la tabla"
-
-#: superset-frontend/src/explore/controls.jsx:1308
-msgid "Timestamp Format"
-msgstr "Formato Hora"
-
-#: superset-frontend/src/explore/controls.jsx:1315
-msgid "Series Height"
-msgstr "Altura Series"
-
-#: superset-frontend/src/explore/controls.jsx:1327
-msgid "Pixel height of each series"
-msgstr "Altura de píxel de cada serie."
-
-#: superset-frontend/src/explore/controls.jsx:1334
-msgid "Page Length"
-msgstr "Longitud de Página"
-
-#: superset-frontend/src/explore/controls.jsx:1337
-msgid "Rows per page, 0 means no pagination"
-msgstr "Filas por página, 0 significa que no hay paginación"
-
-#: superset-frontend/src/explore/controls.jsx:1343
-#: superset-frontend/src/explore/controls.jsx:1353
+#: superset-frontend/src/explore/controls.jsx:1055
 msgid "X Axis Format"
 msgstr "Formato Eje X"
 
-#: superset-frontend/src/explore/controls.jsx:1363
+#: superset-frontend/src/explore/controls.jsx:1065
 msgid "Y Axis Format"
 msgstr "Formato Eje Y"
 
-#: superset-frontend/src/explore/controls.jsx:1375
+#: superset-frontend/src/explore/controls.jsx:1077
 msgid ""
 "When `Calculation type` is set to \"Percentage change\", the Y Axis "
 "Format is forced to `.1%`"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1388
+#: superset-frontend/src/explore/controls.jsx:1090
 msgid "Right Axis Format"
 msgstr "Formato Eje Derecho"
 
-#: superset-frontend/src/explore/controls.jsx:1397
+#: superset-frontend/src/explore/controls.jsx:1099
 msgid "Date Time Format"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1406
+#: superset-frontend/src/explore/controls.jsx:1108
 msgid "Markup Type"
 msgstr "Tipo de Markup"
 
-#: superset-frontend/src/explore/controls.jsx:1411
+#: superset-frontend/src/explore/controls.jsx:1113
 msgid "Pick your favorite markup language"
 msgstr "Elige tu idioma favorito de markup"
 
-#: superset-frontend/src/explore/controls.jsx:1416
+#: superset-frontend/src/explore/controls.jsx:1118
 msgid "Line Style"
 msgstr "Estilo Línea"
 
-#: superset-frontend/src/explore/controls.jsx:1427
+#: superset-frontend/src/explore/controls.jsx:1129
 msgid "Line interpolation as defined by d3.js"
 msgstr "Interpolación de línea según definido por d3.js"
 
-#: superset-frontend/src/explore/controls.jsx:1432
+#: superset-frontend/src/explore/controls.jsx:1134
 msgid "Label Type"
 msgstr "Tipo Etiqueta"
 
-#: superset-frontend/src/explore/controls.jsx:1442
+#: superset-frontend/src/explore/controls.jsx:1144
 msgid "What should be shown on the label?"
 msgstr "¿Qué se debe mostrar en la etiqueta?"
 
 #: superset-frontend/src/explore/controlPanels/Markup.js:24
 #: superset-frontend/src/explore/controlPanels/Separator.js:24
-#: superset-frontend/src/explore/controls.jsx:1447
+#: superset-frontend/src/explore/controls.jsx:1149
 msgid "Code"
 msgstr "Código"
 
-#: superset-frontend/src/explore/controls.jsx:1448
+#: superset-frontend/src/explore/controls.jsx:1150
 msgid "Put your code here"
 msgstr "Pon tu código aquí"
 
-#: superset-frontend/src/explore/controls.jsx:1460
+#: superset-frontend/src/explore/controls.jsx:1162
 msgid "Aggregation function"
 msgstr "Función de agregación"
 
-#: superset-frontend/src/explore/controls.jsx:1464
+#: superset-frontend/src/explore/controls.jsx:1166
 msgid ""
 "Aggregate function to apply when pivoting and computing the total rows "
 "and columns"
@@ -4868,324 +4836,284 @@ msgstr ""
 "Función agregada para aplicar al pivotar y al calcular el total de filas "
 "y columnas"
 
-#: superset-frontend/src/explore/controls.jsx:1472
+#: superset-frontend/src/explore/controls.jsx:1174
 msgid "Dynamic Aggregation Function"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1473
+#: superset-frontend/src/explore/controls.jsx:1175
 msgid "The function to use when aggregating points into groups"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1495
+#: superset-frontend/src/explore/controls.jsx:1197
 msgid "Header Font Size"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1502
-#: superset-frontend/src/explore/controls.jsx:1533
+#: superset-frontend/src/explore/controls.jsx:1204
+#: superset-frontend/src/explore/controls.jsx:1235
 msgid "Tiny"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1510
-#: superset-frontend/src/explore/controls.jsx:1541
+#: superset-frontend/src/explore/controls.jsx:1212
+#: superset-frontend/src/explore/controls.jsx:1243
 msgid "Normal"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1518
-#: superset-frontend/src/explore/controls.jsx:1549
+#: superset-frontend/src/explore/controls.jsx:1220
+#: superset-frontend/src/explore/controls.jsx:1251
 msgid "Huge"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1526
+#: superset-frontend/src/explore/controls.jsx:1228
 msgid "Subheader Font Size"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1557
+#: superset-frontend/src/explore/controls.jsx:1259
 msgid "Instant Filtering"
 msgstr "Filtrado Instantáneo"
 
-#: superset-frontend/src/explore/controls.jsx:1567
+#: superset-frontend/src/explore/controls.jsx:1269
 msgid "Extruded"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1575
+#: superset-frontend/src/explore/controls.jsx:1277
 msgid "Show Range Filter"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1584
+#: superset-frontend/src/explore/controls.jsx:1286
 msgid "Whether to display the time range interactive selector"
 msgstr "Mostrar el selector interactivo de rango de tiempo"
 
-#: superset-frontend/src/explore/controls.jsx:1589
+#: superset-frontend/src/explore/controls.jsx:1291
 msgid "Date Filter"
 msgstr "Filtro de Fecha"
 
-#: superset-frontend/src/explore/controls.jsx:1591
+#: superset-frontend/src/explore/controls.jsx:1293
 msgid "Whether to include a time filter"
 msgstr "Mostrar un filtro de tiempo"
 
-#: superset-frontend/src/explore/controls.jsx:1596
+#: superset-frontend/src/explore/controls.jsx:1298
 msgid "Show SQL Granularity Dropdown"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1598
+#: superset-frontend/src/explore/controls.jsx:1300
 msgid "Check to include SQL Granularity dropdown"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1603
+#: superset-frontend/src/explore/controls.jsx:1305
 msgid "Show SQL Time Column"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1605
+#: superset-frontend/src/explore/controls.jsx:1307
 msgid "Check to include Time Column dropdown"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1610
+#: superset-frontend/src/explore/controls.jsx:1312
 msgid "Show Druid Granularity Dropdown"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1612
+#: superset-frontend/src/explore/controls.jsx:1314
 msgid "Check to include Druid Granularity dropdown"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1617
+#: superset-frontend/src/explore/controls.jsx:1319
 msgid "Show Druid Time Origin"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1619
+#: superset-frontend/src/explore/controls.jsx:1321
 msgid "Check to include Time Origin dropdown"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1624
-msgid "Data Table"
-msgstr "Tabla de Datos"
-
-#: superset-frontend/src/explore/controls.jsx:1627
-msgid "Whether to display the interactive data table"
-msgstr "Mostrar la tabla de datos interactiva"
-
-#: superset-frontend/src/explore/controls.jsx:1632
-msgid "Search Box"
-msgstr "Caja de Búsqueda"
-
-#: superset-frontend/src/explore/controls.jsx:1635
-msgid "Whether to include a client-side search box"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1640
+#: superset-frontend/src/explore/controls.jsx:1326
 msgid "Emit Filter Events"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1643
+#: superset-frontend/src/explore/controls.jsx:1329
 msgid "Whether to apply filter when items are clicked"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1648
-msgid "Align +/-"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1651
-msgid "Whether to align the background chart for +/- values"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1656
-msgid "Color +/-"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1659
-msgid "Whether to color +/- values"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1664
+#: superset-frontend/src/explore/controls.jsx:1334
 msgid "Legend"
 msgstr "Leyenda"
 
-#: superset-frontend/src/explore/controls.jsx:1667
+#: superset-frontend/src/explore/controls.jsx:1337
 msgid "Whether to display the legend (toggles)"
 msgstr "Mostrar la leyenda (toggles)"
 
-#: superset-frontend/src/explore/controls.jsx:1672
+#: superset-frontend/src/explore/controls.jsx:1342
 msgid "Propagate"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1675
+#: superset-frontend/src/explore/controls.jsx:1345
 msgid "Send range filter events to other charts"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1680
+#: superset-frontend/src/explore/controls.jsx:1350
 msgid "Multiple filtering"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1683
+#: superset-frontend/src/explore/controls.jsx:1353
 msgid "Allow sending multiple polygons as a filter event"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1690
+#: superset-frontend/src/explore/controls.jsx:1360
 msgid "Number of buckets to group data"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1693
+#: superset-frontend/src/explore/controls.jsx:1363
 msgid "How many buckets should the data be grouped in."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1701
+#: superset-frontend/src/explore/controls.jsx:1371
 msgid "Bucket break points"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1703
+#: superset-frontend/src/explore/controls.jsx:1373
 msgid "List of n+1 values for bucketing metric into n buckets."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1709
+#: superset-frontend/src/explore/controls.jsx:1379
 msgid "Show Labels"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1712
+#: superset-frontend/src/explore/controls.jsx:1382
 msgid ""
 "Whether to display the labels. Note that the label only displays when the"
 " the 5% threshold."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1720
+#: superset-frontend/src/explore/controls.jsx:1390
 msgid "Show Values"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1723
+#: superset-frontend/src/explore/controls.jsx:1393
 msgid "Whether to display the numerical values within the cells"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1728
-msgid "Show Metric Names"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1731
-msgid "Whether to display the metric name as a title"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:1736
+#: superset-frontend/src/explore/controls.jsx:1398
 msgid "Show Trend Line"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1739
+#: superset-frontend/src/explore/controls.jsx:1401
 msgid "Whether to display the trend line"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1744
+#: superset-frontend/src/explore/controls.jsx:1406
 msgid "Start y-axis at 0"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1747
+#: superset-frontend/src/explore/controls.jsx:1409
 msgid ""
 "Start y-axis at zero. Uncheck to start y-axis at minimum value in the "
 "data."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1754
+#: superset-frontend/src/explore/controls.jsx:1416
 msgid "X bounds"
 msgstr "Límites X"
 
-#: superset-frontend/src/explore/controls.jsx:1757
+#: superset-frontend/src/explore/controls.jsx:1419
 msgid "Whether to display the min and max values of the X-axis"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1762
+#: superset-frontend/src/explore/controls.jsx:1424
 msgid "Y bounds"
 msgstr "Límites Y"
 
-#: superset-frontend/src/explore/controls.jsx:1765
+#: superset-frontend/src/explore/controls.jsx:1427
 msgid "Whether to display the min and max values of the Y-axis"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1770
+#: superset-frontend/src/explore/controls.jsx:1432
 msgid "Rich Tooltip"
 msgstr "Tooltip Rico"
 
-#: superset-frontend/src/explore/controls.jsx:1773
+#: superset-frontend/src/explore/controls.jsx:1435
 msgid "The rich tooltip shows a list of all series for that point in time"
 msgstr "El tooltip rico muestra una lista de todas las series para ese punto"
 
-#: superset-frontend/src/explore/controls.jsx:1780
+#: superset-frontend/src/explore/controls.jsx:1442
 msgid "Y Log Scale"
 msgstr "Escala Logarítmica Y"
 
-#: superset-frontend/src/explore/controls.jsx:1783
+#: superset-frontend/src/explore/controls.jsx:1445
 msgid "Use a log scale for the Y-axis"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1788
+#: superset-frontend/src/explore/controls.jsx:1450
 msgid "X Log Scale"
 msgstr "Escala Logarítmica X"
 
-#: superset-frontend/src/explore/controls.jsx:1791
+#: superset-frontend/src/explore/controls.jsx:1453
 msgid "Use a log scale for the X-axis"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1796
+#: superset-frontend/src/explore/controls.jsx:1458
 msgid "Log Scale"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1799
+#: superset-frontend/src/explore/controls.jsx:1461
 msgid "Use a log scale"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1804
+#: superset-frontend/src/explore/controls.jsx:1466
 msgid "Donut"
 msgstr "Donut"
 
-#: superset-frontend/src/explore/controls.jsx:1807
+#: superset-frontend/src/explore/controls.jsx:1469
 msgid "Do you want a donut or a pie?"
 msgstr "¿Quieres un donut o un pastel?"
 
-#: superset-frontend/src/explore/controls.jsx:1812
+#: superset-frontend/src/explore/controls.jsx:1474
 msgid "Put labels outside"
 msgstr "Poner las etiquetas fuera"
 
-#: superset-frontend/src/explore/controls.jsx:1815
+#: superset-frontend/src/explore/controls.jsx:1477
 msgid "Put the labels outside the pie?"
 msgstr "¿Poner las etiquetas fuera del pastel?"
 
-#: superset-frontend/src/explore/controls.jsx:1820
+#: superset-frontend/src/explore/controls.jsx:1482
 msgid "Contribution"
 msgstr "Contribución"
 
-#: superset-frontend/src/explore/controls.jsx:1822
+#: superset-frontend/src/explore/controls.jsx:1484
 msgid "Compute the contribution to the total"
 msgstr "Calcular la contribución al total."
 
-#: superset-frontend/src/explore/controls.jsx:1829
+#: superset-frontend/src/explore/controls.jsx:1491
 msgid "Time Shift"
 msgstr "Cambio de Hora"
 
-#: superset-frontend/src/explore/controls.jsx:1838
+#: superset-frontend/src/explore/controls.jsx:1500
 msgid ""
 "Overlay one or more timeseries from a relative time period. Expects "
 "relative time deltas in natural language (example:  24 hours, 7 days, 56 "
 "weeks, 365 days)"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1848
+#: superset-frontend/src/explore/controls.jsx:1510
 msgid "Calculation type"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1856
+#: superset-frontend/src/explore/controls.jsx:1518
 msgid ""
 "How to display time shifts: as individual lines; as the absolute "
 "difference between the main time series and each time shift; as the "
 "percentage change; or as the ratio between series and time shifts."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1865
+#: superset-frontend/src/explore/controls.jsx:1527
 msgid "Subheader"
 msgstr "Sub-encabezado"
 
-#: superset-frontend/src/explore/controls.jsx:1866
+#: superset-frontend/src/explore/controls.jsx:1528
 msgid "Description text that shows up below your Big Number"
 msgstr "Descripción del texto que aparece debajo de tu Gran Número"
 
-#: superset-frontend/src/explore/controls.jsx:1872
+#: superset-frontend/src/explore/controls.jsx:1534
 msgid "label"
 msgstr "etiqueta"
 
-#: superset-frontend/src/explore/controls.jsx:1874
+#: superset-frontend/src/explore/controls.jsx:1536
 msgid ""
 "`count` is COUNT(*) if a group by is used. Numerical columns will be "
 "aggregated with the aggregator. Non-numerical columns will be used to "
@@ -5196,456 +5124,260 @@ msgstr ""
 "etiquetar puntos. Deja vacío para obtener un conteo de puntos en cada "
 "grupo."
 
-#: superset-frontend/src/explore/controls.jsx:1887
+#: superset-frontend/src/explore/controls.jsx:1549
 msgid "Map Style"
 msgstr "Estilo Mapa"
 
-#: superset-frontend/src/explore/controls.jsx:1899
+#: superset-frontend/src/explore/controls.jsx:1561
 msgid "Base layer map style"
 msgstr "Estilo de mapa de capa base"
 
-#: superset-frontend/src/explore/controls.jsx:1905
-msgid "Clustering Radius"
-msgstr "Radio de Agrupación"
-
-#: superset-frontend/src/explore/controls.jsx:1918
-msgid ""
-"The radius (in pixels) the algorithm uses to define a cluster. Choose 0 "
-"to turn off clustering, but beware that a large number of points (>1000) "
-"will cause lag."
-msgstr ""
-"El radio (en píxeles) que utiliza el algoritmo para definir un grupo. "
-"Elige 0 para desactivar la agrupación, pero ten en cuenta que un gran "
-"número de puntos (> 1000) causará un retraso."
-
 #: superset-frontend/src/explore/controlPanels/DeckScatter.js:54
-#: superset-frontend/src/explore/controls.jsx:1927
+#: superset-frontend/src/explore/controls.jsx:1566
 msgid "Point Size"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1929
+#: superset-frontend/src/explore/controls.jsx:1568
 msgid "Fixed point radius"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:1937
-msgid "Point Radius"
-msgstr "Radio del Punto"
-
-#: superset-frontend/src/explore/controls.jsx:1939
-msgid ""
-"The radius of individual points (ones that are not in a cluster). Either "
-"a numerical column or `Auto`, which scales the point based on the largest"
-" cluster"
-msgstr ""
-"El radio de los puntos individuales (aquellos que no están en un grupo). "
-"Ya sea una columna numérica o `Auto`, que escala el punto en función del "
-"grupo más grande"
-
-#: superset-frontend/src/explore/controls.jsx:1953
-msgid "Point Radius Unit"
-msgstr "Unidades del Radio del Punto"
-
-#: superset-frontend/src/explore/controls.jsx:1956
-#: superset-frontend/src/explore/controls.jsx:1972
-msgid "The unit of measure for the specified point radius"
-msgstr "La unidad de medida para el radio del punto especificado."
-
-#: superset-frontend/src/explore/controls.jsx:1961
+#: superset-frontend/src/explore/controls.jsx:1576
 msgid "Point Unit"
 msgstr ""
 
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:93
+#: superset-frontend/src/explore/controls.jsx:1587
+msgid "The unit of measure for the specified point radius"
+msgstr "La unidad de medida para el radio del punto especificado."
+
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:596
-#: superset-frontend/src/explore/controls.jsx:1977
-#: superset-frontend/src/explore/controls.jsx:1987
+#: superset-frontend/src/explore/controls.jsx:1592
+#: superset-frontend/src/explore/controls.jsx:1602
 msgid "Opacity"
 msgstr "Opacidad"
 
-#: superset-frontend/src/explore/controls.jsx:1980
+#: superset-frontend/src/explore/controls.jsx:1595
 msgid "Opacity of all clusters, points, and labels. Between 0 and 1."
 msgstr "Opacidad de todas las agrupaciones, puntos y etiquetas. Entre 0 y 1."
 
-#: superset-frontend/src/explore/controls.jsx:1993
+#: superset-frontend/src/explore/controls.jsx:1608
 msgid "Opacity, expects values between 0 and 100"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:52
-#: superset-frontend/src/explore/controls.jsx:1998
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:146
+#: superset-frontend/src/explore/controls.jsx:1613
 msgid "Viewport"
 msgstr "Vista"
 
-#: superset-frontend/src/explore/controls.jsx:2000
+#: superset-frontend/src/explore/controls.jsx:1615
 msgid "Parameters related to the view and perspective on the map"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2009
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:184
+#: superset-frontend/src/explore/controls.jsx:1624
 msgid "Zoom"
 msgstr "Acercamiento"
 
-#: superset-frontend/src/explore/controls.jsx:2013
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:188
+#: superset-frontend/src/explore/controls.jsx:1628
 msgid "Zoom level of the map"
 msgstr "Nivel de acercamiento del mapa"
 
-#: superset-frontend/src/explore/controls.jsx:2021
-msgid "Default latitude"
-msgstr "Latitud por defecto"
-
-#: superset-frontend/src/explore/controls.jsx:2025
-msgid "Latitude of default viewport"
-msgstr "Latitud de la ventana gráfica predeterminada"
-
-#: superset-frontend/src/explore/controls.jsx:2033
-msgid "Default longitude"
-msgstr "Longitud por defecto"
-
-#: superset-frontend/src/explore/controls.jsx:2037
-msgid "Longitude of default viewport"
-msgstr "Longitud de la ventana gráfica predeterminada"
-
-#: superset-frontend/src/explore/controls.jsx:2045
-msgid "Live render"
-msgstr "Generación en Directo"
-
-#: superset-frontend/src/explore/controls.jsx:2047
-msgid "Points and clusters will update as the viewport is being changed"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2055
-msgid "RGB Color"
-msgstr "Color RGB"
-
-#: superset-frontend/src/explore/controls.jsx:2065
-msgid "The color for points and clusters in RGB"
-msgstr "El color para puntos y clusters en RGB."
-
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:608
-#: superset-frontend/src/explore/controls.jsx:2070
+#: superset-frontend/src/explore/controls.jsx:1636
 msgid "Color"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2072
+#: superset-frontend/src/explore/controls.jsx:1638
 msgid "Pick a color"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2077
+#: superset-frontend/src/explore/controls.jsx:1643
 msgid "Ranges"
 msgstr "Rangos"
 
-#: superset-frontend/src/explore/controls.jsx:2079
+#: superset-frontend/src/explore/controls.jsx:1645
 msgid "Ranges to highlight with shading"
 msgstr "Rangos a resaltar con sombreado."
 
-#: superset-frontend/src/explore/controls.jsx:2084
+#: superset-frontend/src/explore/controls.jsx:1650
 msgid "Range labels"
 msgstr "Etiquetas de Rango"
 
-#: superset-frontend/src/explore/controls.jsx:2086
+#: superset-frontend/src/explore/controls.jsx:1652
 msgid "Labels for the ranges"
 msgstr "Etiquetas para los rangos"
 
-#: superset-frontend/src/explore/controls.jsx:2091
+#: superset-frontend/src/explore/controls.jsx:1657
 msgid "Markers"
 msgstr "Marcadores"
 
-#: superset-frontend/src/explore/controls.jsx:2093
+#: superset-frontend/src/explore/controls.jsx:1659
 msgid "List of values to mark with triangles"
 msgstr "Lista de valores para marcar con triángulos."
 
-#: superset-frontend/src/explore/controls.jsx:2098
+#: superset-frontend/src/explore/controls.jsx:1664
 msgid "Marker labels"
 msgstr "Etiquetas de Marcadores"
 
-#: superset-frontend/src/explore/controls.jsx:2100
+#: superset-frontend/src/explore/controls.jsx:1666
 msgid "Labels for the markers"
 msgstr "Etiquetas para los Marcadores"
 
-#: superset-frontend/src/explore/controls.jsx:2105
+#: superset-frontend/src/explore/controls.jsx:1671
 msgid "Marker lines"
 msgstr "Líneas de Marcadores"
 
-#: superset-frontend/src/explore/controls.jsx:2107
+#: superset-frontend/src/explore/controls.jsx:1673
 msgid "List of values to mark with lines"
 msgstr "Lista de valores a marcar con líneas."
 
-#: superset-frontend/src/explore/controls.jsx:2112
+#: superset-frontend/src/explore/controls.jsx:1678
 msgid "Marker line labels"
 msgstr "Etiquetas de Líneas para los Marcadores"
 
-#: superset-frontend/src/explore/controls.jsx:2114
+#: superset-frontend/src/explore/controls.jsx:1680
 msgid "Labels for the marker lines"
 msgstr "Etiquetas para las líneas de marca"
 
-#: superset-frontend/src/explore/controls.jsx:2143
+#: superset-frontend/src/explore/controls.jsx:1709
 msgid "Chart ID"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2145
+#: superset-frontend/src/explore/controls.jsx:1711
 msgid "The id of the active chart"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2150
+#: superset-frontend/src/explore/controls.jsx:1716
 msgid "Cache Timeout (seconds)"
 msgstr "Tiempo de espera de caché (segundos)"
 
-#: superset-frontend/src/explore/controls.jsx:2152
+#: superset-frontend/src/explore/controls.jsx:1718
 msgid "The number of seconds before expiring the cache"
 msgstr "El número de segundos antes de caducar el caché."
 
-#: superset-frontend/src/explore/controls.jsx:2157
+#: superset-frontend/src/explore/controls.jsx:1723
 msgid "URL Parameters"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2159
+#: superset-frontend/src/explore/controls.jsx:1725
 msgid "Extra parameters for use in jinja templated queries"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2164
+#: superset-frontend/src/explore/controls.jsx:1730
 msgid "Time range endpoints"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2166
+#: superset-frontend/src/explore/controls.jsx:1732
 msgid "Time range endpoints (SIP-15)"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2171
-msgid "Order by entity id"
-msgstr "Ordenar por ID entidad"
-
-#: superset-frontend/src/explore/controls.jsx:2172
-msgid ""
-"Important! Select this if the table is not already sorted by entity id, "
-"else there is no guarantee that all events for each entity are returned."
-msgstr ""
-"¡Importante! Selecciona esto si la tabla no está ya ordenada por el "
-"identificador de la entidad, de lo contrario no hay garantía de que se "
-"devuelvan todos los eventos para cada entidad."
-
-#: superset-frontend/src/explore/controls.jsx:2182
-msgid "Minimum leaf node event count"
-msgstr "Recuento mínimo de eventos del nodo hoja"
-
-#: superset-frontend/src/explore/controls.jsx:2185
-msgid ""
-"Leaf nodes that represent fewer than this number of events will be "
-"initially hidden in the visualization"
-msgstr ""
-"Los nodos de hoja que representan menos que este número de eventos se "
-"ocultarán inicialmente en la visualización"
-
-#: superset-frontend/src/explore/controls.jsx:2197
+#: superset-frontend/src/explore/controls.jsx:1741
 msgid "The color scheme for rendering chart"
 msgstr "El esquema de color para la representación gráfica."
 
-#: superset-frontend/src/explore/controls.jsx:2203
+#: superset-frontend/src/explore/controls.jsx:1747
 msgid "Color Map"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/TimeSeriesColumnControl.jsx:53
-#: superset-frontend/src/explore/controls.jsx:2214
+#: superset-frontend/src/explore/controls.jsx:1758
 msgid "Time Series Columns"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/BigNumber.js:29
-#: superset-frontend/src/explore/controlPanels/BigNumberTotal.js:29
-#: superset-frontend/src/explore/controlPanels/CountryMap.js:29
-#: superset-frontend/src/explore/controlPanels/DirectedForce.js:34
-#: superset-frontend/src/explore/controlPanels/Iframe.js:24
-#: superset-frontend/src/explore/controlPanels/Para.js:35
-#: superset-frontend/src/explore/controlPanels/Table.js:47
-#: superset-frontend/src/explore/controlPanels/WordCloud.js:35
-#: superset-frontend/src/explore/controls.jsx:2221
-msgid "Options"
-msgstr "Opciones"
-
-#: superset-frontend/src/explore/controls.jsx:2227
-msgid "Not Time Series"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2229
-msgid "Ignore time"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2232
-msgid "Time Series"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2234
-msgid "Standard time series"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2237
-msgid "Aggregate Mean"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2239
-msgid "Mean of values over specified period"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2242
-msgid "Aggregate Sum"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2244
-msgid "Sum of values over specified period"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2247
-msgid "Difference"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2249
-msgid "Metric change in value from `since` to `until`"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2252
-msgid "Percent Change"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2254
-msgid "Metric percent change in value from `since` to `until`"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2259
-msgid "Factor"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2261
-msgid "Metric factor change from `since` to `until`"
-msgstr ""
-
-#: superset-frontend/src/explore/controlPanels/sections.jsx:71
-#: superset-frontend/src/explore/controls.jsx:2264
-msgid "Advanced Analytics"
-msgstr "Analíticas Avanzadas"
-
-#: superset-frontend/src/explore/controls.jsx:2266
-msgid "Use the Advanced Analytics options below"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2271
-msgid "Settings for time series"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2276
-msgid "Equal Date Sizes"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2279
-msgid "Check to force date partitions to have the same height"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2284
-msgid "Partition Limit"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2287
-msgid ""
-"The maximum number of subdivisions of each group; lower values are pruned"
-" first"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2295
+#: superset-frontend/src/explore/controls.jsx:1765
 msgid "Minimum Radius"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2300
+#: superset-frontend/src/explore/controls.jsx:1770
 msgid ""
 "Minimum radius size of the circle, in pixels. As the zoom level changes, "
 "this insures that the circle respects this minimum radius."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2308
+#: superset-frontend/src/explore/controls.jsx:1778
 msgid "Maximum Radius"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2313
+#: superset-frontend/src/explore/controls.jsx:1783
 msgid ""
 "Maxium radius size of the circle, in pixels. As the zoom level changes, "
 "this insures that the circle respects this maximum radius."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2321
-msgid "Partition Threshold"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2324
-msgid ""
-"Partitions whose height to parent height proportions are below this value"
-" are pruned"
-msgstr ""
-
-#: superset-frontend/src/explore/controls.jsx:2332
+#: superset-frontend/src/explore/controls.jsx:1791
 msgid "Lines column"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2334
+#: superset-frontend/src/explore/controls.jsx:1793
 msgid "The database columns that contains lines information"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2342
+#: superset-frontend/src/explore/controls.jsx:1801
 msgid "Lines encoding"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2345
+#: superset-frontend/src/explore/controls.jsx:1804
 msgid "The encoding format of the lines"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2355
+#: superset-frontend/src/explore/controls.jsx:1814
 msgid "Line width"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2359
+#: superset-frontend/src/explore/controls.jsx:1818
 msgid "The width of the lines"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2365
+#: superset-frontend/src/explore/controls.jsx:1824
 msgid "Line charts"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2368
+#: superset-frontend/src/explore/controls.jsx:1827
 msgid "Pick a set of line charts to layer on top of one another"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2371
-#: superset-frontend/src/explore/controls.jsx:2390
-#: superset-frontend/src/explore/controls.jsx:2424
+#: superset-frontend/src/explore/controls.jsx:1830
+#: superset-frontend/src/explore/controls.jsx:1849
+#: superset-frontend/src/explore/controls.jsx:1883
 msgid "Select charts"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2372
-#: superset-frontend/src/explore/controls.jsx:2391
-#: superset-frontend/src/explore/controls.jsx:2425
+#: superset-frontend/src/explore/controls.jsx:1831
+#: superset-frontend/src/explore/controls.jsx:1850
+#: superset-frontend/src/explore/controls.jsx:1884
 msgid "Error while fetching charts"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2384
+#: superset-frontend/src/explore/controls.jsx:1843
 msgid "Right Axis chart(s)"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2387
+#: superset-frontend/src/explore/controls.jsx:1846
 msgid "Choose one or more charts for right axis"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2402
+#: superset-frontend/src/explore/controls.jsx:1861
 msgid "Prefix metric name with slice name"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2409
+#: superset-frontend/src/explore/controls.jsx:1868
 msgid "Reverse Lat & Long"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2416
+#: superset-frontend/src/explore/controls.jsx:1875
 msgid "deck.gl charts"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2419
+#: superset-frontend/src/explore/controls.jsx:1878
 msgid "Pick a set of deck.gl charts to layer on top of one another"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2435
+#: superset-frontend/src/explore/controls.jsx:1894
 msgid "Javascript data interceptor"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2436
+#: superset-frontend/src/explore/controls.jsx:1895
 msgid ""
 "Define a javascript function that receives the data array used in the "
 "visualization and is expected to return a modified version of that array."
@@ -5653,67 +5385,67 @@ msgid ""
 "array."
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2444
+#: superset-frontend/src/explore/controls.jsx:1903
 msgid "Javascript data mutator"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2445
+#: superset-frontend/src/explore/controls.jsx:1904
 msgid ""
 "Define a function that receives intercepts the data objects and can "
 "mutate it"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2451
+#: superset-frontend/src/explore/controls.jsx:1910
 msgid "Javascript tooltip generator"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2452
+#: superset-frontend/src/explore/controls.jsx:1911
 msgid ""
 "Define a function that receives the input and outputs the content for a "
 "tooltip"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2458
+#: superset-frontend/src/explore/controls.jsx:1917
 msgid "Javascript onClick href"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2459
+#: superset-frontend/src/explore/controls.jsx:1918
 msgid "Define a function that returns a URL to navigate to when user clicks"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2464
+#: superset-frontend/src/explore/controls.jsx:1923
 msgid "Extra data for JS"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2466
+#: superset-frontend/src/explore/controls.jsx:1925
 msgid "List of extra columns made available in Javascript functions"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2473
+#: superset-frontend/src/explore/controls.jsx:1932
 msgid "Stroked"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2475
+#: superset-frontend/src/explore/controls.jsx:1934
 msgid "Whether to display the stroke"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2481
+#: superset-frontend/src/explore/controls.jsx:1940
 msgid "Filled"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2483
+#: superset-frontend/src/explore/controls.jsx:1942
 msgid "Whether to fill the objects"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2490
+#: superset-frontend/src/explore/controls.jsx:1949
 msgid "Filter configuration for the filter box"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2498
+#: superset-frontend/src/explore/controls.jsx:1957
 msgid "Normalized"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:2500
+#: superset-frontend/src/explore/controls.jsx:1959
 msgid "Whether to normalize the histogram"
 msgstr ""
 
@@ -5769,6 +5501,14 @@ msgstr "Valor del Filtro"
 msgid "choose WHERE or HAVING..."
 msgstr ""
 
+#: superset-frontend/src/explore/components/AdhocFilterOption.jsx:103
+msgid ""
+"\n"
+"                This filter was inherited from the dashboard's context.\n"
+"                It won't be saved when saving the chart.\n"
+"              "
+msgstr ""
+
 #: superset-frontend/src/explore/components/AdhocMetricEditPopover.jsx:220
 #, python-format
 msgid "%s aggregates(s)"
@@ -5794,38 +5534,38 @@ msgstr ""
 msgid "Customize"
 msgstr ""
 
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:109
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:112
 msgid "Sorry, An error occurred"
 msgstr ""
 
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:172
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:175
 msgid "rows retrieved"
 msgstr ""
 
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:201
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:204
 msgid "No data"
 msgstr ""
 
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:239
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:243
 msgid "Edit properties"
 msgstr ""
 
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:252
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:253
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:257
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:258
 msgid "View query"
 msgstr ""
 
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:261
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:262
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:266
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:267
 msgid "View results"
 msgstr ""
 
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:270
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:271
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:275
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:276
 msgid "View samples"
 msgstr ""
 
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:278
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:283
 msgid "Run in SQL Lab"
 msgstr ""
 
@@ -5847,12 +5587,12 @@ msgstr "Exportar a .json"
 msgid "Export to .csv format"
 msgstr "Exportar a .csv"
 
-#: superset-frontend/src/explore/components/ExploreChartHeader.jsx:101
+#: superset-frontend/src/explore/components/ExploreChartHeader.jsx:126
 #, python-format
 msgid "%s - untitled"
 msgstr "%s - sin título"
 
-#: superset-frontend/src/explore/components/ExploreChartHeader.jsx:137
+#: superset-frontend/src/explore/components/ExploreChartHeader.jsx:167
 msgid "Edit chart properties"
 msgstr ""
 
@@ -5860,17 +5600,17 @@ msgstr ""
 msgid "Control labeled "
 msgstr ""
 
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:167
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:200
 msgid ""
 "The description can be displayed as widget headers in the dashboard view."
 " Supports markdown."
 msgstr ""
 
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:174
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:207
 msgid "Configuration"
 msgstr ""
 
-#: superset-frontend/src/explore/components/PropertiesModal.jsx:209
+#: superset-frontend/src/explore/components/PropertiesModal.tsx:242
 msgid "A list of users who can alter the chart"
 msgstr ""
 
@@ -6064,7 +5804,7 @@ msgid "Error while fetching data"
 msgstr "Error recuperando datos"
 
 #: superset-frontend/src/explore/components/controls/SelectControl.jsx:75
-#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:319
+#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:316
 msgid "No results found"
 msgstr ""
 
@@ -6121,21 +5861,21 @@ msgstr "Selecciona un tipo de visualización"
 
 #: superset-frontend/src/explore/controlPanels/Area.js:28
 #: superset-frontend/src/explore/controlPanels/Bar.js:28
-#: superset-frontend/src/explore/controlPanels/BigNumber.js:38
+#: superset-frontend/src/explore/controlPanels/BigNumber.js:39
 #: superset-frontend/src/explore/controlPanels/BigNumberTotal.js:34
-#: superset-frontend/src/explore/controlPanels/BoxPlot.js:29
+#: superset-frontend/src/explore/controlPanels/BoxPlot.js:30
 #: superset-frontend/src/explore/controlPanels/Bubble.js:38
 #: superset-frontend/src/explore/controlPanels/Bullet.js:30
-#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:34
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:77
 #: superset-frontend/src/explore/controlPanels/Chord.js:36
 #: superset-frontend/src/explore/controlPanels/Compare.js:28
 #: superset-frontend/src/explore/controlPanels/DistBar.js:37
 #: superset-frontend/src/explore/controlPanels/DualLine.js:27
 #: superset-frontend/src/explore/controlPanels/Histogram.js:35
-#: superset-frontend/src/explore/controlPanels/Horizon.js:26
+#: superset-frontend/src/explore/controlPanels/Horizon.js:27
 #: superset-frontend/src/explore/controlPanels/Line.js:28
 #: superset-frontend/src/explore/controlPanels/LineMulti.js:27
-#: superset-frontend/src/explore/controlPanels/Partition.js:31
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:98
 #: superset-frontend/src/explore/controlPanels/Pie.js:34
 #: superset-frontend/src/explore/controlPanels/Rose.js:27
 #: superset-frontend/src/explore/controlPanels/Sankey.js:34
@@ -6145,12 +5885,12 @@ msgstr "Selecciona un tipo de visualización"
 msgid "Chart Options"
 msgstr "Opciones de Gráfico"
 
-#: superset-frontend/src/explore/controlPanels/BigNumber.js:24
+#: superset-frontend/src/explore/controlPanels/BigNumber.js:25
 #: superset-frontend/src/explore/controlPanels/BigNumberTotal.js:24
-#: superset-frontend/src/explore/controlPanels/BoxPlot.js:24
+#: superset-frontend/src/explore/controlPanels/BoxPlot.js:25
 #: superset-frontend/src/explore/controlPanels/Bubble.js:25
 #: superset-frontend/src/explore/controlPanels/Bullet.js:25
-#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:25
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:32
 #: superset-frontend/src/explore/controlPanels/Chord.js:25
 #: superset-frontend/src/explore/controlPanels/CountryMap.js:24
 #: superset-frontend/src/explore/controlPanels/DeckArc.js:26
@@ -6162,21 +5902,21 @@ msgstr "Opciones de Gráfico"
 #: superset-frontend/src/explore/controlPanels/DeckPolygon.js:26
 #: superset-frontend/src/explore/controlPanels/DeckScatter.js:37
 #: superset-frontend/src/explore/controlPanels/DeckScreengrid.js:27
-#: superset-frontend/src/explore/controlPanels/DirectedForce.js:24
+#: superset-frontend/src/explore/controlPanels/DirectedForce.js:25
 #: superset-frontend/src/explore/controlPanels/DistBar.js:25
 #: superset-frontend/src/explore/controlPanels/DualLine.js:42
-#: superset-frontend/src/explore/controlPanels/EventFlow.js:36
-#: superset-frontend/src/explore/controlPanels/Heatmap.js:25
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:65
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:33
 #: superset-frontend/src/explore/controlPanels/Histogram.js:25
 #: superset-frontend/src/explore/controlPanels/LineMulti.js:56
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:24
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:26
 #: superset-frontend/src/explore/controlPanels/PairedTtest.js:25
 #: superset-frontend/src/explore/controlPanels/Para.js:24
 #: superset-frontend/src/explore/controlPanels/Pie.js:24
 #: superset-frontend/src/explore/controlPanels/PivotTable.js:24
 #: superset-frontend/src/explore/controlPanels/Sankey.js:24
 #: superset-frontend/src/explore/controlPanels/Sunburst.js:24
-#: superset-frontend/src/explore/controlPanels/Table.js:42
+#: superset-frontend/src/explore/controlPanels/Table.js:100
 #: superset-frontend/src/explore/controlPanels/TimePivot.js:26
 #: superset-frontend/src/explore/controlPanels/TimeTable.js:24
 #: superset-frontend/src/explore/controlPanels/Treemap.js:24
@@ -6186,17 +5926,108 @@ msgstr "Opciones de Gráfico"
 msgid "Query"
 msgstr "Consulta"
 
-#: superset-frontend/src/explore/controlPanels/BigNumber.js:52
+#: superset-frontend/src/explore/controlPanels/BigNumber.js:30
+#: superset-frontend/src/explore/controlPanels/BigNumberTotal.js:29
+#: superset-frontend/src/explore/controlPanels/CountryMap.js:29
+#: superset-frontend/src/explore/controlPanels/DirectedForce.js:35
+#: superset-frontend/src/explore/controlPanels/Iframe.js:24
+#: superset-frontend/src/explore/controlPanels/Para.js:35
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:37
+#: superset-frontend/src/explore/controlPanels/Table.js:105
+#: superset-frontend/src/explore/controlPanels/WordCloud.js:35
+msgid "Options"
+msgstr "Opciones"
+
+#: superset-frontend/src/explore/controlPanels/BigNumber.js:48
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:84
+#: superset-frontend/src/explore/controlPanels/sections.jsx:71
+msgid "Advanced Analytics"
+msgstr "Analíticas Avanzadas"
+
+#: superset-frontend/src/explore/controlPanels/BigNumber.js:51
+#: superset-frontend/src/explore/controlPanels/sections.jsx:78
+msgid "Rolling Window"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/BigNumber.js:61
 #: superset-frontend/src/explore/controlPanels/BigNumberTotal.js:44
 msgid "Big Number Font Size"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:48
-msgid "Number Format"
+#: superset-frontend/src/explore/controlPanels/BoxPlot.js:40
+msgid "Whisker/outlier options"
+msgstr "Opciones de patillas/valores atípicos"
+
+#: superset-frontend/src/explore/controlPanels/BoxPlot.js:42
+msgid "Determines how whiskers and outliers are calculated."
+msgstr "Determina cómo se calculan las patillas y los valores atípicos."
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:40
+msgid "Domain"
+msgstr "Dominio"
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:49
+msgid "The time unit used for the grouping of blocks"
+msgstr "La unidad de tiempo utilizada para la agrupación de bloques."
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:56
+msgid "Subdomain"
+msgstr "Subdominio"
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:65
+msgid ""
+"The time unit for each block. Should be a smaller unit than "
+"domain_granularity. Should be larger or equal to Time Grain"
+msgstr ""
+"La unidad de tiempo para cada bloque. Debe ser una unidad más pequeña que"
+" domain_granularity. Debe ser mayor o igual a Time Grain"
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:90
+msgid "Cell Size"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:51
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:91
+msgid "The size of the square cell, in pixels"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:102
+msgid "Cell Padding"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:103
+msgid "The distance between cells, in pixels"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:116
+msgid "Cell Radius"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:117
+msgid "The pixel radius"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:128
+msgid "Color Steps"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:129
+msgid "The number color \"steps\""
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:140
 msgid "Time Format"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:154
+msgid "Show Metric Names"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:157
+msgid "Whether to display the metric name as a title"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/CalHeatmap.js:167
+msgid "Number Format"
 msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/Chord.js:47
@@ -6294,12 +6125,20 @@ msgstr ""
 msgid "Metric used as a weight for the grid's coloring"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/DirectedForce.js:40
+#: superset-frontend/src/explore/controlPanels/DirectedForce.js:45
+msgid "Charge"
+msgstr "Cargo"
+
+#: superset-frontend/src/explore/controlPanels/DirectedForce.js:59
+msgid "Charge in the force layout"
+msgstr "Cargo en Disposición Forzada"
+
+#: superset-frontend/src/explore/controlPanels/DirectedForce.js:68
 #: superset-frontend/src/explore/controlPanels/Sankey.js:41
 msgid "Source / Target"
 msgstr "Origen / Destino"
 
-#: superset-frontend/src/explore/controlPanels/DirectedForce.js:41
+#: superset-frontend/src/explore/controlPanels/DirectedForce.js:69
 #: superset-frontend/src/explore/controlPanels/Sankey.js:42
 msgid "Choose a source and a target"
 msgstr "Elige una fuente y un objetivo"
@@ -6335,39 +6174,64 @@ msgstr "Elige una métrica para el eje izquierdo"
 msgid "Left Axis Format"
 msgstr "Formato del Eje Izquierdo"
 
-#: superset-frontend/src/explore/controlPanels/EventFlow.js:26
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:27
 msgid "Event definition"
 msgstr "Definición evento"
 
-#: superset-frontend/src/explore/controlPanels/EventFlow.js:41
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:37
+msgid "Order by entity id"
+msgstr "Ordenar por ID entidad"
+
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:38
+msgid ""
+"Important! Select this if the table is not already sorted by entity id, "
+"else there is no guarantee that all events for each entity are returned."
+msgstr ""
+"¡Importante! Selecciona esto si la tabla no está ya ordenada por el "
+"identificador de la entidad, de lo contrario no hay garantía de que se "
+"devuelvan todos los eventos para cada entidad."
+
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:52
+msgid "Minimum leaf node event count"
+msgstr "Recuento mínimo de eventos del nodo hoja"
+
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:55
+msgid ""
+"Leaf nodes that represent fewer than this number of events will be "
+"initially hidden in the visualization"
+msgstr ""
+"Los nodos de hoja que representan menos que este número de eventos se "
+"ocultarán inicialmente en la visualización"
+
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:70
 msgid "Additional metadata"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/EventFlow.js:47
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:76
 msgid "Column containing entity ids"
 msgstr "Columna que contiene identificadores de entidad"
 
-#: superset-frontend/src/explore/controlPanels/EventFlow.js:48
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:77
 msgid "e.g., a \"user id\" column"
 msgstr "e.g., una columna de \"user id\""
 
-#: superset-frontend/src/explore/controlPanels/EventFlow.js:51
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:80
 msgid "Column containing event names"
 msgstr "Columna que contiene nombres de eventos"
 
-#: superset-frontend/src/explore/controlPanels/EventFlow.js:59
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:88
 msgid "Event count limit"
 msgstr "Límite de conteo de eventos"
 
-#: superset-frontend/src/explore/controlPanels/EventFlow.js:60
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:89
 msgid "The maximum number of events to return, equivalent to the number of rows"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/EventFlow.js:65
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:94
 msgid "Meta data"
 msgstr "Metadatos"
 
-#: superset-frontend/src/explore/controlPanels/EventFlow.js:66
+#: superset-frontend/src/explore/controlPanels/EventFlow.js:95
 msgid "Select any columns for metadata inspection"
 msgstr ""
 
@@ -6383,25 +6247,85 @@ msgstr ""
 msgid "These filters apply to the values available in the dropdowns"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/Heatmap.js:35
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:24
+msgid "Axis ascending"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:25
+msgid "Axis descending"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:26
+msgid "Metric ascending"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:27
+msgid "Metric descending"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:43
 msgid "Heatmap Options"
 msgstr "Opciones de mapa de calor"
 
-#: superset-frontend/src/explore/controlPanels/Heatmap.js:56
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:52
+msgid "XScale Interval"
+msgstr "Intervalo Escala X"
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:57
+msgid "Number of steps to take between ticks when displaying the X scale"
+msgstr "Número de pasos a seguir entre las marcas al mostrar la escala X"
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:66
+msgid "YScale Interval"
+msgstr "Intervalo Escala Y"
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:71
+msgid "Number of steps to take between ticks when displaying the Y scale"
+msgstr "Número de pasos a seguir entre las marcas al mostrar la escala Y"
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:82
+msgid "Rendering"
+msgstr "Generando"
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:89
+msgid ""
+"image-rendering CSS attribute of the canvas object that defines how the "
+"browser scales up the image"
+msgstr ""
+"Atributo CSS de representación de imagen que define cómo el navegador "
+"amplía la imagen"
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:105
+msgid "Show percentage"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:107
+msgid "Whether to include the percentage in the tooltip"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:120
+msgid "Sort X Axis"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:130
+msgid "Sort Y Axis"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:147
 msgid "Whether to apply a normal distribution based on rank on the color scale"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/Heatmap.js:60
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:151
 msgid "Value bounds"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/Heatmap.js:62
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:153
 msgid ""
 "Hard value bounds applied for color coding. Is only relevant and applied "
 "when the normalization is applied against the whole heatmap."
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/Heatmap.js:68
+#: superset-frontend/src/explore/controlPanels/Heatmap.js:159
 msgid "Value Format"
 msgstr ""
 
@@ -6425,6 +6349,25 @@ msgstr ""
 msgid "Opacity of the bars. Between 0 and 1"
 msgstr ""
 
+#: superset-frontend/src/explore/controlPanels/Horizon.js:37
+msgid "Series Height"
+msgstr "Altura Series"
+
+#: superset-frontend/src/explore/controlPanels/Horizon.js:49
+msgid "Pixel height of each series"
+msgstr "Altura de píxel de cada serie."
+
+#: superset-frontend/src/explore/controlPanels/Horizon.js:57
+msgid "Value Domain"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Horizon.js:64
+msgid ""
+"series: Treat each series independently; overall: All series use the same"
+" scale; change: Show changes compared to the first data point in each "
+"series"
+msgstr ""
+
 #: superset-frontend/src/explore/controlPanels/LineMulti.js:64
 msgid "Left Axis chart(s)"
 msgstr ""
@@ -6433,31 +6376,95 @@ msgstr ""
 msgid "Choose one or more charts for left axis"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:35
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:36
+msgid "Clustering Radius"
+msgstr "Radio de Agrupación"
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:49
+msgid ""
+"The radius (in pixels) the algorithm uses to define a cluster. Choose 0 "
+"to turn off clustering, but beware that a large number of points (>1000) "
+"will cause lag."
+msgstr ""
+"El radio (en píxeles) que utiliza el algoritmo para definir un grupo. "
+"Elige 0 para desactivar la agrupación, pero ten en cuenta que un gran "
+"número de puntos (> 1000) causará un retraso."
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:63
 msgid "Points"
 msgstr "Puntos"
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:39
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:70
+msgid "Point Radius"
+msgstr "Radio del Punto"
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:72
+msgid ""
+"The radius of individual points (ones that are not in a cluster). Either "
+"a numerical column or `Auto`, which scales the point based on the largest"
+" cluster"
+msgstr ""
+"El radio de los puntos individuales (aquellos que no están en un grupo). "
+"Ya sea una columna numérica o `Auto`, que escala el punto en función del "
+"grupo más grande"
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:90
+msgid "Point Radius Unit"
+msgstr "Unidades del Radio del Punto"
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:102
 msgid "Labelling"
 msgstr "Etiquetando"
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:43
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:106
 msgid "Visual Tweaks"
 msgstr "Ajustes visuales"
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:63
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:113
+msgid "Live render"
+msgstr "Generación en Directo"
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:115
+msgid "Points and clusters will update as the viewport is being changed"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:129
+msgid "RGB Color"
+msgstr "Color RGB"
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:139
+msgid "The color for points and clusters in RGB"
+msgstr "El color para puntos y clusters en RGB."
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:154
+msgid "Default longitude"
+msgstr "Longitud por defecto"
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:158
+msgid "Longitude of default viewport"
+msgstr "Longitud de la ventana gráfica predeterminada"
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:168
+msgid "Default latitude"
+msgstr "Latitud por defecto"
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:172
+msgid "Latitude of default viewport"
+msgstr "Latitud de la ventana gráfica predeterminada"
+
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:202
 msgid "Column containing longitude data"
 msgstr "Columna que contiene datos de longitud"
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:67
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:206
 msgid "Column containing latitude data"
 msgstr "Columna que contiene datos de latitud"
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:70
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:209
 msgid "Cluster label aggregator"
 msgstr "Unificador de etiquetas de agrupación"
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:71
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:210
 msgid ""
 "Aggregate function applied to the list of points in each cluster to "
 "produce the cluster label."
@@ -6465,17 +6472,17 @@ msgstr ""
 "Función de agregación aplicada a la lista de puntos en cada grupo para "
 "producir la etiqueta del grupo."
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:77
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:216
 msgid "Tooltip"
 msgstr "Ayuda"
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:78
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:217
 msgid "Show a tooltip when hovering over points and clusters describing the label"
 msgstr ""
 "Mostrar tooltips al pasar el cursor sobre puntos y agrupaciones que "
 "describen la etiqueta"
 
-#: superset-frontend/src/explore/controlPanels/Mapbox.js:84
+#: superset-frontend/src/explore/controlPanels/Mapbox.js:223
 msgid ""
 "One or many controls to group by. If grouping, latitude and longitude "
 "columns must be present."
@@ -6511,8 +6518,116 @@ msgstr ""
 msgid "Number of decimal places with which to display lift values"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/Partition.js:26
+#: superset-frontend/src/explore/controlPanels/Para.js:43
+msgid "Data Table"
+msgstr "Tabla de Datos"
+
+#: superset-frontend/src/explore/controlPanels/Para.js:46
+msgid "Whether to display the interactive data table"
+msgstr "Mostrar la tabla de datos interactiva"
+
+#: superset-frontend/src/explore/controlPanels/Para.js:53
+msgid "Include Series"
+msgstr "Incluir series"
+
+#: superset-frontend/src/explore/controlPanels/Para.js:56
+msgid "Include series name as an axis"
+msgstr "Incluir el nombre de la serie como un eje."
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:29
 msgid "Time Series Options"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:43
+msgid "Not Time Series"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:45
+msgid "Ignore time"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:48
+msgid "Time Series"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:50
+msgid "Standard time series"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:53
+msgid "Aggregate Mean"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:55
+msgid "Mean of values over specified period"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:58
+msgid "Aggregate Sum"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:60
+msgid "Sum of values over specified period"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:63
+msgid "Difference"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:65
+msgid "Metric change in value from `since` to `until`"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:70
+msgid "Percent Change"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:72
+msgid "Metric percent change in value from `since` to `until`"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:77
+msgid "Factor"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:79
+msgid "Metric factor change from `since` to `until`"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:86
+msgid "Use the Advanced Analytics options below"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:91
+msgid "Settings for time series"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:108
+msgid "Partition Limit"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:111
+msgid ""
+"The maximum number of subdivisions of each group; lower values are pruned"
+" first"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:121
+msgid "Partition Threshold"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:124
+msgid ""
+"Partitions whose height to parent height proportions are below this value"
+" are pruned"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:137
+msgid "Equal Date Sizes"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Partition.jsx:140
+msgid "Check to force date partitions to have the same height"
 msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/Pie.js:50
@@ -6525,6 +6640,34 @@ msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/PivotTable.js:35
 msgid "Pivot Options"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/PivotTable.js:43
+msgid "Show totals"
+msgstr "Mostrar Totales"
+
+#: superset-frontend/src/explore/controlPanels/PivotTable.js:46
+msgid "Display total row/column"
+msgstr "Mostrar total fila/columna"
+
+#: superset-frontend/src/explore/controlPanels/PivotTable.js:56
+msgid "Combine Metrics"
+msgstr "Combinar Métricas"
+
+#: superset-frontend/src/explore/controlPanels/PivotTable.js:58
+msgid ""
+"Display metrics side by side within each column, as opposed to each "
+"column being displayed side by side for each metric."
+msgstr ""
+"Muestre las métricas lado a lado dentro de cada columna, a diferencia de "
+"cada columna que se muestra lado a lado para cada métrica."
+
+#: superset-frontend/src/explore/controlPanels/PivotTable.js:70
+msgid "Transpose Pivot"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/PivotTable.js:72
+msgid "Swap Groups and Columns"
 msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/Rose.js:38
@@ -6566,27 +6709,97 @@ msgstr "Jerarquía"
 msgid "This defines the level of the hierarchy"
 msgstr "Esto define el nivel de la jerarquía."
 
-#: superset-frontend/src/explore/controlPanels/Table.js:24
+#: superset-frontend/src/explore/controlPanels/Table.js:27
 msgid "GROUP BY"
 msgstr "AGRUPAR POR"
 
-#: superset-frontend/src/explore/controlPanels/Table.js:25
+#: superset-frontend/src/explore/controlPanels/Table.js:28
 msgid "Use this section if you want a query that aggregates"
 msgstr "Utiliza esta sección si quieres una consulta que agregue"
 
-#: superset-frontend/src/explore/controlPanels/Table.js:36
+#: superset-frontend/src/explore/controlPanels/Table.js:48
+msgid "Percentage Metrics"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Table.js:50
+msgid "Metrics for which percentage of total are to be displayed"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Table.js:62
+msgid "Include Time"
+msgstr "Incluir Tiempo"
+
+#: superset-frontend/src/explore/controlPanels/Table.js:63
+msgid "Whether to include the time granularity as defined in the time section"
+msgstr ""
+"Si se incluye la granularidad de tiempo como se define en la sección de "
+"tiempo"
+
+#: superset-frontend/src/explore/controlPanels/Table.js:74
 msgid "NOT GROUPED BY"
 msgstr "NO AGRUPADO POR"
 
-#: superset-frontend/src/explore/controlPanels/Table.js:37
+#: superset-frontend/src/explore/controlPanels/Table.js:75
 msgid "Use this section if you want to query atomic rows"
 msgstr "Utiliza esta sección si quieres consultar filas atómicas"
+
+#: superset-frontend/src/explore/controlPanels/Table.js:85
+msgid "Ordering"
+msgstr "Ordenación"
+
+#: superset-frontend/src/explore/controlPanels/Table.js:114
+msgid "Table Timestamp Format"
+msgstr "Formato de hora en la tabla"
+
+#: superset-frontend/src/explore/controlPanels/Table.js:120
+msgid "Timestamp Format"
+msgstr "Formato Hora"
+
+#: superset-frontend/src/explore/controlPanels/Table.js:131
+msgid "Page Length"
+msgstr "Longitud de Página"
+
+#: superset-frontend/src/explore/controlPanels/Table.js:144
+msgid "Rows per page, 0 means no pagination"
+msgstr "Filas por página, 0 significa que no hay paginación"
+
+#: superset-frontend/src/explore/controlPanels/Table.js:154
+msgid "Search Box"
+msgstr "Caja de Búsqueda"
+
+#: superset-frontend/src/explore/controlPanels/Table.js:157
+msgid "Whether to include a client-side search box"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Table.js:167
+msgid "Align +/-"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Table.js:170
+msgid "Whether to align the background chart for +/- values"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Table.js:179
+msgid "Color +/-"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Table.js:182
+msgid "Whether to color +/- values"
+msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/TimeTable.js:41
 msgid ""
 "Templated link, it's possible to include {{ metric }} or other values "
 "coming from the controls."
 msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/Treemap.js:43
+msgid "Ratio"
+msgstr "Proporción"
+
+#: superset-frontend/src/explore/controlPanels/Treemap.js:47
+msgid "Target aspect ratio for treemap tiles."
+msgstr "Relación de aspecto de destino para los mosaicos de treemap."
 
 #: superset-frontend/src/explore/controlPanels/WordCloud.js:44
 msgid "Minimum Font Size"
@@ -6681,10 +6894,6 @@ msgstr ""
 "Esta sección contiene opciones que permiten el procesamiento analítico "
 "avanzado de los resultados de la consulta"
 
-#: superset-frontend/src/explore/controlPanels/sections.jsx:78
-msgid "Moving Average"
-msgstr ""
-
 #: superset-frontend/src/explore/controlPanels/sections.jsx:80
 msgid "Time Comparison"
 msgstr ""
@@ -6694,20 +6903,20 @@ msgid "Python Functions"
 msgstr ""
 
 #: superset-frontend/src/profile/components/App.jsx:47
-#: superset-frontend/src/welcome/Welcome.jsx:96
 #: superset-frontend/src/welcome/Welcome.jsx:100
+#: superset-frontend/src/welcome/Welcome.jsx:105
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: superset-frontend/src/profile/components/App.jsx:59
+#: superset-frontend/src/profile/components/App.jsx:61
 msgid "Created Content"
 msgstr "Contenido creado"
 
-#: superset-frontend/src/profile/components/App.jsx:71
+#: superset-frontend/src/profile/components/App.jsx:75
 msgid "Recent Activity"
 msgstr "Actividad Reciente"
 
-#: superset-frontend/src/profile/components/App.jsx:83
+#: superset-frontend/src/profile/components/App.jsx:89
 msgid "Security & Access"
 msgstr "Acceso y Seguridad"
 
@@ -6735,11 +6944,11 @@ msgstr "Fuentes de datos"
 msgid "Profile picture provided by Gravatar"
 msgstr "Foto de perfil proporcionada por Gravatar"
 
-#: superset-frontend/src/profile/components/UserInfo.jsx:54
+#: superset-frontend/src/profile/components/UserInfo.jsx:55
 msgid "joined"
 msgstr "unido"
 
-#: superset-frontend/src/profile/components/UserInfo.jsx:66
+#: superset-frontend/src/profile/components/UserInfo.jsx:67
 msgid "id:"
 msgstr "id:"
 
@@ -6751,58 +6960,91 @@ msgstr ""
 msgid "(no description, click to see stack trace)"
 msgstr ""
 
-#: superset-frontend/src/views/chartList/ChartList.tsx:98
-#: superset-frontend/src/views/chartList/ChartList.tsx:305
+#: superset-frontend/src/views/chartList/ChartList.tsx:95
+#: superset-frontend/src/views/chartList/ChartList.tsx:335
 msgid "An error occurred while fetching Charts"
 msgstr ""
 
-#: superset-frontend/src/views/chartList/ChartList.tsx:190
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:195
+#: superset-frontend/src/views/chartList/ChartList.tsx:192
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:200
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:204
 msgid "Please Confirm"
 msgstr ""
 
-#: superset-frontend/src/views/chartList/ChartList.tsx:193
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:198
+#: superset-frontend/src/views/chartList/ChartList.tsx:195
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:203
 msgid "Are you sure you want to delete"
 msgstr ""
 
-#: superset-frontend/src/views/chartList/ChartList.tsx:250
-msgid "Deleted: %(slice_name)"
+#: superset-frontend/src/views/chartList/ChartList.tsx:273
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:298
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:264
+#, python-format
+msgid "Deleted: %s"
 msgstr ""
 
-#: superset-frontend/src/views/chartList/ChartList.tsx:254
-msgid "There was an issue deleting: %(slice_name)"
+#: superset-frontend/src/views/chartList/ChartList.tsx:277
+#, python-format
+msgid "There was an issue deleting: %s"
 msgstr ""
 
-#: superset-frontend/src/views/chartList/ChartList.tsx:276
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:294
-msgid "There was an issue deleting the selected dashboards"
+#: superset-frontend/src/views/chartList/ChartList.tsx:297
+msgid "There was an issue deleting the selected charts"
 msgstr ""
 
-#: superset-frontend/src/views/chartList/ChartList.tsx:362
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:395
+#: superset-frontend/src/views/chartList/ChartList.tsx:406
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:432
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:394
 msgid "Please confirm"
 msgstr ""
 
-#: superset-frontend/src/views/chartList/ChartList.tsx:363
+#: superset-frontend/src/views/chartList/ChartList.tsx:407
 msgid "Are you sure you want to delete the selected charts?"
 msgstr ""
 
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:101
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:341
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:104
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:281
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:371
 #: superset-frontend/src/welcome/DashboardTable.jsx:131
 msgid "An error occurred while fetching Dashboards"
 msgstr ""
 
-#: superset-frontend/src/views/dashboardList/DashboardList.tsx:396
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:303
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:269
+#, python-format
+msgid "There was an issue deleting %s"
+msgstr ""
+
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:324
+msgid "There was an issue deleting the selected dashboards"
+msgstr ""
+
+#: superset-frontend/src/views/dashboardList/DashboardList.tsx:433
 msgid "Are you sure you want to delete the selected dashboards?"
 msgstr ""
 
-#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:188
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:113
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:329
+msgid "An error occurred while fetching Datasets"
+msgstr ""
+
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:207
+msgid "Are you sure you want to delete "
+msgstr ""
+
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:290
+msgid "There was an issue deleting the selected datasets"
+msgstr ""
+
+#: superset-frontend/src/views/datasetList/DatasetList.tsx:395
+msgid "Are you sure you want to delete the selected datasets?"
+msgstr ""
+
+#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:185
 msgid "Select start and end date"
 msgstr ""
 
-#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:291
+#: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:288
 #, python-format
 msgid "Select [%s]"
 msgstr "Selecciona [%s]"
@@ -6821,8 +7063,8 @@ msgid ""
 "contact your administrator."
 msgstr ""
 
-#: superset-frontend/src/welcome/Welcome.jsx:85
-#: superset-frontend/src/welcome/Welcome.jsx:89
+#: superset-frontend/src/welcome/Welcome.jsx:87
+#: superset-frontend/src/welcome/Welcome.jsx:92
 msgid "Recently Viewed"
 msgstr "Recientemente vistos"
 
@@ -7663,4 +7905,22 @@ msgstr "Recientemente vistos"
 
 #~ msgid "Slice %(id)s not found"
 #~ msgstr "Sección %(id)s no encontrado"
+
+#~ msgid "Unexpected error occurred."
+#~ msgstr ""
+
+#~ msgid "No dashboards deleted"
+#~ msgstr ""
+
+#~ msgid "Rolling"
+#~ msgstr "Ventana Desplazamiento"
+
+#~ msgid "Moving Average"
+#~ msgstr ""
+
+#~ msgid "Deleted: %(slice_name)"
+#~ msgstr ""
+
+#~ msgid "There was an issue deleting: %(slice_name)"
+#~ msgstr ""
 
