@@ -31,4 +31,6 @@ class LogModelView(LogMixin, SupersetModelView):  # pylint: disable=too-many-anc
     label_columns = {"dashboard_id": _("Dashboard Id"),
                     "slice_id": _("Slice Id"),
                     "duration_ms": _("Duration Ms"),
-                    "referrer": _("Referrer"),}
+                    "referrer": _("Referrer"),
+                    "user": _("User"),
+                    "action": _("Action"),}
