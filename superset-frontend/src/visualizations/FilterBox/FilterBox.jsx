@@ -244,6 +244,10 @@ class FilterBox extends React.Component {
       selectedValues = this.state.selectedValues;
     } else {
       selectedValues = this.props.origSelectedValues;
+      this.state.selectedValues = {
+        ...this.state.selectedValues,
+        ...selectedValues,
+      };
     }
 
     // Add created options to filtersChoices, even though it doesn't exist,
