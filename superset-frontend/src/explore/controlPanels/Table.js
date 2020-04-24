@@ -183,6 +183,7 @@ export default {
             },
           },
         ],
+        ['all_columns_filter_event'],
       ],
     },
   ],

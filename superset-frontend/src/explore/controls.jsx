@@ -548,6 +548,24 @@ export const controls = {
     freeForm: true,
   },
 
+  all_columns_filter_event: {
+    type: 'SelectControl',
+    multi: true,
+    label: t('Columns Filter Event'),
+    default: [],
+    renderTrigger: true,
+    description: t('Columns to emit filter event'),
+    optionRenderer: c => <ColumnOption column={c} showType />,
+    valueRenderer: c => <ColumnOption column={c} />,
+    valueKey: 'column_name',
+    allowAll: true,
+    mapStateToProps: state => ({
+      options: state.datasource ? state.datasource.columns : [],
+    }),
+    commaChoosesOption: false,
+    freeForm: true,
+  },
+
   spatial: {
     type: 'SpatialControl',
     label: t('Longitude & Latitude'),
