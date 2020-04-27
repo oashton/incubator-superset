@@ -52,6 +52,11 @@ export default {
         ['y_axis_format', 'y_axis_bounds'],
       ],
     },
+    {
+      label: t('Others'),
+      expanded: true,
+      controlSetRows: [['all_columns_filter_required']],
+    },
     NVD3TimeSeries[1],
     annotations,
   ],

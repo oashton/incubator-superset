@@ -19,6 +19,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Alert } from 'react-bootstrap';
+import { t } from '@superset-ui/translation';
 
 import { isFeatureEnabled, FeatureFlag } from 'src/featureFlags';
 import { Logger, LOG_ACTIONS_RENDER_CHART_CONTAINER } from '../logger/LogUtils';
@@ -138,6 +139,27 @@ class Chart extends React.PureComponent {
     });
   }
 
+  validateFilterRequiredRestriction() {
+    if (
+      this.props.formData.all_columns_filter_required &&
+      this.props.formData.all_columns_filter_required !== ''
+    ) {
+      if (this.props.formData.extra_filters) {
+        for (const entry of this.props.formData.extra_filters) {
+          if (
+            this.props.formData.all_columns_filter_required === entry.col &&
+            entry.val !== null
+          ) {
+            return true;
+          }
+        }
+      }
+    } else {
+      return true;
+    }
+    return false;
+  }
+
   renderStackTraceMessage() {
     const { chartAlert, chartStackTrace, queryResponse } = this.props;
     return (
@@ -166,6 +188,7 @@ class Chart extends React.PureComponent {
     const containerStyles = isLoading ? { height, width } : null;
     const isFaded = refreshOverlayVisible && !errorMessage;
     this.renderContainerStartTime = Logger.getTimestamp();
+    const filterValidation = this.validateFilterRequiredRestriction();
     if (chartStatus === 'failed') {
       return this.renderStackTraceMessage();
     }
@@ -190,9 +213,19 @@ class Chart extends React.PureComponent {
               onQuery={onQuery}
             />
           )}
-          <div className={`slice_container ${isFaded ? ' faded' : ''}`}>
-            <ChartRenderer {...this.props} />
-          </div>
+          {filterValidation && (
+            <div className={`slice_container ${isFaded ? ' faded' : ''}`}>
+              <ChartRenderer {...this.props} />
+            </div>
+          )}
+          {!filterValidation && (
+            <h2>
+              {t(
+                'Please select a value from the filter %s',
+                this.props.formData.all_columns_filter_required,
+              )}
+            </h2>
+          )}
         </div>
       </ErrorBoundary>
     );

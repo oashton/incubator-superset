@@ -566,6 +566,24 @@ export const controls = {
     freeForm: true,
   },
 
+  all_columns_filter_required: {
+    type: 'SelectControl',
+    multi: false,
+    label: t('Column Filter Required'),
+    default: [],
+    renderTrigger: true,
+    description: t('Required Column to Filter Object'),
+    optionRenderer: c => <ColumnOption column={c} showType />,
+    valueRenderer: c => <ColumnOption column={c} />,
+    valueKey: 'column_name',
+    allowAll: true,
+    mapStateToProps: state => ({
+      options: state.datasource ? state.datasource.columns : [],
+    }),
+    commaChoosesOption: false,
+    freeForm: true,
+  },
+
   spatial: {
     type: 'SpatialControl',
     label: t('Longitude & Latitude'),
