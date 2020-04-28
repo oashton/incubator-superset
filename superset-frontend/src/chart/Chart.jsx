@@ -142,7 +142,7 @@ class Chart extends React.PureComponent {
   validateFilterRequiredRestriction() {
     if (
       this.props.formData.all_columns_filter_required &&
-      this.props.formData.all_columns_filter_required !== ''
+      this.props.formData.all_columns_filter_required.length > 0
     ) {
       if (this.props.formData.extra_filters) {
         for (const entry of this.props.formData.extra_filters) {

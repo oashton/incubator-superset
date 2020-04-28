@@ -568,7 +568,7 @@ export const controls = {
 
   all_columns_filter_required: {
     type: 'SelectControl',
-    multi: false,
+    multi: true,
     label: t('Column Filter Required'),
     default: [],
     renderTrigger: true,
