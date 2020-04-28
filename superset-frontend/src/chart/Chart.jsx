@@ -146,11 +146,11 @@ class Chart extends React.PureComponent {
     ) {
       if (this.props.formData.extra_filters) {
         for (const entry of this.props.formData.extra_filters) {
-          if (
-            this.props.formData.all_columns_filter_required === entry.col &&
-            entry.val !== null
-          ) {
-            return true;
+          for (const filterColumn of this.props.formData
+            .all_columns_filter_required) {
+            if (filterColumn === entry.col && entry.val !== null) {
+              return true;
+            }
           }
         }
       }
