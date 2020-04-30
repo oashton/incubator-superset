@@ -1951,13 +1951,22 @@ class IFrameViz(BaseViz):
     is_timeseries = False
 
     def query_obj(self):
-        return None
-
-    def get_df(self, query_obj: Optional[Dict[str, Any]] = None) -> pd.DataFrame:
-        return pd.DataFrame()
+        d = super().query_obj()
+        fd = self.form_data
+        d["columns"] = fd.get("all_columns")
+        if len( d["columns"] ) > 0:
+            return d
+        else:
+            return None
 
     def get_data(self, df: pd.DataFrame) -> VizData:
-        return {"iframe": True}
+        if df is not None:
+            data = self.handle_js_int_overflow(
+                dict(records=df.to_dict(orient="records"), columns=list(df.columns))
+            )
+            return data
+        else:
+            return {"iframe": True}
 
 
 class ParallelCoordinatesViz(BaseViz):
