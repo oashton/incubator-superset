@@ -19,6 +19,7 @@
 import json
 import logging
 import textwrap
+import threading
 from contextlib import closing
 from copy import deepcopy
 from datetime import datetime
@@ -359,8 +360,12 @@ class Database(
                     cursor.fetchall()
 
                 _log_query(sqls[-1])
+                init_date = datetime.now()
+                sql_bck = sqls[-1]
+                print( "INICIO: " + str(init_date) + " - " + str(threading.get_ident()) + " - " + sql_bck[0:50] )
                 self.db_engine_spec.execute(cursor, sqls[-1])
-
+                end_date = datetime.now()
+                print( "FIN: " + str(end_date - init_date) + " - " + str(end_date) + " - " + str(threading.get_ident()) + " - " + sql_bck[0:50] )
                 if cursor.description is not None:
                     columns = [col_desc[0] for col_desc in cursor.description]
                 else:
