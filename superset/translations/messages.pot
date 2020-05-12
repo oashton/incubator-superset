@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-04-27 16:54-0400\n"
+"POT-Creation-Date: 2020-05-11 20:23-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -145,335 +145,359 @@ msgstr ""
 msgid "Only `SELECT` statements can be used with the CREATE TABLE feature."
 msgstr ""
 
-#: superset/viz.py:100
+#: superset/viz.py:92
+msgid ""
+"No results were returned for this query. If you expected results to be "
+"returned, ensure any filters are configured properly and the datasource "
+"contains data for the selected time range."
+msgstr ""
+
+#: superset/viz.py:93
+msgid "No Results"
+msgstr ""
+
+#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:204
+#: superset/viz.py:94 superset/viz.py:1120
+msgid "No data"
+msgstr ""
+
+#: superset/viz.py:95
+msgid "Adjust filters or check the Datasource."
+msgstr ""
+
+#: superset/viz.py:104
 msgid "Viz is missing a datasource"
 msgstr ""
 
-#: superset/utils/core.py:1082 superset/viz.py:322
+#: superset/utils/core.py:1082 superset/viz.py:326
 msgid "From date cannot be larger than to date"
 msgstr ""
 
-#: superset/viz.py:533
+#: superset/viz.py:537
 msgid "Table View"
 msgstr ""
 
-#: superset/viz.py:546
+#: superset/viz.py:550
 msgid "Pick a granularity in the Time section or uncheck 'Include Time'"
 msgstr ""
 
-#: superset/viz.py:558
+#: superset/viz.py:562
 msgid ""
 "Choose either fields to [Group By] and [Metrics] and/or [Percentage "
 "Metrics], or [Columns], not both"
 msgstr ""
 
-#: superset/viz.py:655
+#: superset/viz.py:659
 msgid "Time Table View"
 msgstr ""
 
-#: superset/viz.py:664 superset/viz.py:1616
+#: superset/viz.py:668 superset/viz.py:1622
 msgid "Pick at least one metric"
 msgstr ""
 
-#: superset/viz.py:668
+#: superset/viz.py:672
 msgid "When using 'Group By' you are limited to use a single metric"
 msgstr ""
 
-#: superset/viz.py:697
+#: superset/viz.py:701
 msgid "Pivot Table"
 msgstr ""
 
-#: superset/viz.py:712
+#: superset/viz.py:716
 msgid "Please choose at least one 'Group by' field "
 msgstr ""
 
-#: superset/viz.py:723
+#: superset/viz.py:727
 msgid "Please choose at least one metric"
 msgstr ""
 
-#: superset/viz.py:725
+#: superset/viz.py:729
 msgid "Group By' and 'Columns' can't overlap"
 msgstr ""
 
-#: superset/viz.py:777
+#: superset/viz.py:781
 msgid "Markup"
 msgstr ""
 
-#: superset/viz.py:799
+#: superset/viz.py:803
 msgid "Separator"
 msgstr ""
 
-#: superset/viz.py:811
+#: superset/viz.py:815
 msgid "Word Cloud"
 msgstr ""
 
-#: superset/viz.py:825
+#: superset/viz.py:829
 msgid "Treemap"
 msgstr ""
 
-#: superset/viz.py:857
+#: superset/viz.py:861
 msgid "Calendar Heatmap"
 msgstr ""
 
-#: superset/viz.py:929
+#: superset/viz.py:933
 msgid "Box Plot"
 msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/Bubble.js:22
-#: superset/viz.py:1016
+#: superset/viz.py:1020
 msgid "Bubble Chart"
 msgstr ""
 
-#: superset/viz.py:1038
+#: superset/viz.py:1042
 msgid "Please use 3 different metric labels"
 msgstr ""
 
-#: superset/viz.py:1040
+#: superset/viz.py:1044
 msgid "Pick a metric for x, y and size"
 msgstr ""
 
-#: superset/viz.py:1067
+#: superset/viz.py:1071
 msgid "Bullet Chart"
 msgstr ""
 
-#: superset/viz.py:1091
+#: superset/viz.py:1095
 msgid "Pick a metric to display"
 msgstr ""
 
-#: superset/viz.py:1113
+#: superset/viz.py:1117
 msgid "Big Number with Trendline"
 msgstr ""
 
-#: superset/viz.py:1121 superset/viz.py:1152
+#: superset/viz.py:1121
+msgid "Try applying different filters or ensuring your Datasource contains data"
+msgstr ""
+
+#: superset/viz.py:1127 superset/viz.py:1158
 msgid "Pick a metric!"
 msgstr ""
 
-#: superset/viz.py:1144
+#: superset/viz.py:1150
 msgid "Big Number"
 msgstr ""
 
-#: superset/viz.py:1166
+#: superset/viz.py:1172
 msgid "Time Series - Line Chart"
 msgstr ""
 
-#: superset/viz.py:1230 superset/viz.py:1442
+#: superset/viz.py:1236 superset/viz.py:1448
 msgid "Pick a time granularity for your time series"
 msgstr ""
 
-#: superset/viz.py:1285
+#: superset/viz.py:1291
 msgid ""
 "`Since` and `Until` time bounds should be specified when using the `Time "
 "Shift` feature."
 msgstr ""
 
-#: superset/viz.py:1355
+#: superset/viz.py:1361
 msgid "Time Series - Multiple Line Charts"
 msgstr ""
 
-#: superset/viz.py:1385
+#: superset/viz.py:1391
 msgid "Time Series - Dual Axis Line Chart"
 msgstr ""
 
-#: superset/viz.py:1395
+#: superset/viz.py:1401
 msgid "Pick a metric for left axis!"
 msgstr ""
 
-#: superset/viz.py:1397
+#: superset/viz.py:1403
 msgid "Pick a metric for right axis!"
 msgstr ""
 
-#: superset/viz.py:1400
+#: superset/viz.py:1406
 msgid "Please choose different metrics on left and right axis"
 msgstr ""
 
-#: superset/viz.py:1458
+#: superset/viz.py:1464
 msgid "Time Series - Bar Chart"
 msgstr ""
 
-#: superset/viz.py:1467
+#: superset/viz.py:1473
 msgid "Time Series - Period Pivot"
 msgstr ""
 
-#: superset/viz.py:1514
+#: superset/viz.py:1520
 msgid "Time Series - Percent Change"
 msgstr ""
 
-#: superset/viz.py:1522
+#: superset/viz.py:1528
 msgid "Time Series - Stacked"
 msgstr ""
 
-#: superset/viz.py:1532
+#: superset/viz.py:1538
 msgid "Distribution - NVD3 - Pie Chart"
 msgstr ""
 
-#: superset/viz.py:1551
+#: superset/viz.py:1557
 msgid "Histogram"
 msgstr ""
 
-#: superset/viz.py:1560
+#: superset/viz.py:1566
 msgid "Must have at least one numeric column specified"
 msgstr ""
 
-#: superset/viz.py:1605
+#: superset/viz.py:1611
 msgid "Distribution - Bar Chart"
 msgstr ""
 
-#: superset/viz.py:1614
+#: superset/viz.py:1620
 msgid "Can't have overlap between Series and Breakdowns"
 msgstr ""
 
-#: superset/viz.py:1618
+#: superset/viz.py:1624
 msgid "Pick at least one field for [Series]"
 msgstr ""
 
-#: superset/viz.py:1668
+#: superset/viz.py:1674
 msgid "Sunburst"
 msgstr ""
 
-#: superset/viz.py:1708
+#: superset/viz.py:1714
 msgid "Sankey"
 msgstr ""
 
-#: superset/viz.py:1715
+#: superset/viz.py:1721
 msgid "Pick exactly 2 columns as [Source / Target]"
 msgstr ""
 
-#: superset/viz.py:1748
+#: superset/viz.py:1754
 msgid ""
 "There's a loop in your Sankey, please provide a tree. Here's a faulty "
 "link: {}"
 msgstr ""
 
-#: superset/viz.py:1761 superset/viz.py:1782
+#: superset/viz.py:1767 superset/viz.py:1788
 msgid "Directed Force Layout"
 msgstr ""
 
-#: superset/viz.py:1768
+#: superset/viz.py:1774
 msgid "Pick exactly 2 columns to 'Group By'"
 msgstr ""
 
-#: superset/viz.py:1815
+#: superset/viz.py:1821
 msgid "Country Map"
 msgstr ""
 
-#: superset/viz.py:1842
+#: superset/viz.py:1848
 msgid "World Map"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/Header.jsx:405
-#: superset-frontend/src/explore/controls.jsx:1730 superset/viz.py:1893
+#: superset-frontend/src/explore/controls.jsx:1730 superset/viz.py:1899
 msgid "Filters"
 msgstr ""
 
-#: superset/viz.py:1911
+#: superset/viz.py:1917
 msgid "Invalid filter configuration, please select a column"
 msgstr ""
 
-#: superset/viz.py:1949
+#: superset/viz.py:1955
 msgid "iFrame"
 msgstr ""
 
-#: superset/viz.py:1972
+#: superset/viz.py:1987
 msgid "Parallel Coordinates"
 msgstr ""
 
-#: superset/viz.py:1994
+#: superset/viz.py:2009
 msgid "Heatmap"
 msgstr ""
 
-#: superset/viz.py:2050
+#: superset/viz.py:2065
 msgid "Horizon Charts"
 msgstr ""
 
-#: superset/viz.py:2062
+#: superset/viz.py:2077
 msgid "Mapbox"
 msgstr ""
 
-#: superset/viz.py:2073
+#: superset/viz.py:2088
 msgid "[Longitude] and [Latitude] must be set"
 msgstr ""
 
-#: superset/viz.py:2079
+#: superset/viz.py:2094
 msgid "Must have a [Group By] column to have 'count' as the [Label]"
 msgstr ""
 
-#: superset/viz.py:2098
+#: superset/viz.py:2113
 msgid "Choice of [Label] must be present in [Group By]"
 msgstr ""
 
-#: superset/viz.py:2104
+#: superset/viz.py:2119
 msgid "Choice of [Point Radius] must be present in [Group By]"
 msgstr ""
 
-#: superset/viz.py:2111
+#: superset/viz.py:2126
 msgid "[Longitude] and [Latitude] columns must be present in [Group By]"
 msgstr ""
 
-#: superset/viz.py:2191
+#: superset/viz.py:2206
 msgid "Deck.gl - Multiple Layers"
 msgstr ""
 
-#: superset/viz.py:2231 superset/viz.py:2262
+#: superset/viz.py:2246 superset/viz.py:2277
 msgid "Bad spatial key"
 msgstr ""
 
-#: superset/viz.py:2248
+#: superset/viz.py:2263
 #, python-format
 msgid "Invalid spatial point encountered: %s"
 msgstr ""
 
-#: superset/viz.py:2284
+#: superset/viz.py:2299
 msgid ""
 "Encountered invalid NULL spatial entry,"
 "                                        please consider filtering those "
 "out"
 msgstr ""
 
-#: superset/viz.py:2372
+#: superset/viz.py:2387
 msgid "Deck.gl - Scatter plot"
 msgstr ""
 
-#: superset/viz.py:2419
+#: superset/viz.py:2434
 msgid "Deck.gl - Screen Grid"
 msgstr ""
 
-#: superset/viz.py:2445
+#: superset/viz.py:2460
 msgid "Deck.gl - 3D Grid"
 msgstr ""
 
-#: superset/viz.py:2472
+#: superset/viz.py:2487
 msgid "Deck.gl - Paths"
 msgstr ""
 
-#: superset/viz.py:2520
+#: superset/viz.py:2535
 msgid "Deck.gl - Polygon"
 msgstr ""
 
-#: superset/viz.py:2549
+#: superset/viz.py:2564
 msgid "Deck.gl - 3D HEX"
 msgstr ""
 
-#: superset/viz.py:2565
+#: superset/viz.py:2580
 msgid "Deck.gl - GeoJSON"
 msgstr ""
 
-#: superset/viz.py:2584
+#: superset/viz.py:2599
 msgid "Deck.gl - Arc"
 msgstr ""
 
-#: superset/viz.py:2619
+#: superset/viz.py:2634
 msgid "Event flow"
 msgstr ""
 
-#: superset/viz.py:2651
+#: superset/viz.py:2666
 msgid "Time Series - Paired t-test"
 msgstr ""
 
-#: superset/viz.py:2706
+#: superset/viz.py:2721
 msgid "Time Series - Nightingale Rose Chart"
 msgstr ""
 
-#: superset/viz.py:2741
+#: superset/viz.py:2756
 msgid "Partition Diagram"
 msgstr ""
 
@@ -5434,10 +5458,6 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/DisplayQueryButton.jsx:175
 msgid "rows retrieved"
-msgstr ""
-
-#: superset-frontend/src/explore/components/DisplayQueryButton.jsx:204
-msgid "No data"
 msgstr ""
 
 #: superset-frontend/src/explore/components/DisplayQueryButton.jsx:243

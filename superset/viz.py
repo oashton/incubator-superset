@@ -89,6 +89,10 @@ class BaseViz:
     is_timeseries = False
     cache_type = "df"
     enforce_numerical_metrics = True
+    body_no_result = _('No results were returned for this query. If you expected results to be returned, ensure any filters are configured properly and the datasource contains data for the selected time range.')
+    title_no_result = _('No Results')
+    title_no_data = _('No data')
+    body_no_data = _('Adjust filters or check the Datasource.')
 
     def __init__(
         self,
@@ -1113,6 +1117,8 @@ class BigNumberViz(BaseViz):
     verbose_name = _("Big Number with Trendline")
     credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
     is_timeseries = True
+    no_data_title = _("No data")
+    no_data_message = _("Try applying different filters or ensuring your Datasource contains data")
 
     def query_obj(self):
         d = super().query_obj()
