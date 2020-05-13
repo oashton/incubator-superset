@@ -25,7 +25,12 @@ from superset.connectors.connector_registry import ConnectorRegistry
 from superset.constants import RouteMethod
 from superset.models.slice import Slice
 from superset.utils import core as utils
-from superset.views.base import check_ownership, DeleteMixin, SupersetModelView, common_bootstrap_payload
+from superset.views.base import (
+    check_ownership,
+    DeleteMixin,
+    SupersetModelView,
+    common_bootstrap_payload,
+)
 from superset.views.chart.mixin import SliceMixin
 
 
