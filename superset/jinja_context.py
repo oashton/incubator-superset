@@ -92,7 +92,11 @@ def filter_values(column: str, default: Optional[str] = None) -> List[str]:
     :param default: default value to return if there's no matching columns
     :return: returns a list of filter values
     """
-    form_data = json.loads(request.form.get("form_data", "{}"))
+    form_data = "{}"
+    if request.method == 'GET':
+        form_data = json.loads(request.args.get('form_data', "{}"))
+    else:
+        form_data = json.loads(request.form.get("form_data", "{}"))
     return_val = []
     for filter_type in ["filters", "extra_filters"]:
         if filter_type not in form_data:
