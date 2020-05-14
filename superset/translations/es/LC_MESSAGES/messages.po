@@ -3155,27 +3155,27 @@ msgstr "Consulta sin título %s"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:301
 msgid "Close tab"
-msgstr ""
+msgstr "Cerrar pestaña"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:307
 msgid "Rename tab"
-msgstr ""
+msgstr "Renombrar pestaña"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:313
 msgid "Expand tool bar"
-msgstr ""
+msgstr "Expandir barra de herramientas"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:313
 msgid "Hide tool bar"
-msgstr ""
+msgstr "Ocultar barra de herramientas"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:322
 msgid "Close all other tabs"
-msgstr ""
+msgstr "Cerrar todas las otras pestañas"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors.jsx:328
 msgid "Duplicate tab"
-msgstr ""
+msgstr "Duplicar pestaña"
 
 #: superset-frontend/src/SqlLab/components/TableElement.jsx:102
 msgid "Copy partition query to clipboard"
