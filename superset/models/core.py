@@ -31,6 +31,7 @@ import sqlalchemy as sqla
 import sqlparse
 from flask import g, request
 from flask_appbuilder import Model
+from flask_appbuilder.models.decorators import renders
 from sqlalchemy import (
     Boolean,
     Column,
@@ -51,6 +52,7 @@ from sqlalchemy.pool import NullPool
 from sqlalchemy.schema import UniqueConstraint
 from sqlalchemy.sql import Select
 from sqlalchemy_utils import EncryptedType
+from markupsafe import Markup
 
 from superset import app, db_engine_specs, is_feature_enabled, security_manager
 from superset.db_engine_specs.base import TimeGrain
@@ -76,6 +78,12 @@ class Url(Model, AuditMixinNullable):
     __tablename__ = "url"
     id = Column(Integer, primary_key=True)  # pylint: disable=invalid-name
     url = Column(Text)
+    label = Column(Text)
+
+    @renders("bookmark_url")
+    def bookmark_url(self) -> str:
+        url2 = f"/r/{self.id}"
+        return Markup(f'<a href="{url2}">{self.label}</a>')
 
 
 class KeyValue(Model):  # pylint: disable=too-few-public-methods

@@ -141,6 +141,9 @@ class SupersetAppInitializer:
             AnnotationLayerModelView,
             AnnotationModelView,
         )
+        from superset.views.url import (
+            UrlModelView,
+        )
         from superset.views.api import Api
         from superset.views.core import (
             AccessRequestsModelView,
@@ -206,6 +209,15 @@ class SupersetAppInitializer:
             icon="fa-comments",
             category="Manage",
             category_label=_("Manage"),
+            category_icon="",
+        )
+        appbuilder.add_view(
+            UrlModelView,
+            "Url",
+            label=_("Bookmark"),
+            icon="fa-comments",
+            category="Sources",
+            category_label=_("Sources"),
             category_icon="",
         )
         appbuilder.add_view(

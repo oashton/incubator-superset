@@ -72,6 +72,21 @@ export function getShortUrl(longUrl) {
     );
 }
 
+export function getShortUrlWithBookmark(longUrl, bookmarkName) {
+  return SupersetClient.post({
+    endpoint: '/r/shortner-bookmark/',
+    postPayload: { data: `/${longUrl}`, bookmark: bookmarkName }, // note: url should contain 2x '/' to redirect properly
+    parseMethod: 'text',
+    stringify: false, // the url saves with an extra set of string quotes without this
+  })
+    .then(({ text }) => text)
+    .catch(response =>
+      getClientErrorObject(response).then(({ error, statusText }) =>
+        Promise.reject(error || statusText),
+      ),
+    );
+}
+
 export function supersetURL(rootUrl, getParams = {}) {
   const url = new URL(rootUrl, window.location.origin);
   for (const k in getParams) {
