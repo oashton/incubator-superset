@@ -24,3 +24,8 @@ class TableRestApi(BaseSupersetModelRestApi):
     class_permission_name = "TableModelView"
     resource_name = "table"
     allow_browser_login = True
+
+    show_columns = [
+        "id",
+        "created_by",
+    ]
