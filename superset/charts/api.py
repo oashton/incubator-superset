@@ -69,6 +69,7 @@ class ChartRestApi(BaseSupersetModelRestApi):
         "dashboards.dashboard_title",
         "viz_type",
         "params",
+        "created_by",
         "cache_timeout",
     ]
     list_columns = [
