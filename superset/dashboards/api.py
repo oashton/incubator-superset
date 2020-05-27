@@ -72,6 +72,7 @@ class DashboardRestApi(BaseSupersetModelRestApi):
         "changed_by_url",
         "changed_by.username",
         "changed_on",
+        "created_by",
         "position_json",
         "published",
         "url",
