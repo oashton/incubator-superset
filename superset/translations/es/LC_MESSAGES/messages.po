@@ -5575,11 +5575,11 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/ControlPanelsContainer.jsx:227
 msgid "Data"
-msgstr ""
+msgstr "Datos"
 
 #: superset-frontend/src/explore/components/ControlPanelsContainer.jsx:231
 msgid "Customize"
-msgstr ""
+msgstr "Personalizar"
 
 #: superset-frontend/src/explore/components/DisplayQueryButton.jsx:112
 msgid "Sorry, An error occurred"
@@ -5768,23 +5768,23 @@ msgstr "Máx"
 
 #: superset-frontend/src/explore/components/controls/DatasourceControl.jsx:132
 msgid "Click to change the datasource"
-msgstr ""
+msgstr "Click para cambiar fuente de datos"
 
 #: superset-frontend/src/explore/components/controls/DatasourceControl.jsx:141
 msgid "Change Datasource"
-msgstr ""
+msgstr "Cambiar fuente de datos"
 
 #: superset-frontend/src/explore/components/controls/DatasourceControl.jsx:150
 msgid "Explore in SQL Lab"
-msgstr ""
+msgstr "Explorar en laboratorio SQL"
 
 #: superset-frontend/src/explore/components/controls/DatasourceControl.jsx:154
 msgid "Edit Datasource"
-msgstr ""
+msgstr "Editar fuente de datos"
 
 #: superset-frontend/src/explore/components/controls/DatasourceControl.jsx:162
 msgid "Expand/collapse datasource configuration"
-msgstr ""
+msgstr "Expandir/contraer configuración de la fuente de datos"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:88
 msgid ""
