@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-12 19:35-0500\n"
+"POT-Creation-Date: 2020-06-12 20:14-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4619,10 +4619,6 @@ msgstr ""
 msgid "Left margin, in pixels, allowing for more room for axis labels"
 msgstr ""
 
-#: superset-frontend/src/explore/controls.jsx:776
-msgid "week_ending_saturday"
-msgstr ""
-
 #: superset-frontend/src/explore/controls.jsx:781
 msgid ""
 "The time granularity for the visualization. Note that you can type and "
@@ -4668,6 +4664,7 @@ msgstr ""
 msgid "Pandas resample method"
 msgstr ""
 
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:61
 #: superset-frontend/src/explore/controls.jsx:882
 msgid "Last week"
 msgstr ""
@@ -5821,6 +5818,26 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DatasourceControl.jsx:162
 msgid "Expand/collapse datasource configuration"
+msgstr ""
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:60
+msgid "Last day"
+msgstr ""
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:62
+msgid "Last month"
+msgstr ""
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:63
+msgid "Last quarter"
+msgstr ""
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:64
+msgid "Last year"
+msgstr ""
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:65
+msgid "No filter"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:88
