@@ -94,6 +94,7 @@ class BaseViz:
     title_no_data = _('No data')
     body_no_data = _('Adjust filters or check the Datasource.')
 
+
     def __init__(
         self,
         datasource: "BaseDatasource",
@@ -657,6 +658,7 @@ class TimeTableViz(BaseViz):
 
     viz_type = "time_table"
     verbose_name = _("Time Table View")
+    alternate_name= _("Time-series Table")
     credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
     is_timeseries = True
 
@@ -1170,6 +1172,7 @@ class NVD3TimeSeriesViz(NVD3Viz):
 
     viz_type = "line"
     verbose_name = _("Time Series - Line Chart")
+    short_name = _("Line Chart")
     sort_series = False
     is_timeseries = True
     pivot_fill_value: Optional[int] = None
@@ -1359,7 +1362,7 @@ class MultiLineViz(NVD3Viz):
 
     viz_type = "line_multi"
     verbose_name = _("Time Series - Multiple Line Charts")
-
+    alternate_name = _("Multiple Line Charts")
     is_timeseries = True
 
     def query_obj(self):
@@ -1389,6 +1392,7 @@ class NVD3DualLineViz(NVD3Viz):
 
     viz_type = "dual_line"
     verbose_name = _("Time Series - Dual Axis Line Chart")
+    alternate_name = _("Dual Line Chart")
     sort_series = False
     is_timeseries = True
 
@@ -1462,6 +1466,7 @@ class NVD3TimeSeriesBarViz(NVD3TimeSeriesViz):
     viz_type = "bar"
     sort_series = True
     verbose_name = _("Time Series - Bar Chart")
+    alternate_name = _("Time-series Bar Chart")
 
 
 class NVD3TimePivotViz(NVD3TimeSeriesViz):
@@ -1471,6 +1476,7 @@ class NVD3TimePivotViz(NVD3TimeSeriesViz):
     viz_type = "time_pivot"
     sort_series = True
     verbose_name = _("Time Series - Period Pivot")
+    alternate_name = _("Time-series Period Pivot")
 
     def query_obj(self):
         d = super().query_obj()
@@ -1518,6 +1524,7 @@ class NVD3CompareTimeSeriesViz(NVD3TimeSeriesViz):
 
     viz_type = "compare"
     verbose_name = _("Time Series - Percent Change")
+    alternate_name = _("Time-series Percent Change")
 
 
 class NVD3TimeSeriesStackedViz(NVD3TimeSeriesViz):
@@ -1526,6 +1533,7 @@ class NVD3TimeSeriesStackedViz(NVD3TimeSeriesViz):
 
     viz_type = "area"
     verbose_name = _("Time Series - Stacked")
+    alternate_name = _("Area Chart")
     sort_series = True
     pivot_fill_value = 0
 
@@ -1536,6 +1544,7 @@ class DistributionPieViz(NVD3Viz):
 
     viz_type = "pie"
     verbose_name = _("Distribution - NVD3 - Pie Chart")
+    alternate_name = _("Pie Chart")
     is_timeseries = False
 
     def get_data(self, df: pd.DataFrame) -> VizData:
@@ -1609,6 +1618,7 @@ class DistributionBarViz(DistributionPieViz):
 
     viz_type = "dist_bar"
     verbose_name = _("Distribution - Bar Chart")
+    alternate_name = _("Bar Chart")
     is_timeseries = False
 
     def query_obj(self):
@@ -1672,6 +1682,7 @@ class SunburstViz(BaseViz):
 
     viz_type = "sunburst"
     verbose_name = _("Sunburst")
+    alternate_name = _("Sunburst Chart")
     is_timeseries = False
     credits = (
         "Kerry Rodden "
@@ -1712,6 +1723,7 @@ class SankeyViz(BaseViz):
 
     viz_type = "sankey"
     verbose_name = _("Sankey")
+    alternate_name = _("Sankey Diagram")
     is_timeseries = False
     credits = '<a href="https://www.npmjs.com/package/d3-sankey">d3-sankey on npm</a>'
 
@@ -1765,6 +1777,7 @@ class DirectedForceViz(BaseViz):
 
     viz_type = "directed_force"
     verbose_name = _("Directed Force Layout")
+    alternate_name = _("Force-directed Graph")
     credits = 'd3noob @<a href="http://bl.ocks.org/d3noob/5141278">bl.ocks.org</a>'
     is_timeseries = False
 
@@ -1786,6 +1799,7 @@ class ChordViz(BaseViz):
 
     viz_type = "chord"
     verbose_name = _("Directed Force Layout")
+    alternate_name = _("Chord Diagram")
     credits = '<a href="https://github.com/d3/d3-chord">Bostock</a>'
     is_timeseries = False
 
@@ -1953,6 +1967,7 @@ class IFrameViz(BaseViz):
 
     viz_type = "iframe"
     verbose_name = _("iFrame")
+    alternate_name = _("IFrame")
     credits = 'a <a href="https://github.com/airbnb/superset">Superset</a> original'
     is_timeseries = False
 
@@ -2063,6 +2078,8 @@ class HorizonViz(NVD3TimeSeriesViz):
 
     viz_type = "horizon"
     verbose_name = _("Horizon Charts")
+    alternate_name = _("Horizon Chart")
+    alternate_name = _("Horizon Chart")
     credits = (
         '<a href="https://www.npmjs.com/package/d3-horizon-chart">'
         "d3-horizon-chart</a>"
@@ -2075,6 +2092,7 @@ class MapboxViz(BaseViz):
 
     viz_type = "mapbox"
     verbose_name = _("Mapbox")
+    alternate_name = _("MapBox")
     is_timeseries = False
     credits = "<a href=https://www.mapbox.com/mapbox-gl-js/api/>Mapbox GL JS</a>"
 
@@ -2204,7 +2222,7 @@ class DeckGLMultiLayer(BaseViz):
 
     viz_type = "deck_multi"
     verbose_name = _("Deck.gl - Multiple Layers")
-
+    alternate_name = _("deck.gl Multiple Layers")
     is_timeseries = False
     credits = '<a href="https://uber.github.io/deck.gl/">deck.gl</a>'
 
@@ -2385,6 +2403,7 @@ class DeckScatterViz(BaseDeckGLViz):
 
     viz_type = "deck_scatter"
     verbose_name = _("Deck.gl - Scatter plot")
+    alternate_name = _("deck.gl Scatterplot")
     spatial_control_keys = ["spatial"]
     is_timeseries = True
 
@@ -2432,6 +2451,7 @@ class DeckScreengrid(BaseDeckGLViz):
 
     viz_type = "deck_screengrid"
     verbose_name = _("Deck.gl - Screen Grid")
+    alternate_name = _("deck.gl Screen Grid")
     spatial_control_keys = ["spatial"]
     is_timeseries = True
 
@@ -2458,6 +2478,7 @@ class DeckGrid(BaseDeckGLViz):
 
     viz_type = "deck_grid"
     verbose_name = _("Deck.gl - 3D Grid")
+    alternate_name = _("deck.gl Grid")
     spatial_control_keys = ["spatial"]
 
     def get_properties(self, d):
@@ -2485,6 +2506,7 @@ class DeckPathViz(BaseDeckGLViz):
 
     viz_type = "deck_path"
     verbose_name = _("Deck.gl - Paths")
+    verbose_name = _("deck.gl Path")
     deck_viz_key = "path"
     is_timeseries = True
     deser_map = {
@@ -2533,6 +2555,7 @@ class DeckPolygon(DeckPathViz):
     viz_type = "deck_polygon"
     deck_viz_key = "polygon"
     verbose_name = _("Deck.gl - Polygon")
+    alternate_name = _("deck.gl Polygon")
 
     def query_obj(self):
         fd = self.form_data
@@ -2562,6 +2585,7 @@ class DeckHex(BaseDeckGLViz):
 
     viz_type = "deck_hex"
     verbose_name = _("Deck.gl - 3D HEX")
+    alternate_name = _("deck.gl 3D Hexagon")
     spatial_control_keys = ["spatial"]
 
     def get_properties(self, d):
@@ -2578,6 +2602,7 @@ class DeckGeoJson(BaseDeckGLViz):
 
     viz_type = "deck_geojson"
     verbose_name = _("Deck.gl - GeoJSON")
+    alternate_name = _("deck.gl Geojson")
 
     def query_obj(self):
         d = super().query_obj()
@@ -2597,6 +2622,7 @@ class DeckArc(BaseDeckGLViz):
 
     viz_type = "deck_arc"
     verbose_name = _("Deck.gl - Arc")
+    alternate_name = _("deck.gl Arc")
     spatial_control_keys = ["start_spatial", "end_spatial"]
     is_timeseries = True
 
@@ -2632,6 +2658,7 @@ class EventFlowViz(BaseViz):
 
     viz_type = "event_flow"
     verbose_name = _("Event flow")
+    alternate_name = _("Event Flow")
     credits = 'from <a href="https://github.com/williaster/data-ui">@data-ui</a>'
     is_timeseries = True
 
@@ -2664,6 +2691,7 @@ class PairedTTestViz(BaseViz):
 
     viz_type = "paired_ttest"
     verbose_name = _("Time Series - Paired t-test")
+    alternate_name = _("Paired t-test Table")
     sort_series = False
     is_timeseries = True
 
@@ -2719,6 +2747,7 @@ class RoseViz(NVD3TimeSeriesViz):
 
     viz_type = "rose"
     verbose_name = _("Time Series - Nightingale Rose Chart")
+    alternate_name = _("Nightingale Rose Chart")
     sort_series = False
     is_timeseries = True
 
@@ -2754,6 +2783,7 @@ class PartitionViz(NVD3TimeSeriesViz):
 
     viz_type = "partition"
     verbose_name = _("Partition Diagram")
+    verbose_name = _("Partition Chart")
 
     def query_obj(self):
         query_obj = super().query_obj()

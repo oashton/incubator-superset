@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-11 20:23-0400\n"
+"POT-Creation-Date: 2020-06-12 19:35-0500\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -28,38 +28,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
 
-#: superset/app.py:196
+#: superset/app.py:199
 msgid "Annotation Layers"
 msgstr "Capas de Anotación"
 
-#: superset/app.py:199 superset/app.py:208 superset/app.py:252
-#: superset/app.py:260 superset/app.py:310 superset/app.py:371
-#: superset/app.py:379
+#: superset/app.py:202 superset/app.py:211 superset/app.py:264
+#: superset/app.py:272 superset/app.py:322 superset/app.py:383
+#: superset/app.py:391
 msgid "Manage"
 msgstr "Administrar"
 
-#: superset/app.py:205
+#: superset/app.py:208
 msgid "Annotations"
 msgstr "Anotaciones"
 
-#: superset-frontend/src/profile/components/Security.jsx:43 superset/app.py:214
+#: superset/app.py:217
+msgid "Bookmark"
+msgstr ""
+
+#: superset/app.py:220 superset/app.py:229 superset/app.py:238
+#: superset/app.py:355 superset/app.py:418 superset/app.py:427
+#: superset/app.py:440 superset/app.py:449
+msgid "Sources"
+msgstr "Fuentes"
+
+#: superset-frontend/src/profile/components/Security.jsx:43 superset/app.py:226
 #: superset/views/database/mixins.py:31
 msgid "Databases"
 msgstr "Bases de datos"
 
-#: superset/app.py:217 superset/app.py:226 superset/app.py:343
-#: superset/app.py:406 superset/app.py:415 superset/app.py:428
-#: superset/app.py:437
-msgid "Sources"
-msgstr "Fuentes"
-
-#: superset/app.py:222 superset/connectors/sqla/views.py:264
+#: superset/app.py:234 superset/connectors/sqla/views.py:264
 msgid "Tables"
 msgstr "Tablas"
 
 #: superset-frontend/src/profile/components/CreatedContent.jsx:82
 #: superset-frontend/src/profile/components/Favorites.jsx:83
-#: superset/app.py:233 superset/views/chart/mixin.py:26
+#: superset/app.py:245 superset/views/chart/mixin.py:26
 #: superset/views/dashboard/mixin.py:75
 msgid "Charts"
 msgstr "Gráficas"
@@ -67,80 +71,80 @@ msgstr "Gráficas"
 #: superset-frontend/src/profile/components/CreatedContent.jsx:79
 #: superset-frontend/src/profile/components/Favorites.jsx:80
 #: superset-frontend/src/welcome/Welcome.jsx:64
-#: superset-frontend/src/welcome/Welcome.jsx:69 superset/app.py:241
+#: superset-frontend/src/welcome/Welcome.jsx:69 superset/app.py:253
 #: superset/views/chart/mixin.py:79 superset/views/dashboard/mixin.py:25
 msgid "Dashboards"
 msgstr "Cuadros de Mando"
 
-#: superset/app.py:249 superset/views/core.py:2814
+#: superset/app.py:261 superset/views/core.py:2830
 msgid "CSS Templates"
 msgstr "Plantillas CSS"
 
-#: superset/app.py:258
+#: superset/app.py:270
 msgid "Queries"
 msgstr "Consultas"
 
-#: superset/app.py:267
+#: superset/app.py:279
 msgid "Row level security filters"
 msgstr ""
 
-#: superset/app.py:269 superset/app.py:357 superset/app.py:392
+#: superset/app.py:281 superset/app.py:369 superset/app.py:404
 msgid "Security"
 msgstr "Seguridad"
 
-#: superset/app.py:306
+#: superset/app.py:318
 msgid "Import Dashboards"
 msgstr "Importar Cuadros de Mando"
 
-#: superset/app.py:315
+#: superset/app.py:327
 msgid "SQL Editor"
 msgstr "Editor SQL"
 
-#: superset/app.py:320 superset/app.py:335
+#: superset/app.py:332 superset/app.py:347
 msgid "SQL Lab"
 msgstr "Laboratorio SQL"
 
-#: superset/app.py:323
+#: superset/app.py:335
 msgid "Saved Queries"
 msgstr " Consultas Guardadas"
 
-#: superset/app.py:330
+#: superset/app.py:342
 msgid "Query Search"
 msgstr "Consulta de Búsqueda"
 
-#: superset/app.py:339
+#: superset/app.py:351
 msgid "Upload a CSV"
 msgstr "Cargar un CSV"
 
-#: superset/app.py:355
+#: superset/app.py:367
 msgid "Action Log"
 msgstr "Registro Acciones"
 
-#: superset/app.py:369
+#: superset/app.py:381
 msgid "Dashboard Emails"
 msgstr ""
 
-#: superset/app.py:377
+#: superset/app.py:389
 msgid "Chart Email Schedules"
 msgstr ""
 
-#: superset/app.py:390
+#: superset/app.py:402
 msgid "Access requests"
 msgstr "Solicitudes de Acceso"
 
-#: superset/app.py:404 superset/connectors/druid/views.py:256
+#: superset/app.py:416 superset/connectors/druid/views.py:256
 msgid "Druid Datasources"
 msgstr "Fuentes de Datos Druid"
 
-#: superset/app.py:412 superset/connectors/druid/views.py:194
+#: superset/app.py:424 superset/connectors/druid/views.py:194
 msgid "Druid Clusters"
 msgstr "Clusters Druid"
 
-#: superset/app.py:425
+#: superset/app.py:437
 msgid "Scan New Datasources"
 msgstr "Buscar Nuevas Fuentes de Datos"
 
-#: superset/app.py:434
+#: superset/app.py:446
 msgid "Refresh Druid Metadata"
 msgstr "Actualizar Metadatos Druid"
 
@@ -168,7 +172,7 @@ msgid "No Results"
 msgstr "Sin resultado"
 
 #: superset-frontend/src/explore/components/DisplayQueryButton.jsx:204
-#: superset/viz.py:94 superset/viz.py:1120
+#: superset/viz.py:94 superset/viz.py:1122
 msgid "No data"
 msgstr "Sin datos"
 
@@ -176,204 +180,253 @@ msgstr "Sin datos"
 msgid "Adjust filters or check the Datasource."
 msgstr "Ajustar filtros o verificar la fuente de datos"
 
-#: superset/viz.py:104
+#: superset/viz.py:105
 msgid "Viz is missing a datasource"
 msgstr "Falta una fuente de datos"
 
-#: superset/utils/core.py:1082 superset/viz.py:326
+#: superset/utils/core.py:1082 superset/viz.py:327
 msgid "From date cannot be larger than to date"
 msgstr "La fecha de inicio no puede ser superior a la de fin"
 
-#: superset/viz.py:537
+#: superset/viz.py:538
 msgid "Table View"
 msgstr "Vista de Tabla"
 
-#: superset/viz.py:550
+#: superset/viz.py:551
 msgid "Pick a granularity in the Time section or uncheck 'Include Time'"
 msgstr "Elige una granularidad en la sección de tiempo o desmarca 'Incluir tiempo'"
 
-#: superset/viz.py:562
+#: superset/viz.py:563
 msgid ""
 "Choose either fields to [Group By] and [Metrics] and/or [Percentage "
 "Metrics], or [Columns], not both"
 msgstr ""
 
-#: superset/viz.py:659
+#: superset/viz.py:660
 msgid "Time Table View"
-msgstr ""
+msgstr "Tabla de series de tiempo"
 
-#: superset/viz.py:668 superset/viz.py:1622
+#: superset-frontend/src/visualizations/TimeTable/TimeTableChartPlugin.js:25
+#: superset/viz.py:661
+msgid "Time-series Table"
+msgstr "Tabla de series de tiempo"
+
+#: superset/viz.py:670 superset/viz.py:1632
 msgid "Pick at least one metric"
 msgstr "Elige al menos una métrica"
 
-#: superset/viz.py:672
+#: superset/viz.py:674
 msgid "When using 'Group By' you are limited to use a single metric"
 msgstr ""
 
-#: superset/viz.py:701
+#: superset/viz.py:703
 msgid "Pivot Table"
 msgstr "Tabla Dinámica"
 
-#: superset/viz.py:716
+#: superset/viz.py:718
 msgid "Please choose at least one 'Group by' field "
 msgstr ""
 
-#: superset/viz.py:727
+#: superset/viz.py:729
 msgid "Please choose at least one metric"
 msgstr "Por favor elige al menos una métrica"
 
-#: superset/viz.py:729
+#: superset/viz.py:731
 msgid "Group By' and 'Columns' can't overlap"
 msgstr ""
 
-#: superset/viz.py:781
+#: superset/viz.py:783
 msgid "Markup"
 msgstr "Texto con Formato"
 
-#: superset/viz.py:803
+#: superset/viz.py:805
 msgid "Separator"
 msgstr "Separador"
 
-#: superset/viz.py:815
+#: superset/viz.py:817
 msgid "Word Cloud"
 msgstr "Nube de Etiquetas"
 
-#: superset/viz.py:829
+#: superset/viz.py:831
 msgid "Treemap"
-msgstr "Mapa de Arbol"
+msgstr "Diagrama de arbol"
 
-#: superset/viz.py:861
+#: superset/viz.py:863
 msgid "Calendar Heatmap"
-msgstr "Mapa de Calor del Calendario"
+msgstr "Mapa de Calor de calendario"
 
-#: superset/viz.py:933
+#: superset/viz.py:935
 msgid "Box Plot"
-msgstr "Diagrama de Caja"
+msgstr "Diagrama de caja"
 
 #: superset-frontend/src/explore/controlPanels/Bubble.js:22
-#: superset/viz.py:1020
+#: superset/viz.py:1022
 msgid "Bubble Chart"
-msgstr "Gráfico de Burbujas"
+msgstr "Gráfico de burbujas"
 
-#: superset/viz.py:1042
+#: superset/viz.py:1044
 msgid "Please use 3 different metric labels"
 msgstr ""
 
-#: superset/viz.py:1044
+#: superset/viz.py:1046
 msgid "Pick a metric for x, y and size"
 msgstr "Elige una métrica y tamaño para x, y "
 
-#: superset/viz.py:1071
+#: superset/viz.py:1073
 msgid "Bullet Chart"
-msgstr "Grafico de Puntos"
+msgstr "Barra de puntos"
 
-#: superset/viz.py:1095
+#: superset/viz.py:1097
 msgid "Pick a metric to display"
 msgstr "Elige una métrica para mostrar"
 
-#: superset/viz.py:1117
+#: superset/viz.py:1119
 msgid "Big Number with Trendline"
 msgstr "Número Grande con Línea de Tendencia"
 
-#: superset/viz.py:1121
+#: superset/viz.py:1123
 msgid "Try applying different filters or ensuring your Datasource contains data"
 msgstr "Intenta aplicar diferentes filtros"
 
-#: superset/viz.py:1127 superset/viz.py:1158
+#: superset/viz.py:1129 superset/viz.py:1160
 msgid "Pick a metric!"
 msgstr "Elige una métrica!"
 
-#: superset/viz.py:1150
+#: superset/viz.py:1152
 msgid "Big Number"
 msgstr "Número Grande"
 
-#: superset/viz.py:1172
+#: superset/viz.py:1174
 msgid "Time Series - Line Chart"
-msgstr "Serie Temporal - Gráfico de Líneas"
+msgstr "Serie de tiempo - Gráfico de líneas"
 
-#: superset/viz.py:1236 superset/viz.py:1448
+#: superset/viz.py:1175
+msgid "Line Chart"
+msgstr "Gráfico de líneas"
+
+#: superset/viz.py:1239 superset/viz.py:1452
 msgid "Pick a time granularity for your time series"
 msgstr "Elige una granularidad de tiempo para tus series de tiempo."
 
-#: superset/viz.py:1291
+#: superset/viz.py:1294
 msgid ""
 "`Since` and `Until` time bounds should be specified when using the `Time "
 "Shift` feature."
 msgstr ""
 
-#: superset/viz.py:1361
+#: superset/viz.py:1364
 msgid "Time Series - Multiple Line Charts"
-msgstr ""
+msgstr "Gráfico de múltiples líneas"
 
-#: superset/viz.py:1391
+#: superset/viz.py:1365
+msgid "Multiple Line Charts"
+msgstr "Gráfico de múltiples líneas"
+
+#: superset/viz.py:1394
 msgid "Time Series - Dual Axis Line Chart"
 msgstr "Series temporales - Gráfico de líneas de doble eje"
 
-#: superset/viz.py:1401
+#: superset/viz.py:1395
+msgid "Dual Line Chart"
+msgstr "Gráfico de doble linea"
+
+#: superset/viz.py:1405
 msgid "Pick a metric for left axis!"
 msgstr "Elige una métrica para el eje izquierdo!"
 
-#: superset/viz.py:1403
+#: superset/viz.py:1407
 msgid "Pick a metric for right axis!"
 msgstr "Elige una métrica para el eje derecho!"
 
-#: superset/viz.py:1406
+#: superset/viz.py:1410
 msgid "Please choose different metrics on left and right axis"
 msgstr "Por favor, elige diferentes métricas en el eje izquierdo y derecho"
 
-#: superset/viz.py:1464
+#: superset/viz.py:1468
 msgid "Time Series - Bar Chart"
 msgstr "Series de Tiempo - Gráfico de Barras"
 
-#: superset/viz.py:1473
+#: superset/viz.py:1469
+msgid "Time-series Bar Chart"
+msgstr "Gráfico de barras de series de tiempo"
+
+#: superset/viz.py:1478
 msgid "Time Series - Period Pivot"
-msgstr ""
+msgstr "Series de tiempo con pivote periódico"
 
-#: superset/viz.py:1520
+#: superset/viz.py:1479
+msgid "Time-series Period Pivot"
+msgstr "Series de tiempo con pivote periódico"
+
+#: superset/viz.py:1526
 msgid "Time Series - Percent Change"
-msgstr "Series de tiempo - Cambio Porcentual"
+msgstr "Series de tiempo - cambio porcentual"
 
-#: superset/viz.py:1528
+#: superset/viz.py:1527
+msgid "Time-series Percent Change"
+msgstr "Series de tiempo cambio porcentual"
+
+#: superset/viz.py:1535
 msgid "Time Series - Stacked"
 msgstr "Series de Tiempo - Apiladas"
 
-#: superset/viz.py:1538
+#: superset/viz.py:1536
+msgid "Area Chart"
+msgstr "Gráfico de area"
+
+#: superset/viz.py:1546
 msgid "Distribution - NVD3 - Pie Chart"
 msgstr "Distribución - NVD3 - Gráfico Circular"
 
-#: superset/viz.py:1557
+#: superset/viz.py:1547
+msgid "Pie Chart"
+msgstr "Gráfico circular"
+
+#: superset/viz.py:1566
 msgid "Histogram"
 msgstr "Histograma"
 
-#: superset/viz.py:1566
+#: superset/viz.py:1575
 msgid "Must have at least one numeric column specified"
 msgstr ""
 
-#: superset/viz.py:1611
-msgid "Distribution - Bar Chart"
-msgstr "Distribución - Gráfico de Barra"
-
 #: superset/viz.py:1620
+msgid "Distribution - Bar Chart"
+msgstr "Distribución - Gráfico de barras"
+
+#: superset/viz.py:1621
+msgid "Bar Chart"
+msgstr "Gráfico de barras"
+
+#: superset/viz.py:1630
 msgid "Can't have overlap between Series and Breakdowns"
 msgstr "No se puede superponer Series y Distribuciones"
 
-#: superset/viz.py:1624
+#: superset/viz.py:1634
 msgid "Pick at least one field for [Series]"
 msgstr "Elige al menos un campo para [Series]"
 
-#: superset/viz.py:1674
+#: superset/viz.py:1684
 msgid "Sunburst"
 msgstr "Sunburst"
 
-#: superset/viz.py:1714
+#: superset/viz.py:1685
+msgid "Sunburst Chart"
+msgstr "Gráfico de anillo"
+
+#: superset/viz.py:1725
 msgid "Sankey"
 msgstr "Sankey"
 
-#: superset/viz.py:1721
+#: superset/viz.py:1726
+msgid "Sankey Diagram"
+msgstr "Diagrama sankey"
+
+#: superset/viz.py:1733
 msgid "Pick exactly 2 columns as [Source / Target]"
 msgstr "Elige exactamente 2 columnas como [Origen / Destino]"
 
-#: superset/viz.py:1754
+#: superset/viz.py:1766
 msgid ""
 "There's a loop in your Sankey, please provide a tree. Here's a faulty "
 "link: {}"
@@ -381,142 +434,214 @@ msgstr ""
 "Hay un bucle en tu Sankey, por favor proporciona un árbol. Aquí hay un "
 "enlace defectuoso: {}"
 
-#: superset/viz.py:1767 superset/viz.py:1788
+#: superset/viz.py:1779 superset/viz.py:1801
 msgid "Directed Force Layout"
 msgstr "Disposición Dirigida Forzado"
 
-#: superset/viz.py:1774
+#: superset/viz.py:1780
+msgid "Force-directed Graph"
+msgstr "Grafo de fuerzas"
+
+#: superset/viz.py:1787
 msgid "Pick exactly 2 columns to 'Group By'"
 msgstr "Elija exactamente 2 columnas para 'Agrupar por'"
 
-#: superset/viz.py:1821
+#: superset/viz.py:1802
+msgid "Chord Diagram"
+msgstr "Diagrama de cuerdas"
+
+#: superset/viz.py:1835
 msgid "Country Map"
 msgstr "Mapa de País"
 
-#: superset/viz.py:1848
+#: superset/viz.py:1862
 msgid "World Map"
 msgstr "Mapa Mundial"
 
 #: superset-frontend/src/dashboard/components/Header.jsx:405
-#: superset-frontend/src/explore/controls.jsx:1730 superset/viz.py:1899
+#: superset-frontend/src/explore/controls.jsx:1730 superset/viz.py:1913
 msgid "Filters"
 msgstr "Filtros"
 
-#: superset/viz.py:1917
+#: superset/viz.py:1931
 msgid "Invalid filter configuration, please select a column"
 msgstr ""
 
-#: superset/viz.py:1955
+#: superset/viz.py:1969
 msgid "iFrame"
-msgstr "iFrame"
+msgstr "Embeber objeto"
 
-#: superset/viz.py:1987
+#: superset/viz.py:1970
+msgid "IFrame"
+msgstr "Embeber objeto"
+
+#: superset/viz.py:2002
 msgid "Parallel Coordinates"
 msgstr "Coordenadas Paralelas"
 
-#: superset/viz.py:2009
+#: superset/viz.py:2024
 msgid "Heatmap"
 msgstr "Mapa de Calor"
 
-#: superset/viz.py:2065
+#: superset/viz.py:2080
 msgid "Horizon Charts"
-msgstr "Gráficos de Horizontes"
+msgstr "Gráfico de horizontes"
 
-#: superset/viz.py:2077
+#: superset/viz.py:2081 superset/viz.py:2082
+msgid "Horizon Chart"
+msgstr "Gráfico de horizontes"
+
+#: superset/viz.py:2094
 msgid "Mapbox"
-msgstr "Caja de Mapa"
+msgstr "Mapa mapbox"
 
-#: superset/viz.py:2088
+#: superset/viz.py:2095
+msgid "MapBox"
+msgstr "Mapa mapbox"
+
+#: superset/viz.py:2106
 msgid "[Longitude] and [Latitude] must be set"
 msgstr ""
 
-#: superset/viz.py:2094
+#: superset/viz.py:2112
 msgid "Must have a [Group By] column to have 'count' as the [Label]"
 msgstr ""
 "Debe tener una columna [Agrupar por] para tener 'contar' como la "
 "[Etiqueta]"
 
-#: superset/viz.py:2113
+#: superset/viz.py:2131
 msgid "Choice of [Label] must be present in [Group By]"
 msgstr "La opción de [Etiqueta] debe estar presente en [Agrupar por]"
 
-#: superset/viz.py:2119
+#: superset/viz.py:2137
 msgid "Choice of [Point Radius] must be present in [Group By]"
 msgstr "La opción de [Radio de puntos] debe estar presente en [Agrupar por]"
 
-#: superset/viz.py:2126
+#: superset/viz.py:2144
 msgid "[Longitude] and [Latitude] columns must be present in [Group By]"
 msgstr "Las columnas [Longitud] y [Latitud] deben estar presentes en [Agrupar por]"
 
-#: superset/viz.py:2206
+#: superset/viz.py:2224
 msgid "Deck.gl - Multiple Layers"
-msgstr ""
+msgstr "Capas multiples deck.gl"
 
-#: superset/viz.py:2246 superset/viz.py:2277
+#: superset/viz.py:2225
+msgid "deck.gl Multiple Layers"
+msgstr "Capas multiples deck.gl"
+
+#: superset/viz.py:2264 superset/viz.py:2295
 msgid "Bad spatial key"
 msgstr ""
 
-#: superset/viz.py:2263
+#: superset/viz.py:2281
 #, python-format
 msgid "Invalid spatial point encountered: %s"
 msgstr ""
 
-#: superset/viz.py:2299
+#: superset/viz.py:2317
 msgid ""
 "Encountered invalid NULL spatial entry,"
 "                                        please consider filtering those "
 "out"
 msgstr ""
 
-#: superset/viz.py:2387
+#: superset/viz.py:2405
 msgid "Deck.gl - Scatter plot"
-msgstr ""
+msgstr "Diagrama de dispersión deck.gl"
 
-#: superset/viz.py:2434
+#: superset/viz.py:2406
+msgid "deck.gl Scatterplot"
+msgstr "Diagrama de dispersión deck.gl"
+
+#: superset/viz.py:2453
 msgid "Deck.gl - Screen Grid"
-msgstr ""
+msgstr "Rejilla deck.gl"
 
-#: superset/viz.py:2460
+#: superset/viz.py:2454
+msgid "deck.gl Screen Grid"
+msgstr "Rejilla deck.gl"
+
+#: superset/viz.py:2480
 msgid "Deck.gl - 3D Grid"
-msgstr ""
+msgstr "Rejilla 3D deck.gl"
 
-#: superset/viz.py:2487
+#: superset/viz.py:2481
+msgid "deck.gl Grid"
+msgstr "Rejilla 3D deck.gl"
+
+#: superset/viz.py:2508
 msgid "Deck.gl - Paths"
-msgstr ""
+msgstr "Trayectoria deck.gl"
 
-#: superset/viz.py:2535
+#: superset/viz.py:2509
+msgid "deck.gl Path"
+msgstr "Trayectoria deck.gl"
+
+#: superset/viz.py:2557
 msgid "Deck.gl - Polygon"
-msgstr ""
+msgstr "Polígono deck.gl"
 
-#: superset/viz.py:2564
+#: superset/viz.py:2558
+msgid "deck.gl Polygon"
+msgstr "Polígono deck.gl"
+
+#: superset/viz.py:2587
 msgid "Deck.gl - 3D HEX"
-msgstr ""
+msgstr "Hexágono 3D deck.gl"
 
-#: superset/viz.py:2580
+#: superset/viz.py:2588
+msgid "deck.gl 3D Hexagon"
+msgstr "Hexágono 3D deck.gl"
+
+#: superset/viz.py:2604
 msgid "Deck.gl - GeoJSON"
-msgstr ""
+msgstr "GeoJSON deck.gl"
 
-#: superset/viz.py:2599
+#: superset/viz.py:2605
+msgid "deck.gl Geojson"
+msgstr "GeoJSON deck.gl"
+
+#: superset/viz.py:2624
 msgid "Deck.gl - Arc"
-msgstr ""
+msgstr "Arco deck.gl"
 
-#: superset/viz.py:2634
+#: superset/viz.py:2625
+msgid "deck.gl Arc"
+msgstr "Arco deck.gl"
+
+#: superset/viz.py:2660
 msgid "Event flow"
-msgstr "Flujo de Evento"
+msgstr "Flujo de eventos"
 
-#: superset/viz.py:2666
+#: superset/viz.py:2661
+msgid "Event Flow"
+msgstr "Flujo de eventos"
+
+#: superset/viz.py:2693
 msgid "Time Series - Paired t-test"
-msgstr "Serie Temportal - Prueba-T Pareada"
+msgstr "Prueba-T apareada de series de tiempo"
 
-#: superset/viz.py:2721
+#: superset/viz.py:2694
+msgid "Paired t-test Table"
+msgstr "Prueba-T apareada de series de tiempo"
+
+#: superset/viz.py:2749
 msgid "Time Series - Nightingale Rose Chart"
-msgstr ""
+msgstr "Gráfico de rosas"
 
-#: superset/viz.py:2756
+#: superset/viz.py:2750
+msgid "Nightingale Rose Chart"
+msgstr "Gráfico de rosas"
+
+#: superset/viz.py:2785
 msgid "Partition Diagram"
-msgstr ""
+msgstr "Diagrama de particiones"
 
-#: superset/charts/api.py:337
+#: superset/viz.py:2786
+msgid "Partition Chart"
+msgstr "Diagrama de particiones"
+
+#: superset/charts/api.py:338
 #, python-format
 msgid "Deleted %(num)d chart"
 msgid_plural "Deleted %(num)d charts"
@@ -1186,7 +1311,7 @@ msgstr ""
 msgid "Unable to retrieve metadata for the following table(s): %(tables)s"
 msgstr ""
 
-#: superset/dashboards/api.py:332
+#: superset/dashboards/api.py:333
 #, python-format
 msgid "Deleted %(num)d dashboard"
 msgid_plural "Deleted %(num)d dashboards"
@@ -1342,10 +1467,10 @@ msgstr "Consulta SQL"
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:358
 #: superset-frontend/src/views/chartList/ChartList.tsx:123
 #: superset/templates/appbuilder/navbar_right.html:39
-#: superset/views/chart/mixin.py:85 superset/views/chart/views.py:101
+#: superset/views/chart/mixin.py:85 superset/views/chart/views.py:108
 #: superset/views/schedules.py:260
 msgid "Chart"
-msgstr "Gráfica"
+msgstr "Gráfico"
 
 #: superset-frontend/src/components/Menu/NewMenu.jsx:56
 #: superset-frontend/src/welcome/DashboardTable.jsx:56
@@ -1610,101 +1735,101 @@ msgstr "URL de la Base de datos"
 msgid "Roles to grant"
 msgstr "Roles a conceder"
 
-#: superset/views/core.py:468
+#: superset/views/core.py:484
 msgid "Access was requested"
 msgstr "Se ha solicitado Acceso"
 
-#: superset/views/core.py:533
+#: superset/views/core.py:549
 #, python-format
 msgid ""
 "%(user)s was granted the role %(role)s that gives access to the "
 "%(datasource)s"
 msgstr "%(user)s recibió el rol %(role)s que le da acceso a %(datasource)s"
 
-#: superset/views/core.py:556
+#: superset/views/core.py:572
 #, python-format
 msgid "Role %(r)s was extended to provide the access to the datasource %(ds)s"
 msgstr ""
 "El rol %(r)s se extendió para proporcionar el acceso al origen de datos "
 "%(ds)s"
 
-#: superset/views/core.py:573
+#: superset/views/core.py:589
 msgid "You have no permission to approve this request"
 msgstr "No tienes permiso para aprobar esta solicitud."
 
-#: superset/views/core.py:732
+#: superset/views/core.py:748
 #, python-format
 msgid ""
 "Cannot import dashboard: %(db_error)s.\n"
 "Make sure to create the database before importing the dashboard."
 msgstr ""
 
-#: superset/views/core.py:743
+#: superset/views/core.py:759
 msgid "An unknown error occurred. Please contact your Superset administrator"
 msgstr ""
 
-#: superset/views/core.py:845 superset/views/core.py:851
-#: superset/views/core.py:984 superset/views/core.py:1001
+#: superset/views/core.py:861 superset/views/core.py:867
+#: superset/views/core.py:1000 superset/views/core.py:1017
 msgid "You don't have the rights to "
 msgstr ""
 
-#: superset/views/core.py:845 superset/views/core.py:985
+#: superset/views/core.py:861 superset/views/core.py:1001
 msgid "alter this "
 msgstr ""
 
-#: superset/views/core.py:845 superset/views/core.py:851
+#: superset/views/core.py:861 superset/views/core.py:867
 msgid "chart"
 msgstr ""
 
-#: superset/views/core.py:851 superset/views/core.py:1002
+#: superset/views/core.py:867 superset/views/core.py:1018
 msgid "create a "
 msgstr ""
 
-#: superset/views/core.py:892
+#: superset/views/core.py:908
 #, python-format
 msgid "Explore - %(table)s"
 msgstr ""
 
-#: superset/views/core.py:986 superset/views/core.py:1003
+#: superset/views/core.py:1002 superset/views/core.py:1019
 msgid "dashboard"
 msgstr ""
 
-#: superset/views/core.py:991
+#: superset/views/core.py:1007
 msgid "Chart [{}] was added to dashboard [{}]"
 msgstr ""
 
-#: superset/views/core.py:1012
+#: superset/views/core.py:1028
 msgid "Dashboard [{}] just got created and chart [{}] was added to it"
 msgstr ""
 
-#: superset/views/core.py:1038
+#: superset/views/core.py:1054
 msgid "Chart [{}] has been saved"
 msgstr ""
 
-#: superset/views/core.py:1047
+#: superset/views/core.py:1063
 msgid "Chart [{}] has been overwritten"
 msgstr ""
 
-#: superset/views/core.py:1378
+#: superset/views/core.py:1394
 #, python-format
 msgid "Could not load database driver: %(driver_name)s"
 msgstr ""
 
-#: superset/views/core.py:1387
+#: superset/views/core.py:1403
 msgid ""
 "Invalid connection string, a valid string usually follows:\n"
 "'DRIVER://USER:PASSWORD@DB-HOST/DATABASE-NAME'"
 msgstr ""
 
-#: superset/views/core.py:1395
+#: superset/views/core.py:1411
 msgid "Connection failed, please check your connection settings."
 msgstr ""
 
-#: superset/views/core.py:1403
+#: superset/views/core.py:1419
 msgid "Unexpected error occurred, please check your logs for details"
 msgstr ""
 
-#: superset/views/core.py:1655
+#: superset/views/core.py:1671
 msgid ""
 "Malformed request. slice_id or table_name and db_name arguments are "
 "expected"
@@ -1712,29 +1837,29 @@ msgstr ""
 "Solicitud mal formada. Se esperan argumentos de slice_id o table_name y "
 "db_name"
 
-#: superset/views/core.py:1665
+#: superset/views/core.py:1681
 #, python-format
 msgid "Chart %(id)s not found"
 msgstr ""
 
-#: superset/views/core.py:1679
+#: superset/views/core.py:1695
 #, python-format
 msgid "Table %(t)s wasn't found in the database %(d)s"
 msgstr "La tabla %(t)s no se encontró en la base de datos %(d)s"
 
-#: superset/views/core.py:1930
+#: superset/views/core.py:1946
 #, python-format
 msgid "Can't find User '%(name)s', please ask your admin to create one."
 msgstr ""
 "No se puede encontrar el usuario '%(name)s', pídale a tu administrador "
 "que cree uno."
 
-#: superset/views/core.py:1942
+#: superset/views/core.py:1958
 #, python-format
 msgid "Can't find DruidCluster with cluster_name = '%(name)s'"
 msgstr "No puedo encontrar DruidCluster con nombre = '%(name)s'"
 
-#: superset/views/core.py:2228
+#: superset/views/core.py:2244
 #, python-format
 msgid ""
 "%(validator_name)s was unable to check your query.\n"
@@ -1742,34 +1867,34 @@ msgid ""
 "Exception: {exception}"
 msgstr ""
 
-#: superset/views/core.py:2273
+#: superset/views/core.py:2289
 msgid ""
 "Failed to start remote query on a worker. Tell your administrator to "
 "verify the availability of the message queue."
 msgstr ""
 
-#: superset/views/core.py:2420 superset/views/core.py:2422
+#: superset/views/core.py:2436 superset/views/core.py:2438
 msgid "Query record was not created as expected."
 msgstr "El registro de consulta no se creó como se esperaba."
 
-#: superset/views/core.py:2695
+#: superset/views/core.py:2711
 #, python-format
 msgid "%(user)s's profile"
 msgstr ""
 
-#: superset/views/core.py:2815
+#: superset/views/core.py:2831
 msgid "Show CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2816
+#: superset/views/core.py:2832
 msgid "Add CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2817
+#: superset/views/core.py:2833
 msgid "Edit CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2822
+#: superset/views/core.py:2838
 msgid "Template Name"
 msgstr "Nombre Plantilla"
 
@@ -1947,6 +2072,26 @@ msgstr "Pop Tab Link"
 #: superset/views/sql_lab.py:139
 msgid "Changed on"
 msgstr "Cambiado el"
+
+#: superset/views/url.py:24
+msgid "List Bookmarks"
+msgstr ""
+
+#: superset/views/url.py:25
+msgid "Show Url"
+msgstr ""
+
+#: superset/views/url.py:26
+msgid "Add Url"
+msgstr ""
+
+#: superset/views/url.py:27
+msgid "Edit Url"
+msgstr ""
+
+#: superset/views/url.py:33
+msgid "bookmark_url"
+msgstr ""
 
 #: superset/views/chart/mixin.py:27
 msgid "Show Chart"
@@ -3009,6 +3154,7 @@ msgid "Save New"
 msgstr ""
 
 #: superset-frontend/src/SqlLab/components/SaveQuery.jsx:149
+#: superset-frontend/src/dashboard/components/BookmarkModal.jsx:107
 #: superset-frontend/src/dashboard/components/PropertiesModal.jsx:311
 #: superset-frontend/src/dashboard/components/SaveModal.jsx:187
 #: superset-frontend/src/dashboard/components/filterscope/FilterScopeSelector.jsx:519
@@ -3540,6 +3686,18 @@ msgstr ""
 msgid "Added"
 msgstr ""
 
+#: superset-frontend/src/dashboard/components/BookmarkModal.jsx:75
+msgid "You must pick a name for the bookmark"
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/BookmarkModal.jsx:92
+msgid "Save Bookmark"
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/BookmarkModal.jsx:97
+msgid "[bookmark name]"
+msgstr ""
+
 #: superset-frontend/src/dashboard/components/CodeModal.jsx:57
 msgid "Active Dashboard Filters"
 msgstr "Filtros de Cuadros de Mando Activos"
@@ -3609,48 +3767,52 @@ msgstr ""
 msgid "Edit dashboard"
 msgstr "Editar tablero"
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:94
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:95
 msgid "An error occurred while fetching available CSS templates"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:131
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:132
 msgid "Superset Dashboard"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:133
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:134
 msgid "Check out this dashboard: "
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:158
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:159
 #: superset-frontend/src/explore/components/SaveModal.jsx:207
 msgid "Save as"
 msgstr "Guardar como"
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:169
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:170
 msgid "Discard changes"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:177
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:178
 msgid "Force refresh dashboard"
 msgstr "Forzar refresco del tablero"
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:187
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:188
 msgid "Set auto-refresh interval"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:188
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:189
 msgid "Auto-refresh dashboard"
 msgstr "Auto-refrescar tablero"
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:195
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:196
 msgid "Edit dashboard properties"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:209
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:210
 msgid "Share dashboard"
 msgstr "Compartir tablero"
 
-#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:214
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:225
+msgid "Bookmark dashboard"
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/HeaderActionsDropdown.jsx:236
 msgid "Edit CSS"
 msgstr ""
 
@@ -4560,6 +4722,10 @@ msgstr ""
 "Margen izquierdo, en píxeles, lo que permite más espacio para las "
 "etiquetas de los ejes."
 
+#: superset-frontend/src/explore/controls.jsx:776
+msgid "week_ending_saturday"
+msgstr "semana_termina_sábado"
+
 #: superset-frontend/src/explore/controls.jsx:781
 msgid ""
 "The time granularity for the visualization. Note that you can type and "
@@ -4583,6 +4749,9 @@ msgid ""
 " expression that return a DATETIME column in the table. Also note that "
 "the filter below is applied against this column or expression"
 msgstr ""
+"\"La columna de tiempo para la visualización. Es posible definir una "
+"expresion que retorne una columna de tipo DATETIME de la tabla. Tener en "
+"cuenta que el filtro de abajo es aplicado contra esta columna o expresión"
 
 #: superset-frontend/src/explore/controls.jsx:841
 msgid ""
@@ -4626,6 +4795,13 @@ msgid ""
 " explicitly set the timezone per the ISO 8601 format if specifying either"
 " the start and/or end time."
 msgstr ""
+"El rango de tiempo para la visualización, Todos los intervalos relativos,"
+" ej: \"Ultimo mes\", \"Ahora\", etc. Son evaluados en el servidor usando "
+"la hora local del servidor. Todas las fechas de ayuda y de relleno estan "
+"expresadas en UTC. La hora es entonces evaluada por la base de datos "
+"usando la zona horaria del servidor. Es posible tambien definir la zona "
+"horaria deacuerdo al formato ISO 8601 si se especifica ya sea el inicio o"
+" fin de la hora"
 
 #: superset-frontend/src/explore/controls.jsx:899
 msgid "Max Bubble Size"
@@ -5378,7 +5554,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/controls.jsx:1860
 msgid "Line charts"
-msgstr ""
+msgstr "Gráfico de linea"
 
 #: superset-frontend/src/explore/controls.jsx:1863
 msgid "Pick a set of line charts to layer on top of one another"
@@ -7100,10 +7276,6 @@ msgstr "Selecciona [%s]"
 msgid "Filter Box"
 msgstr "Caja de filtro"
 
-#: superset-frontend/src/visualizations/TimeTable/TimeTableChartPlugin.js:25
-msgid "Time-series Table"
-msgstr ""
-
 #: superset-frontend/src/welcome/DashboardTable.jsx:125
 msgid ""
 "You don't have the necessary permissions to load dashboards. Please "
@@ -7114,48 +7286,6 @@ msgstr ""
 #: superset-frontend/src/welcome/Welcome.jsx:92
 msgid "Recently Viewed"
 msgstr "Recientemente vistos"
-
-#~ msgid "second"
-#~ msgstr "segundo"
-
-#~ msgid "minute"
-#~ msgstr "minuto"
-
-#~ msgid "hour"
-#~ msgstr "hora"
-
-#~ msgid "day"
-#~ msgstr "día"
-
-#~ msgid "week"
-#~ msgstr "semana"
-
-#~ msgid "month"
-#~ msgstr "mes"
-
-#~ msgid "quarter"
-#~ msgstr "trimestre"
-
-#~ msgid "year"
-#~ msgstr "año"
-
-#~ msgid "week_start_monday"
-#~ msgstr "semana_empieza_lunes"
-
-#~ msgid "week_ending_saturday"
-#~ msgstr "semana_termina_sábado"
-
-#~ msgid "week_start_sunday"
-#~ msgstr "semana_empieza_domingo"
-
-#~ msgid "5 minute"
-#~ msgstr "5 minutos"
-
-#~ msgid "half hour"
-#~ msgstr "media hora"
-
-#~ msgid "10 minute"
-#~ msgstr "10 minutos"
 
 #~ msgid "Choose either fields to [Group By] and [Metrics] or [Columns], not both"
 #~ msgstr ""
@@ -7970,4 +8100,43 @@ msgstr "Recientemente vistos"
 
 #~ msgid "There was an issue deleting: %(slice_name)"
 #~ msgstr ""
+
+#~ msgid "second"
+#~ msgstr "segundo"
+
+#~ msgid "minute"
+#~ msgstr "minuto"
+
+#~ msgid "hour"
+#~ msgstr "hora"
+
+#~ msgid "day"
+#~ msgstr "día"
+
+#~ msgid "week"
+#~ msgstr "semana"
+
+#~ msgid "month"
+#~ msgstr "mes"
+
+#~ msgid "quarter"
+#~ msgstr "trimestre"
+
+#~ msgid "year"
+#~ msgstr "año"
+
+#~ msgid "week_start_monday"
+#~ msgstr "semana_empieza_lunes"
+
+#~ msgid "week_start_sunday"
+#~ msgstr "semana_empieza_domingo"
+
+#~ msgid "5 minute"
+#~ msgstr "5 minutos"
+
+#~ msgid "half hour"
+#~ msgstr "media hora"
+
+#~ msgid "10 minute"
+#~ msgstr "10 minutos"
 
