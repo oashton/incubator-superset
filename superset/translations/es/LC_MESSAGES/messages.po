@@ -5145,7 +5145,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/controls.jsx:1362
 msgid "Emit Filter Events"
-msgstr ""
+msgstr "Emitir eventos de filtro"
 
 #: superset-frontend/src/explore/controls.jsx:1365
 msgid "Whether to apply filter when items are clicked"
@@ -5877,7 +5877,7 @@ msgstr "Guardar e ir al cuadro de mando"
 
 #: superset-frontend/src/explore/components/controls/AdhocFilterControl.jsx:221
 msgid "choose a column or metric"
-msgstr ""
+msgstr "Escoja una columna o métrica"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayer.jsx:578
 msgid "Display configuration"
@@ -6033,7 +6033,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/controls/MetricsControl.jsx:329
 msgid "choose a column or aggregate function"
-msgstr ""
+msgstr "Escoja una columna o función de agregación"
 
 #: superset-frontend/src/explore/components/controls/SelectAsyncControl.jsx:45
 msgid "Error while fetching data"
@@ -6047,7 +6047,7 @@ msgstr ""
 #: superset-frontend/src/explore/components/controls/SelectControl.jsx:184
 #, python-format
 msgid "%s option(s)"
-msgstr ""
+msgstr "%s opciones"
 
 #: superset-frontend/src/explore/components/controls/SpatialControl.jsx:85
 msgid "Invalid lat/long configuration."
@@ -6614,7 +6614,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/LineMulti.js:65
 msgid "Choose one or more charts for left axis"
-msgstr ""
+msgstr "Escoja una o mas gráficos para el eje de la izquierda"
 
 #: superset-frontend/src/explore/controlPanels/Mapbox.js:36
 msgid "Clustering Radius"
@@ -7013,7 +7013,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/Table.js:167
 msgid "Align +/-"
-msgstr ""
+msgstr "Alinear +/-"
 
 #: superset-frontend/src/explore/controlPanels/Table.js:170
 msgid "Whether to align the background chart for +/- values"
