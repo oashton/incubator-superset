@@ -879,7 +879,7 @@ export const controls = {
     type: 'DateFilterControl',
     freeForm: true,
     label: TIME_FILTER_LABELS.time_range,
-    default: t('Last week'),
+    default: 'Last week',
     description: t(
       'The time range for the visualization. All relative times, e.g. "Last month", ' +
         '"Last 7 days", "now", etc. are evaluated on the server using the server\'s ' +

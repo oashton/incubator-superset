@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-12 20:14-0500\n"
+"POT-Creation-Date: 2020-06-16 14:33-0500\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -4777,11 +4777,6 @@ msgstr ""
 msgid "Pandas resample method"
 msgstr ""
 
-#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:61
-#: superset-frontend/src/explore/controls.jsx:882
-msgid "Last week"
-msgstr "Última semana"
-
 #: superset-frontend/src/explore/controls.jsx:883
 msgid ""
 "The time range for the visualization. All relative times, e.g. \"Last "
@@ -5958,26 +5953,6 @@ msgstr "Editar fuente de datos"
 #: superset-frontend/src/explore/components/controls/DatasourceControl.jsx:162
 msgid "Expand/collapse datasource configuration"
 msgstr "Expandir/contraer configuración de la fuente de datos"
-
-#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:60
-msgid "Last day"
-msgstr "Último dia"
-
-#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:62
-msgid "Last month"
-msgstr "Último mes"
-
-#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:63
-msgid "Last quarter"
-msgstr "Último cuatrimestre"
-
-#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:64
-msgid "Last year"
-msgstr "Último año"
-
-#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:65
-msgid "No filter"
-msgstr "Sin filtro"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:88
 msgid ""
@@ -8159,4 +8134,22 @@ msgstr "Recientemente vistos"
 
 #~ msgid "week_ending_saturday"
 #~ msgstr "semana_termina_sábado"
+
+#~ msgid "Last week"
+#~ msgstr "Última semana"
+
+#~ msgid "Last day"
+#~ msgstr "Último dia"
+
+#~ msgid "Last month"
+#~ msgstr "Último mes"
+
+#~ msgid "Last quarter"
+#~ msgstr "Último cuatrimestre"
+
+#~ msgid "Last year"
+#~ msgstr "Último año"
+
+#~ msgid "No filter"
+#~ msgstr "Sin filtro"
 
