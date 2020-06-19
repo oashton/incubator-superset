@@ -43,6 +43,11 @@ export default {
       expanded: true,
       controlSetRows: [['adhoc_filters']],
     },
+    {
+      label: t('Others'),
+      expanded: true,
+      controlSetRows: [['all_columns_filter_required']],
+    },
     annotations,
   ],
   controlOverrides: {
