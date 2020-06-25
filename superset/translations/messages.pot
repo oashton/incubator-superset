@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-16 14:33-0500\n"
+"POT-Creation-Date: 2020-06-24 23:52-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3034,10 +3034,12 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/components/RunQueryActionButton.tsx:45
 #: superset-frontend/src/components/RefreshChartOverlay.jsx:43
+#: superset-frontend/src/explore/components/QueryAndSaveBtns.jsx:75
 msgid "Run Query"
 msgstr ""
 
 #: superset-frontend/src/SqlLab/components/RunQueryActionButton.tsx:59
+#: superset-frontend/src/explore/components/QueryAndSaveBtns.jsx:66
 msgid "Stop"
 msgstr ""
 
@@ -3079,6 +3081,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/filterscope/FilterScopeSelector.jsx:519
 #: superset-frontend/src/datasource/DatasourceModal.jsx:165
 #: superset-frontend/src/explore/components/PropertiesModal.tsx:256
+#: superset-frontend/src/explore/components/QueryAndSaveBtns.jsx:90
 #: superset-frontend/src/explore/components/SaveModal.jsx:269
 msgid "Save"
 msgstr ""
@@ -6229,15 +6232,20 @@ msgstr ""
 msgid "Y Axis 2"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/DualLine.js:50
+#: superset-frontend/src/explore/controlPanels/DualLine.js:47
+#: superset-frontend/src/explore/controlPanels/Line.js:56
+msgid "Others"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/DualLine.js:55
 msgid "Left Axis Metric"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/DualLine.js:51
+#: superset-frontend/src/explore/controlPanels/DualLine.js:56
 msgid "Choose a metric for left axis"
 msgstr ""
 
-#: superset-frontend/src/explore/controlPanels/DualLine.js:54
+#: superset-frontend/src/explore/controlPanels/DualLine.js:59
 #: superset-frontend/src/explore/controlPanels/LineMulti.js:68
 msgid "Left Axis Format"
 msgstr ""
@@ -6427,10 +6435,6 @@ msgid ""
 "series: Treat each series independently; overall: All series use the same"
 " scale; change: Show changes compared to the first data point in each "
 "series"
-msgstr ""
-
-#: superset-frontend/src/explore/controlPanels/Line.js:56
-msgid "Others"
 msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/LineMulti.js:64

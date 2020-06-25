@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-16 14:33-0500\n"
+"POT-Creation-Date: 2020-06-24 23:52-0500\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -3115,10 +3115,12 @@ msgstr "Ejecutar consulta seleccionada"
 
 #: superset-frontend/src/SqlLab/components/RunQueryActionButton.tsx:45
 #: superset-frontend/src/components/RefreshChartOverlay.jsx:43
+#: superset-frontend/src/explore/components/QueryAndSaveBtns.jsx:75
 msgid "Run Query"
 msgstr "Ejecutar consulta"
 
 #: superset-frontend/src/SqlLab/components/RunQueryActionButton.tsx:59
+#: superset-frontend/src/explore/components/QueryAndSaveBtns.jsx:66
 msgid "Stop"
 msgstr "Detener"
 
@@ -3160,6 +3162,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/filterscope/FilterScopeSelector.jsx:519
 #: superset-frontend/src/datasource/DatasourceModal.jsx:165
 #: superset-frontend/src/explore/components/PropertiesModal.tsx:256
+#: superset-frontend/src/explore/components/QueryAndSaveBtns.jsx:90
 #: superset-frontend/src/explore/components/SaveModal.jsx:269
 msgid "Save"
 msgstr "Guardar"
@@ -3239,7 +3242,7 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/components/SqlEditor.jsx:220
 msgid "Stop query"
-msgstr ""
+msgstr "Detener consulta"
 
 #: superset-frontend/src/SqlLab/components/SqlEditor.jsx:375
 msgid "Create table as with query results"
@@ -4828,11 +4831,11 @@ msgstr "Métrica utilizada para definir la serie superior."
 
 #: superset-frontend/src/explore/controls.jsx:951
 msgid "Sort Descending"
-msgstr ""
+msgstr "Ordenar descendentemente"
 
 #: superset-frontend/src/explore/controls.jsx:953
 msgid "Whether to sort descending or ascending"
-msgstr ""
+msgstr "Ordenar ascendente o descendentemente"
 
 #: superset-frontend/src/explore/controls.jsx:958
 msgid "Rolling Function"
@@ -6372,15 +6375,20 @@ msgstr "Eje Y 1"
 msgid "Y Axis 2"
 msgstr "Eje Y 2"
 
-#: superset-frontend/src/explore/controlPanels/DualLine.js:50
+#: superset-frontend/src/explore/controlPanels/DualLine.js:47
+#: superset-frontend/src/explore/controlPanels/Line.js:56
+msgid "Others"
+msgstr ""
+
+#: superset-frontend/src/explore/controlPanels/DualLine.js:55
 msgid "Left Axis Metric"
 msgstr "Métrica del Eje Izquierdo"
 
-#: superset-frontend/src/explore/controlPanels/DualLine.js:51
+#: superset-frontend/src/explore/controlPanels/DualLine.js:56
 msgid "Choose a metric for left axis"
 msgstr "Elige una métrica para el eje izquierdo"
 
-#: superset-frontend/src/explore/controlPanels/DualLine.js:54
+#: superset-frontend/src/explore/controlPanels/DualLine.js:59
 #: superset-frontend/src/explore/controlPanels/LineMulti.js:68
 msgid "Left Axis Format"
 msgstr "Formato del Eje Izquierdo"
@@ -6577,10 +6585,6 @@ msgid ""
 "series: Treat each series independently; overall: All series use the same"
 " scale; change: Show changes compared to the first data point in each "
 "series"
-msgstr ""
-
-#: superset-frontend/src/explore/controlPanels/Line.js:56
-msgid "Others"
 msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/LineMulti.js:64
