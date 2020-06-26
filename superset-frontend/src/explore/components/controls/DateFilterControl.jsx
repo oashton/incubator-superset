@@ -57,12 +57,12 @@ const RELATIVE_TIME_OPTIONS = Object.freeze({
   NEXT: 'Next',
 });
 const COMMON_TIME_FRAMES = [
-  'Last day',
-  'Last week',
-  'Last month',
-  'Last quarter',
-  'Last year',
-  'No filter',
+  t('Last day'),
+  t('Last week'),
+  t('Last month'),
+  t('Last quarter'),
+  t('Last year'),
+  t('No filter'),
 ];
 const TIME_GRAIN_OPTIONS = [
   'seconds',
@@ -424,10 +424,10 @@ export default class DateFilterControl extends React.Component {
             className="time-filter-tabs"
             onSelect={this.changeTab}
           >
-            <Tab eventKey={1} title="Defaults">
+            <Tab eventKey={1} title={t("Defaults")}>
               <FormGroup>{timeFrames}</FormGroup>
             </Tab>
-            <Tab eventKey={2} title="Custom">
+            <Tab eventKey={2} title={t("Custom")}>
               <FormGroup>
                 <PopoverSection
                   title="Relative to today"

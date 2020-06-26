@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-25 00:28-0500\n"
+"POT-Creation-Date: 2020-06-26 00:01-0500\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -1405,59 +1405,6 @@ msgstr ""
 msgid "Changing this dataset is forbidden"
 msgstr ""
 
-#: superset-frontend/src/explore/constants.js:65
-#: superset/db_engine_specs/base.py:78
-msgid "Time Column"
-msgstr "Columna de Tiempo"
-
-#: superset/db_engine_specs/base.py:79
-msgid "second"
-msgstr "segundo"
-
-#: superset/db_engine_specs/base.py:80
-msgid "minute"
-msgstr "minuto"
-
-#: superset/db_engine_specs/base.py:81
-msgid "5 minute"
-msgstr "5 minutos"
-
-#: superset/db_engine_specs/base.py:82
-msgid "10 minute"
-msgstr "10 minutos"
-
-#: superset/db_engine_specs/base.py:83
-msgid "15 minute"
-msgstr "15 minutos"
-
-#: superset/db_engine_specs/base.py:84
-msgid "half hour"
-msgstr "media hora"
-
-#: superset/db_engine_specs/base.py:85
-msgid "hour"
-msgstr "hora"
-
-#: superset/db_engine_specs/base.py:86
-msgid "day"
-msgstr "dia"
-
-#: superset/db_engine_specs/base.py:87
-msgid "week"
-msgstr "semana"
-
-#: superset/db_engine_specs/base.py:88
-msgid "month"
-msgstr "mes"
-
-#: superset/db_engine_specs/base.py:89
-msgid "quarter"
-msgstr "trimestre"
-
-#: superset/db_engine_specs/base.py:90
-msgid "year"
-msgstr "año"
-
 #: superset/models/dashboard.py:203
 msgid "True"
 msgstr "Verdadero"
@@ -1622,6 +1569,31 @@ msgstr "Probar Conexión"
 #, python-format
 msgid "[Superset] Access to the datasource %(name)s was granted"
 msgstr "Se ha otorgado Acceso [Superset] a la fuente de datos %(name)"
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:60
+#: superset/utils/core.py:1024
+msgid "Last day"
+msgstr "Día anterior"
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:61
+#: superset/utils/core.py:1028
+msgid "Last week"
+msgstr "Semana anterior"
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:62
+#: superset/utils/core.py:1032
+msgid "Last month"
+msgstr "Mes anterior"
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:63
+#: superset/utils/core.py:1036
+msgid "Last quarter"
+msgstr "Trimestre anterior"
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:64
+#: superset/utils/core.py:1040
+msgid "Last year"
+msgstr "Año anterior"
 
 #: superset/views/annotations.py:34
 msgid "annotation start time or end time is required."
@@ -4409,6 +4381,10 @@ msgstr ""
 msgid "Time Range"
 msgstr "Rango de tiempo"
 
+#: superset-frontend/src/explore/constants.js:65
+msgid "Time Column"
+msgstr "Columna de Tiempo"
+
 #: superset-frontend/src/explore/constants.js:66
 msgid "Time Grain"
 msgstr "Granularidad Temporal"
@@ -6006,11 +5982,23 @@ msgstr "Editar fuente de datos"
 msgid "Expand/collapse datasource configuration"
 msgstr "Expandir/contraer configuración de la fuente de datos"
 
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:65
+msgid "No filter"
+msgstr ""
+
 #: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:88
 msgid ""
 "Superset supports smart date parsing. Strings like `last sunday` or `last"
 " october` can be used."
 msgstr ""
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:427
+msgid "Defaults"
+msgstr "Predeterminados"
+
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:430
+msgid "Custom"
+msgstr "Personalizado"
 
 #: superset-frontend/src/explore/components/controls/FilterBoxItemControl.jsx:103
 msgid "Default"
@@ -8162,7 +8150,7 @@ msgstr "Recientemente vistos"
 #~ msgstr "hora"
 
 #~ msgid "day"
-#~ msgstr "día"
+#~ msgstr "dia"
 
 #~ msgid "week"
 #~ msgstr "semana"
@@ -8211,4 +8199,10 @@ msgstr "Recientemente vistos"
 
 #~ msgid "No filter"
 #~ msgstr "Sin filtro"
+
+#~ msgid "15 minute"
+#~ msgstr "15 minutos"
+
+#~ msgid "minutes"
+#~ msgstr "minutos"
 

@@ -52,7 +52,6 @@ from cryptography.hazmat.backends.openssl.x509 import _Certificate
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
 from flask import current_app, flash, Flask, g, Markup, render_template
-from flask._compat import text_type
 from flask_appbuilder import SQLA
 from flask_appbuilder.security.sqla.models import User
 from flask_babel import gettext as __, lazy_gettext as _
@@ -60,7 +59,6 @@ from sqlalchemy import event, exc, select, Text
 from sqlalchemy.dialects.mysql import MEDIUMTEXT
 from sqlalchemy.sql.type_api import Variant
 from sqlalchemy.types import TEXT, TypeDecorator
-from speaklater import _LazyString
 
 from superset.exceptions import (
     CertificateException,
@@ -268,11 +266,7 @@ class DashboardEncoder(json.JSONEncoder):
 
     # pylint: disable=E0202
     def default(self, o):
-        print('serializing')
         try:
-            if isinstance(o, _LazyString):
-                print('ins instance')
-                return text_type(o)
             vals = {k: v for k, v in o.__dict__.items() if k != "_sa_instance_state"}
             return {"__{}__".format(o.__class__.__name__): vals}
         except Exception:
@@ -1027,23 +1021,23 @@ def get_since_until(
     relative_start = parse_human_datetime(relative_start if relative_start else "today")
     relative_end = parse_human_datetime(relative_end if relative_end else "today")
     common_time_frames = {
-        "Last day": (
+        _("Last day"): (
             relative_start - relativedelta(days=1),  # type: ignore
             relative_end,
         ),
-        "Last week": (
+        _("Last week"): (
             relative_start - relativedelta(weeks=1),  # type: ignore
             relative_end,
         ),
-        "Last month": (
+        _("Last month"): (
             relative_start - relativedelta(months=1),  # type: ignore
             relative_end,
         ),
-        "Last quarter": (
+        _("Last quarter"): (
             relative_start - relativedelta(months=3),  # type: ignore
             relative_end,
         ),
-        "Last year": (
+        _("Last year"): (
             relative_start - relativedelta(years=1),  # type: ignore
             relative_end,
         ),
