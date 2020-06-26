@@ -73,7 +73,7 @@ describe('SelectControl', () => {
     };
     wrapper.setProps(selectAllProps);
     const select = wrapper.find(OnPasteSelect);
-    select.simulate('change', [{ meta: true, value: 'Select All' }]);
+    select.simulate('change', [{ meta: true, value: t('Select All') }]);
     expect(selectAllProps.onChange.calledWith(expectedValues)).toBe(true);
   });
 
@@ -119,9 +119,9 @@ describe('SelectControl', () => {
       };
       wrapper.setProps(selectAllProps);
       expect(wrapper.instance().getOptions(selectAllProps)).toContainEqual({
-        label: 'Select All',
+        label: t('Select All'),
         meta: true,
-        value: 'Select All',
+        value: t('Select All'),
       });
     });
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-24 23:52-0500\n"
+"POT-Creation-Date: 2020-06-25 00:28-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1358,6 +1358,59 @@ msgstr ""
 
 #: superset/datasets/commands/exceptions.py:170
 msgid "Changing this dataset is forbidden"
+msgstr ""
+
+#: superset-frontend/src/explore/constants.js:65
+#: superset/db_engine_specs/base.py:78
+msgid "Time Column"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:79
+msgid "second"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:80
+msgid "minute"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:81
+msgid "5 minute"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:82
+msgid "10 minute"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:83
+msgid "15 minute"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:84
+msgid "half hour"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:85
+msgid "hour"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:86
+msgid "day"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:87
+msgid "week"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:88
+msgid "month"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:89
+msgid "quarter"
+msgstr ""
+
+#: superset/db_engine_specs/base.py:90
+msgid "year"
 msgstr ""
 
 #: superset/models/dashboard.py:203
@@ -4266,10 +4319,6 @@ msgstr ""
 msgid "Time Range"
 msgstr ""
 
-#: superset-frontend/src/explore/constants.js:65
-msgid "Time Column"
-msgstr ""
-
 #: superset-frontend/src/explore/constants.js:66
 msgid "Time Grain"
 msgstr ""
@@ -5881,6 +5930,12 @@ msgstr ""
 #: superset-frontend/src/explore/components/controls/SelectControl.jsx:75
 #: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:320
 msgid "No results found"
+msgstr ""
+
+#: superset-frontend/src/explore/components/controls/SelectControl.jsx:172
+#: superset-frontend/src/explore/components/controls/SelectControl.jsx:176
+#: superset-frontend/src/explore/components/controls/SelectControl.jsx:177
+msgid "Select All"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/SelectControl.jsx:184

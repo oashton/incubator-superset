@@ -169,12 +169,12 @@ export default class SelectControl extends React.PureComponent {
   }
 
   isMetaSelectAllOption(o) {
-    return o.meta && o.meta === true && o.label === 'Select All';
+    return o.meta && o.meta === true && o.label === t('Select All');
   }
 
   createMetaSelectAllOption() {
-    const option = { label: 'Select All', meta: true };
-    option[this.props.valueKey] = 'Select All';
+    const option = { label: t('Select All'), meta: true };
+    option[this.props.valueKey] = t('Select All');
     return option;
   }
 
