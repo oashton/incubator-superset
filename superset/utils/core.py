@@ -52,9 +52,10 @@ from cryptography.hazmat.backends.openssl.x509 import _Certificate
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
 from flask import current_app, flash, Flask, g, Markup, render_template
+from flask._compat import text_type
 from flask_appbuilder import SQLA
 from flask_appbuilder.security.sqla.models import User
-from flask_babel import gettext as __, lazy_gettext as _
+from flask_babel import gettext as __, lazy_gettext as _, LazyString
 from sqlalchemy import event, exc, select, Text
 from sqlalchemy.dialects.mysql import MEDIUMTEXT
 from sqlalchemy.sql.type_api import Variant
@@ -388,7 +389,10 @@ def json_iso_dttm_ser(obj, pessimistic: Optional[bool] = False):
         obj = obj.isoformat()
     else:
         if pessimistic:
-            return "Unserializable [{}]".format(type(obj))
+            if isinstance(obj, LazyString):
+                return text_type(obj)
+            else:
+                return "Unserializable [{}]".format(type(obj))
         else:
             raise TypeError(
                 "Unserializable object {} of type {}".format(obj, type(obj))
