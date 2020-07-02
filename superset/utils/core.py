@@ -367,6 +367,8 @@ def base_json_conv(obj):
         return str(obj)
     elif isinstance(obj, timedelta):
         return format_timedelta(obj)
+    elif isinstance(obj, LazyString):
+        return text_type(obj)
     elif isinstance(obj, bytes):
         try:
             return obj.decode("utf-8")
@@ -389,10 +391,7 @@ def json_iso_dttm_ser(obj, pessimistic: Optional[bool] = False):
         obj = obj.isoformat()
     else:
         if pessimistic:
-            if isinstance(obj, LazyString):
-                return text_type(obj)
-            else:
-                return "Unserializable [{}]".format(type(obj))
+            return "Unserializable [{}]".format(type(obj))
         else:
             raise TypeError(
                 "Unserializable object {} of type {}".format(obj, type(obj))
