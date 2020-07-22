@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-26 01:02-0500\n"
+"POT-Creation-Date: 2020-07-22 15:06-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -173,7 +173,7 @@ msgstr ""
 msgid "Viz is missing a datasource"
 msgstr ""
 
-#: superset/utils/core.py:1087 superset/viz.py:327
+#: superset/utils/core.py:1085 superset/viz.py:327
 msgid "From date cannot be larger than to date"
 msgstr ""
 
@@ -1557,33 +1557,34 @@ msgstr ""
 msgid "Test Connection"
 msgstr ""
 
-#: superset/utils/core.py:657
+#: superset/utils/core.py:655
 #, python-format
 msgid "[Superset] Access to the datasource %(name)s was granted"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:60
-#: superset/utils/core.py:1029
+#: superset/utils/core.py:1027
 msgid "Last day"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:61
-#: superset/utils/core.py:1033
+#: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:111
+#: superset-frontend/src/explore/controls.jsx:882 superset/utils/core.py:1031
 msgid "Last week"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:62
-#: superset/utils/core.py:1037
+#: superset/utils/core.py:1035
 msgid "Last month"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:63
-#: superset/utils/core.py:1041
+#: superset/utils/core.py:1039
 msgid "Last quarter"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl.jsx:64
-#: superset/utils/core.py:1045
+#: superset/utils/core.py:1043
 msgid "Last year"
 msgstr ""
 

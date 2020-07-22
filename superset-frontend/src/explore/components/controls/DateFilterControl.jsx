@@ -108,7 +108,7 @@ const propTypes = {
 const defaultProps = {
   animation: true,
   onChange: () => {},
-  value: 'Last week',
+  value: t('Last week'),
   onOpenDateFilterControl: () => {},
   onCloseDateFilterControl: () => {},
 };
