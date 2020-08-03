@@ -53,7 +53,7 @@ logger = logging.getLogger("tasks.email_reports")
 logger.setLevel(logging.INFO)
 
 # Time in seconds, we will wait for the page to load and render
-PAGE_RENDER_WAIT = 30
+PAGE_RENDER_WAIT = config["EMAIL_PAGE_RENDER_WAIT"]
 
 
 EmailContent = namedtuple("EmailContent", ["body", "data", "images"])
