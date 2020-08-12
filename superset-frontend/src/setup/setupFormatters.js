@@ -21,6 +21,7 @@ import {
   getNumberFormatter,
   getNumberFormatterRegistry,
   NumberFormats,
+  createD3NumberFormatter
 } from '@superset-ui/number-format';
 import {
   getTimeFormatterRegistry,
@@ -64,6 +65,15 @@ export default function setupFormatters() {
     .registerValue('$,0', getNumberFormatter('$,.4f'))
     .registerValue('$,0f', getNumberFormatter('$,.4f'))
     .registerValue('$,.f', getNumberFormatter('$,.4f'))
+    .registerValue('.,2f', createD3NumberFormatter({
+      formatString: ',.2f',
+      locale: {
+        decimal: ',',
+        thousands: '.',
+        grouping: [3],
+        currency: ['$', ''],
+      },
+    }))
     .registerValue('DURATION', createDurationFormatter())
     .registerValue(
       'DURATION_SUB',
