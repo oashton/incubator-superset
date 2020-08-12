@@ -65,7 +65,7 @@ export default function setupFormatters() {
     .registerValue('$,0', getNumberFormatter('$,.4f'))
     .registerValue('$,0f', getNumberFormatter('$,.4f'))
     .registerValue('$,.f', getNumberFormatter('$,.4f'))
-    .registerValue('.,2f', createD3NumberFormatter({
+    .registerValue('DOT_THOUS_COMMA_DEC', createD3NumberFormatter({
       formatString: ',.2f',
       locale: {
         decimal: ',',
