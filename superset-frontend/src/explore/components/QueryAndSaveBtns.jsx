@@ -21,11 +21,13 @@ import PropTypes from 'prop-types';
 import { t } from '@superset-ui/translation';
 import { ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import classnames from 'classnames';
+import { t } from '@superset-ui/translation';
 
 import Button from '../../components/Button';
+import './QueryAndSaveBtns.css';
 
 const propTypes = {
-  canAdd: PropTypes.string.isRequired,
+  canAdd: PropTypes.bool.isRequired,
   onQuery: PropTypes.func.isRequired,
   onSave: PropTypes.func,
   onStop: PropTypes.func,
@@ -50,7 +52,8 @@ export default function QueryAndSaveBtns({
   errorMessage,
 }) {
   const saveClasses = classnames({
-    'disabled disabledButton': canAdd !== 'True',
+    'disabled disabledButton': !canAdd,
+    'save-btn': true,
   });
 
   let qryButtonStyle = 'default';
@@ -62,17 +65,17 @@ export default function QueryAndSaveBtns({
 
   const saveButtonDisabled = errorMessage ? true : loading;
   const qryOrStopButton = loading ? (
-    <Button onClick={onStop} bsStyle="warning">
+    <Button onClick={onStop} bsStyle="warning" className="save-btn">
       <i className="fa fa-stop-circle-o" /> {t('Stop')}
     </Button>
   ) : (
     <Button
-      className="query"
+      className="query save-btn"
       onClick={onQuery}
       bsStyle={qryButtonStyle}
       disabled={!!errorMessage}
     >
-      <i className="fa fa-bolt" /> {t('Run Query')}
+      <i className="fa fa-bolt" /> {t('Run')}
     </Button>
   );
 

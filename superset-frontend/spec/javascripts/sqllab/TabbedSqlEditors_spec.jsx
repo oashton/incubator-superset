@@ -20,14 +20,14 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import URI from 'urijs';
-
 import { Tab } from 'react-bootstrap';
 import { shallow, mount } from 'enzyme';
 import sinon from 'sinon';
+import { supersetTheme, ThemeProvider } from '@superset-ui/style';
+import TabbedSqlEditors from 'src/SqlLab/components/TabbedSqlEditors';
+import SqlEditor from 'src/SqlLab/components/SqlEditor';
 
 import { table, initialState } from './fixtures';
-import TabbedSqlEditors from '../../../src/SqlLab/components/TabbedSqlEditors';
-import SqlEditor from '../../../src/SqlLab/components/SqlEditor';
 
 describe('TabbedSqlEditors', () => {
   const middlewares = [thunk];
@@ -37,10 +37,7 @@ describe('TabbedSqlEditors', () => {
   const tabHistory = ['dfsadfs', 'newEditorId'];
 
   const tables = [
-    Object.assign({}, table, {
-      dataPreviewQueryId: 'B1-VQU1zW',
-      queryEditorId: 'newEditorId',
-    }),
+    { ...table, dataPreviewQueryId: 'B1-VQU1zW', queryEditorId: 'newEditorId' },
   ];
 
   const queryEditors = [
@@ -102,6 +99,8 @@ describe('TabbedSqlEditors', () => {
       uriStub.returns({ id: 1 });
       wrapper = mount(<TabbedSqlEditors {...mockedProps} />, {
         context: { store },
+        wrappingComponent: ThemeProvider,
+        wrappingComponentProps: { theme: supersetTheme },
       });
       expect(TabbedSqlEditors.prototype.componentDidMount.calledOnce).toBe(
         true,
@@ -114,6 +113,8 @@ describe('TabbedSqlEditors', () => {
       uriStub.returns({ savedQueryId: 1 });
       wrapper = mount(<TabbedSqlEditors {...mockedProps} />, {
         context: { store },
+        wrappingComponent: ThemeProvider,
+        wrappingComponentProps: { theme: supersetTheme },
       });
       expect(TabbedSqlEditors.prototype.componentDidMount.calledOnce).toBe(
         true,
@@ -126,6 +127,8 @@ describe('TabbedSqlEditors', () => {
       uriStub.returns({ sql: 1, dbid: 1 });
       wrapper = mount(<TabbedSqlEditors {...mockedProps} />, {
         context: { store },
+        wrappingComponent: ThemeProvider,
+        wrappingComponentProps: { theme: supersetTheme },
       });
       expect(TabbedSqlEditors.prototype.componentDidMount.calledOnce).toBe(
         true,
@@ -228,18 +231,8 @@ describe('TabbedSqlEditors', () => {
   });
   it('should disable new tab when offline', () => {
     wrapper = getWrapper();
-    expect(
-      wrapper
-        .find(Tab)
-        .last()
-        .props().disabled,
-    ).toBe(false);
+    expect(wrapper.find(Tab).last().props().disabled).toBe(false);
     wrapper.setProps({ offline: true });
-    expect(
-      wrapper
-        .find(Tab)
-        .last()
-        .props().disabled,
-    ).toBe(true);
+    expect(wrapper.find(Tab).last().props().disabled).toBe(true);
   });
 });

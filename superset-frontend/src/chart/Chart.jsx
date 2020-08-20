@@ -22,10 +22,10 @@ import { Alert } from 'react-bootstrap';
 import { t } from '@superset-ui/translation';
 
 import { isFeatureEnabled, FeatureFlag } from 'src/featureFlags';
-import { Logger, LOG_ACTIONS_RENDER_CHART_CONTAINER } from '../logger/LogUtils';
+import { Logger, LOG_ACTIONS_RENDER_CHART } from '../logger/LogUtils';
 import Loading from '../components/Loading';
 import RefreshChartOverlay from '../components/RefreshChartOverlay';
-import StackTraceMessage from '../components/StackTraceMessage';
+import ErrorMessageWithStackTrace from '../components/ErrorMessage/ErrorMessageWithStackTrace';
 import ErrorBoundary from '../components/ErrorBoundary';
 import ChartRenderer from './ChartRenderer';
 import './chart.less';
@@ -129,7 +129,7 @@ class Chart extends React.PureComponent {
       info ? info.componentStack : null,
     );
 
-    actions.logEvent(LOG_ACTIONS_RENDER_CHART_CONTAINER, {
+    actions.logEvent(LOG_ACTIONS_RENDER_CHART, {
       slice_id: chartId,
       has_err: true,
       error_details: error.toString(),
@@ -160,11 +160,12 @@ class Chart extends React.PureComponent {
     return false;
   }
 
-  renderStackTraceMessage() {
+  renderErrorMessage() {
     const { chartAlert, chartStackTrace, queryResponse } = this.props;
     return (
-      <StackTraceMessage
-        message={chartAlert}
+      <ErrorMessageWithStackTrace
+        error={queryResponse?.errors?.[0]}
+        message={chartAlert || queryResponse?.message}
         link={queryResponse ? queryResponse.link : null}
         stackTrace={chartStackTrace}
       />
@@ -190,7 +191,7 @@ class Chart extends React.PureComponent {
     this.renderContainerStartTime = Logger.getTimestamp();
     const filterValidation = this.validateFilterRequiredRestriction();
     if (chartStatus === 'failed') {
-      return this.renderStackTraceMessage();
+      return this.renderErrorMessage();
     }
     if (errorMessage) {
       return <Alert bsStyle="warning">{errorMessage}</Alert>;
@@ -204,7 +205,9 @@ class Chart extends React.PureComponent {
           className={`chart-container ${isLoading ? 'is-loading' : ''}`}
           style={containerStyles}
         >
-          {isLoading && <Loading size={50} />}
+          <div className={`slice_container ${isFaded ? ' faded' : ''}`}>
+            <ChartRenderer {...this.props} />
+          </div>
 
           {!isLoading && !chartAlert && isFaded && (
             <RefreshChartOverlay
@@ -226,6 +229,8 @@ class Chart extends React.PureComponent {
               )}
             </h2>
           )}
+
+          {isLoading && <Loading />}
         </div>
       </ErrorBoundary>
     );

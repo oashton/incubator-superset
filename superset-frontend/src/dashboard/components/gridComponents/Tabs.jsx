@@ -35,7 +35,7 @@ import { TAB_TYPE } from '../../util/componentTypes';
 import { LOG_ACTIONS_SELECT_DASHBOARD_TAB } from '../../../logger/LogUtils';
 
 const NEW_TAB_INDEX = -1;
-const MAX_TAB_COUNT = 7;
+const MAX_TAB_COUNT = 10;
 
 const propTypes = {
   id: PropTypes.string.isRequired,
@@ -150,12 +150,13 @@ class Tabs extends React.PureComponent {
         },
       });
     } else if (tabIndex !== this.state.tabIndex) {
+      const pathToTabIndex = getDirectPathToTabIndex(component, tabIndex);
+      const targetTabId = pathToTabIndex[pathToTabIndex.length - 1];
       this.props.logEvent(LOG_ACTIONS_SELECT_DASHBOARD_TAB, {
-        tab_id: component.id,
+        target_id: targetTabId,
         index: tabIndex,
       });
 
-      const pathToTabIndex = getDirectPathToTabIndex(component, tabIndex);
       this.props.onChangeTab({ pathToTabIndex });
     }
   }

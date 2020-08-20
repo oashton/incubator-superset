@@ -33,8 +33,8 @@ class DatabaseNotFoundValidationError(ValidationError):
     Marshmallow validation error for database does not exist
     """
 
-    def __init__(self):
-        super().__init__(_("Database does not exist"), field_names=["database"])
+    def __init__(self) -> None:
+        super().__init__([_("Database does not exist")], field_name="database")
 
 
 class DatabaseChangeValidationError(ValidationError):
@@ -42,8 +42,8 @@ class DatabaseChangeValidationError(ValidationError):
     Marshmallow validation error database changes are not allowed on update
     """
 
-    def __init__(self):
-        super().__init__(_("Database not allowed to change"), field_names=["database"])
+    def __init__(self) -> None:
+        super().__init__([_("Database not allowed to change")], field_name="database")
 
 
 class DatasetExistsValidationError(ValidationError):
@@ -51,9 +51,9 @@ class DatasetExistsValidationError(ValidationError):
     Marshmallow validation error for dataset already exists
     """
 
-    def __init__(self, table_name: str):
+    def __init__(self, table_name: str) -> None:
         super().__init__(
-            get_datasource_exist_error_msg(table_name), field_names=["table_name"]
+            get_datasource_exist_error_msg(table_name), field_name="table_name"
         )
 
 
@@ -62,8 +62,8 @@ class DatasetColumnNotFoundValidationError(ValidationError):
     Marshmallow validation error when dataset column for update does not exist
     """
 
-    def __init__(self):
-        super().__init__(_("One or more columns do not exist"), field_names=["columns"])
+    def __init__(self) -> None:
+        super().__init__([_("One or more columns do not exist")], field_name="columns")
 
 
 class DatasetColumnsDuplicateValidationError(ValidationError):
@@ -71,9 +71,9 @@ class DatasetColumnsDuplicateValidationError(ValidationError):
     Marshmallow validation error when dataset columns have a duplicate on the list
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__(
-            _("One or more columns are duplicated"), field_names=["columns"]
+            [_("One or more columns are duplicated")], field_name="columns"
         )
 
 
@@ -82,10 +82,8 @@ class DatasetColumnsExistsValidationError(ValidationError):
     Marshmallow validation error when dataset columns already exist
     """
 
-    def __init__(self):
-        super().__init__(
-            _("One or more columns already exist"), field_names=["columns"]
-        )
+    def __init__(self) -> None:
+        super().__init__([_("One or more columns already exist")], field_name="columns")
 
 
 class DatasetMetricsNotFoundValidationError(ValidationError):
@@ -93,8 +91,8 @@ class DatasetMetricsNotFoundValidationError(ValidationError):
     Marshmallow validation error when dataset metric for update does not exist
     """
 
-    def __init__(self):
-        super().__init__(_("One or more metrics do not exist"), field_names=["metrics"])
+    def __init__(self) -> None:
+        super().__init__([_("One or more metrics do not exist")], field_name="metrics")
 
 
 class DatasetMetricsDuplicateValidationError(ValidationError):
@@ -102,9 +100,9 @@ class DatasetMetricsDuplicateValidationError(ValidationError):
     Marshmallow validation error when dataset metrics have a duplicate on the list
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__(
-            _("One or more metrics are duplicated"), field_names=["metrics"]
+            [_("One or more metrics are duplicated")], field_name="metrics"
         )
 
 
@@ -113,10 +111,8 @@ class DatasetMetricsExistsValidationError(ValidationError):
     Marshmallow validation error when dataset metrics already exist
     """
 
-    def __init__(self):
-        super().__init__(
-            _("One or more metrics already exist"), field_names=["metrics"]
-        )
+    def __init__(self) -> None:
+        super().__init__([_("One or more metrics already exist")], field_name="metrics")
 
 
 class TableNotFoundValidationError(ValidationError):
@@ -124,7 +120,7 @@ class TableNotFoundValidationError(ValidationError):
     Marshmallow validation error when a table does not exist on the database
     """
 
-    def __init__(self, table_name: str):
+    def __init__(self, table_name: str) -> None:
         super().__init__(
             _(
                 "Table [{table_name}] could not be found, "
@@ -138,8 +134,8 @@ class TableNotFoundValidationError(ValidationError):
 
 
 class OwnersNotFoundValidationError(ValidationError):
-    def __init__(self):
-        super().__init__(_("Owners are invalid"), field_names=["owners"])
+    def __init__(self) -> None:
+        super().__init__([_("Owners are invalid")], field_name="owners")
 
 
 class DatasetNotFoundError(CommandException):

@@ -23,8 +23,8 @@ import sinon from 'sinon';
 import fetchMock from 'fetch-mock';
 import thunk from 'redux-thunk';
 
+import TableSelector from 'src/components/TableSelector';
 import { initialState, tables } from '../sqllab/fixtures';
-import TableSelector from '../../../src/components/TableSelector';
 
 describe('TableSelector', () => {
   let mockedProps;
@@ -176,7 +176,7 @@ describe('TableSelector', () => {
     });
 
     // Test needs to be fixed: Github issue #7768
-    xit('should dispatch a danger toast on error', () => {
+    it.skip('should dispatch a danger toast on error', () => {
       fetchMock.get(
         FETCH_TABLES_GLOB,
         { throws: 'error' },
@@ -218,7 +218,7 @@ describe('TableSelector', () => {
     });
 
     // Test needs to be fixed: Github issue #7768
-    xit('should dispatch a danger toast on error', () => {
+    it.skip('should dispatch a danger toast on error', () => {
       const handleErrors = sinon.stub();
       expect(handleErrors.callCount).toBe(0);
       wrapper.setProps({ handleErrors });

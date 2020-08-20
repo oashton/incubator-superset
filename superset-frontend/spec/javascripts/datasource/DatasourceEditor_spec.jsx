@@ -23,8 +23,8 @@ import configureStore from 'redux-mock-store';
 import fetchMock from 'fetch-mock';
 import thunk from 'redux-thunk';
 
-import DatasourceEditor from '../../../src/datasource/DatasourceEditor';
-import Field from '../../../src/CRUD/Field';
+import DatasourceEditor from 'src/datasource/DatasourceEditor';
+import Field from 'src/CRUD/Field';
 import mockDatasource from '../../fixtures/mockDatasource';
 
 const props = {
@@ -70,17 +70,19 @@ describe('DatasourceEditor', () => {
     expect(wrapper.find(Tabs)).toHaveLength(1);
   });
 
-  it('makes an async request', done => {
-    wrapper.setState({ activeTabKey: 2 });
-    const syncButton = wrapper.find('.sync-from-source');
-    expect(syncButton).toHaveLength(1);
-    syncButton.simulate('click');
+  it('makes an async request', () => {
+    return new Promise(done => {
+      wrapper.setState({ activeTabKey: 2 });
+      const syncButton = wrapper.find('.sync-from-source');
+      expect(syncButton).toHaveLength(1);
+      syncButton.simulate('click');
 
-    setTimeout(() => {
-      expect(fetchMock.calls(DATASOURCE_ENDPOINT)).toHaveLength(1);
-      fetchMock.reset();
-      done();
-    }, 0);
+      setTimeout(() => {
+        expect(fetchMock.calls(DATASOURCE_ENDPOINT)).toHaveLength(1);
+        fetchMock.reset();
+        done();
+      }, 0);
+    });
   });
 
   it('merges columns', () => {
@@ -94,10 +96,7 @@ describe('DatasourceEditor', () => {
     wrapper.setState({ activeTabKey: 4 });
     expect(wrapper.state('isSqla')).toBe(true);
     expect(
-      wrapper
-        .find(Field)
-        .find({ fieldKey: 'fetch_values_predicate' })
-        .exists(),
+      wrapper.find(Field).find({ fieldKey: 'fetch_values_predicate' }).exists(),
     ).toBe(true);
   });
 });

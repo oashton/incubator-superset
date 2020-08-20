@@ -15,8 +15,9 @@
 # specific language governing permissions and limitations
 # under the License.
 import logging
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
+from flask_appbuilder.models.sqla import Model
 from flask_appbuilder.security.sqla.models import User
 from marshmallow import ValidationError
 
@@ -34,21 +35,22 @@ logger = logging.getLogger(__name__)
 
 
 class CreateDashboardCommand(BaseCommand):
-    def __init__(self, user: User, data: Dict):
+    def __init__(self, user: User, data: Dict[str, Any]):
         self._actor = user
         self._properties = data.copy()
 
-    def run(self):
+    def run(self) -> Model:
         self.validate()
         try:
-            dashboard = DashboardDAO.create(self._properties)
-        except DAOCreateFailedError as e:
-            logger.exception(e.exception)
+            dashboard = DashboardDAO.create(self._properties, commit=False)
+            dashboard = DashboardDAO.update_charts_owners(dashboard, commit=True)
+        except DAOCreateFailedError as ex:
+            logger.exception(ex.exception)
             raise DashboardCreateFailedError()
         return dashboard
 
     def validate(self) -> None:
-        exceptions = list()
+        exceptions: List[ValidationError] = list()
         owner_ids: Optional[List[int]] = self._properties.get("owners")
         slug: str = self._properties.get("slug", "")
 
@@ -59,8 +61,8 @@ class CreateDashboardCommand(BaseCommand):
         try:
             owners = populate_owners(self._actor, owner_ids)
             self._properties["owners"] = owners
-        except ValidationError as e:
-            exceptions.append(e)
+        except ValidationError as ex:
+            exceptions.append(ex)
         if exceptions:
             exception = DashboardInvalidError()
             exception.add_list(exceptions)

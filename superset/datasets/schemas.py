@@ -23,7 +23,7 @@ from marshmallow.validate import Length
 get_export_ids_schema = {"type": "array", "items": {"type": "integer"}}
 
 
-def validate_python_date_format(value):
+def validate_python_date_format(value: str) -> None:
     regex = re.compile(
         r"""
         ^(
@@ -39,7 +39,7 @@ def validate_python_date_format(value):
 
 
 class DatasetColumnsPutSchema(Schema):
-    id = fields.Integer()  # pylint: disable=invalid-name
+    id = fields.Integer()
     column_name = fields.String(required=True, validate=Length(1, 255))
     type = fields.String(validate=Length(1, 32))
     verbose_name = fields.String(allow_none=True, Length=(1, 1024))
@@ -55,7 +55,7 @@ class DatasetColumnsPutSchema(Schema):
 
 
 class DatasetMetricsPutSchema(Schema):
-    id = fields.Integer()  # pylint: disable=invalid-name
+    id = fields.Integer()
     expression = fields.String(required=True)
     description = fields.String(allow_none=True)
     metric_name = fields.String(required=True, validate=Length(1, 255))
@@ -87,3 +87,35 @@ class DatasetPutSchema(Schema):
     owners = fields.List(fields.Integer())
     columns = fields.List(fields.Nested(DatasetColumnsPutSchema))
     metrics = fields.List(fields.Nested(DatasetMetricsPutSchema))
+
+
+class DatasetRelatedChart(Schema):
+    id = fields.Integer()
+    slice_name = fields.String()
+    viz_type = fields.String()
+
+
+class DatasetRelatedDashboard(Schema):
+    id = fields.Integer()
+    json_metadata = fields.Dict()
+    slug = fields.String()
+    title = fields.String()
+
+
+class DatasetRelatedCharts(Schema):
+    count = fields.Integer(description="Chart count")
+    result = fields.List(
+        fields.Nested(DatasetRelatedChart), description="A list of dashboards"
+    )
+
+
+class DatasetRelatedDashboards(Schema):
+    count = fields.Integer(description="Dashboard count")
+    result = fields.List(
+        fields.Nested(DatasetRelatedDashboard), description="A list of dashboards"
+    )
+
+
+class DatasetRelatedObjectsResponse(Schema):
+    charts = fields.Nested(DatasetRelatedCharts)
+    dashboards = fields.Nested(DatasetRelatedDashboards)

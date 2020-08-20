@@ -18,36 +18,17 @@
  */
 import { t } from '@superset-ui/translation';
 import React, { FunctionComponent } from 'react';
-import {
-  Button,
-  Col,
-  DropdownButton,
-  FormControl,
-  MenuItem,
-  Row,
-  // @ts-ignore
-} from 'react-bootstrap';
-// @ts-ignore
-import SelectComponent from 'react-select';
-// @ts-ignore
-import VirtualizedSelect from 'react-virtualized-select';
-import IndeterminateCheckbox from '../IndeterminateCheckbox';
+import { Col, DropdownButton, MenuItem, Row } from 'react-bootstrap';
+import Loading from 'src/components/Loading';
+import IndeterminateCheckbox from 'src/components/IndeterminateCheckbox';
 import TableCollection from './TableCollection';
 import Pagination from './Pagination';
-import {
-  FetchDataConfig,
-  Filters,
-  InternalFilter,
-  Select,
-  SortColumn,
-} from './types';
-import {
-  convertFilters,
-  extractInputValue,
-  ListViewError,
-  removeFromList,
-  useListViewState,
-} from './utils';
+import { FilterMenu, FilterInputs } from './LegacyFilters';
+import FilterControls from './Filters';
+import { FetchDataConfig, Filters, SortColumn } from './types';
+import { ListViewError, useListViewState } from './utils';
+
+import './ListViewStyles.less';
 
 import './ListViewStyles.less';
 
@@ -59,28 +40,28 @@ interface Props {
   fetchData: (conf: FetchDataConfig) => any;
   loading: boolean;
   className?: string;
-  title?: string;
   initialSort?: SortColumn[];
   filters?: Filters;
   bulkActions?: Array<{
-    key?: string;
-    name: React.ReactNode;
+    key: string;
+    name: React.ReactNode | string;
     onSelect: (rows: any[]) => any;
   }>;
+  isSIP34FilterUIEnabled?: boolean;
 }
 
 const bulkSelectColumnConfig = {
   Cell: ({ row }: any) => (
-    <div>
-      <IndeterminateCheckbox {...row.getToggleRowSelectedProps()} />
-    </div>
+    <IndeterminateCheckbox {...row.getToggleRowSelectedProps()} id={row.id} />
   ),
   Header: ({ getToggleAllRowsSelectedProps }: any) => (
-    <div>
-      <IndeterminateCheckbox {...getToggleAllRowsSelectedProps()} />
-    </div>
+    <IndeterminateCheckbox
+      {...getToggleAllRowsSelectedProps()}
+      id={'header-toggle-all'}
+    />
   ),
   id: 'selection',
+  size: 'sm',
 };
 
 const ListView: FunctionComponent<Props> = ({
@@ -92,9 +73,9 @@ const ListView: FunctionComponent<Props> = ({
   loading,
   initialSort = [],
   className = '',
-  title = '',
   filters = [],
   bulkActions = [],
+  isSIP34FilterUIEnabled = false,
 }) => {
   const {
     getTableProps,
@@ -104,9 +85,10 @@ const ListView: FunctionComponent<Props> = ({
     prepareRow,
     pageCount = 1,
     gotoPage,
-    setAllFilters,
+    removeFilterAndApply,
     setInternalFilters,
     updateInternalFilter,
+    applyFilterValue,
     applyFilters,
     filtersApplied,
     selectedFlatRows,
@@ -120,6 +102,7 @@ const ListView: FunctionComponent<Props> = ({
     fetchData,
     initialPageSize,
     initialSort,
+    initialFilters: isSIP34FilterUIEnabled ? filters : [],
   });
   const filterable = Boolean(filters.length);
   if (filterable) {
@@ -135,228 +118,111 @@ const ListView: FunctionComponent<Props> = ({
       }
     });
   }
-
-  const removeFilterAndApply = (index: number) => {
-    const updated = removeFromList(internalFilters, index);
-    setInternalFilters(updated);
-    setAllFilters(convertFilters(updated));
-  };
-
+  if (loading && !data.length) {
+    return <Loading />;
+  }
   return (
-    <div className={`superset-list-view ${className}`}>
-      {title && filterable && (
+    <div className="superset-list-view-container">
+      <div className={`superset-list-view ${className}`}>
         <div className="header">
-          <Row>
-            <Col md={10}>
-              <h2>{t(title)}</h2>
-            </Col>
-            {filterable && (
-              <Col md={2}>
-                <div className="filter-dropdown">
-                  <DropdownButton
-                    id="filter-picker"
-                    bsSize="small"
-                    bsStyle={'default'}
-                    noCaret
-                    title={
-                      <>
-                        <i className="fa fa-filter text-primary" />
-                        {'  '}
-                        {t('Filter List')}
-                      </>
-                    }
-                  >
-                    {filters
-                      .map(({ id, Header }) => ({
-                        Header,
-                        id,
-                      }))
-                      .map((ft: InternalFilter) => (
-                        <MenuItem
-                          key={ft.id}
-                          eventKey={ft}
-                          onSelect={(fltr: InternalFilter) =>
-                            setInternalFilters([...internalFilters, fltr])
-                          }
-                        >
-                          {ft.Header}
-                        </MenuItem>
-                      ))}
-                  </DropdownButton>
-                </div>
-              </Col>
-            )}
-          </Row>
-          <hr />
-          {internalFilters.map((ft, i) => {
-            const filter = filters.find(f => f.id === ft.id);
-            if (!filter) {
-              console.error(`could not find filter for ${ft.id}`);
-              return null;
-            }
-            return (
-              <div key={`${ft.Header}-${i}`} className="filter-inputs">
-                <Row>
-                  <Col className="text-center filter-column" md={2}>
-                    <span>{ft.Header}</span>
-                  </Col>
-                  <Col md={2}>
-                    <FormControl
-                      componentClass="select"
-                      bsSize="small"
-                      value={ft.operator}
-                      placeholder={filter ? filter.operators[0] : ''}
-                      onChange={(e: React.MouseEvent<HTMLInputElement>) => {
-                        updateInternalFilter(i, {
-                          operator: e.currentTarget.value,
-                        });
-                      }}
-                    >
-                      {filter.operators.map(({ label, value }: Select) => (
-                        <option key={label} value={value}>
-                          {label}
-                        </option>
-                      ))}
-                    </FormControl>
-                  </Col>
-                  <Col md={1} />
-                  <Col md={4}>
-                    {filter.input === 'select' && (
-                      <VirtualizedSelect
-                        autoFocus
-                        multi
-                        searchable
-                        name={`filter-${filter.id}-select`}
-                        options={filter.selects}
-                        placeholder="Select Value"
-                        value={ft.value}
-                        selectComponent={SelectComponent}
-                        onChange={(e: Select[] | null) => {
-                          updateInternalFilter(i, {
-                            operator: ft.operator || filter.operators[0].value,
-                            value: e ? e.map(s => s.value) : e,
-                          });
-                        }}
-                      />
-                    )}
-                    {filter.input !== 'select' && (
-                      <FormControl
-                        type={filter.input ? filter.input : 'text'}
-                        bsSize="small"
-                        value={ft.value || ''}
-                        checked={Boolean(ft.value)}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                          e.persist();
-                          updateInternalFilter(i, {
-                            operator: ft.operator || filter.operators[0].value,
-                            value: extractInputValue(filter.input, e),
-                          });
-                        }}
-                      />
-                    )}
-                  </Col>
-                  <Col md={1}>
-                    <div
-                      className="filter-close"
-                      role="button"
-                      tabIndex={0}
-                      onClick={() => removeFilterAndApply(i)}
-                    >
-                      <i className="fa fa-close text-primary" />
-                    </div>
-                  </Col>
-                </Row>
-                <br />
-              </div>
-            );
-          })}
-          {internalFilters.length > 0 && (
+          {!isSIP34FilterUIEnabled && filterable && (
             <>
               <Row>
                 <Col md={10} />
                 <Col md={2}>
-                  <Button
-                    data-test="apply-filters"
-                    disabled={!!filtersApplied}
-                    bsStyle="primary"
-                    onClick={applyFilters}
-                    bsSize="small"
-                  >
-                    {t('Apply')}
-                  </Button>
+                  <FilterMenu
+                    filters={filters}
+                    internalFilters={internalFilters}
+                    setInternalFilters={setInternalFilters}
+                  />
                 </Col>
               </Row>
-              <br />
+              <hr />
+              <FilterInputs
+                internalFilters={internalFilters}
+                filters={filters}
+                updateInternalFilter={updateInternalFilter}
+                removeFilterAndApply={removeFilterAndApply}
+                filtersApplied={filtersApplied}
+                applyFilters={applyFilters}
+              />
             </>
           )}
-        </div>
-      )}
-      <div className="body">
-        <TableCollection
-          getTableProps={getTableProps}
-          getTableBodyProps={getTableBodyProps}
-          prepareRow={prepareRow}
-          headerGroups={headerGroups}
-          rows={rows}
-          loading={loading}
-        />
-      </div>
-      <div className="footer">
-        <Row>
-          <Col md={2}>
-            <div className="form-actions-container">
-              <div className="btn-group">
-                {bulkActions.length > 0 && (
-                  <DropdownButton
-                    id="bulk-actions"
-                    bsSize="small"
-                    bsStyle="default"
-                    noCaret
-                    title={
-                      <>
-                        {t('Actions')} <span className="caret" />
-                      </>
-                    }
-                  >
-                    {bulkActions.map(action => (
-                      <MenuItem
-                        id={action.name}
-                        key={action.key || action.name}
-                        eventKey={selectedFlatRows}
-                        onSelect={(selectedRows: typeof selectedFlatRows) => {
-                          action.onSelect(
-                            selectedRows.map((r: any) => r.original),
-                          );
-                        }}
-                      >
-                        {action.name}
-                      </MenuItem>
-                    ))}
-                  </DropdownButton>
-                )}
-              </div>
-            </div>
-          </Col>
-          <Col md={8} className="text-center">
-            <Pagination
-              totalPages={pageCount || 0}
-              currentPage={pageCount ? pageIndex + 1 : 0}
-              onChange={(p: number) => gotoPage(p - 1)}
-              hideFirstAndLastPageLinks
+          {isSIP34FilterUIEnabled && filterable && (
+            <FilterControls
+              filters={filters}
+              internalFilters={internalFilters}
+              updateFilterValue={applyFilterValue}
             />
-          </Col>
-          <Col md={2}>
-            <span className="pull-right">
-              {t('showing')}{' '}
-              <strong>
-                {pageSize * pageIndex + (rows.length && 1)}-
-                {pageSize * pageIndex + rows.length}
-              </strong>{' '}
-              {t('of')} <strong>{count}</strong>
-            </span>
-          </Col>
-        </Row>
+          )}
+        </div>
+        <div className="body">
+          <TableCollection
+            getTableProps={getTableProps}
+            getTableBodyProps={getTableBodyProps}
+            prepareRow={prepareRow}
+            headerGroups={headerGroups}
+            rows={rows}
+            loading={loading}
+          />
+        </div>
+        <div className="footer">
+          <Row>
+            <Col>
+              <div className="form-actions-container">
+                <div className="btn-group">
+                  {bulkActions.length > 0 && (
+                    <DropdownButton
+                      id="bulk-actions"
+                      bsSize="small"
+                      bsStyle="default"
+                      noCaret
+                      title={
+                        <>
+                          {t('Actions')} <span className="caret" />
+                        </>
+                      }
+                    >
+                      {bulkActions.map(action => (
+                        // @ts-ignore
+                        <MenuItem
+                          key={action.key}
+                          eventKey={selectedFlatRows}
+                          // @ts-ignore
+                          onSelect={(selectedRows: typeof selectedFlatRows) => {
+                            action.onSelect(
+                              selectedRows.map((r: any) => r.original),
+                            );
+                          }}
+                        >
+                          {action.name}
+                        </MenuItem>
+                      ))}
+                    </DropdownButton>
+                  )}
+                </div>
+              </div>
+            </Col>
+
+            <Col>
+              <span className="row-count-container">
+                showing{' '}
+                <strong>
+                  {pageSize * pageIndex + (rows.length && 1)}-
+                  {pageSize * pageIndex + rows.length}
+                </strong>{' '}
+                of <strong>{count}</strong>
+              </span>
+            </Col>
+          </Row>
+        </div>
       </div>
+      <Pagination
+        totalPages={pageCount || 0}
+        currentPage={pageCount ? pageIndex + 1 : 0}
+        onChange={(p: number) => gotoPage(p - 1)}
+        hideFirstAndLastPageLinks
+      />
     </div>
   );
 };

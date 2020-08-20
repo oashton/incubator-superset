@@ -20,6 +20,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { t } from '@superset-ui/translation';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
+import styled from '@superset-ui/style';
 import MenuObject from './MenuObject';
 import NewMenu from './NewMenu';
 import UserMenu from './UserMenu';
@@ -33,6 +34,7 @@ const propTypes = {
       path: PropTypes.string.isRequired,
       icon: PropTypes.string.isRequired,
       alt: PropTypes.string.isRequired,
+      width: PropTypes.string.isRequired,
     }).isRequired,
     navbar_right: PropTypes.shape({
       bug_report_url: PropTypes.string,
@@ -50,16 +52,24 @@ const propTypes = {
   }).isRequired,
 };
 
+const StyledHeader = styled.header`
+  .navbar-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+`;
+
 export default function Menu({
   data: { menu, brand, navbar_right: navbarRight },
 }) {
   return (
-    <header className="top" id="main-menu">
+    <StyledHeader className="top" id="main-menu">
       <Navbar inverse fluid staticTop role="navigation">
         <Navbar.Header>
           <Navbar.Brand>
             <a className="navbar-brand" href={brand.path}>
-              <img width="126" src={brand.icon} alt={brand.alt} />
+              <img width={brand.width} src={brand.icon} alt={brand.alt} />
             </a>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -113,7 +123,7 @@ export default function Menu({
           )}
         </Nav>
       </Navbar>
-    </header>
+    </StyledHeader>
   );
 }
 
