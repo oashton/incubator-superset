@@ -84,7 +84,8 @@ class AnnotationDatasource(BaseDatasource):
     """
 
     cache_timeout = 0
-
+    changed_on = None
+    
     def query(self, query_obj: Dict[str, Any]) -> QueryResult:
         error_message = None
         qry = db.session.query(Annotation)
