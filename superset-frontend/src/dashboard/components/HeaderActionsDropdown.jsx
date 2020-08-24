@@ -25,7 +25,6 @@ import { t } from '@superset-ui/translation';
 import CssEditor from './CssEditor';
 import RefreshIntervalModal from './RefreshIntervalModal';
 import SaveModal from './SaveModal';
-import BookmarkModal from './BookmarkModal';
 import injectCustomCss from '../util/injectCustomCss';
 import { SAVE_TYPE_NEWDASHBOARD } from '../util/constants';
 import URLShortLinkModal from '../../components/URLShortLinkModal';
@@ -223,27 +222,6 @@ class HeaderActionsDropdown extends React.PureComponent {
           addDangerToast={this.props.addDangerToast}
           isMenuItem
           triggerNode={<span>{t('Share dashboard')}</span>}
-        />
-
-        <BookmarkModal
-          addSuccessToast={this.props.addSuccessToast}
-          addDangerToast={this.props.addDangerToast}
-          dashboardId={dashboardId}
-          defaultBookmarName=""
-          layout={layout}
-          refreshFrequency={refreshFrequency}
-          css={css}
-          colorNamespace={colorNamespace}
-          colorScheme={colorScheme}
-          onSave={onSave}
-          isMenuItem
-          triggerNode={<span>{t('Bookmark dashboard')}</span>}
-          canOverwrite={userCanEdit}
-          url={getDashboardUrl(
-            window.location.pathname,
-            getActiveFilters(),
-            window.location.hash,
-          )}
         />
 
         {editMode && (

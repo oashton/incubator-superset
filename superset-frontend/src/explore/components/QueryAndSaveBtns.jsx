@@ -21,7 +21,6 @@ import PropTypes from 'prop-types';
 import { t } from '@superset-ui/translation';
 import { ButtonGroup, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import classnames from 'classnames';
-import { t } from '@superset-ui/translation';
 
 import Button from '../../components/Button';
 import './QueryAndSaveBtns.css';
