@@ -30,8 +30,6 @@ import { ListViewError, useListViewState } from './utils';
 
 import './ListViewStyles.less';
 
-import './ListViewStyles.less';
-
 interface Props {
   columns: any[];
   data: any[];

@@ -192,12 +192,7 @@ Array [
     expect(wrapper.find(Pagination.Item).exists()).toBe(true);
     expect(wrapper.find(Pagination.Next).exists()).toBe(true);
   });
-  it('renders pagination controls', () => {
-    expect(wrapper.find(Pagination).exists()).toBe(true);
-    expect(wrapper.find(Pagination.Prev).exists()).toBe(true);
-    expect(wrapper.find(Pagination.Item).exists()).toBe(true);
-    expect(wrapper.find(Pagination.Next).exists()).toBe(true);
-  });
+
   it('calls fetchData on page change', () => {
     act(() => {
       wrapper.find(ListViewPagination).prop('onChange')(2);
