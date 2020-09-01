@@ -28,6 +28,7 @@ import SaveModal from './SaveModal';
 import injectCustomCss from '../util/injectCustomCss';
 import { SAVE_TYPE_NEWDASHBOARD } from '../util/constants';
 import URLShortLinkModal from '../../components/URLShortLinkModal';
+import BookmarkModal from './BookmarkModal';
 import downloadAsImage from '../util/downloadAsImage';
 import getDashboardUrl from '../util/getDashboardUrl';
 import { getActiveFilters } from '../util/activeDashboardFilters';
@@ -222,6 +223,27 @@ class HeaderActionsDropdown extends React.PureComponent {
           addDangerToast={this.props.addDangerToast}
           isMenuItem
           triggerNode={<span>{t('Share dashboard')}</span>}
+        />
+
+        <BookmarkModal
+          addSuccessToast={this.props.addSuccessToast}
+          addDangerToast={this.props.addDangerToast}
+          dashboardId={dashboardId}
+          defaultBookmarName=""
+          layout={layout}
+          refreshFrequency={refreshFrequency}
+          customCss={customCss}
+          colorNamespace={colorNamespace}
+          colorScheme={colorScheme}
+          onSave={onSave}
+          isMenuItem
+          triggerNode={<span>{t('Bookmark dashboard')}</span>}
+          canOverwrite={userCanEdit}
+          url={getDashboardUrl(
+            window.location.pathname,
+            getActiveFilters(),
+            window.location.hash,
+          )}
         />
 
         {editMode && (
