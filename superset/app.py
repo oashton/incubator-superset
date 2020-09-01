@@ -227,7 +227,7 @@ class SupersetAppInitializer:
             icon="fa-comments",
             category="Sources",
             category_label=_("Sources"),
-            category_icon="",
+            category_icon="fa-comments",
         )
         appbuilder.add_view(
             DatabaseView,
