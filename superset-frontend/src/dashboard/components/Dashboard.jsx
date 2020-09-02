@@ -229,7 +229,7 @@ class Dashboard extends React.PureComponent {
         }
       }
     });
-
+    affectedChartIds.push(([...allKeys][0]).substr(0,([...allKeys][0]).indexOf('_')));
     // remove dup in affectedChartIds
     this.refreshCharts([...new Set(affectedChartIds)]);
     this.appliedFilters = activeFilters;
