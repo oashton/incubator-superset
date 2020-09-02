@@ -443,7 +443,7 @@ class ChartList extends React.PureComponent<Props, State> {
             unfilteredLabel: 'All',
             selects: getChartMetadataRegistry()
               .keys()
-              .map(k => ({ label: k, value: k })),
+              .map((k:any) => ({ label: k, value: k })),
           },
           {
             Header: 'Dataset',
