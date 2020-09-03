@@ -20,7 +20,10 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "esnext"
+    "target": "esnext",
+    "paths": {
+      "@superset-ui/plugin-chart-table": ["node_modules/@superset-ui/plugin-chart-table/src"]
+    }
   },
   "include": [
     "./src/**/*",
