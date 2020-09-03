@@ -217,6 +217,10 @@ const config = {
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     symlinks: false,
+    modules: [
+      path.resolve(APP_DIR, './node_modules'),
+      'node_modules',
+    ]
   },
   context: APP_DIR, // to automatically find tsconfig.json
   module: {
