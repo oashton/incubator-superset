@@ -234,6 +234,8 @@ const config = {
       },
       {
         test: /\.tsx?$/,
+        exclude: [/superset-ui.*\/node_modules\//],
+        include: [new RegExp(`${APP_DIR}/src`), /superset-ui.*\/src/],
         use: [
           'thread-loader',
           babelLoader,
@@ -250,6 +252,7 @@ const config = {
               compilerOptions: {
                 esModuleInterop: false,
                 importHelpers: false,
+                noImplicitAny: true,
                 module: 'esnext',
                 target: 'esnext',
               },
