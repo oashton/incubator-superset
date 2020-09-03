@@ -20,8 +20,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 import { t } from '@superset-ui/translation';
-
+import { SupersetClient } from '@superset-ui/connection';
 import { isFeatureEnabled, FeatureFlag } from 'src/featureFlags';
+import { getExploreUrlAndPayload } from '../explore/exploreUtils';
+import { allowCrossDomain as allowDomainSharding } from '../utils/hostNamesConfig';
 import { Logger, LOG_ACTIONS_RENDER_CHART_CONTAINER } from '../logger/LogUtils';
 import Loading from '../components/Loading';
 import RefreshChartOverlay from '../components/RefreshChartOverlay';
@@ -66,6 +68,8 @@ const propTypes = {
 };
 
 const BLANK = {};
+const BIG_NUMBER_TYPE = 'big_number';
+const COLOR_COLUMN = 'color';
 
 const defaultProps = {
   addFilter: () => BLANK,
@@ -81,20 +85,78 @@ const defaultProps = {
 class Chart extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.state = {
+      textColor: 'black'
+    }
+
     this.handleRenderContainerFailure = this.handleRenderContainerFailure.bind(
       this,
     );
+    this.getExtraData = this.getExtraData.bind(this);
   }
 
   componentDidMount() {
     if (this.props.triggerQuery) {
       this.runQuery();
     }
+    this.getExtraData();
   }
 
   componentDidUpdate() {
     if (this.props.triggerQuery) {
       this.runQuery();
+    }
+    this.getExtraData();
+  }
+  
+  getExtraData() {
+    const {
+      dashboardId,
+      vizType,
+      formData,
+      chartStatus,
+      datasource,
+    } = this.props;
+
+    const isColored = (column) => column['column_name'] === COLOR_COLUMN;
+    const datasourceReady = 'columns' in datasource
+    const getColorData = datasource.columns.some(isColored) ? datasourceReady : false;
+
+    if (vizType === BIG_NUMBER_TYPE && chartStatus !== 'loading' && getColorData){
+      console.log('Getting extra data...');
+      let queryObj = formData;
+      queryObj['columns'] = [COLOR_COLUMN];
+
+      const { url, payload } = getExploreUrlAndPayload({
+        formData: queryObj,
+        endpointType: 'json',
+        allowDomainSharding,
+        requestParams: dashboardId ? { dashboard_id: dashboardId } : {},
+      });
+      const controller = new AbortController();
+      const { signal } = controller;
+      let querySettings = {
+        url,
+        postPayload: { form_data: payload },
+        signal,
+        timeout: 120 * 1000,
+      };
+      if (allowDomainSharding) {
+        querySettings = {
+          ...querySettings,
+          mode: 'cors',
+          credentials: 'include',
+        };
+      }
+
+      const queryPromise = SupersetClient.post(querySettings)
+        .then(({ json }) => {
+          if (json.data.length > 0) { 
+            this.setState({
+              textColor: json.data[json.data.length - 1]['color']
+            })
+          }
+        })
     }
   }
 
@@ -215,7 +277,7 @@ class Chart extends React.PureComponent {
           )}
           {filterValidation && (
             <div className={`slice_container ${isFaded ? ' faded' : ''}`}>
-              <ChartRenderer {...this.props} />
+              <ChartRenderer textColor={this.state.textColor} {...this.props} />
             </div>
           )}
           {!filterValidation && (

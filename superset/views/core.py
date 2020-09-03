@@ -2558,7 +2558,7 @@ class Superset(BaseSupersetView):
 
         # Check permission for datasource
         security_manager.assert_datasource_permission(datasource)
-        return json_success(json.dumps(datasource.data))
+        return json_success(json.dumps(str(datasource.data)))
 
     @has_access_api
     @expose("/queries/<last_updated_ms>")
