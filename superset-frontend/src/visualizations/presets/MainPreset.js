@@ -20,7 +20,7 @@ import { Preset } from '@superset-ui/core';
 import {
   BigNumberChartPlugin,
   BigNumberTotalChartPlugin,
-} from '@superset-ui/legacy-preset-chart-big-number';
+} from '@superset-ui-uptime/legacy-preset-chart-big-number';
 import CalendarChartPlugin from '@superset-ui/legacy-plugin-chart-calendar';
 import ChordChartPlugin from '@superset-ui/legacy-plugin-chart-chord';
 import CountryMapChartPlugin from '@superset-ui/legacy-plugin-chart-country-map';
