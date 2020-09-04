@@ -150,7 +150,7 @@ def _generate_report_content(
 
     if delivery_type == EmailDeliveryType.attachment:
         images = None
-        data = {"screenshot": screenshot}
+        data = {"screenshot.png": screenshot}
         body = __(
             '<b><a href="%(url)s">Explore in Superset</a></b><p></p>',
             name=name,
