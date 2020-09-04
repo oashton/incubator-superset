@@ -29,7 +29,7 @@ import ForceDirectedChartPlugin from '@superset-ui/legacy-plugin-chart-force-dir
 import HeatmapChartPlugin from '@superset-ui/legacy-plugin-chart-heatmap';
 import HistogramChartPlugin from '@superset-ui/legacy-plugin-chart-histogram';
 import HorizonChartPlugin from '@superset-ui/legacy-plugin-chart-horizon';
-import IframeChartPlugin from '@superset-ui/legacy-plugin-chart-iframe';
+import IframeChartPlugin from '@superset-ui-uptime/legacy-plugin-chart-iframe';
 import MapBoxChartPlugin from '@superset-ui/legacy-plugin-chart-map-box';
 import MarkupChartPlugin from '@superset-ui/legacy-plugin-chart-markup';
 import PairedTTestChartPlugin from '@superset-ui/legacy-plugin-chart-paired-t-test';
