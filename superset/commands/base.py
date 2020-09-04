@@ -15,6 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 from abc import ABC, abstractmethod
+from typing import Any
 
 
 class BaseCommand(ABC):
@@ -23,12 +24,11 @@ class BaseCommand(ABC):
     """
 
     @abstractmethod
-    def run(self):
+    def run(self) -> Any:
         """
         Run executes the command. Can raise command exceptions
         :raises: CommandException
         """
-        pass
 
     @abstractmethod
     def validate(self) -> None:
@@ -37,4 +37,3 @@ class BaseCommand(ABC):
         Will raise exception if validation fails
         :raises: CommandException
         """
-        pass

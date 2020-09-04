@@ -24,7 +24,7 @@ import fetchMock from 'fetch-mock';
 import thunk from 'redux-thunk';
 import sinon from 'sinon';
 
-import ChangeDatasourceModal from '../../../src/datasource/ChangeDatasourceModal';
+import ChangeDatasourceModal from 'src/datasource/ChangeDatasourceModal';
 import mockDatasource from '../../fixtures/mockDatasource';
 
 const props = {
@@ -70,25 +70,29 @@ describe('ChangeDatasourceModal', () => {
     expect(wrapper.find(Modal)).toHaveLength(1);
   });
 
-  it('fetches datasources', done => {
-    inst.onEnterModal();
-    setTimeout(() => {
-      expect(fetchMock.calls(DATASOURCES_ENDPOINT)).toHaveLength(1);
-      fetchMock.reset();
-      done();
-    }, 0);
+  it('fetches datasources', () => {
+    return new Promise(done => {
+      inst.onEnterModal();
+      setTimeout(() => {
+        expect(fetchMock.calls(DATASOURCES_ENDPOINT)).toHaveLength(1);
+        fetchMock.reset();
+        done();
+      }, 0);
+    });
   });
 
-  it('changes the datasource', done => {
-    fetchMock.get(DATASOURCE_ENDPOINT, DATASOURCE_PAYLOAD);
-    inst.selectDatasource(datasourceData);
-    setTimeout(() => {
-      expect(fetchMock.calls(DATASOURCE_ENDPOINT)).toHaveLength(1);
-      expect(props.onDatasourceSave.getCall(0).args[0]).toEqual(
-        DATASOURCE_PAYLOAD,
-      );
-      fetchMock.reset();
-      done();
-    }, 0);
+  it('changes the datasource', () => {
+    return new Promise(done => {
+      fetchMock.get(DATASOURCE_ENDPOINT, DATASOURCE_PAYLOAD);
+      inst.selectDatasource(datasourceData);
+      setTimeout(() => {
+        expect(fetchMock.calls(DATASOURCE_ENDPOINT)).toHaveLength(1);
+        expect(props.onDatasourceSave.getCall(0).args[0]).toEqual(
+          DATASOURCE_PAYLOAD,
+        );
+        fetchMock.reset();
+        done();
+      }, 0);
+    });
   });
 });

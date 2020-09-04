@@ -24,8 +24,8 @@ import fetchMock from 'fetch-mock';
 import thunk from 'redux-thunk';
 import sinon from 'sinon';
 
-import DatasourceModal from '../../../src/datasource/DatasourceModal';
-import DatasourceEditor from '../../../src/datasource/DatasourceEditor';
+import DatasourceModal from 'src/datasource/DatasourceModal';
+import DatasourceEditor from 'src/datasource/DatasourceEditor';
 import mockDatasource from '../../fixtures/mockDatasource';
 
 const props = {
@@ -68,13 +68,15 @@ describe('DatasourceModal', () => {
     expect(wrapper.find(DatasourceEditor)).toHaveLength(1);
   });
 
-  it('saves on confirm', done => {
-    inst.onConfirmSave();
-    setTimeout(() => {
-      expect(fetchMock.calls(SAVE_ENDPOINT)).toHaveLength(1);
-      expect(props.onDatasourceSave.getCall(0).args[0]).toEqual(SAVE_PAYLOAD);
-      fetchMock.reset();
-      done();
-    }, 0);
+  it('saves on confirm', () => {
+    return new Promise(done => {
+      inst.onConfirmSave();
+      setTimeout(() => {
+        expect(fetchMock.calls(SAVE_ENDPOINT)).toHaveLength(1);
+        expect(props.onDatasourceSave.getCall(0).args[0]).toEqual(SAVE_PAYLOAD);
+        fetchMock.reset();
+        done();
+      }, 0);
+    });
   });
 });

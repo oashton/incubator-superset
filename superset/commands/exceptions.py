@@ -25,10 +25,10 @@ from superset.exceptions import SupersetException
 class CommandException(SupersetException):
     """ Common base class for Command exceptions. """
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         if self._exception:
-            return self._exception
-        return self
+            return repr(self._exception)
+        return repr(self)
 
 
 class CommandInvalidError(CommandException):
@@ -36,20 +36,20 @@ class CommandInvalidError(CommandException):
 
     status = 422
 
-    def __init__(self, message="") -> None:
+    def __init__(self, message: str = "") -> None:
         self._invalid_exceptions: List[ValidationError] = []
         super().__init__(self.message)
 
-    def add(self, exception: ValidationError):
+    def add(self, exception: ValidationError) -> None:
         self._invalid_exceptions.append(exception)
 
-    def add_list(self, exceptions: List[ValidationError]):
+    def add_list(self, exceptions: List[ValidationError]) -> None:
         self._invalid_exceptions.extend(exceptions)
 
     def normalized_messages(self) -> Dict[Any, Any]:
         errors: Dict[Any, Any] = {}
         for exception in self._invalid_exceptions:
-            errors.update(exception.normalized_messages())
+            errors.update(exception.normalized_messages())  # type: ignore
         return errors
 
 
@@ -76,12 +76,12 @@ class ForbiddenError(CommandException):
 class OwnersNotFoundValidationError(ValidationError):
     status = 422
 
-    def __init__(self):
-        super().__init__(_("Owners are invalid"), field_names=["owners"])
+    def __init__(self) -> None:
+        super().__init__([_("Owners are invalid")], field_name="owners")
 
 
 class DatasourceNotFoundValidationError(ValidationError):
     status = 404
 
-    def __init__(self):
-        super().__init__(_("Datasource does not exist"), field_names=["datasource_id"])
+    def __init__(self) -> None:
+        super().__init__([_("Datasource does not exist")], field_name="datasource_id")

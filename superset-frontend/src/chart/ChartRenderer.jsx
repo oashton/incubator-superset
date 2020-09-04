@@ -199,12 +199,22 @@ class ChartRenderer extends React.Component {
         : snakeCaseVizType;
     formData['text_color'] = textColor
 
+    const webpackHash =
+      process.env.WEBPACK_MODE === 'development'
+        ? `-${
+            // eslint-disable-next-line camelcase
+            typeof __webpack_require__ !== 'undefined' &&
+            // eslint-disable-next-line camelcase, no-undef
+            typeof __webpack_require__.h === 'function' &&
+            // eslint-disable-next-line no-undef
+            __webpack_require__.h()
+          }`
+        : '';
+
     return (
       <SuperChart
         disableErrorBoundary
-        key={`${chartId}${
-          process.env.WEBPACK_MODE === 'development' ? `-${Date.now()}` : ''
-        }`}
+        key={`${chartId}${webpackHash}`}
         id={`chart-id-${chartId}`}
         className={chartClassName}
         chartType={vizType}

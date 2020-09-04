@@ -25,12 +25,12 @@ import { Button, Popover, Tab, Tabs } from 'react-bootstrap';
 import AdhocFilter, {
   EXPRESSION_TYPES,
   CLAUSES,
-} from '../../../../src/explore/AdhocFilter';
-import AdhocMetric from '../../../../src/explore/AdhocMetric';
-import AdhocFilterEditPopover from '../../../../src/explore/components/AdhocFilterEditPopover';
-import AdhocFilterEditPopoverSimpleTabContent from '../../../../src/explore/components/AdhocFilterEditPopoverSimpleTabContent';
-import AdhocFilterEditPopoverSqlTabContent from '../../../../src/explore/components/AdhocFilterEditPopoverSqlTabContent';
-import { AGGREGATES } from '../../../../src/explore/constants';
+} from 'src/explore/AdhocFilter';
+import AdhocMetric from 'src/explore/AdhocMetric';
+import AdhocFilterEditPopover from 'src/explore/components/AdhocFilterEditPopover';
+import AdhocFilterEditPopoverSimpleTabContent from 'src/explore/components/AdhocFilterEditPopoverSimpleTabContent';
+import AdhocFilterEditPopoverSqlTabContent from 'src/explore/components/AdhocFilterEditPopoverSqlTabContent';
+import { AGGREGATES } from 'src/explore/constants';
 
 const simpleAdhocFilter = new AdhocFilter({
   expressionType: EXPRESSION_TYPES.SIMPLE,
@@ -127,9 +127,9 @@ describe('AdhocFilterEditPopover', () => {
     wrapper.instance().onDragDown = sinon.spy();
     wrapper.instance().forceUpdate();
 
-    expect(wrapper.find('i.glyphicon-resize-full')).toHaveLength(1);
+    expect(wrapper.find('i.fa-expand')).toHaveLength(1);
     expect(wrapper.instance().onDragDown.calledOnce).toBe(false);
-    wrapper.find('i.glyphicon-resize-full').simulate('mouseDown', {});
+    wrapper.find('i.fa-expand').simulate('mouseDown', {});
     expect(wrapper.instance().onDragDown.calledOnce).toBe(true);
   });
 });

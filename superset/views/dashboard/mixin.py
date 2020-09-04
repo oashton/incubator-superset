@@ -84,5 +84,5 @@ class DashboardMixin:  # pylint: disable=too-few-public-methods
         "published_translation": _("Published"),
     }
 
-    def pre_delete(self, item):  # pylint: disable=no-self-use
+    def pre_delete(self, item: "DashboardMixin") -> None:  # pylint: disable=no-self-use
         check_ownership(item)

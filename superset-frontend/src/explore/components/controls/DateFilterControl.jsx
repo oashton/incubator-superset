@@ -80,10 +80,7 @@ const DEFAULT_SINCE = moment()
   .startOf('day')
   .subtract(7, 'days')
   .format(MOMENT_FORMAT);
-const DEFAULT_UNTIL = moment()
-  .utc()
-  .startOf('day')
-  .format(MOMENT_FORMAT);
+const DEFAULT_UNTIL = moment().utc().startOf('day').format(MOMENT_FORMAT);
 const SEPARATOR = ' : ';
 const FREEFORM_TOOLTIP = t(
   'Superset supports smart date parsing. Strings like `last sunday` or ' +
@@ -137,10 +134,7 @@ function getStateFromCommonTimeFrame(value) {
       .startOf('day')
       .subtract(1, units)
       .format(MOMENT_FORMAT),
-    until: moment()
-      .utc()
-      .startOf('day')
-      .format(MOMENT_FORMAT),
+    until: moment().utc().startOf('day').format(MOMENT_FORMAT),
   };
 }
 
@@ -149,24 +143,15 @@ function getStateFromCustomRange(value) {
   let since;
   let until;
   if (rel === RELATIVE_TIME_OPTIONS.LAST) {
-    until = moment()
-      .utc()
-      .startOf('day')
-      .format(MOMENT_FORMAT);
+    until = moment().utc().startOf('day').format(MOMENT_FORMAT);
     since = moment()
       .utc()
       .startOf('day')
       .subtract(num, grain)
       .format(MOMENT_FORMAT);
   } else {
-    until = moment()
-      .utc()
-      .startOf('day')
-      .add(num, grain)
-      .format(MOMENT_FORMAT);
-    since = moment()
-      .startOf('day')
-      .format(MOMENT_FORMAT);
+    until = moment().utc().startOf('day').add(num, grain).format(MOMENT_FORMAT);
+    since = moment().startOf('day').format(MOMENT_FORMAT);
   }
   return {
     tab: TABS.CUSTOM,
@@ -355,7 +340,7 @@ export default class DateFilterControl extends React.Component {
   renderInput(props, key) {
     return (
       <FormGroup>
-        <InputGroup>
+        <InputGroup bsSize="small">
           <FormControl
             {...props}
             type="text"
@@ -365,7 +350,7 @@ export default class DateFilterControl extends React.Component {
           />
           <InputGroup.Button onClick={() => this.toggleCalendar(key)}>
             <Button>
-              <Glyphicon glyph="calendar" style={{ padding: 3 }} />
+              <i className="fa fa-calendar" />
             </Button>
           </InputGroup.Button>
         </InputGroup>
@@ -469,7 +454,7 @@ export default class DateFilterControl extends React.Component {
                     </div>
                     <div
                       style={{ width: '60px', marginTop: '-4px' }}
-                      className="input-inline"
+                      className="input-inline m-l-5 m-r-3"
                     >
                       <FormControl
                         bsSize="small"

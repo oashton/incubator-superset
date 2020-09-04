@@ -20,17 +20,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 import { t } from '@superset-ui/translation';
-import { SupersetClient } from '@superset-ui/connection';
 import { isFeatureEnabled, FeatureFlag } from 'src/featureFlags';
-import { getExploreUrlAndPayload } from '../explore/exploreUtils';
-import { allowCrossDomain as allowDomainSharding } from '../utils/hostNamesConfig';
-import { Logger, LOG_ACTIONS_RENDER_CHART_CONTAINER } from '../logger/LogUtils';
+import { Logger, LOG_ACTIONS_RENDER_CHART } from '../logger/LogUtils';
+
 import Loading from '../components/Loading';
 import RefreshChartOverlay from '../components/RefreshChartOverlay';
-import StackTraceMessage from '../components/StackTraceMessage';
+import ErrorMessageWithStackTrace from '../components/ErrorMessage/ErrorMessageWithStackTrace';
 import ErrorBoundary from '../components/ErrorBoundary';
 import ChartRenderer from './ChartRenderer';
 import './chart.less';
+import { getChartDataRequest } from "./chartAction";
 
 const propTypes = {
   annotationData: PropTypes.object,
@@ -120,40 +119,37 @@ class Chart extends React.PureComponent {
 
     const isColored = (column) => column['column_name'] === COLOR_COLUMN;
     const datasourceReady = 'columns' in datasource
-    const getColorData = datasource.columns.some(isColored) ? datasourceReady : false;
-
-    if (vizType === BIG_NUMBER_TYPE && chartStatus !== 'loading' && getColorData){
-      console.log('Getting extra data...');
+    //const getColorData = datasource.columns.some(isColored) ? datasourceReady : false;
+    console.log('Getting extra data...');
+    console.log(datasource);
+    if (vizType === BIG_NUMBER_TYPE && chartStatus !== 'loading'){
       let queryObj = formData;
       queryObj['columns'] = [COLOR_COLUMN];
 
-      const { url, payload } = getExploreUrlAndPayload({
-        formData: queryObj,
-        endpointType: 'json',
-        allowDomainSharding,
-        requestParams: dashboardId ? { dashboard_id: dashboardId } : {},
-      });
       const controller = new AbortController();
-      const { signal } = controller;
-      let querySettings = {
-        url,
-        postPayload: { form_data: payload },
-        signal,
+      const requestParams = {
+        signal: controller.signal,
         timeout: 120 * 1000,
       };
-      if (allowDomainSharding) {
-        querySettings = {
-          ...querySettings,
-          mode: 'cors',
-          credentials: 'include',
-        };
-      }
+      if (dashboardId) requestParams.dashboard_id = dashboardId;
 
-      const queryPromise = SupersetClient.post(querySettings)
-        .then(({ json }) => {
-          if (json.data.length > 0) { 
+      const chartDataRequest = getChartDataRequest({
+        formData,
+        resultformDataFormat: 'json',
+        resultType: 'full',
+        force: false,
+        method: 'POST',
+        requestParams,
+      });
+
+      const query = chartDataRequest
+        .then(json => {
+          console.log(json.result);
+          const data = json.result[0].data;
+          if(data.length > 0) {
+            const last_val = data[data.length - 1]
             this.setState({
-              textColor: json.data[json.data.length - 1]['color']
+              textColor: last_val['color'] ? 'color' in last_val : 'black'
             })
           }
         })
@@ -191,7 +187,7 @@ class Chart extends React.PureComponent {
       info ? info.componentStack : null,
     );
 
-    actions.logEvent(LOG_ACTIONS_RENDER_CHART_CONTAINER, {
+    actions.logEvent(LOG_ACTIONS_RENDER_CHART, {
       slice_id: chartId,
       has_err: true,
       error_details: error.toString(),
@@ -222,11 +218,12 @@ class Chart extends React.PureComponent {
     return false;
   }
 
-  renderStackTraceMessage() {
+  renderErrorMessage() {
     const { chartAlert, chartStackTrace, queryResponse } = this.props;
     return (
-      <StackTraceMessage
-        message={chartAlert}
+      <ErrorMessageWithStackTrace
+        error={queryResponse?.errors?.[0]}
+        message={chartAlert || queryResponse?.message}
         link={queryResponse ? queryResponse.link : null}
         stackTrace={chartStackTrace}
       />
@@ -252,7 +249,7 @@ class Chart extends React.PureComponent {
     this.renderContainerStartTime = Logger.getTimestamp();
     const filterValidation = this.validateFilterRequiredRestriction();
     if (chartStatus === 'failed') {
-      return this.renderStackTraceMessage();
+      return this.renderErrorMessage();
     }
     if (errorMessage) {
       return <Alert bsStyle="warning">{errorMessage}</Alert>;
@@ -266,8 +263,6 @@ class Chart extends React.PureComponent {
           className={`chart-container ${isLoading ? 'is-loading' : ''}`}
           style={containerStyles}
         >
-          {isLoading && <Loading size={50} />}
-
           {!isLoading && !chartAlert && isFaded && (
             <RefreshChartOverlay
               width={width}
@@ -288,6 +283,8 @@ class Chart extends React.PureComponent {
               )}
             </h2>
           )}
+
+          {isLoading && <Loading />}
         </div>
       </ErrorBoundary>
     );

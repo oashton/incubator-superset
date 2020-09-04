@@ -20,7 +20,7 @@ import { Preset } from '@superset-ui/core';
 import {
   BigNumberChartPlugin,
   BigNumberTotalChartPlugin,
-} from '@superset-ui/legacy-preset-chart-big-number';
+} from '@superset-ui-uptime/legacy-preset-chart-big-number';
 import CalendarChartPlugin from '@superset-ui/legacy-plugin-chart-calendar';
 import ChordChartPlugin from '@superset-ui/legacy-plugin-chart-chord';
 import CountryMapChartPlugin from '@superset-ui/legacy-plugin-chart-country-map';
@@ -29,25 +29,20 @@ import ForceDirectedChartPlugin from '@superset-ui/legacy-plugin-chart-force-dir
 import HeatmapChartPlugin from '@superset-ui/legacy-plugin-chart-heatmap';
 import HistogramChartPlugin from '@superset-ui/legacy-plugin-chart-histogram';
 import HorizonChartPlugin from '@superset-ui/legacy-plugin-chart-horizon';
-import IframeChartPlugin from '@superset-ui/legacy-plugin-chart-iframe';
+import IframeChartPlugin from '@superset-ui-uptime/legacy-plugin-chart-iframe';
 import MapBoxChartPlugin from '@superset-ui/legacy-plugin-chart-map-box';
 import MarkupChartPlugin from '@superset-ui/legacy-plugin-chart-markup';
 import PairedTTestChartPlugin from '@superset-ui/legacy-plugin-chart-paired-t-test';
 import ParallelCoordinatesChartPlugin from '@superset-ui/legacy-plugin-chart-parallel-coordinates';
 import PartitionChartPlugin from '@superset-ui/legacy-plugin-chart-partition';
-import PivotTableChartPlugin from '@superset-ui/legacy-plugin-chart-pivot-table';
+import PivotTableChartPlugin from '@superset-ui-uptime/legacy-plugin-chart-pivot-table';
 import RoseChartPlugin from '@superset-ui/legacy-plugin-chart-rose';
-import SankeyChartPlugin from '@superset-ui/legacy-plugin-chart-sankey';
+import SankeyChartPlugin from '@superset-ui-uptime/legacy-plugin-chart-sankey';
 import SunburstChartPlugin from '@superset-ui/legacy-plugin-chart-sunburst';
-import TableChartPlugin from '@superset-ui/legacy-plugin-chart-table';
+import TableChartPlugin from '@superset-ui-uptime/plugin-chart-table';
 import TreemapChartPlugin from '@superset-ui/legacy-plugin-chart-treemap';
-import WordCloudChartPlugin from '@superset-ui/legacy-plugin-chart-word-cloud';
+import { WordCloudChartPlugin } from '@superset-ui/plugin-chart-word-cloud';
 import WorldMapChartPlugin from '@superset-ui/legacy-plugin-chart-world-map';
-// There is a known issue with bubble chart that the bubbles will not show up.
-// (<path d="NaN" />)
-// Make sure to import '@superset-ui/legacy-preset-chart-nvd3/lib'
-// Not '@superset-ui/legacy-preset-chart-nvd3',
-// which will point to '@superset-ui/legacy-preset-chart-nvd3/esm' by default
 import {
   AreaChartPlugin,
   BarChartPlugin,
@@ -60,10 +55,9 @@ import {
   LineMultiChartPlugin,
   PieChartPlugin,
   TimePivotChartPlugin,
-} from '@superset-ui/legacy-preset-chart-nvd3';
-import { BoxPlotChartPlugin } from '@superset-ui/preset-chart-xy/esm/legacy';
+} from '@superset-ui-uptime/legacy-preset-chart-nvd3';
+import { LegacyBoxPlotChartPlugin } from '@superset-ui/preset-chart-xy';
 import { DeckGLChartPreset } from '@superset-ui/legacy-preset-chart-deckgl';
-
 import FilterBoxChartPlugin from '../FilterBox/FilterBoxChartPlugin';
 import TimeTableChartPlugin from '../TimeTable/TimeTableChartPlugin';
 
@@ -77,7 +71,7 @@ export default class MainPreset extends Preset {
         new BarChartPlugin().configure({ key: 'bar' }),
         new BigNumberChartPlugin().configure({ key: 'big_number' }),
         new BigNumberTotalChartPlugin().configure({ key: 'big_number_total' }),
-        new BoxPlotChartPlugin().configure({ key: 'box_plot' }),
+        new LegacyBoxPlotChartPlugin().configure({ key: 'box_plot' }),
         new BubbleChartPlugin().configure({ key: 'bubble' }),
         new BulletChartPlugin().configure({ key: 'bullet' }),
         new CalendarChartPlugin().configure({ key: 'cal_heatmap' }),

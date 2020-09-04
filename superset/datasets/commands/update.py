@@ -16,8 +16,9 @@
 # under the License.
 import logging
 from collections import Counter
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
+from flask_appbuilder.models.sqla import Model
 from flask_appbuilder.security.sqla.models import User
 from marshmallow import ValidationError
 
@@ -47,23 +48,25 @@ logger = logging.getLogger(__name__)
 
 
 class UpdateDatasetCommand(BaseCommand):
-    def __init__(self, user: User, model_id: int, data: Dict):
+    def __init__(self, user: User, model_id: int, data: Dict[str, Any]):
         self._actor = user
         self._model_id = model_id
         self._properties = data.copy()
         self._model: Optional[SqlaTable] = None
 
-    def run(self):
+    def run(self) -> Model:
         self.validate()
-        try:
-            dataset = DatasetDAO.update(self._model, self._properties)
-        except DAOUpdateFailedError as e:
-            logger.exception(e.exception)
-            raise DatasetUpdateFailedError()
-        return dataset
+        if self._model:
+            try:
+                dataset = DatasetDAO.update(self._model, self._properties)
+                return dataset
+            except DAOUpdateFailedError as ex:
+                logger.exception(ex.exception)
+                raise DatasetUpdateFailedError()
+        raise DatasetUpdateFailedError()
 
     def validate(self) -> None:
-        exceptions = list()
+        exceptions: List[ValidationError] = list()
         owner_ids: Optional[List[int]] = self._properties.get("owners")
         # Validate/populate model exists
         self._model = DatasetDAO.find_by_id(self._model_id)
@@ -89,8 +92,8 @@ class UpdateDatasetCommand(BaseCommand):
         try:
             owners = populate_owners(self._actor, owner_ids)
             self._properties["owners"] = owners
-        except ValidationError as e:
-            exceptions.append(e)
+        except ValidationError as ex:
+            exceptions.append(ex)
 
         # Validate columns
         columns = self._properties.get("columns")
@@ -107,7 +110,9 @@ class UpdateDatasetCommand(BaseCommand):
             exception.add_list(exceptions)
             raise exception
 
-    def _validate_columns(self, columns: List[Dict], exceptions: List[ValidationError]):
+    def _validate_columns(
+        self, columns: List[Dict[str, Any]], exceptions: List[ValidationError]
+    ) -> None:
         # Validate duplicates on data
         if self._get_duplicates(columns, "column_name"):
             exceptions.append(DatasetColumnsDuplicateValidationError())
@@ -127,7 +132,9 @@ class UpdateDatasetCommand(BaseCommand):
             ):
                 exceptions.append(DatasetColumnsExistsValidationError())
 
-    def _validate_metrics(self, metrics: List[Dict], exceptions: List[ValidationError]):
+    def _validate_metrics(
+        self, metrics: List[Dict[str, Any]], exceptions: List[ValidationError]
+    ) -> None:
         if self._get_duplicates(metrics, "metric_name"):
             exceptions.append(DatasetMetricsDuplicateValidationError())
         else:
@@ -145,7 +152,7 @@ class UpdateDatasetCommand(BaseCommand):
                 exceptions.append(DatasetMetricsExistsValidationError())
 
     @staticmethod
-    def _get_duplicates(data: List[Dict], key: str):
+    def _get_duplicates(data: List[Dict[str, Any]], key: str) -> List[str]:
         duplicates = [
             name
             for name, count in Counter([item[key] for item in data]).items()

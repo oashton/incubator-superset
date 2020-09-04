@@ -17,11 +17,18 @@
  * under the License.
  */
 import { SupersetClient } from '@superset-ui/connection';
+import { getTimeFormatter, TimeFormats } from '@superset-ui/time-format';
 import getClientErrorObject from './getClientErrorObject';
 
 // ATTENTION: If you change any constants, make sure to also change constants.py
 
 export const NULL_STRING = '<NULL>';
+
+// moment time format strings
+export const SHORT_DATE = 'MMM D, YYYY';
+export const SHORT_TIME = 'h:m a';
+
+const DATETIME_FORMATTER = getTimeFormatter(TimeFormats.DATABASE_DATETIME);
 
 export function getParamFromQuery(query, param) {
   const vars = query.split('&');
@@ -59,7 +66,7 @@ export function getParamsFromUrl() {
 
 export function getShortUrl(longUrl) {
   return SupersetClient.post({
-    endpoint: '/r/shortner/',
+    endpoint: '/superset/shortner/',
     postPayload: { data: `/${longUrl}` }, // note: url should contain 2x '/' to redirect properly
     parseMethod: 'text',
     stringify: false, // the url saves with an extra set of string quotes without this
@@ -74,7 +81,7 @@ export function getShortUrl(longUrl) {
 
 export function getShortUrlWithBookmark(longUrl, bookmarkName) {
   return SupersetClient.post({
-    endpoint: '/r/shortner-bookmark/',
+    endpoint: '/superset/shortner-bookmark/',
     postPayload: { data: `/${longUrl}`, bookmark: bookmarkName }, // note: url should contain 2x '/' to redirect properly
     parseMethod: 'text',
     stringify: false, // the url saves with an extra set of string quotes without this
@@ -128,4 +135,19 @@ export function prepareCopyToClipboardTabularData(data) {
     result += Object.values(data[i]).join('\t') + '\n';
   }
   return result;
+}
+
+export function applyFormattingToTabularData(data) {
+  if (!data || data.length === 0 || !('__timestamp' in data[0])) {
+    return data;
+  }
+  return data.map(row => ({
+    ...row,
+    /* eslint-disable no-underscore-dangle */
+    __timestamp:
+      row.__timestamp === 0 || row.__timestamp
+        ? DATETIME_FORMATTER(new Date(row.__timestamp))
+        : row.__timestamp,
+    /* eslint-enable no-underscore-dangle */
+  }));
 }

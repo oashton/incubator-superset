@@ -20,7 +20,8 @@ module.exports = {
   testRegex: '\\/spec\\/.*(_spec|\\.test)\\.(j|t)sx?$',
   moduleNameMapper: {
     '\\.(css|less)$': '<rootDir>/spec/__mocks__/styleMock.js',
-    '\\.(gif|ttf|eot|svg)$': '<rootDir>/spec/__mocks__/fileMock.js',
+    '\\.(gif|ttf|eot)$': '<rootDir>/spec/__mocks__/fileMock.js',
+    '\\.svg$': '<rootDir>/spec/__mocks__/svgrMock.js',
     '^src/(.*)$': '<rootDir>/src/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/spec/helpers/shim.js'],
@@ -34,12 +35,9 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   globals: {
     'ts-jest': {
+      babelConfig: true,
       diagnostics: {
         warnOnly: true,
-      },
-      tsConfig: {
-        jsx: 'react',
-        esModuleInterop: true,
       },
     },
   },

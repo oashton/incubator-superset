@@ -73,7 +73,7 @@ class ChartHolder extends React.Component {
   static renderInFocusCSS(columnName) {
     return (
       <style>
-        {`label[for=${columnName}] + .Select .Select-control {
+        {`label[for=${columnName}] + .Select .Select__control {
                     border-color: #00736a;
                     transition: border-color 1s ease-in-out;
            }`}
@@ -252,9 +252,9 @@ class ChartHolder extends React.Component {
               <Chart
                 componentId={component.id}
                 id={component.meta.chartId}
+                dashboardId={dashboardId}
                 width={chartWidth}
                 height={chartHeight}
-                dashboardId={dashboardId}
                 sliceName={component.meta.sliceName || ''}
                 updateSliceName={this.handleUpdateSliceName}
                 isComponentVisible={isComponentVisible}
