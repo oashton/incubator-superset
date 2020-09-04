@@ -1136,7 +1136,7 @@ class BigNumberViz(BaseViz):
         df = df.pivot_table(
             index=DTTM_ALIAS,
             columns=[],
-            values=self.metric_labels,
+            values=self.metric_labels + self.form_data.get('columns', []),
             dropna=False,
             aggfunc=np.min,  # looking for any (only) value, preserving `None`
         )
