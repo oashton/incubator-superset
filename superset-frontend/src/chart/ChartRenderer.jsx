@@ -197,8 +197,8 @@ class ChartRenderer extends React.Component {
       vizType === 'table'
         ? `superset-chart-${snakeCaseVizType}`
         : snakeCaseVizType;
-    formData['text_color'] = textColor
-
+    formData['text_color'] = textColor;
+    
     const webpackHash =
       process.env.WEBPACK_MODE === 'development'
         ? `-${

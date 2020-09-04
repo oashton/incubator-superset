@@ -119,9 +119,8 @@ class Chart extends React.PureComponent {
 
     const isColored = (column) => column['column_name'] === COLOR_COLUMN;
     const datasourceReady = 'columns' in datasource
-    //const getColorData = datasource.columns.some(isColored) ? datasourceReady : false;
     console.log('Getting extra data...');
-    console.log(datasource);
+
     if (vizType === BIG_NUMBER_TYPE && chartStatus !== 'loading'){
       let queryObj = formData;
       queryObj['columns'] = [COLOR_COLUMN];
@@ -144,12 +143,11 @@ class Chart extends React.PureComponent {
 
       const query = chartDataRequest
         .then(json => {
-          console.log(json.result);
           const data = json.result[0].data;
           if(data.length > 0) {
-            const last_val = data[data.length - 1]
+            const lastVal = data[data.length - 1];
             this.setState({
-              textColor: last_val['color'] ? 'color' in last_val : 'black'
+              textColor: 'color' in lastVal ? lastVal['color'] : 'black'
             })
           }
         })
