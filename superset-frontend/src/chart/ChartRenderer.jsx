@@ -95,6 +95,7 @@ class ChartRenderer extends React.Component {
         nextProps.width !== this.props.width ||
         nextProps.triggerRender ||
         nextProps.formData.color_scheme !== this.props.formData.color_scheme ||
+        nextProps.textColor !== this.props.textColor && nextProps.textColor !== 'black' ||
         nextProps.cacheBusterProp !== this.props.cacheBusterProp
       ) {
         return true;
@@ -184,6 +185,7 @@ class ChartRenderer extends React.Component {
       initialValues,
       formData,
       queryResponse,
+      textColor,
     } = this.props;
 
     // It's bad practice to use unprefixed `vizType` as classnames for chart
@@ -195,7 +197,8 @@ class ChartRenderer extends React.Component {
       vizType === 'table'
         ? `superset-chart-${snakeCaseVizType}`
         : snakeCaseVizType;
-
+    formData['text_color'] = textColor;
+    
     const webpackHash =
       process.env.WEBPACK_MODE === 'development'
         ? `-${
