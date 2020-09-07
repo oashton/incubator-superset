@@ -377,6 +377,7 @@ export default class FilterableTable extends PureComponent<
       this.props.expandedColumns.indexOf(label) > -1
         ? 'header-style-disabled'
         : 'header-style';
+    let styleTop: any = style.top;
     return (
       <TooltipWrapper key={key} label="header" tooltip={label}>
         <div
@@ -384,8 +385,8 @@ export default class FilterableTable extends PureComponent<
             ...style,
             top:
               typeof style.top === 'number'
-                ? style.top - GRID_POSITION_ADJUSTMENT
-                : style.top,
+                ? styleTop  - GRID_POSITION_ADJUSTMENT
+                : styleTop,
           }}
           className={`${className} grid-cell grid-header-cell`}
         >
@@ -409,6 +410,7 @@ export default class FilterableTable extends PureComponent<
     const columnKey = this.props.orderedColumnKeys[columnIndex];
     const cellData = this.list.get(rowIndex)[columnKey];
     const content = this.getCellContent({ cellData, columnKey });
+    let styleTop: any = style.top;
     const cellNode = (
       <div
         key={key}
@@ -416,8 +418,8 @@ export default class FilterableTable extends PureComponent<
           ...style,
           top:
             typeof style.top === 'number'
-              ? style.top - GRID_POSITION_ADJUSTMENT
-              : style.top,
+              ? styleTop - GRID_POSITION_ADJUSTMENT
+              : styleTop,
         }}
         className={`grid-cell ${this.rowClassName({ index: rowIndex })}`}
       >
