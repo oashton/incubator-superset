@@ -97,14 +97,11 @@ class AnnotationModelView(
 class AnnotationLayerModelView(SupersetModelView):  # pylint: disable=too-many-ancestors
     datamodel = SQLAInterface(AnnotationLayer)
     include_route_methods = RouteMethod.CRUD_SET | {RouteMethod.API_READ}
-
     related_views = [AnnotationModelView]
     list_title = _("Annotation Layers")
-
     show_title = _("Show Annotation Layer")
     add_title = _("Add Annotation Layer")
     edit_title = _("Edit Annotation Layer")
-
     list_columns = ["id", "name", "descr"]
     edit_columns = ["name", "descr"]
     add_columns = edit_columns
