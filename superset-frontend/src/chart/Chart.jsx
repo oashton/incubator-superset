@@ -29,7 +29,6 @@ import ErrorMessageWithStackTrace from '../components/ErrorMessage/ErrorMessageW
 import ErrorBoundary from '../components/ErrorBoundary';
 import ChartRenderer from './ChartRenderer';
 import './chart.less';
-import { getChartDataRequest } from "./chartAction";
 
 const propTypes = {
   annotationData: PropTypes.object,
@@ -85,72 +84,49 @@ class Chart extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      textColor: 'black'
-    }
+      textColor: undefined,
+    };
 
     this.handleRenderContainerFailure = this.handleRenderContainerFailure.bind(
       this,
     );
-    this.getExtraData = this.getExtraData.bind(this);
+    this.runExtraOpts = this.runExtraOpts.bind(this);
   }
 
   componentDidMount() {
     if (this.props.triggerQuery) {
       this.runQuery();
     }
-    this.getExtraData();
+    this.runExtraOpts();
   }
 
   componentDidUpdate() {
     if (this.props.triggerQuery) {
       this.runQuery();
     }
-    this.getExtraData();
+    this.runExtraOpts();
   }
-  
-  getExtraData() {
-    const {
-      dashboardId,
-      vizType,
-      formData,
-      chartStatus,
-      datasource,
-    } = this.props;
 
-    const isColored = (column) => column['column_name'] === COLOR_COLUMN;
-    const datasourceReady = 'columns' in datasource
-    console.log('Getting extra data...');
+  runExtraOpts() {
+    const { vizType, chartStatus, queryResponse } = this.props;
 
-    if (vizType === BIG_NUMBER_TYPE && chartStatus !== 'loading'){
-      let queryObj = formData;
-      queryObj['columns'] = [COLOR_COLUMN];
-
-      const controller = new AbortController();
-      const requestParams = {
-        signal: controller.signal,
-        timeout: 120 * 1000,
-      };
-      if (dashboardId) requestParams.dashboard_id = dashboardId;
-
-      const chartDataRequest = getChartDataRequest({
-        formData,
-        resultformDataFormat: 'json',
-        resultType: 'full',
-        force: false,
-        method: 'POST',
-        requestParams,
-      });
-
-      const query = chartDataRequest
-        .then(json => {
-          const data = json.result[0].data;
-          if(data.length > 0) {
-            const lastVal = data[data.length - 1];
-            this.setState({
-              textColor: 'color' in lastVal ? lastVal['color'] : 'black'
-            })
-          }
-        })
+    if (
+      vizType === BIG_NUMBER_TYPE &&
+      chartStatus !== 'loading' &&
+      'data' in queryResponse
+    ) {
+      let lastItem;
+      const dataSize = queryResponse.data.length;
+      let isColored = false;
+      if (dataSize > 0) {
+        lastItem = queryResponse.data[dataSize - 1];
+        if (COLOR_COLUMN in lastItem) isColored = true;
+      }
+      if (isColored && lastItem.color !== this.state.textColor) {
+        this.setState({
+          textColor: lastItem.color,
+        });
+      }
     }
   }
 
@@ -245,6 +221,8 @@ class Chart extends React.PureComponent {
     const containerStyles = isLoading ? { height, width } : null;
     const isFaded = refreshOverlayVisible && !errorMessage;
     this.renderContainerStartTime = Logger.getTimestamp();
+    this.props.formData.textColor = this.state.textColor;
+
     const filterValidation = this.validateFilterRequiredRestriction();
     if (chartStatus === 'failed') {
       return this.renderErrorMessage();
@@ -270,7 +248,7 @@ class Chart extends React.PureComponent {
           )}
           {filterValidation && (
             <div className={`slice_container ${isFaded ? ' faded' : ''}`}>
-              <ChartRenderer textColor={this.state.textColor} {...this.props} />
+              <ChartRenderer {...this.props} />
             </div>
           )}
           {!filterValidation && (
