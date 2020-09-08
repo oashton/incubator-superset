@@ -252,7 +252,7 @@ export function runAnnotationQuery(
       {},
     );
 
-    if (!isDashboardRequest && fd) {
+    if (fd !== null) {
       const hasExtraFilters = fd.extra_filters && fd.extra_filters.length > 0;
       sliceFormData.extra_filters = hasExtraFilters
         ? fd.extra_filters

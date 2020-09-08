@@ -66,7 +66,7 @@ export function getParamsFromUrl() {
 
 export function getShortUrl(longUrl) {
   return SupersetClient.post({
-    endpoint: '/superset/shortner/',
+    endpoint: '/r/shortner/',
     postPayload: { data: `/${longUrl}` }, // note: url should contain 2x '/' to redirect properly
     parseMethod: 'text',
     stringify: false, // the url saves with an extra set of string quotes without this
@@ -81,7 +81,7 @@ export function getShortUrl(longUrl) {
 
 export function getShortUrlWithBookmark(longUrl, bookmarkName) {
   return SupersetClient.post({
-    endpoint: '/superset/shortner-bookmark/',
+    endpoint: '/r/shortner-bookmark/',
     postPayload: { data: `/${longUrl}`, bookmark: bookmarkName }, // note: url should contain 2x '/' to redirect properly
     parseMethod: 'text',
     stringify: false, // the url saves with an extra set of string quotes without this

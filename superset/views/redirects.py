@@ -58,3 +58,19 @@ class R(BaseSupersetView):  # pylint: disable=invalid-name
             ),
             mimetype="text/plain",
         )
+
+    @event_logger.log_this
+    @has_access_api
+    @expose("/shortner-bookmark/", methods=["POST"])
+    def shortner_bookmark(self) -> FlaskResponse:
+        url = request.form.get("data")
+        bookmark = request.form.get("bookmark")
+        obj = models.Url(url=url, label=bookmark)
+        db.session.add(obj)
+        db.session.commit()
+        return Response(
+            "{scheme}://{request.headers[Host]}/r/{obj.id}".format(
+                scheme=request.scheme, request=request, obj=obj
+            ),
+            mimetype="text/plain",
+        )
