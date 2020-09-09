@@ -1120,8 +1120,12 @@ class BigNumberViz(BaseViz):
     is_timeseries = True
     no_data_title = _("No data")
     no_data_message = _("Try applying different filters or ensuring your Datasource contains data")
+    color_column = 'color'
 
     def query_obj(self) -> QueryObjectDict:
+        if self.color_column in set(self.datasource.column_names):
+            self.form_data['columns'] = self.form_data.get('columns', []) + [self.color_column]
+
         d = super().query_obj()
         metric = self.form_data.get("metric")
         if not metric:
