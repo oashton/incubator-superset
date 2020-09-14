@@ -718,7 +718,6 @@ def schedule_window(
             schedule.crontab, start_at, stop_at, resolution=resolution
         ):
             get_scheduler_action(report_type).apply_async(args, eta=eta)  # type: ignore
-            break
 
     return None
 
