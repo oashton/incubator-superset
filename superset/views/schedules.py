@@ -141,7 +141,7 @@ class EmailScheduleView(
         # Notify the user that schedule changes will be activate only in the
         # next hour
         if item.active:
-            flash("Schedule changes will get applied in one hour", "warning")
+            flash(_("Schedule changes will get applied in one hour"), "warning")
 
     def post_update(self, item: "EmailScheduleView") -> None:
         self.post_add(item)
