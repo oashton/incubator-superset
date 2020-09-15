@@ -2176,7 +2176,7 @@ msgstr "Los cambios programados serán aplicados en una hora"
 
 #: superset/views/schedules.py:183
 msgid "Schedule Email Reports for Dashboards"
-msgstr ""
+msgstr "Programar Reportes por Correo de Cuadros de Mando"
 
 #: superset/views/schedules.py:185
 msgid "Manage Email Reports for Dashboards"
@@ -2208,7 +2208,7 @@ msgstr "Tipo de entrega"
 
 #: superset/views/schedules.py:244
 msgid "Schedule Email Reports for Charts"
-msgstr ""
+msgstr "Programar Reportes por Correo de Gráficos"
 
 #: superset/views/schedules.py:246
 msgid "Manage Email Reports for Charts"
