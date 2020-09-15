@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-15 15:14-0500\n"
+"POT-Creation-Date: 2020-09-15 17:02-0500\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -138,7 +138,7 @@ msgstr "Correos Programados de Gráficos"
 
 #: superset/app.py:430
 msgid "Alerts"
-msgstr ""
+msgstr "Alertas"
 
 #: superset/app.py:444
 msgid "Access requests"
@@ -1005,7 +1005,8 @@ msgstr "Cluster"
 #: superset-frontend/src/views/dashboardList/DashboardList.tsx:151
 #: superset-frontend/src/views/datasetList/DatasetList.tsx:341
 #: superset/connectors/druid/views.py:325 superset/connectors/sqla/views.py:372
-#: superset/views/chart/mixin.py:83 superset/views/dashboard/mixin.py:76
+#: superset/views/alerts.py:77 superset/views/chart/mixin.py:83
+#: superset/views/dashboard/mixin.py:76
 msgid "Owners"
 msgstr "Propietarios"
 
@@ -1276,9 +1277,10 @@ msgstr ""
 
 #: superset/connectors/sqla/views.py:362 superset/connectors/sqla/views.py:363
 #: superset/templates/superset/import_dashboards.html:54
-#: superset/views/database/forms.py:112 superset/views/database/forms.py:309
-#: superset/views/database/mixins.py:192 superset/views/sql_lab.py:70
-#: superset/views/sql_lab.py:74 superset/views/sql_lab.py:135
+#: superset/views/alerts.py:75 superset/views/database/forms.py:112
+#: superset/views/database/forms.py:309 superset/views/database/mixins.py:192
+#: superset/views/sql_lab.py:70 superset/views/sql_lab.py:74
+#: superset/views/sql_lab.py:135
 msgid "Database"
 msgstr "Base de datos"
 
@@ -1585,8 +1587,8 @@ msgstr "Gráfico"
 #: superset-frontend/src/components/Menu/NewMenu.jsx:56
 #: superset-frontend/src/welcome/DashboardTable.tsx:65
 #: superset/templates/appbuilder/navbar_right.html:40
-#: superset/views/dashboard/mixin.py:72 superset/views/dashboard/views.py:136
-#: superset/views/schedules.py:223
+#: superset/views/alerts.py:80 superset/views/dashboard/mixin.py:72
+#: superset/views/dashboard/views.py:136 superset/views/schedules.py:223
 msgid "Dashboard"
 msgstr "Cuadro de Mando"
 
@@ -1793,11 +1795,48 @@ msgstr "Roles a conceder"
 msgid "Created On"
 msgstr "Creado El"
 
-#: superset/views/alerts.py:72
-msgid "Log Retentions (days)"
-msgstr ""
+#: superset/views/alerts.py:48
+msgid "Add Alert"
+msgstr "Crear Alerta"
 
-#: superset/views/alerts.py:75
+#: superset-frontend/src/SqlLab/components/SaveQuery.jsx:95
+#: superset-frontend/src/SqlLab/components/ScheduleQueryButton.jsx:137
+#: superset-frontend/src/datasource/DatasourceEditor.jsx:91
+#: superset-frontend/src/datasource/DatasourceEditor.jsx:571
+#: superset-frontend/src/datasource/DatasourceEditor.jsx:579
+#: superset-frontend/src/explore/components/controls/FilterBoxItemControl.jsx:150
+#: superset/views/alerts.py:73 superset/views/annotations.py:72
+#: superset/views/sql_lab.py:133
+msgid "Label"
+msgstr "Etiqueta"
+
+#: superset/views/alerts.py:74 superset/views/schedules.py:227
+#: superset/views/schedules.py:290
+msgid "Active"
+msgstr "Activo"
+
+#: superset/views/alerts.py:76
+msgid "Alert Type"
+msgstr "Tipo de Alerta"
+
+#: superset/views/alerts.py:78 superset/views/schedules.py:229
+#: superset/views/schedules.py:292
+msgid "Recipients"
+msgstr "Destinatarios"
+
+#: superset/views/alerts.py:79
+msgid "Slide"
+msgstr "Gráfico"
+
+#: superset/views/alerts.py:81
+msgid "Grace Period"
+msgstr "Tiempo de Gracia"
+
+#: superset/views/alerts.py:83
+msgid "Log Retentions (days)"
+msgstr "Retención de Logs (días)"
+
+#: superset/views/alerts.py:86
 msgid ""
 "A SQL statement that defines whether the alert should get triggered or "
 "not. If the statement return no row, the alert is not triggered. If the "
@@ -1805,20 +1844,35 @@ msgid ""
 " they are 'truthy' if any cell is truthy, the alert will fire. Truthy "
 "values are non zero, non null, non empty strings."
 msgstr ""
+"Una sentencia SQL que defina si la alerta debe activarse o no. Si la "
+"sentencia no retorna filas, la alerta no es activada. Si la sentencia "
+"retorna uno o más filas, las celdas serán evaluadas para ver si son "
+"'veraces', si alguna celda es veraz, la alerta de activará. Valores "
+"veraces son no nulo, no cero y cadenas de caractéres no vacías."
 
-#: superset/views/alerts.py:89
+#: superset/views/alerts.py:95
+msgid "A CRON-like expression. "
+msgstr "Una expresión con notación tipo CRON. "
+
+#: superset/views/alerts.py:97
+msgid " is a helpful resource that can help you craft a CRON expression."
+msgstr " Es un recurso útil que puede ayudarlo a crear una expresión CRON."
+
+#: superset/views/alerts.py:100
 msgid "A semicolon ';' delimited list of email addresses"
-msgstr ""
+msgstr "Un punto y coma ';' delimita la lista de correos electrónicos"
 
-#: superset/views/alerts.py:90
+#: superset/views/alerts.py:101
 msgid "How long to keep the logs around for this alert"
-msgstr ""
+msgstr "Cuanto tiempo se deben conservar los logs para ésta alerta."
 
-#: superset/views/alerts.py:91
+#: superset/views/alerts.py:102
 msgid ""
 "Once an alert is triggered, how long, in seconds, before Superset nags "
 "you again."
 msgstr ""
+"Una vez la alerta es activada, cuánto tiempo, en segundos, antes de que "
+"Superset vuelva a dar aviso."
 
 #: superset/views/annotations.py:36
 msgid "annotation start time or end time is required."
@@ -1843,16 +1897,6 @@ msgstr ""
 #: superset/views/annotations.py:71
 msgid "Layer"
 msgstr "Capa"
-
-#: superset-frontend/src/SqlLab/components/SaveQuery.jsx:95
-#: superset-frontend/src/SqlLab/components/ScheduleQueryButton.jsx:137
-#: superset-frontend/src/datasource/DatasourceEditor.jsx:91
-#: superset-frontend/src/datasource/DatasourceEditor.jsx:571
-#: superset-frontend/src/datasource/DatasourceEditor.jsx:579
-#: superset-frontend/src/explore/components/controls/FilterBoxItemControl.jsx:150
-#: superset/views/annotations.py:72 superset/views/sql_lab.py:133
-msgid "Label"
-msgstr "Etiqueta"
 
 #: superset/views/annotations.py:74
 msgid "Start"
@@ -2182,17 +2226,9 @@ msgstr "Programar Reportes por Correo de Cuadros de Mando"
 msgid "Manage Email Reports for Dashboards"
 msgstr ""
 
-#: superset/views/schedules.py:227 superset/views/schedules.py:290
-msgid "Active"
-msgstr "Activo"
-
 #: superset/views/schedules.py:228 superset/views/schedules.py:291
 msgid "Crontab"
 msgstr ""
-
-#: superset/views/schedules.py:229 superset/views/schedules.py:292
-msgid "Recipients"
-msgstr "Destinatarios"
 
 #: superset/views/schedules.py:230 superset/views/schedules.py:293
 msgid "Slack Channel"
