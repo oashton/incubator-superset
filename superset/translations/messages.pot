@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-15 11:32-0500\n"
+"POT-Creation-Date: 2020-09-15 14:22-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2052,6 +2052,12 @@ msgstr ""
 
 #: superset/views/css_templates.py:39
 msgid "Template Name"
+msgstr ""
+
+#: superset/views/schedules.py:76
+msgid ""
+"Unix style crontab schedule to deliver emails. Changes to schedules "
+"reflect in one hour."
 msgstr ""
 
 #: superset/views/schedules.py:144

@@ -73,8 +73,8 @@ class EmailScheduleView(
     description_columns = {
         "deliver_as_group": "If enabled, send a single email to all "
         "recipients (in email/To: field)",
-        "crontab": "Unix style crontab schedule to deliver emails. "
-        "Changes to schedules reflect in one hour.",
+        "crontab": _("Unix style crontab schedule to deliver emails. "
+        "Changes to schedules reflect in one hour."),
         "delivery_type": "Indicates how the rendered content is delivered",
     }
 
