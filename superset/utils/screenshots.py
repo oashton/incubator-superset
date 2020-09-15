@@ -181,7 +181,7 @@ class AuthWebDriverProxy:
 
 
 class BaseScreenshot:
-    driver_type = "chrome"
+    driver_type = "firefox"
     thumbnail_type: str = ""
     element: str = ""
     window_size: WindowSize = (800, 600)

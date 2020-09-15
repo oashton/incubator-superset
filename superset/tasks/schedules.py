@@ -752,11 +752,9 @@ def schedule_hourly() -> None:
 @celery_app.task(name="alerts.schedule_check")
 def schedule_alerts() -> None:
     """ Celery beat job meant to be invoked every minute to check alerts """
-    resolution = 0
+    resolution = config["EMAIL_REPORTS_CRON_RESOLUTION"] * 60
     now = datetime.utcnow()
-    start_at = now - timedelta(
-        seconds=3600
-    )  # process any missed tasks in the past hour
-    stop_at = now + timedelta(seconds=1)
+    start_at = now.replace(microsecond=0, second=0, minute=0)
+    stop_at = now + timedelta(seconds=3600)
 
     schedule_window(ScheduleType.alert, start_at, stop_at, resolution)
