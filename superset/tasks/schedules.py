@@ -142,7 +142,7 @@ def _generate_report_content(
     slack_message = __(
         """
         *%(name)s*\n
-        <%(url)s|Explore in Superset>
+        <%(url)s|Explorar en Gemelo Analítico>
         """,
         name=name,
         url=url,
@@ -152,7 +152,7 @@ def _generate_report_content(
         images = None
         data = {"screenshot.png": screenshot}
         body = __(
-            '<b><a href="%(url)s">Explore in Superset</a></b><p></p>',
+            '<b><a href="%(url)s">Explorar en Gemelo Analítico</a></b><p></p>',
             name=name,
             url=url,
         )
@@ -166,7 +166,7 @@ def _generate_report_content(
         data = None
         body = __(
             """
-            <b><a href="%(url)s">Explore in Superset</a></b><p></p>
+            <b><a href="%(url)s">Explorar en Gemelo Analítico</a></b><p></p>
             <img src="cid:%(msgid)s">
             """,
             name=name,
@@ -381,7 +381,7 @@ def _get_slice_data(slc: Slice, delivery_type: EmailDeliveryType) -> ReportConte
     elif delivery_type == EmailDeliveryType.attachment:
         data = {__("%(name)s.csv", name=slc.slice_name): content}
         body = __(
-            '<b><a href="%(url)s">Explore in Superset</a></b><p></p>',
+            '<b><a href="%(url)s">Explorar en Gemelo Analítico</a></b><p></p>',
             name=slc.slice_name,
             url=slice_url_user_friendly,
         )
@@ -390,7 +390,7 @@ def _get_slice_data(slc: Slice, delivery_type: EmailDeliveryType) -> ReportConte
     slack_message = __(
         """
         *%(slice_name)s*\n
-        <%(slice_url_user_friendly)s|Explore in Superset>
+        <%(slice_url_user_friendly)s|Explorar en Gemelo Analítico>
         """,
         slice_name=slc.slice_name,
         slice_url_user_friendly=slice_url_user_friendly,
