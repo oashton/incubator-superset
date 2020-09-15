@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-09 10:35-0500\n"
+"POT-Creation-Date: 2020-09-15 11:32-0500\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -223,7 +223,7 @@ msgstr "Tabla de series de tiempo"
 msgid "Time-series Table"
 msgstr "Tabla de series de tiempo"
 
-#: superset/viz.py:720 superset/viz.py:1647 superset/viz_sip38.py:726
+#: superset/viz.py:720 superset/viz.py:1651 superset/viz_sip38.py:726
 #: superset/viz_sip38.py:1609
 msgid "Pick at least one metric"
 msgstr "Elige al menos una métrica"
@@ -288,147 +288,147 @@ msgstr "Número Grande con Línea de Tendencia"
 msgid "Try applying different filters or ensuring your Datasource contains data"
 msgstr "Intenta aplicar diferentes filtros"
 
-#: superset/viz.py:1128 superset/viz.py:1162 superset/viz_sip38.py:1113
+#: superset/viz.py:1132 superset/viz.py:1166 superset/viz_sip38.py:1113
 #: superset/viz_sip38.py:1144
 msgid "Pick a metric!"
 msgstr "Elige una métrica!"
 
-#: superset/viz.py:1154 superset/viz_sip38.py:1136
+#: superset/viz.py:1158 superset/viz_sip38.py:1136
 msgid "Big Number"
 msgstr "Número Grande"
 
-#: superset/viz.py:1176 superset/viz_sip38.py:1158
+#: superset/viz.py:1180 superset/viz_sip38.py:1158
 msgid "Time Series - Line Chart"
 msgstr "Serie de tiempo - Gráfico de líneas"
 
-#: superset/viz.py:1177
+#: superset/viz.py:1181
 msgid "Line Chart"
 msgstr "Gráfico de líneas"
 
-#: superset/viz.py:1247 superset/viz.py:1462 superset/viz_sip38.py:1223
+#: superset/viz.py:1251 superset/viz.py:1466 superset/viz_sip38.py:1223
 #: superset/viz_sip38.py:1437
 msgid "Pick a time granularity for your time series"
 msgstr "Elige una granularidad de tiempo para tus series de tiempo."
 
-#: superset/viz.py:1303 superset/viz_sip38.py:1279
+#: superset/viz.py:1307 superset/viz_sip38.py:1279
 msgid ""
 "`Since` and `Until` time bounds should be specified when using the `Time "
 "Shift` feature."
 msgstr ""
 
-#: superset/viz.py:1373 superset/viz_sip38.py:1349
+#: superset/viz.py:1377 superset/viz_sip38.py:1349
 msgid "Time Series - Multiple Line Charts"
 msgstr "Gráfico de múltiples líneas"
 
-#: superset/viz.py:1374
+#: superset/viz.py:1378
 msgid "Multiple Line Charts"
 msgstr "Gráfico de múltiples líneas"
 
-#: superset/viz.py:1403 superset/viz_sip38.py:1379
+#: superset/viz.py:1407 superset/viz_sip38.py:1379
 msgid "Time Series - Dual Axis Line Chart"
 msgstr "Series temporales - Gráfico de líneas de doble eje"
 
-#: superset/viz.py:1404
+#: superset/viz.py:1408
 msgid "Dual Line Chart"
 msgstr "Gráfico de doble linea"
 
-#: superset/viz.py:1414 superset/viz_sip38.py:1389
+#: superset/viz.py:1418 superset/viz_sip38.py:1389
 msgid "Pick a metric for left axis!"
 msgstr "Elige una métrica para el eje izquierdo!"
 
-#: superset/viz.py:1416 superset/viz_sip38.py:1391
+#: superset/viz.py:1420 superset/viz_sip38.py:1391
 msgid "Pick a metric for right axis!"
 msgstr "Elige una métrica para el eje derecho!"
 
-#: superset/viz.py:1419 superset/viz_sip38.py:1394
+#: superset/viz.py:1423 superset/viz_sip38.py:1394
 msgid "Please choose different metrics on left and right axis"
 msgstr "Por favor, elige diferentes métricas en el eje izquierdo y derecho"
 
-#: superset/viz.py:1479 superset/viz_sip38.py:1454
+#: superset/viz.py:1483 superset/viz_sip38.py:1454
 msgid "Time Series - Bar Chart"
 msgstr "Series de Tiempo - Gráfico de Barras"
 
-#: superset/viz.py:1480
+#: superset/viz.py:1484
 msgid "Time-series Bar Chart"
 msgstr "Gráfico de barras de series de tiempo"
 
-#: superset/viz.py:1489 superset/viz_sip38.py:1463
+#: superset/viz.py:1493 superset/viz_sip38.py:1463
 msgid "Time Series - Period Pivot"
 msgstr "Series de tiempo con pivote periódico"
 
-#: superset/viz.py:1490
+#: superset/viz.py:1494
 msgid "Time-series Period Pivot"
 msgstr "Series de tiempo con pivote periódico"
 
-#: superset/viz.py:1537 superset/viz_sip38.py:1510
+#: superset/viz.py:1541 superset/viz_sip38.py:1510
 msgid "Time Series - Percent Change"
 msgstr "Series de tiempo - cambio porcentual"
 
-#: superset/viz.py:1538
+#: superset/viz.py:1542
 msgid "Time-series Percent Change"
 msgstr "Series de tiempo cambio porcentual"
 
-#: superset/viz.py:1546 superset/viz_sip38.py:1518
+#: superset/viz.py:1550 superset/viz_sip38.py:1518
 msgid "Time Series - Stacked"
 msgstr "Series de Tiempo - Apiladas"
 
-#: superset/viz.py:1547
+#: superset/viz.py:1551
 msgid "Area Chart"
 msgstr "Gráfico de area"
 
-#: superset/viz.py:1557 superset/viz_sip38.py:1528
+#: superset/viz.py:1561 superset/viz_sip38.py:1528
 msgid "Distribution - NVD3 - Pie Chart"
 msgstr "Distribución - NVD3 - Gráfico Circular"
 
-#: superset/viz.py:1558
+#: superset/viz.py:1562
 msgid "Pie Chart"
 msgstr "Gráfico circular"
 
-#: superset/viz.py:1577 superset/viz_sip38.py:1547
+#: superset/viz.py:1581 superset/viz_sip38.py:1547
 msgid "Histogram"
 msgstr "Histograma"
 
-#: superset/viz.py:1587 superset/viz_sip38.py:1556
+#: superset/viz.py:1591 superset/viz_sip38.py:1556
 msgid "Must have at least one numeric column specified"
 msgstr ""
 
-#: superset/viz.py:1633 superset/viz_sip38.py:1600
+#: superset/viz.py:1637 superset/viz_sip38.py:1600
 msgid "Distribution - Bar Chart"
 msgstr "Distribución - Gráfico de barras"
 
-#: superset/viz.py:1634
+#: superset/viz.py:1638
 msgid "Bar Chart"
 msgstr "Gráfico de barras"
 
-#: superset/viz.py:1644
+#: superset/viz.py:1648
 msgid "Can't have overlap between Series and Breakdowns"
 msgstr "No se puede superponer Series y Distribuciones"
 
-#: superset/viz.py:1649 superset/viz_sip38.py:1611
+#: superset/viz.py:1653 superset/viz_sip38.py:1611
 msgid "Pick at least one field for [Series]"
 msgstr "Elige al menos un campo para [Series]"
 
-#: superset/viz.py:1699 superset/viz_sip38.py:1663
+#: superset/viz.py:1703 superset/viz_sip38.py:1663
 msgid "Sunburst"
 msgstr "Sunburst"
 
-#: superset/viz.py:1700
+#: superset/viz.py:1704
 msgid "Sunburst Chart"
 msgstr "Gráfico de anillo"
 
-#: superset/viz.py:1744 superset/viz_sip38.py:1707
+#: superset/viz.py:1748 superset/viz_sip38.py:1707
 msgid "Sankey"
 msgstr "Sankey"
 
-#: superset/viz.py:1745
+#: superset/viz.py:1749
 msgid "Sankey Diagram"
 msgstr "Diagrama sankey"
 
-#: superset/viz.py:1753
+#: superset/viz.py:1757
 msgid "Pick exactly 2 columns as [Source / Target]"
 msgstr "Elige exactamente 2 columnas como [Origen / Destino]"
 
-#: superset/viz.py:1793 superset/viz_sip38.py:1740
+#: superset/viz.py:1797 superset/viz_sip38.py:1740
 msgid ""
 "There's a loop in your Sankey, please provide a tree. Here's a faulty "
 "link: {}"
@@ -436,212 +436,212 @@ msgstr ""
 "Hay un bucle en tu Sankey, por favor proporciona un árbol. Aquí hay un "
 "enlace defectuoso: {}"
 
-#: superset/viz.py:1806 superset/viz.py:1828 superset/viz_sip38.py:1753
+#: superset/viz.py:1810 superset/viz.py:1832 superset/viz_sip38.py:1753
 #: superset/viz_sip38.py:1774
 msgid "Directed Force Layout"
 msgstr "Disposición Dirigida Forzado"
 
-#: superset/viz.py:1807
+#: superset/viz.py:1811
 msgid "Force-directed Graph"
 msgstr "Grafo de fuerzas"
 
-#: superset/viz.py:1814 superset/viz_sip38.py:1760
+#: superset/viz.py:1818 superset/viz_sip38.py:1760
 msgid "Pick exactly 2 columns to 'Group By'"
 msgstr "Elija exactamente 2 columnas para 'Agrupar por'"
 
-#: superset/viz.py:1829
+#: superset/viz.py:1833
 msgid "Chord Diagram"
 msgstr "Diagrama de cuerdas"
 
-#: superset/viz.py:1862 superset/viz_sip38.py:1806
+#: superset/viz.py:1866 superset/viz_sip38.py:1806
 msgid "Country Map"
 msgstr "Mapa de País"
 
-#: superset/viz.py:1889 superset/viz_sip38.py:1827
+#: superset/viz.py:1893 superset/viz_sip38.py:1827
 msgid "World Map"
 msgstr "Mapa Mundial"
 
 #: superset-frontend/src/dashboard/components/Header.jsx:439
-#: superset-frontend/src/explore/controls.jsx:512 superset/viz.py:1947
+#: superset-frontend/src/explore/controls.jsx:512 superset/viz.py:1951
 #: superset/viz_sip38.py:1877
 msgid "Filters"
 msgstr "Filtros"
 
-#: superset/viz.py:1965 superset/viz_sip38.py:1895
+#: superset/viz.py:1969 superset/viz_sip38.py:1895
 msgid "Invalid filter configuration, please select a column"
 msgstr ""
 
-#: superset/viz.py:2005 superset/viz_sip38.py:1933
+#: superset/viz.py:2009 superset/viz_sip38.py:1933
 msgid "iFrame"
 msgstr "Embeber objeto"
 
-#: superset/viz.py:2006
+#: superset/viz.py:2010
 msgid "IFrame"
 msgstr "Embeber objeto"
 
-#: superset/viz.py:2038 superset/viz_sip38.py:1956
+#: superset/viz.py:2042 superset/viz_sip38.py:1956
 msgid "Parallel Coordinates"
 msgstr "Coordenadas Paralelas"
 
-#: superset/viz.py:2060 superset/viz_sip38.py:1972
+#: superset/viz.py:2064 superset/viz_sip38.py:1972
 msgid "Heatmap"
 msgstr "Mapa de Calor"
 
-#: superset/viz.py:2116 superset/viz_sip38.py:2021
+#: superset/viz.py:2120 superset/viz_sip38.py:2021
 msgid "Horizon Charts"
 msgstr "Gráfico de horizontes"
 
-#: superset/viz.py:2117 superset/viz.py:2118
+#: superset/viz.py:2121 superset/viz.py:2122
 msgid "Horizon Chart"
 msgstr "Gráfico de horizontes"
 
-#: superset/viz.py:2130 superset/viz_sip38.py:2033
+#: superset/viz.py:2134 superset/viz_sip38.py:2033
 msgid "Mapbox"
 msgstr "Mapa mapbox"
 
-#: superset/viz.py:2131
+#: superset/viz.py:2135
 msgid "MapBox"
 msgstr "Mapa mapbox"
 
-#: superset/viz.py:2143 superset/viz_sip38.py:2045
+#: superset/viz.py:2147 superset/viz_sip38.py:2045
 msgid "[Longitude] and [Latitude] must be set"
 msgstr ""
 
-#: superset/viz.py:2150 superset/viz_sip38.py:2052
+#: superset/viz.py:2154 superset/viz_sip38.py:2052
 msgid "Must have a [Group By] column to have 'count' as the [Label]"
 msgstr ""
 "Debe tener una columna [Agrupar por] para tener 'contar' como la "
 "[Etiqueta]"
 
-#: superset/viz.py:2170 superset/viz_sip38.py:2072
+#: superset/viz.py:2174 superset/viz_sip38.py:2072
 msgid "Choice of [Label] must be present in [Group By]"
 msgstr "La opción de [Etiqueta] debe estar presente en [Agrupar por]"
 
-#: superset/viz.py:2178 superset/viz_sip38.py:2079
+#: superset/viz.py:2182 superset/viz_sip38.py:2079
 msgid "Choice of [Point Radius] must be present in [Group By]"
 msgstr "La opción de [Radio de puntos] debe estar presente en [Agrupar por]"
 
-#: superset/viz.py:2186 superset/viz_sip38.py:2086
+#: superset/viz.py:2190 superset/viz_sip38.py:2086
 msgid "[Longitude] and [Latitude] columns must be present in [Group By]"
 msgstr "Las columnas [Longitud] y [Latitud] deben estar presentes en [Agrupar por]"
 
-#: superset/viz.py:2266 superset/viz_sip38.py:2166
+#: superset/viz.py:2270 superset/viz_sip38.py:2166
 msgid "Deck.gl - Multiple Layers"
 msgstr "Capas multiples deck.gl"
 
-#: superset/viz.py:2267
+#: superset/viz.py:2271
 msgid "deck.gl Multiple Layers"
 msgstr "Capas multiples deck.gl"
 
-#: superset/viz.py:2306 superset/viz.py:2338 superset/viz_sip38.py:2222
+#: superset/viz.py:2310 superset/viz.py:2342 superset/viz_sip38.py:2222
 msgid "Bad spatial key"
 msgstr ""
 
-#: superset/viz.py:2324 superset/viz_sip38.py:2208
+#: superset/viz.py:2328 superset/viz_sip38.py:2208
 #, python-format
 msgid "Invalid spatial point encountered: %s"
 msgstr ""
 
-#: superset/viz.py:2360 superset/viz_sip38.py:2244
+#: superset/viz.py:2364 superset/viz_sip38.py:2244
 msgid ""
 "Encountered invalid NULL spatial entry,"
 "                                        please consider filtering those "
 "out"
 msgstr ""
 
-#: superset/viz.py:2448 superset/viz_sip38.py:2315
+#: superset/viz.py:2452 superset/viz_sip38.py:2315
 msgid "Deck.gl - Scatter plot"
 msgstr "Diagrama de dispersión deck.gl"
 
-#: superset/viz.py:2449
+#: superset/viz.py:2453
 msgid "deck.gl Scatterplot"
 msgstr "Diagrama de dispersión deck.gl"
 
-#: superset/viz.py:2498 superset/viz_sip38.py:2362
+#: superset/viz.py:2502 superset/viz_sip38.py:2362
 msgid "Deck.gl - Screen Grid"
 msgstr "Rejilla deck.gl"
 
-#: superset/viz.py:2499
+#: superset/viz.py:2503
 msgid "deck.gl Screen Grid"
 msgstr "Rejilla deck.gl"
 
-#: superset/viz.py:2525 superset/viz_sip38.py:2388
+#: superset/viz.py:2529 superset/viz_sip38.py:2388
 msgid "Deck.gl - 3D Grid"
 msgstr "Rejilla 3D deck.gl"
 
-#: superset/viz.py:2526
+#: superset/viz.py:2530
 msgid "deck.gl Grid"
 msgstr "Rejilla 3D deck.gl"
 
-#: superset/viz.py:2556 superset/viz_sip38.py:2415
+#: superset/viz.py:2560 superset/viz_sip38.py:2415
 msgid "Deck.gl - Paths"
 msgstr "Trayectoria deck.gl"
 
-#: superset/viz.py:2557
+#: superset/viz.py:2561
 msgid "deck.gl Path"
 msgstr "Trayectoria deck.gl"
 
-#: superset/viz.py:2605 superset/viz_sip38.py:2460
+#: superset/viz.py:2609 superset/viz_sip38.py:2460
 msgid "Deck.gl - Polygon"
 msgstr "Polígono deck.gl"
 
-#: superset/viz.py:2606
+#: superset/viz.py:2610
 msgid "deck.gl Polygon"
 msgstr "Polígono deck.gl"
 
-#: superset/viz.py:2635 superset/viz_sip38.py:2489
+#: superset/viz.py:2639 superset/viz_sip38.py:2489
 msgid "Deck.gl - 3D HEX"
 msgstr "Hexágono 3D deck.gl"
 
-#: superset/viz.py:2636
+#: superset/viz.py:2640
 msgid "deck.gl 3D Hexagon"
 msgstr "Hexágono 3D deck.gl"
 
-#: superset/viz.py:2655 superset/viz_sip38.py:2505
+#: superset/viz.py:2659 superset/viz_sip38.py:2505
 msgid "Deck.gl - GeoJSON"
 msgstr "GeoJSON deck.gl"
 
-#: superset/viz.py:2656
+#: superset/viz.py:2660
 msgid "deck.gl Geojson"
 msgstr "GeoJSON deck.gl"
 
-#: superset/viz.py:2675 superset/viz_sip38.py:2517
+#: superset/viz.py:2679 superset/viz_sip38.py:2517
 msgid "Deck.gl - Arc"
 msgstr "Arco deck.gl"
 
-#: superset/viz.py:2676
+#: superset/viz.py:2680
 msgid "deck.gl Arc"
 msgstr "Arco deck.gl"
 
-#: superset/viz.py:2711 superset/viz_sip38.py:2552
+#: superset/viz.py:2715 superset/viz_sip38.py:2552
 msgid "Event flow"
 msgstr "Flujo de eventos"
 
-#: superset/viz.py:2712
+#: superset/viz.py:2716
 msgid "Event Flow"
 msgstr "Flujo de eventos"
 
-#: superset/viz.py:2744 superset/viz_sip38.py:2584
+#: superset/viz.py:2748 superset/viz_sip38.py:2584
 msgid "Time Series - Paired t-test"
 msgstr "Prueba-T apareada de series de tiempo"
 
-#: superset/viz.py:2745
+#: superset/viz.py:2749
 msgid "Paired t-test Table"
 msgstr "Prueba-T apareada de series de tiempo"
 
-#: superset/viz.py:2800 superset/viz_sip38.py:2639
+#: superset/viz.py:2804 superset/viz_sip38.py:2639
 msgid "Time Series - Nightingale Rose Chart"
 msgstr "Gráfico de rosas"
 
-#: superset/viz.py:2801
+#: superset/viz.py:2805
 msgid "Nightingale Rose Chart"
 msgstr "Gráfico de rosas"
 
-#: superset/viz.py:2836 superset/viz_sip38.py:2674
+#: superset/viz.py:2840 superset/viz_sip38.py:2674
 msgid "Partition Diagram"
 msgstr "Diagrama de particiones"
 
-#: superset/viz.py:2837
+#: superset/viz.py:2841
 msgid "Partition Chart"
 msgstr "Diagrama de particiones"
 
@@ -2104,6 +2104,10 @@ msgstr ""
 #: superset/views/css_templates.py:39
 msgid "Template Name"
 msgstr "Nombre Plantilla"
+
+#: superset/views/schedules.py:144
+msgid "Schedule changes will get applied in one hour"
+msgstr "Los cambios programados serán aplicados en una hora"
 
 #: superset/views/schedules.py:183
 msgid "Schedule Email Reports for Dashboards"
@@ -3653,7 +3657,7 @@ msgstr "Escoge un tipo de visualizaciòn"
 msgid "Create new chart"
 msgstr "Crear un nuevo gráfico"
 
-#: superset-frontend/src/chart/Chart.jsx:278
+#: superset-frontend/src/chart/Chart.jsx:256
 #, python-format
 msgid "Please select a value from the filter %s"
 msgstr "Por favor seleccionar un valor del filtro %s"
@@ -6131,7 +6135,7 @@ msgstr ""
 
 #: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:387
 #, python-format
-msgid "Type or Select \[%s\]"
+msgid "Type or Select [%s]"
 msgstr "Escribe o selecciona \[%s\]"
 
 #: superset-frontend/src/visualizations/FilterBox/FilterBoxChartPlugin.js:25
@@ -8354,4 +8358,7 @@ msgstr "Recientemente vistos"
 
 #~ msgid "Select [%s]"
 #~ msgstr "Selecciona [%s]"
+
+#~ msgid "Type or Select \\[%s\\]"
+#~ msgstr "Escribe o selecciona \\[%s\\]"
 
