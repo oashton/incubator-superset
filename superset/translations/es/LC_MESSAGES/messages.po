@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-15 14:48-0500\n"
+"POT-Creation-Date: 2020-09-15 15:14-0500\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -1486,6 +1486,23 @@ msgstr "Verdadero"
 msgid "False"
 msgstr "Falso"
 
+#: superset/models/schedules.py:42
+msgid "Attachment"
+msgstr "Adjunto"
+
+#: superset/models/schedules.py:43
+msgid "Inline"
+msgstr "En línea"
+
+#: superset-frontend/src/dashboard/components/AddSliceCard.jsx:60
+#: superset/models/schedules.py:47
+msgid "Visualization"
+msgstr "Visualización"
+
+#: superset/models/schedules.py:48
+msgid "Raw data"
+msgstr "Datos en bruto"
+
 #: superset/security/manager.py:101 superset/views/access_requests.py:40
 #: superset/views/log/__init__.py:30 superset/views/log/views.py:35
 #: superset/views/schedules.py:226 superset/views/schedules.py:289
@@ -2129,7 +2146,9 @@ msgstr "Enviar Email de Prueba"
 
 #: superset/views/schedules.py:85
 msgid "If enabled, we send a test mail on create / update"
-msgstr "Si está habilitado, nosotros enviamos un correo de prueba en crear / actualizar"
+msgstr ""
+"Si está habilitado, nosotros enviamos un correo de prueba en crear / "
+"actualizar"
 
 #: superset/views/schedules.py:88
 msgid "Test Email Recipients"
@@ -2139,7 +2158,9 @@ msgstr "Destinatarios de Prueba"
 msgid ""
 "List of recipients to send test email to. If empty, we send it to the "
 "original recipients"
-msgstr "Lista de destinatarios a los que enviar el correo de prueba. Si está vacio, lo enviamos a los destinararios originales"
+msgstr ""
+"Lista de destinatarios a los que enviar el correo de prueba. Si está "
+"vacio, lo enviamos a los destinararios originales"
 
 #: superset/views/schedules.py:94
 msgid "Test Slack Channel"
@@ -2195,7 +2216,7 @@ msgstr ""
 
 #: superset/views/schedules.py:296
 msgid "Email Format"
-msgstr ""
+msgstr "Formato de Correo"
 
 #: superset/views/sql_lab.py:59
 msgid "List Query"
@@ -3964,10 +3985,6 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/actions/sliceEntities.js:96
 msgid "Sorry there was an error fetching saved charts: "
-msgstr ""
-
-#: superset-frontend/src/dashboard/components/AddSliceCard.jsx:60
-msgid "Visualization"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/AddSliceCard.jsx:64

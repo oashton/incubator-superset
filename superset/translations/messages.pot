@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-15 14:48-0500\n"
+"POT-Creation-Date: 2020-09-15 15:14-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1439,6 +1439,23 @@ msgstr ""
 
 #: superset/models/dashboard.py:224
 msgid "False"
+msgstr ""
+
+#: superset/models/schedules.py:42
+msgid "Attachment"
+msgstr ""
+
+#: superset/models/schedules.py:43
+msgid "Inline"
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/AddSliceCard.jsx:60
+#: superset/models/schedules.py:47
+msgid "Visualization"
+msgstr ""
+
+#: superset/models/schedules.py:48
+msgid "Raw data"
 msgstr ""
 
 #: superset/security/manager.py:101 superset/views/access_requests.py:40
@@ -3879,10 +3896,6 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/actions/sliceEntities.js:96
 msgid "Sorry there was an error fetching saved charts: "
-msgstr ""
-
-#: superset-frontend/src/dashboard/components/AddSliceCard.jsx:60
-msgid "Visualization"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/AddSliceCard.jsx:64
