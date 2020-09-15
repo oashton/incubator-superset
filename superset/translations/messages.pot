@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-15 14:22-0500\n"
+"POT-Creation-Date: 2020-09-15 14:48-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2054,10 +2054,44 @@ msgstr ""
 msgid "Template Name"
 msgstr ""
 
+#: superset/views/schedules.py:74
+msgid "If enabled, send a single email to all recipients (in email/To: field)"
+msgstr ""
+
 #: superset/views/schedules.py:76
 msgid ""
 "Unix style crontab schedule to deliver emails. Changes to schedules "
 "reflect in one hour."
+msgstr ""
+
+#: superset/views/schedules.py:78
+msgid "Indicates how the rendered content is delivered"
+msgstr ""
+
+#: superset/views/schedules.py:83
+msgid "Send Test Email"
+msgstr ""
+
+#: superset/views/schedules.py:85
+msgid "If enabled, we send a test mail on create / update"
+msgstr ""
+
+#: superset/views/schedules.py:88
+msgid "Test Email Recipients"
+msgstr ""
+
+#: superset/views/schedules.py:90
+msgid ""
+"List of recipients to send test email to. If empty, we send it to the "
+"original recipients"
+msgstr ""
+
+#: superset/views/schedules.py:94
+msgid "Test Slack Channel"
+msgstr ""
+
+#: superset/views/schedules.py:96
+msgid "A slack channel to send a test message to."
 msgstr ""
 
 #: superset/views/schedules.py:144

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-15 14:22-0500\n"
+"POT-Creation-Date: 2020-09-15 14:48-0500\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -2105,6 +2105,12 @@ msgstr ""
 msgid "Template Name"
 msgstr "Nombre Plantilla"
 
+#: superset/views/schedules.py:74
+msgid "If enabled, send a single email to all recipients (in email/To: field)"
+msgstr ""
+"Si está habilitado, envía un único email a todos los destinatarios (en "
+"campo email/Para:)"
+
 #: superset/views/schedules.py:76
 msgid ""
 "Unix style crontab schedule to deliver emails. Changes to schedules "
@@ -2112,6 +2118,36 @@ msgid ""
 msgstr ""
 "Programación crontab estilo Unix para entregar correos electrónicos. "
 "Cambios en la programación se verán reflejados en una hora."
+
+#: superset/views/schedules.py:78
+msgid "Indicates how the rendered content is delivered"
+msgstr "Indica cómo se entrega el contenido renderizado"
+
+#: superset/views/schedules.py:83
+msgid "Send Test Email"
+msgstr "Enviar Email de Prueba"
+
+#: superset/views/schedules.py:85
+msgid "If enabled, we send a test mail on create / update"
+msgstr "Si está habilitado, nosotros enviamos un correo de prueba en crear / actualizar"
+
+#: superset/views/schedules.py:88
+msgid "Test Email Recipients"
+msgstr "Destinatarios de Prueba"
+
+#: superset/views/schedules.py:90
+msgid ""
+"List of recipients to send test email to. If empty, we send it to the "
+"original recipients"
+msgstr "Lista de destinatarios a los que enviar el correo de prueba. Si está vacio, lo enviamos a los destinararios originales"
+
+#: superset/views/schedules.py:94
+msgid "Test Slack Channel"
+msgstr "Canal de Slack de Prueba"
+
+#: superset/views/schedules.py:96
+msgid "A slack channel to send a test message to."
+msgstr "Un canal de slack al cual enviar el correo de prueba."
 
 #: superset/views/schedules.py:144
 msgid "Schedule changes will get applied in one hour"
@@ -2127,7 +2163,7 @@ msgstr ""
 
 #: superset/views/schedules.py:227 superset/views/schedules.py:290
 msgid "Active"
-msgstr ""
+msgstr "Activo"
 
 #: superset/views/schedules.py:228 superset/views/schedules.py:291
 msgid "Crontab"
@@ -2139,15 +2175,15 @@ msgstr "Destinatarios"
 
 #: superset/views/schedules.py:230 superset/views/schedules.py:293
 msgid "Slack Channel"
-msgstr ""
+msgstr "Canal de Slack"
 
 #: superset/views/schedules.py:231 superset/views/schedules.py:294
 msgid "Deliver As Group"
-msgstr ""
+msgstr "Entregar como Grupo"
 
 #: superset/views/schedules.py:232 superset/views/schedules.py:295
 msgid "Delivery Type"
-msgstr ""
+msgstr "Tipo de entrega"
 
 #: superset/views/schedules.py:244
 msgid "Schedule Email Reports for Charts"
