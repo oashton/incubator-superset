@@ -2135,7 +2135,7 @@ msgstr ""
 
 #: superset/views/schedules.py:229 superset/views/schedules.py:292
 msgid "Recipients"
-msgstr ""
+msgstr "Destinatarios"
 
 #: superset/views/schedules.py:230 superset/views/schedules.py:293
 msgid "Slack Channel"
