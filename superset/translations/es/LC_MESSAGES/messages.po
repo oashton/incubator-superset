@@ -130,11 +130,11 @@ msgstr "Registro Acciones"
 
 #: superset/app.py:412
 msgid "Dashboard Emails"
-msgstr ""
+msgstr "Correos de Cuadros de Mando"
 
 #: superset/app.py:420
 msgid "Chart Email Schedules"
-msgstr ""
+msgstr "Correos Programados de Gráficos"
 
 #: superset/app.py:430
 msgid "Alerts"
