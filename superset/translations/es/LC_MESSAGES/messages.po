@@ -6136,7 +6136,7 @@ msgstr ""
 #: superset-frontend/src/visualizations/FilterBox/FilterBox.jsx:387
 #, python-format
 msgid "Type or Select [%s]"
-msgstr ""
+msgstr "Escribe o selecciona \[%s\]"
 
 #: superset-frontend/src/visualizations/FilterBox/FilterBoxChartPlugin.js:25
 msgid "Filter Box"
