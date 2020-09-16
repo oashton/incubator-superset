@@ -78,8 +78,8 @@ class AnnotationModelView(
     }
 
     description_columns = {
-        "json_metadata": "This JSON represents any additional metadata this \
-         annotation needs to add more context."
+        "json_metadata": _("This JSON represents any additional metadata this \
+         annotation needs to add more context.")
     }
 
     validators_columns = {"start_dttm": [StartEndDttmValidator()]}

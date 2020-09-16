@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-15 17:02-0500\n"
+"POT-Creation-Date: 2020-09-16 17:57-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1857,6 +1857,12 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/PropertiesModal.jsx:278
 #: superset/views/annotations.py:76 superset/views/dashboard/mixin.py:81
 msgid "JSON Metadata"
+msgstr ""
+
+#: superset/views/annotations.py:81
+msgid ""
+"This JSON represents any additional metadata this          annotation "
+"needs to add more context."
 msgstr ""
 
 #: superset/views/annotations.py:102

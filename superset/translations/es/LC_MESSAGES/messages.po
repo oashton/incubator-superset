@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-15 17:02-0500\n"
+"POT-Creation-Date: 2020-09-16 17:57-0500\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -1888,7 +1888,7 @@ msgstr ""
 
 #: superset/views/annotations.py:55
 msgid "Add Annotation"
-msgstr ""
+msgstr "Crear Anotación"
 
 #: superset/views/annotations.py:56
 msgid "Edit Annotation"
@@ -1900,16 +1900,24 @@ msgstr "Capa"
 
 #: superset/views/annotations.py:74
 msgid "Start"
-msgstr ""
+msgstr "Comienzo"
 
 #: superset/views/annotations.py:75
 msgid "End"
-msgstr ""
+msgstr "Fin"
 
 #: superset-frontend/src/dashboard/components/PropertiesModal.jsx:278
 #: superset/views/annotations.py:76 superset/views/dashboard/mixin.py:81
 msgid "JSON Metadata"
 msgstr "Metadatos JSON"
+
+#: superset/views/annotations.py:81
+msgid ""
+"This JSON represents any additional metadata this          annotation "
+"needs to add more context."
+msgstr ""
+"Este JSON representa cualquier metadata adicional que esta anotación "
+"necesite para adicionar más contexto."
 
 #: superset/views/annotations.py:102
 msgid "Show Annotation Layer"
