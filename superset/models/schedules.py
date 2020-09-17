@@ -39,13 +39,13 @@ class ScheduleType(str, enum.Enum):
 
 
 class EmailDeliveryType(str, enum.Enum):
-    attachment = _("Attachment")
-    inline = _("Inline")
+    attachment = _("Adjunto")
+    inline = _("En línea")
 
 
 class SliceEmailReportFormat(str, enum.Enum):
-    visualization = _("Visualization")
-    data = _("Raw data")
+    visualization = _("Visualización")
+    data = _("Datos en bruto")
 
 
 class EmailSchedule:
