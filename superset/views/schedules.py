@@ -71,29 +71,29 @@ class EmailScheduleView(
     edit_exclude_columns = add_exclude_columns
 
     description_columns = {
-        "deliver_as_group": "If enabled, send a single email to all "
-        "recipients (in email/To: field)",
-        "crontab": "Unix style crontab schedule to deliver emails. "
-        "Changes to schedules reflect in one hour.",
-        "delivery_type": "Indicates how the rendered content is delivered",
+        "deliver_as_group": _("If enabled, send a single email to all "
+        "recipients (in email/To: field)"),
+        "crontab": _("Unix style crontab schedule to deliver emails. "
+        "Changes to schedules reflect in one hour."),
+        "delivery_type": _("Indicates how the rendered content is delivered"),
     }
 
     add_form_extra_fields = {
         "test_email": BooleanField(
-            "Send Test Email",
+            _("Send Test Email"),
             default=False,
-            description="If enabled, we send a test mail on create / update",
+            description=_("If enabled, we send a test mail on create / update"),
         ),
         "test_email_recipients": StringField(
-            "Test Email Recipients",
+            _("Test Email Recipients"),
             default=None,
-            description="List of recipients to send test email to. "
-            "If empty, we send it to the original recipients",
+            description=_("List of recipients to send test email to. "
+            "If empty, we send it to the original recipients"),
         ),
         "test_slack_channel": StringField(
-            "Test Slack Channel",
+            _("Test Slack Channel"),
             default=None,
-            description="A slack channel to send a test message to.",
+            description=_("A slack channel to send a test message to."),
         ),
     }
 

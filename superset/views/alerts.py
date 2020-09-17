@@ -45,6 +45,8 @@ class AlertModelView(SupersetModelView):  # pylint: disable=too-many-ancestors
     route_base = "/alert"
     include_route_methods = RouteMethod.CRUD_SET
 
+    add_title = _("Add Alert")
+
     list_columns = (
         "label",
         "database",
@@ -68,6 +70,15 @@ class AlertModelView(SupersetModelView):  # pylint: disable=too-many-ancestors
         "grace_period",
     )
     label_columns = {
+        "label": _("Label"),
+        "active": _("Active"),
+        "database": _("Database"),
+        "alert_type": _("Alert Type"),
+        "owners": _("Owners"),
+        "recipients": _("Recipients"),
+        "slice": _("Slide"),
+        "dashboard": _("Dashboard"),
+        "grace_period": _("Grace Period"),
         "sql": "SQL",
         "log_retention": _("Log Retentions (days)"),
     }
@@ -81,9 +92,9 @@ class AlertModelView(SupersetModelView):  # pylint: disable=too-many-ancestors
             "are non zero, non null, non empty strings."
         ),
         "crontab": markdown(
-            "A CRON-like expression. "
-            "[Crontab Guru](https://crontab.guru/) is "
-            "a helpful resource that can help you craft a CRON expression.",
+            _("A CRON-like expression. ") +
+            "[Crontab Guru](https://crontab.guru/) " +
+            _(" is a helpful resource that can help you craft a CRON expression."),
             True,
         ),
         "recipients": _("A semicolon ';' delimited list of email addresses"),

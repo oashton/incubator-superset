@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-15 11:32-0500\n"
+"POT-Creation-Date: 2020-09-16 17:57-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -978,7 +978,8 @@ msgstr ""
 #: superset-frontend/src/views/dashboardList/DashboardList.tsx:151
 #: superset-frontend/src/views/datasetList/DatasetList.tsx:341
 #: superset/connectors/druid/views.py:325 superset/connectors/sqla/views.py:372
-#: superset/views/chart/mixin.py:83 superset/views/dashboard/mixin.py:76
+#: superset/views/alerts.py:77 superset/views/chart/mixin.py:83
+#: superset/views/dashboard/mixin.py:76
 msgid "Owners"
 msgstr ""
 
@@ -1231,9 +1232,10 @@ msgstr ""
 
 #: superset/connectors/sqla/views.py:362 superset/connectors/sqla/views.py:363
 #: superset/templates/superset/import_dashboards.html:54
-#: superset/views/database/forms.py:112 superset/views/database/forms.py:309
-#: superset/views/database/mixins.py:192 superset/views/sql_lab.py:70
-#: superset/views/sql_lab.py:74 superset/views/sql_lab.py:135
+#: superset/views/alerts.py:75 superset/views/database/forms.py:112
+#: superset/views/database/forms.py:309 superset/views/database/mixins.py:192
+#: superset/views/sql_lab.py:70 superset/views/sql_lab.py:74
+#: superset/views/sql_lab.py:135
 msgid "Database"
 msgstr ""
 
@@ -1441,6 +1443,23 @@ msgstr ""
 msgid "False"
 msgstr ""
 
+#: superset/models/schedules.py:42
+msgid "Attachment"
+msgstr ""
+
+#: superset/models/schedules.py:43
+msgid "Inline"
+msgstr ""
+
+#: superset-frontend/src/dashboard/components/AddSliceCard.jsx:60
+#: superset/models/schedules.py:47
+msgid "Visualization"
+msgstr ""
+
+#: superset/models/schedules.py:48
+msgid "Raw data"
+msgstr ""
+
 #: superset/security/manager.py:101 superset/views/access_requests.py:40
 #: superset/views/log/__init__.py:30 superset/views/log/views.py:35
 #: superset/views/schedules.py:226 superset/views/schedules.py:289
@@ -1523,8 +1542,8 @@ msgstr ""
 #: superset-frontend/src/components/Menu/NewMenu.jsx:56
 #: superset-frontend/src/welcome/DashboardTable.tsx:65
 #: superset/templates/appbuilder/navbar_right.html:40
-#: superset/views/dashboard/mixin.py:72 superset/views/dashboard/views.py:136
-#: superset/views/schedules.py:223
+#: superset/views/alerts.py:80 superset/views/dashboard/mixin.py:72
+#: superset/views/dashboard/views.py:136 superset/views/schedules.py:223
 msgid "Dashboard"
 msgstr ""
 
@@ -1731,11 +1750,48 @@ msgstr ""
 msgid "Created On"
 msgstr ""
 
-#: superset/views/alerts.py:72
+#: superset/views/alerts.py:48
+msgid "Add Alert"
+msgstr ""
+
+#: superset-frontend/src/SqlLab/components/SaveQuery.jsx:95
+#: superset-frontend/src/SqlLab/components/ScheduleQueryButton.jsx:137
+#: superset-frontend/src/datasource/DatasourceEditor.jsx:91
+#: superset-frontend/src/datasource/DatasourceEditor.jsx:571
+#: superset-frontend/src/datasource/DatasourceEditor.jsx:579
+#: superset-frontend/src/explore/components/controls/FilterBoxItemControl.jsx:150
+#: superset/views/alerts.py:73 superset/views/annotations.py:72
+#: superset/views/sql_lab.py:133
+msgid "Label"
+msgstr ""
+
+#: superset/views/alerts.py:74 superset/views/schedules.py:227
+#: superset/views/schedules.py:290
+msgid "Active"
+msgstr ""
+
+#: superset/views/alerts.py:76
+msgid "Alert Type"
+msgstr ""
+
+#: superset/views/alerts.py:78 superset/views/schedules.py:229
+#: superset/views/schedules.py:292
+msgid "Recipients"
+msgstr ""
+
+#: superset/views/alerts.py:79
+msgid "Slide"
+msgstr ""
+
+#: superset/views/alerts.py:81
+msgid "Grace Period"
+msgstr ""
+
+#: superset/views/alerts.py:83
 msgid "Log Retentions (days)"
 msgstr ""
 
-#: superset/views/alerts.py:75
+#: superset/views/alerts.py:86
 msgid ""
 "A SQL statement that defines whether the alert should get triggered or "
 "not. If the statement return no row, the alert is not triggered. If the "
@@ -1744,15 +1800,23 @@ msgid ""
 "values are non zero, non null, non empty strings."
 msgstr ""
 
-#: superset/views/alerts.py:89
+#: superset/views/alerts.py:95
+msgid "A CRON-like expression. "
+msgstr ""
+
+#: superset/views/alerts.py:97
+msgid " is a helpful resource that can help you craft a CRON expression."
+msgstr ""
+
+#: superset/views/alerts.py:100
 msgid "A semicolon ';' delimited list of email addresses"
 msgstr ""
 
-#: superset/views/alerts.py:90
+#: superset/views/alerts.py:101
 msgid "How long to keep the logs around for this alert"
 msgstr ""
 
-#: superset/views/alerts.py:91
+#: superset/views/alerts.py:102
 msgid ""
 "Once an alert is triggered, how long, in seconds, before Superset nags "
 "you again."
@@ -1782,16 +1846,6 @@ msgstr ""
 msgid "Layer"
 msgstr ""
 
-#: superset-frontend/src/SqlLab/components/SaveQuery.jsx:95
-#: superset-frontend/src/SqlLab/components/ScheduleQueryButton.jsx:137
-#: superset-frontend/src/datasource/DatasourceEditor.jsx:91
-#: superset-frontend/src/datasource/DatasourceEditor.jsx:571
-#: superset-frontend/src/datasource/DatasourceEditor.jsx:579
-#: superset-frontend/src/explore/components/controls/FilterBoxItemControl.jsx:150
-#: superset/views/annotations.py:72 superset/views/sql_lab.py:133
-msgid "Label"
-msgstr ""
-
 #: superset/views/annotations.py:74
 msgid "Start"
 msgstr ""
@@ -1803,6 +1857,12 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/PropertiesModal.jsx:278
 #: superset/views/annotations.py:76 superset/views/dashboard/mixin.py:81
 msgid "JSON Metadata"
+msgstr ""
+
+#: superset/views/annotations.py:81
+msgid ""
+"This JSON represents any additional metadata this          annotation "
+"needs to add more context."
 msgstr ""
 
 #: superset/views/annotations.py:102
@@ -2054,6 +2114,46 @@ msgstr ""
 msgid "Template Name"
 msgstr ""
 
+#: superset/views/schedules.py:74
+msgid "If enabled, send a single email to all recipients (in email/To: field)"
+msgstr ""
+
+#: superset/views/schedules.py:76
+msgid ""
+"Unix style crontab schedule to deliver emails. Changes to schedules "
+"reflect in one hour."
+msgstr ""
+
+#: superset/views/schedules.py:78
+msgid "Indicates how the rendered content is delivered"
+msgstr ""
+
+#: superset/views/schedules.py:83
+msgid "Send Test Email"
+msgstr ""
+
+#: superset/views/schedules.py:85
+msgid "If enabled, we send a test mail on create / update"
+msgstr ""
+
+#: superset/views/schedules.py:88
+msgid "Test Email Recipients"
+msgstr ""
+
+#: superset/views/schedules.py:90
+msgid ""
+"List of recipients to send test email to. If empty, we send it to the "
+"original recipients"
+msgstr ""
+
+#: superset/views/schedules.py:94
+msgid "Test Slack Channel"
+msgstr ""
+
+#: superset/views/schedules.py:96
+msgid "A slack channel to send a test message to."
+msgstr ""
+
 #: superset/views/schedules.py:144
 msgid "Schedule changes will get applied in one hour"
 msgstr ""
@@ -2066,16 +2166,8 @@ msgstr ""
 msgid "Manage Email Reports for Dashboards"
 msgstr ""
 
-#: superset/views/schedules.py:227 superset/views/schedules.py:290
-msgid "Active"
-msgstr ""
-
 #: superset/views/schedules.py:228 superset/views/schedules.py:291
 msgid "Crontab"
-msgstr ""
-
-#: superset/views/schedules.py:229 superset/views/schedules.py:292
-msgid "Recipients"
 msgstr ""
 
 #: superset/views/schedules.py:230 superset/views/schedules.py:293
@@ -3839,10 +3931,6 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/actions/sliceEntities.js:96
 msgid "Sorry there was an error fetching saved charts: "
-msgstr ""
-
-#: superset-frontend/src/dashboard/components/AddSliceCard.jsx:60
-msgid "Visualization"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/AddSliceCard.jsx:64

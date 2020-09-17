@@ -19,6 +19,8 @@ import enum
 from typing import Optional, Type
 
 from flask_appbuilder import Model
+from flask_babel import lazy_gettext as _
+
 from sqlalchemy import Boolean, Column, Enum, ForeignKey, Integer, String, Text
 from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.orm import relationship, RelationshipProperty
@@ -37,13 +39,13 @@ class ScheduleType(str, enum.Enum):
 
 
 class EmailDeliveryType(str, enum.Enum):
-    attachment = "Attachment"
-    inline = "Inline"
+    attachment = _("Adjunto")
+    inline = _("En línea")
 
 
 class SliceEmailReportFormat(str, enum.Enum):
-    visualization = "Visualization"
-    data = "Raw data"
+    visualization = _("Visualización")
+    data = _("Datos en bruto")
 
 
 class EmailSchedule:
