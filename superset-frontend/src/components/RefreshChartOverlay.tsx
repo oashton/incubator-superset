@@ -39,6 +39,8 @@ const RefreshOverlayWrapper = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
+  z-index: 1;
 
   .refresh-btn {
     font-weight: ${({ theme }) => theme.typography.weights.bold};
