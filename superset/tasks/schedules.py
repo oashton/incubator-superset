@@ -753,8 +753,8 @@ def schedule_hourly() -> None:
 def schedule_alerts() -> None:
     """ Celery beat job meant to be invoked every minute to check alerts """
     resolution = config["EMAIL_REPORTS_CRON_RESOLUTION"] * 60
-    now = datetime.utcnow()
-    start_at = now.replace(microsecond=0, second=0, minute=0)
-    stop_at = now + timedelta(seconds=3600)
+
+    start_at = datetime.utcnow().replace(microsecond=0, second=0, minute=0)
+    stop_at = start_at + timedelta(seconds=3600)
 
     schedule_window(ScheduleType.alert, start_at, stop_at, resolution)
