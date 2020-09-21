@@ -573,6 +573,9 @@ def deliver_alert(alert: Alert) -> None:
         chart_url = get_url_path(
             "Superset.slice", slice_id=alert.slice.id, standalone="true"
         )
+        chart_url_user_friendly = _get_url_path(
+            "Superset.slice", user_friendly=True, slice_id=alert.slice.id,
+        )
         screenshot = ChartScreenshot(chart_url, alert.slice.digest)
         cache_key = screenshot.cache_key()
         image_url = get_url_path(
@@ -586,6 +589,9 @@ def deliver_alert(alert: Alert) -> None:
     else:
         # TODO: dashboard delivery!
         image_url = "https://media.giphy.com/media/dzaUX7CAG0Ihi/giphy.gif"
+        dashboard_url_user_friendly = _get_url_path(
+            "Superset.dashboard", user_friendly=True, dashboard_id_or_slug=alert.dashboard.id
+        )
 
     # generate the email
     subject = f"[Superset] Triggered alert: {alert.label}"
@@ -598,10 +604,12 @@ def deliver_alert(alert: Alert) -> None:
             """\
             <h2>Alert: %(label)s</h2>
             <img src="cid:screenshot" alt="%(label)s" />
+            <b><a href="%(link_url)s">Explorar en Gemelo Analítico</a></b>
         """
         ),
         label=alert.label,
         image_url=image_url,
+        link_url=chart_url_user_friendly if alert.slice else dashboard_url_user_friendly
     )
 
     _deliver_email(alert.recipients, deliver_as_group, subject, body, data, images)
