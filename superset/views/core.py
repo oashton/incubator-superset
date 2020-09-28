@@ -89,6 +89,7 @@ from superset.sql_parse import CtasMethod, ParsedQuery, Table
 from superset.sql_validators import get_validator_by_name
 from superset.typing import FlaskResponse
 from superset.utils import core as utils, dashboard_import_export
+from superset.utils.core import base_json_conv
 from superset.utils.dates import now_as_float
 from superset.utils.decorators import etag_cache
 from superset.views.base import (
@@ -2392,7 +2393,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             return json_error_response(DATASOURCE_MISSING_ERR)
 
         datasource.raise_for_access()
-        return json_success(json.dumps(str(datasource.data)))
+        return json_success(base_json_conv(datasource.data))
 
     @has_access_api
     @expose("/queries/<float:last_updated_ms>")
