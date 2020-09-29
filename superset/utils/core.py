@@ -1046,6 +1046,11 @@ def ensure_path_exists(path: str) -> None:
             raise
 
 
+def time_window(relative_start, relative_end, time_param):
+    return (relative_start - relativedelta(**time_param),  # type: ignore
+            relative_end,)
+
+
 def get_since_until(  # pylint: disable=too-many-arguments
     time_range: Optional[str] = None,
     since: Optional[str] = None,
@@ -1082,31 +1087,21 @@ def get_since_until(  # pylint: disable=too-many-arguments
     relative_start = parse_human_datetime(  # type: ignore
         relative_start if relative_start else "today"
     )
+    common_time_frames = {
+        _("Last day"): time_window(relative_start, relative_end, {'days': 1}),
+        _("Last week"): time_window(relative_start, relative_end, {'weeks': 1}),
+        _("Last month"): time_window(relative_start, relative_end, {'months': 1}),
+        _("Last quarter"): time_window(relative_start, relative_end, {'months': 3}),
+        _("Last year"): time_window(relative_start, relative_end, {'years': 1}),
+        _("Día anterior"): time_window(relative_start, relative_end, {'weeks': 1}),
+        _("Semana anterior"): time_window(relative_start, relative_end, {'weeks': 1}),
+        _("Mes anterior"): time_window(relative_start, relative_end, {'months': 1}),
+        _("Trimestre anterior"): time_window(relative_start, relative_end, {'months': 3}),
+        _("Año anterior"): time_window(relative_start, relative_end, {'years': 1}),
+    }
     relative_end = parse_human_datetime(  # type: ignore
         relative_end if relative_end else "today"
     )
-    common_time_frames = {
-        _("Last day"): (
-            relative_start - relativedelta(days=1),  # type: ignore
-            relative_end,
-        ),
-        _("Last week"): (
-            relative_start - relativedelta(weeks=1),  # type: ignore
-            relative_end,
-        ),
-        _("Last month"): (
-            relative_start - relativedelta(months=1),  # type: ignore
-            relative_end,
-        ),
-        _("Last quarter"): (
-            relative_start - relativedelta(months=3),  # type: ignore
-            relative_end,
-        ),
-        _("Last year"): (
-            relative_start - relativedelta(years=1),  # type: ignore
-            relative_end,
-        ),
-    }
 
     if time_range:
         if separator in time_range:
@@ -1143,6 +1138,8 @@ def get_since_until(  # pylint: disable=too-many-arguments
         since = since if since is None else (since - time_delta)  # type: ignore
         until = until if until is None else (until - time_delta)  # type: ignore
 
+    if type(until) == str:
+        until = parse_human_datetime(until)
     if since and until and since > until:
         raise ValueError(_("From date cannot be larger than to date"))
 
