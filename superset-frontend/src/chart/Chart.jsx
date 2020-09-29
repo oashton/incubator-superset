@@ -20,14 +20,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Alert } from 'react-bootstrap';
 import { t } from '@superset-ui/translation';
-import { SupersetClient } from '@superset-ui/connection';
 import { isFeatureEnabled, FeatureFlag } from 'src/featureFlags';
-import { getExploreUrlAndPayload } from '../explore/exploreUtils';
-import { allowCrossDomain as allowDomainSharding } from '../utils/hostNamesConfig';
-import { Logger, LOG_ACTIONS_RENDER_CHART_CONTAINER } from '../logger/LogUtils';
+import { Logger, LOG_ACTIONS_RENDER_CHART } from '../logger/LogUtils';
+
 import Loading from '../components/Loading';
 import RefreshChartOverlay from '../components/RefreshChartOverlay';
-import StackTraceMessage from '../components/StackTraceMessage';
+import ErrorMessageWithStackTrace from '../components/ErrorMessage/ErrorMessageWithStackTrace';
 import ErrorBoundary from '../components/ErrorBoundary';
 import ChartRenderer from './ChartRenderer';
 import './chart.less';
@@ -86,77 +84,49 @@ class Chart extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      textColor: 'black'
-    }
+      textColor: undefined,
+    };
 
     this.handleRenderContainerFailure = this.handleRenderContainerFailure.bind(
       this,
     );
-    this.getExtraData = this.getExtraData.bind(this);
+    this.runExtraOpts = this.runExtraOpts.bind(this);
   }
 
   componentDidMount() {
     if (this.props.triggerQuery) {
       this.runQuery();
     }
-    this.getExtraData();
+    this.runExtraOpts();
   }
 
   componentDidUpdate() {
     if (this.props.triggerQuery) {
       this.runQuery();
     }
-    this.getExtraData();
+    this.runExtraOpts();
   }
-  
-  getExtraData() {
-    const {
-      dashboardId,
-      vizType,
-      formData,
-      chartStatus,
-      datasource,
-    } = this.props;
 
-    const isColored = (column) => column['column_name'] === COLOR_COLUMN;
-    const datasourceReady = 'columns' in datasource
-    const getColorData = datasource.columns.some(isColored) ? datasourceReady : false;
+  runExtraOpts() {
+    const { vizType, chartStatus, queryResponse } = this.props;
 
-    if (vizType === BIG_NUMBER_TYPE && chartStatus !== 'loading' && getColorData){
-      console.log('Getting extra data...');
-      let queryObj = formData;
-      queryObj['columns'] = [COLOR_COLUMN];
-
-      const { url, payload } = getExploreUrlAndPayload({
-        formData: queryObj,
-        endpointType: 'json',
-        allowDomainSharding,
-        requestParams: dashboardId ? { dashboard_id: dashboardId } : {},
-      });
-      const controller = new AbortController();
-      const { signal } = controller;
-      let querySettings = {
-        url,
-        postPayload: { form_data: payload },
-        signal,
-        timeout: 120 * 1000,
-      };
-      if (allowDomainSharding) {
-        querySettings = {
-          ...querySettings,
-          mode: 'cors',
-          credentials: 'include',
-        };
+    if (
+      vizType === BIG_NUMBER_TYPE &&
+      chartStatus !== 'loading' &&
+      'data' in queryResponse
+    ) {
+      let lastItem;
+      const dataSize = queryResponse.data.length;
+      let isColored = false;
+      if (dataSize > 0) {
+        lastItem = queryResponse.data[dataSize - 1];
+        if (COLOR_COLUMN in lastItem) isColored = true;
       }
-
-      const queryPromise = SupersetClient.post(querySettings)
-        .then(({ json }) => {
-          if (json.data.length > 0) { 
-            this.setState({
-              textColor: json.data[json.data.length - 1]['color']
-            })
-          }
-        })
+      if (isColored && lastItem.color !== this.state.textColor) {
+        this.setState({
+          textColor: lastItem.color,
+        });
+      }
     }
   }
 
@@ -191,7 +161,7 @@ class Chart extends React.PureComponent {
       info ? info.componentStack : null,
     );
 
-    actions.logEvent(LOG_ACTIONS_RENDER_CHART_CONTAINER, {
+    actions.logEvent(LOG_ACTIONS_RENDER_CHART, {
       slice_id: chartId,
       has_err: true,
       error_details: error.toString(),
@@ -222,11 +192,12 @@ class Chart extends React.PureComponent {
     return false;
   }
 
-  renderStackTraceMessage() {
+  renderErrorMessage() {
     const { chartAlert, chartStackTrace, queryResponse } = this.props;
     return (
-      <StackTraceMessage
-        message={chartAlert}
+      <ErrorMessageWithStackTrace
+        error={queryResponse?.errors?.[0]}
+        message={chartAlert || queryResponse?.message}
         link={queryResponse ? queryResponse.link : null}
         stackTrace={chartStackTrace}
       />
@@ -250,9 +221,11 @@ class Chart extends React.PureComponent {
     const containerStyles = isLoading ? { height, width } : null;
     const isFaded = refreshOverlayVisible && !errorMessage;
     this.renderContainerStartTime = Logger.getTimestamp();
+    this.props.formData.textColor = this.state.textColor;
+
     const filterValidation = this.validateFilterRequiredRestriction();
     if (chartStatus === 'failed') {
-      return this.renderStackTraceMessage();
+      return this.renderErrorMessage();
     }
     if (errorMessage) {
       return <Alert bsStyle="warning">{errorMessage}</Alert>;
@@ -266,8 +239,6 @@ class Chart extends React.PureComponent {
           className={`chart-container ${isLoading ? 'is-loading' : ''}`}
           style={containerStyles}
         >
-          {isLoading && <Loading size={50} />}
-
           {!isLoading && !chartAlert && isFaded && (
             <RefreshChartOverlay
               width={width}
@@ -277,7 +248,7 @@ class Chart extends React.PureComponent {
           )}
           {filterValidation && (
             <div className={`slice_container ${isFaded ? ' faded' : ''}`}>
-              <ChartRenderer textColor={this.state.textColor} {...this.props} />
+              <ChartRenderer {...this.props} />
             </div>
           )}
           {!filterValidation && (
@@ -288,6 +259,8 @@ class Chart extends React.PureComponent {
               )}
             </h2>
           )}
+
+          {isLoading && <Loading />}
         </div>
       </ErrorBoundary>
     );

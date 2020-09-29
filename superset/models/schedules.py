@@ -15,33 +15,37 @@
 # specific language governing permissions and limitations
 # under the License.
 """Models for scheduled execution of jobs"""
-
 import enum
+from typing import Optional, Type
 
 from flask_appbuilder import Model
+from flask_babel import lazy_gettext as _
+
 from sqlalchemy import Boolean, Column, Enum, ForeignKey, Integer, String, Text
 from sqlalchemy.ext.declarative import declared_attr
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, RelationshipProperty
 
 from superset import security_manager
+from superset.models.alerts import Alert
 from superset.models.helpers import AuditMixinNullable, ImportMixin
 
 metadata = Model.metadata  # pylint: disable=no-member
 
 
-class ScheduleType(enum.Enum):
+class ScheduleType(str, enum.Enum):
     slice = "slice"
     dashboard = "dashboard"
+    alert = "alert"
 
 
-class EmailDeliveryType(enum.Enum):
-    attachment = "Attachment"
-    inline = "Inline"
+class EmailDeliveryType(str, enum.Enum):
+    attachment = _("Adjunto")
+    inline = _("En línea")
 
 
-class SliceEmailReportFormat(enum.Enum):
-    visualization = "Visualization"
-    data = "Raw data"
+class SliceEmailReportFormat(str, enum.Enum):
+    visualization = _("Visualización")
+    data = _("Datos en bruto")
 
 
 class EmailSchedule:
@@ -50,16 +54,16 @@ class EmailSchedule:
 
     __tablename__ = "email_schedules"
 
-    id = Column(Integer, primary_key=True)  # pylint: disable=invalid-name
+    id = Column(Integer, primary_key=True)
     active = Column(Boolean, default=True, index=True)
     crontab = Column(String(50))
 
     @declared_attr
-    def user_id(self):
+    def user_id(self) -> int:
         return Column(Integer, ForeignKey("ab_user.id"))
 
     @declared_attr
-    def user(self):
+    def user(self) -> RelationshipProperty:
         return relationship(
             security_manager.user_model,
             backref=self.__tablename__,
@@ -67,6 +71,7 @@ class EmailSchedule:
         )
 
     recipients = Column(Text)
+    slack_channel = Column(Text)
     deliver_as_group = Column(Boolean, default=False)
     delivery_type = Column(Enum(EmailDeliveryType))
 
@@ -86,9 +91,11 @@ class SliceEmailSchedule(Model, AuditMixinNullable, ImportMixin, EmailSchedule):
     email_format = Column(Enum(SliceEmailReportFormat))
 
 
-def get_scheduler_model(report_type):
-    if report_type == ScheduleType.dashboard.value:
+def get_scheduler_model(report_type: str) -> Optional[Type[EmailSchedule]]:
+    if report_type == ScheduleType.dashboard:
         return DashboardEmailSchedule
-    elif report_type == ScheduleType.slice.value:
+    if report_type == ScheduleType.slice:
         return SliceEmailSchedule
+    if report_type == ScheduleType.alert:
+        return Alert
     return None

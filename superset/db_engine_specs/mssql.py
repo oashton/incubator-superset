@@ -14,13 +14,20 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
+import logging
 import re
 from datetime import datetime
-from typing import Any, List, Optional, Tuple
+from typing import Any, List, Optional, Tuple, TYPE_CHECKING
 
 from sqlalchemy.types import String, TypeEngine, UnicodeText
 
 from superset.db_engine_specs.base import BaseEngineSpec, LimitMethod
+from superset.utils import core as utils
+
+if TYPE_CHECKING:
+    from superset.models.core import Database  # pylint: disable=unused-import
+
+logger = logging.getLogger(__name__)
 
 
 class MssqlEngineSpec(BaseEngineSpec):
@@ -51,16 +58,16 @@ class MssqlEngineSpec(BaseEngineSpec):
     @classmethod
     def convert_dttm(cls, target_type: str, dttm: datetime) -> Optional[str]:
         tt = target_type.upper()
-        if tt == "DATE":
+        if tt == utils.TemporalType.DATE:
             return f"CONVERT(DATE, '{dttm.date().isoformat()}', 23)"
-        if tt == "DATETIME":
+        if tt == utils.TemporalType.DATETIME:
             return f"""CONVERT(DATETIME, '{dttm.isoformat(timespec="milliseconds")}', 126)"""  # pylint: disable=line-too-long
-        if tt == "SMALLDATETIME":
+        if tt == utils.TemporalType.SMALLDATETIME:
             return f"""CONVERT(SMALLDATETIME, '{dttm.isoformat(sep=" ", timespec="seconds")}', 20)"""  # pylint: disable=line-too-long
         return None
 
     @classmethod
-    def fetch_data(cls, cursor: Any, limit: int) -> List[Tuple]:
+    def fetch_data(cls, cursor: Any, limit: int) -> List[Tuple[Any, ...]]:
         data = super().fetch_data(cursor, limit)
         # Lists of `pyodbc.Row` need to be unpacked further
         return cls.pyodbc_rows_to_tuples(data)
@@ -76,3 +83,12 @@ class MssqlEngineSpec(BaseEngineSpec):
             if regex.match(type_):
                 return sqla_type
         return None
+
+    @classmethod
+    def extract_error_message(cls, ex: Exception) -> str:
+        if str(ex).startswith("(8155,"):
+            return (
+                f"{cls.engine} error: All your SQL functions need to "
+                "have an alias on MSSQL. For example: SELECT COUNT(*) AS C1 FROM TABLE1"
+            )
+        return f"{cls.engine} error: {cls._extract_error_message(ex)}"

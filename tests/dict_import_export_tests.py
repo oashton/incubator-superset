@@ -40,11 +40,8 @@ NAME_PREFIX = "dict_"
 ID_PREFIX = 20000
 
 
-class DictImportExportTests(SupersetTestCase):
+class TestDictImportExport(SupersetTestCase):
     """Testing export import functionality for dashboards"""
-
-    def __init__(self, *args, **kwargs):
-        super(DictImportExportTests, self).__init__(*args, **kwargs)
 
     @classmethod
     def delete_imports(cls):
@@ -165,7 +162,7 @@ class DictImportExportTests(SupersetTestCase):
         new_table = SqlaTable.import_from_dict(db.session, dict_table)
         db.session.commit()
         imported_id = new_table.id
-        imported = self.get_table(imported_id)
+        imported = self.get_table_by_id(imported_id)
         self.assert_table_equals(table, imported)
         self.yaml_compare(table.export_to_dict(), imported.export_to_dict())
 
@@ -178,7 +175,7 @@ class DictImportExportTests(SupersetTestCase):
         )
         imported_table = SqlaTable.import_from_dict(db.session, dict_table)
         db.session.commit()
-        imported = self.get_table(imported_table.id)
+        imported = self.get_table_by_id(imported_table.id)
         self.assert_table_equals(table, imported)
         self.assertEqual(
             {DBREF: ID_PREFIX + 2, "database_name": "main"}, json.loads(imported.params)
@@ -194,7 +191,7 @@ class DictImportExportTests(SupersetTestCase):
         )
         imported_table = SqlaTable.import_from_dict(db.session, dict_table)
         db.session.commit()
-        imported = self.get_table(imported_table.id)
+        imported = self.get_table_by_id(imported_table.id)
         self.assert_table_equals(table, imported)
         self.yaml_compare(table.export_to_dict(), imported.export_to_dict())
 
@@ -213,7 +210,7 @@ class DictImportExportTests(SupersetTestCase):
         imported_over_table = SqlaTable.import_from_dict(db.session, dict_table_over)
         db.session.commit()
 
-        imported_over = self.get_table(imported_over_table.id)
+        imported_over = self.get_table_by_id(imported_over_table.id)
         self.assertEqual(imported_table.id, imported_over.id)
         expected_table, _ = self.create_table(
             "table_override",
@@ -243,7 +240,7 @@ class DictImportExportTests(SupersetTestCase):
         )
         db.session.commit()
 
-        imported_over = self.get_table(imported_over_table.id)
+        imported_over = self.get_table_by_id(imported_over_table.id)
         self.assertEqual(imported_table.id, imported_over.id)
         expected_table, _ = self.create_table(
             "table_override",
@@ -274,12 +271,15 @@ class DictImportExportTests(SupersetTestCase):
         imported_copy_table = SqlaTable.import_from_dict(db.session, dict_copy_table)
         db.session.commit()
         self.assertEqual(imported_table.id, imported_copy_table.id)
-        self.assert_table_equals(copy_table, self.get_table(imported_table.id))
+        self.assert_table_equals(copy_table, self.get_table_by_id(imported_table.id))
         self.yaml_compare(
             imported_copy_table.export_to_dict(), imported_table.export_to_dict()
         )
 
     def test_export_datasource_ui_cli(self):
+        # TODO(bkyryliuk): find fake db is leaking from
+        self.delete_fake_db()
+
         cli_export = export_to_dict(
             session=db.session,
             recursive=True,

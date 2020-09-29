@@ -23,7 +23,7 @@ export interface SortColumn {
 
 export type SortColumns = SortColumn[];
 
-export interface Select {
+export interface SelectOption {
   label: string;
   value: any;
 }
@@ -31,9 +31,18 @@ export interface Select {
 export interface Filter {
   Header: string;
   id: string;
-  operators: Select[];
-  input?: 'text' | 'textarea' | 'select' | 'checkbox';
-  selects?: Select[];
+  operators?: SelectOption[];
+  operator?: string;
+  input?: 'text' | 'textarea' | 'select' | 'checkbox' | 'search';
+  unfilteredLabel?: string;
+  selects?: SelectOption[];
+  onFilterOpen?: () => void;
+  fetchSelects?: (
+    filterValue?: string,
+    pageIndex?: number,
+    pageSize?: number,
+  ) => Promise<SelectOption[]>;
+  paginate?: boolean;
 }
 
 export type Filters = Filter[];
@@ -41,7 +50,7 @@ export type Filters = Filter[];
 export interface FilterValue {
   id: string;
   operator?: string;
-  value: string | boolean | number;
+  value: string | boolean | number | null | undefined;
 }
 
 export interface FetchDataConfig {
@@ -52,7 +61,7 @@ export interface FetchDataConfig {
 }
 
 export interface InternalFilter extends FilterValue {
-  Header: string;
+  Header?: string;
 }
 
 export interface FilterOperatorMap {

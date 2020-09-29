@@ -24,7 +24,7 @@ import thunk from 'redux-thunk';
 import shortid from 'shortid';
 import * as featureFlags from 'src/featureFlags';
 
-import * as actions from '../../../../src/SqlLab/actions/sqlLab';
+import * as actions from 'src/SqlLab/actions/sqlLab';
 import { defaultQueryEditor, query } from '../fixtures';
 
 const middlewares = [thunk];
@@ -107,7 +107,7 @@ describe('async actions', () => {
       });
     });
 
-    xit('parses large number result without losing precision', () =>
+    it.skip('parses large number result without losing precision', () =>
       makeRequest().then(() => {
         expect(fetchMock.calls(fetchQueryEndpoint)).toHaveLength(1);
         expect(dispatch.callCount).toBe(2);
@@ -175,7 +175,7 @@ describe('async actions', () => {
       });
     });
 
-    xit('parses large number result without losing precision', () =>
+    it.skip('parses large number result without losing precision', () =>
       makeRequest().then(() => {
         expect(fetchMock.calls(runQueryEndpoint)).toHaveLength(1);
         expect(dispatch.callCount).toBe(2);
