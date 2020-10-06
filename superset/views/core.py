@@ -92,6 +92,7 @@ from superset.utils import core as utils, dashboard_import_export
 from superset.utils.core import base_json_conv
 from superset.utils.dates import now_as_float
 from superset.utils.decorators import etag_cache
+from superset.utils.sampling import max_min_buckets, largest_triangle_three_buckets
 from superset.views.base import (
     api,
     BaseSupersetView,
@@ -431,6 +432,10 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             return self.get_samples(viz_obj)
 
         payload = viz_obj.get_payload()
+        if payload['form_data']['viz_type'] == 'line' or payload['form_data']['viz_type'] == 'dual_line':
+            for i in range(len(payload['data'])):
+                if len(payload['data'][i]['values']) > 1500:
+                    payload['data'][i]['values'] = max_min_buckets( payload['data'][i]['values'], 750)
         return data_payload_response(*viz_obj.payload_json_and_has_error(payload))
 
     @event_logger.log_this
