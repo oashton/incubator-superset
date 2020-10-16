@@ -433,7 +433,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
 
         payload = viz_obj.get_payload()
         if payload['form_data']['viz_type'] == 'line' or payload['form_data']['viz_type'] == 'dual_line':
-            for i in range(len(payload['data'])):
+            for i in range(len(payload['data']) if payload['data'] else 0):
                 if len(payload['data'][i]['values']) > 1500:
                     payload['data'][i]['values'] = max_min_buckets( payload['data'][i]['values'], 750)
         return data_payload_response(*viz_obj.payload_json_and_has_error(payload))
