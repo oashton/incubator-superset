@@ -116,7 +116,7 @@ class Chart extends React.PureComponent {
       'data' in queryResponse
     ) {
       let lastItem;
-      const dataSize = queryResponse.data.length;
+      const dataSize = queryResponse.data ? queryResponse.data.length : 0;
       let isColored = false;
       if (dataSize > 0) {
         lastItem = queryResponse.data[dataSize - 1];
