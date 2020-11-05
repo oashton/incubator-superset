@@ -74,7 +74,7 @@
     "@superset-ui/legacy-plugin-chart-heatmap": "^0.14.9",
     "@superset-ui/legacy-plugin-chart-histogram": "^0.14.9",
     "@superset-ui/legacy-plugin-chart-horizon": "^0.14.9",
-    "@superset-ui-uptime/legacy-plugin-chart-iframe": "^0.14.9",
+    "@superset-ui-uptime/legacy-plugin-chart-iframe": "^0.14.9-b",
     "@superset-ui/legacy-plugin-chart-map-box": "^0.14.9",
     "@superset-ui/legacy-plugin-chart-markup": "^0.14.9",
     "@superset-ui/legacy-plugin-chart-paired-t-test": "^0.14.9",
